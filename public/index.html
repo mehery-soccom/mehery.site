@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <title>Mehery</title>
+
+        <style>
+            body {
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(0, 173, 65);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div style="display: none">
+            <svg>
+                <use xlink:href="src/@assets/app-amx/images/flags/sprite.svg"></use>
+            </svg>
+        </div> -->
+        <div id="app"></div>
+
+        <script>
+            function getJson(str) {
+                var json;
+                try {
+                    json = JSON.parse(str);
+                } catch (e) {
+                    console.error("Error in config: ", e);
+                    return false;
+                }
+                return json;
+            }
+
+            window.CONST = {
+                APP: "mry",
+                remoteServerUrl: "",
+                remoteJsUrl:
+                    window.location.host === "localhost:8080"
+                        ? "http://localhost:8080"
+                        : "https://mehery.site.pages.dev",
+                buildFolder: ""
+            };
+
+            var config = getJson(window.localStorage.getItem("debugConfig"));
+
+            if (config) {
+                window.CONST.remoteServerUrl = config.remoteServerUrl || window.CONST.remoteServerUrl;
+                window.CONST.remoteJsUrl = config.remoteJsUrl || window.CONST.remoteJsUrl;
+                window.CONST.buildFolder = config.buildFolder || window.CONST.buildFolder;
+            }
+
+            var head = document.getElementsByTagName("head")[0];
+
+            var js = document.createElement("script");
+            js.type = "text/javascript";
+            js.src = `${window.CONST.remoteJsUrl}${
+                window.CONST.buildFolder ? "/" + window.CONST.buildFolder : ""
+            }/main.bundle.js`;
+            head.appendChild(js);
+
+            var css = document.createElement("link");
+            css.rel = "stylesheet";
+            css.href = `${window.CONST.remoteJsUrl}${
+                window.CONST.buildFolder ? "/" + window.CONST.buildFolder : ""
+            }/main.bundle.css`;
+            head.appendChild(css);
+
+            var link = document.createElement("link");
+            link.type = "image/x-icon";
+            link.rel = "shortcut icon";
+            link.href = `${window.CONST.remoteJsUrl}${
+                window.CONST.buildFolder ? "/" + window.CONST.buildFolder : ""
+            }/favicon.ico`;
+            head.appendChild(link);
+        </script>
+    </body>
+</html>

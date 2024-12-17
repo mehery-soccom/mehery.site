@@ -1,0 +1,54 @@
+<template>
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-lg-start">Copyright &copy;2024</div>
+                <!-- <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"
+                        ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"
+                        ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                </div> -->
+                <div class="col-lg-6 text-lg-end">
+                    <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a> -->
+                    <a href="#" target="_blank">Terms &amp; Conditions</a> |
+                    <a href="#" target="_blank">Privacy Policy</a> <br />
+                    <span class="text-gray">Follow us </span>
+                    <a class="ml-2" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a class="ml-2" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="ml-2" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="ml-2" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="ml-2" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</template>
+
+<script>
+import { defineComponent } from "vue";
+
+export default defineComponent({
+    name: "Footer"
+});
+</script>
+
+<style lang="scss">
+.footer {
+    background: #fafafa;
+    padding: 20px 0 20px;
+    border-top: 2px solid #fff;
+    border-bottom: 4px solid var(--bs-primary);
+    line-height: 36px;
+
+    .text-gray {
+        color: #aaa;
+    }
+}
+</style>
