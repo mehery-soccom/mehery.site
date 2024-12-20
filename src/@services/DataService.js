@@ -364,25 +364,25 @@ const DataService = {
 
     loadMetaData(app) {
         return new Promise(async (resolve, reject) => {
-            // if (!this.urlMap.loadMetaData) return resolve();
+            if (!this.urlMap.loadMetaData) return resolve();
 
             console.log("Dataservice loadMetaData");
+ 
+            // try {
+            //     const siteResp = await this.getResource(`site.json`);
+            //     const metaResp = await this.getResource(`meta.json`);
 
-            try {
-                const siteResp = await this.getResource(`site.json`);
-                const metaResp = await this.getResource(`meta.json`);
+            //     this.store["site"] = siteResp.data;
+            //     this.store["meta"] = metaResp.data;
 
-                this.store["site"] = siteResp.data;
-                this.store["meta"] = metaResp.data;
+            //     console.log(this.store);
 
-                console.log(this.store);
+            //     return resolve(this.store);
+            // } catch (error) {
+            //     console.error("Error while fetching Meta Data", error);
 
-                return resolve(this.store);
-            } catch (error) {
-                console.error("Error while fetching Meta Data", error);
-
-                return reject(error);
-            }
+            //     return reject(error);
+            // }
         });
     }
 };
