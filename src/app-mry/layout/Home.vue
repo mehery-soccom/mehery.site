@@ -8,9 +8,24 @@
             <!-- Masthead -->
             <header class="masthead">
                 <div class="container">
-                    <div class="masthead-subheading">Welcome To Our Studio!</div>
-                    <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                    <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <div class="masthead-wrapper">
+                    <div>
+                        <div class="masthead-content">
+                        <div class="masthead-heading text-uppercase">
+                            Engage Customers Seamlessly with Unified Messaging
+                        </div>
+                        
+                    <div class="masthead-image">
+                    <img src="../../@assets/images/header.svg" alt="SVG Image" class="masthead-svg">
+                    </div>
+                    </div>
+                    <div class="masthead-description">
+                        Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
+                    </div>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#trial">Free Trial</a>
+                    </div>
+                    
+                    </div>
                 </div>
             </header>
             <!-- Services -->
