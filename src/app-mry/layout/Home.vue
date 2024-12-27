@@ -1,451 +1,84 @@
 <template>
-    <div id="page-top">
-        <!-- Header -->
-        <Header></Header>
+    <div class="min-h-screen bg-white">
+        <!-- Navigation -->
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <span class="text-4xl font-bold text-[#4B0082]">mehery</span>
+                    <div class="flex space-x-1 -mt-4 ml-1">
+                        <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                        <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                        <div class="w-2 h-2 rounded-full bg-red-400"></div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-800 hover:text-gray-600">Solutions</a>
+                    <a href="#" class="text-gray-800 hover:text-gray-600">Features</a>
+                    <a href="#" class="text-gray-800 hover:text-gray-600">Pricing</a>
+                    <a href="#" class="text-gray-800 hover:text-gray-600">FAQs</a>
+                </div>
+            </div>
+        </nav>
 
-        <!-- Sections -->
-        <div class="page-section-wrapper">
-            <!-- Masthead -->
-            <header class="masthead">
-                <div class="container">
-                <div class="masthead-wrapper">
-                    <div>
-                        <div class="masthead-content">
-                        <div class="masthead-heading text-uppercase">
-                            Engage Customers Seamlessly with Unified Messaging
-                        </div>
-                        
-                    <div class="masthead-image">
-                    <img src="../../@assets/images/header.svg" alt="SVG Image" class="masthead-svg">
-                    </div>
-                    </div>
-                    <div class="masthead-description">
-                        Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
-                    </div>
-                    <a class="btn btn-primary btn-xl text-uppercase" href="#trial">Free Trial</a>
-                    </div>
-                    
-                    </div>
-                </div>
-            </header>
-            <!-- Services -->
-            <section class="page-section" id="services">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Services</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3">E-Commerce</h4>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                                quo inventore harum ex magni, dicta impedit.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3">Responsive Design</h4>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                                quo inventore harum ex magni, dicta impedit.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3">Web Security</h4>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                                quo inventore harum ex magni, dicta impedit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Portfolio Grid -->
-            <SectionPortfolio></SectionPortfolio>
-            <!-- About -->
-            <section class="page-section" id="about">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">About</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/1.jpeg" alt="..." />
+        <!-- Hero Section -->
+        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
+            <!-- Left Column -->
+            <div class="md:w-1/2 lg:pr-20">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8">
+                    Engage Customers Seamlessly with Unified Messaging
+                </h1>
+                <p class="text-gray-600 text-lg mb-8">
+                    Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As
+                    a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
+                </p>
+                <button
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-lg font-medium transition-colors duration-300"
+                >
+                    Free Trial
+                </button>
+            </div>
+
+            <!-- Right Column -->
+            <div class="md:w-1/2 mt-12 md:mt-0 relative">
+                <div class="relative">
+                    <!-- Megaphone Illustration -->
+                    <div class="relative w-full h-[400px]">
+                        <!-- Social Icons -->
+                        <div class="absolute top-0 right-0 flex space-x-4">
+                            <div class="bg-black rounded-full p-3">
+                                <div class="w-6 h-6 text-white">❤️</div>
                             </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/2.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/3.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2015</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/4.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2020</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>
-                                    Be Part
-                                    <br />
-                                    Of Our
-                                    <br />
-                                    Story!
-                                </h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Team -->
-            <section class="page-section bg-light" id="team">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="@assets/images/team/1.jpeg" alt="..." />
-                                <h4>Parveen Anand</h4>
-                                <p class="text-muted">Lead Designer</p>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Parveen Anand Twitter Profile"
-                                    ><i class="fab fa-twitter"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Parveen Anand Facebook Profile"
-                                    ><i class="fab fa-facebook-f"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Parveen Anand LinkedIn Profile"
-                                    ><i class="fab fa-linkedin-in"></i
-                                ></a>
+                            <div class="bg-[#F4B860] rounded-full p-3">
+                                <div class="w-6 h-6">↗️</div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="@assets/images/team/2.jpeg" alt="..." />
-                                <h4>Diana Petersen</h4>
-                                <p class="text-muted">Lead Marketer</p>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Diana Petersen Twitter Profile"
-                                    ><i class="fab fa-twitter"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Diana Petersen Facebook Profile"
-                                    ><i class="fab fa-facebook-f"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Diana Petersen LinkedIn Profile"
-                                    ><i class="fab fa-linkedin-in"></i
-                                ></a>
-                            </div>
+
+                        <!-- Play Button -->
+                        <div class="absolute right-20 top-1/2 bg-black rounded-full p-3">
+                            <div class="w-6 h-6 text-white">▶️</div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="@assets/images/team/3.jpeg" alt="..." />
-                                <h4>Larry Parker</h4>
-                                <p class="text-muted">Lead Developer</p>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Larry Parker Twitter Profile"
-                                    ><i class="fab fa-twitter"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Larry Parker Facebook Profile"
-                                    ><i class="fab fa-facebook-f"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Larry Parker LinkedIn Profile"
-                                    ><i class="fab fa-linkedin-in"></i
-                                ></a>
-                            </div>
+
+                        <!-- Location Icon -->
+                        <div class="absolute bottom-0 right-10 bg-[#F4B860] rounded-full p-3">
+                            <div class="w-6 h-6">📍</div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto text-center">
-                            <p class="large text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
-                                veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Clients -->
-            <div class="py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/microsoft.svg"
-                                    alt="..."
-                                    aria-label="Microsoft Logo"
-                            /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/google.svg"
-                                    alt="..."
-                                    aria-label="Google Logo"
-                            /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/facebook.svg"
-                                    alt="..."
-                                    aria-label="Facebook Logo"
-                            /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/ibm.svg"
-                                    alt="..."
-                                    aria-label="IBM Logo"
-                            /></a>
-                        </div>
+
+                        <!-- Decorative Elements -->
+                        <div class="absolute top-20 left-20 w-8 h-8 bg-[#5DADE2] rounded-full"></div>
+                        <div class="absolute bottom-20 left-40 w-8 h-8 bg-[#F4B860] rounded-full"></div>
+                        <div class="absolute top-40 right-20 w-8 h-8 bg-red-500 transform rotate-45"></div>
+                        <div class="absolute bottom-10 left-10 w-8 h-8 bg-blue-400 transform rotate-45"></div>
                     </div>
                 </div>
             </div>
-            <!-- Contact -->
-            <section class="page-section" id="contact">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Contact Us</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <div class="row align-items-stretch mb-5">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <!-- Name input-->
-                                    <input
-                                        class="form-control"
-                                        id="name"
-                                        type="text"
-                                        placeholder="Your Name *"
-                                        data-sb-validations="required"
-                                    />
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">
-                                        A name is required.
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <!-- Email address input-->
-                                    <input
-                                        class="form-control"
-                                        id="email"
-                                        type="email"
-                                        placeholder="Your Email *"
-                                        data-sb-validations="required,email"
-                                    />
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">
-                                        An email is required.
-                                    </div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">
-                                        Email is not valid.
-                                    </div>
-                                </div>
-                                <div class="form-group mb-md-0">
-                                    <!-- Phone number input-->
-                                    <input
-                                        class="form-control"
-                                        id="phone"
-                                        type="tel"
-                                        placeholder="Your Phone *"
-                                        data-sb-validations="required"
-                                    />
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">
-                                        A phone number is required.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group form-group-textarea mb-md-0">
-                                    <!-- Message input-->
-                                    <textarea
-                                        class="form-control"
-                                        id="message"
-                                        placeholder="Your Message *"
-                                        data-sb-validations="required"
-                                    ></textarea>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">
-                                        A message is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center text-white mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms"
-                                    >https://startbootstrap.com/solution/contact-forms</a
-                                >
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="text-center">
-                            <button
-                                class="btn btn-primary btn-xl text-uppercase disabled"
-                                id="submitButton"
-                                type="submit"
-                            >
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <!-- Example -->
-            <!-- <ArticleList :contentType="'banner'" v-slot="{ loading, results }">
-                <div v-if="loading" class="skeleton skeleton-banner"></div>
-                <div v-else>
-                    <Banner :banner="results" />
-                </div>
-            </ArticleList> -->
         </div>
-
-        <!-- Footer-->
-        <Footer></Footer>
     </div>
 </template>
 
-<script>
-console.log("AppLayout loaded");
+<script setup>
 
-import { defineComponent } from "vue";
-import SectionPortfolio from "@src/app/modules/SectionPortfolio.vue";
-import Header from "@layout/Header.vue";
-import Footer from "@layout/Footer.vue";
-import ArticleList from "@components/ArticleList.vue";
-
-export default defineComponent({
-    name: "AppLayout",
-    components: {
-        Header,
-        SectionPortfolio,
-        Footer,
-        ArticleList
-    }
-});
 </script>
 
-<style lang="css"></style>
+<style scoped>
+/* Add any additional custom styles here if needed */
+</style>

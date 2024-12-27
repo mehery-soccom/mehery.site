@@ -19,10 +19,8 @@ module.exports = {
 
     resolve: {
         alias: {
-            vue: "@vue/compat", // compatiibilty for vue 2
-            // vue$: "vue/dist/vue.esm.js", // If using the runtime only build
-            vue$: "vue/dist/vue.runtime.esm.js", // If using full build of Vue (runtime + compiler)
-
+            vue: "@vue/compat",
+            vue$: "vue/dist/vue.runtime.esm.js",
             "@src": path.resolve(__base, "src"),
             "@assets": path.resolve(__base, "src/@assets"),
             "@components": path.resolve(__base, "src/@components"),
@@ -66,27 +64,35 @@ module.exports = {
                     }
                 }
             },
-
+            
+{
+  test: /\.vue$/,
+  resourceQuery: /type=style.*lang=scss/,
+  use: ["vue-style-loader", "css-loader", "sass-loader"]
+},
             {
                 test: /\.js$/,
                 loader: "babel-loader"
             },
-
-            // SASS and CSS files from Vue Single File Components:
+            
             {
-                test: /\.vue\.(s?[ac]ss)$/,
+                test: /\.vue\.(s[ac]ss)$/,
                 use: ["vue-style-loader", "css-loader", "sass-loader"]
             },
-
-            // SASS and CSS files (standalone):
+            
+            
             {
-                test: /(?<!\.vue)\.(s?[ac]ss)$/,
+                test: /(?<!\.vue)\.(s[ac]ss)$/,
+                exclude: /node_modules/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
-
             {
                 test: /\.(woff|woff2|eot|ttf|svg|jpg|jpeg|gif|png|ico)$/,
                 type: "asset/resource"
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
             }
         ]
     }
