@@ -1,7 +1,7 @@
 <template>
     <nav :class="'navbar navbar-expand-lg navbar-dark fixed-top ' + containerClass" id="mainNav" v-b-scrollspy="96">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="@assets/images/navbar-logo.svg" alt="..." /></a>
+            <a class="navbar-brand" href="#page-top"><img src="@assets/images/logo.svg"  alt="..." /></a>
 
             <b-navbar-toggle target="navbarResponsive">Menu <i class="fas fa-bars ms-1"></i></b-navbar-toggle>
             <b-collapse id="navbarResponsive" is-nav>
