@@ -87,6 +87,11 @@
         <Features />
       </div>
     </div>
+    <div class="">
+      <div class="container mx-auto px-6">
+        <WhatsApp />
+      </div>
+    </div>
       
   </div>
 </template>
@@ -95,7 +100,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import Service from './Service.vue';
 import Features from './Features.vue';
-
+import WhatsApp from './Whatsapp.vue';
 const isScrolled = ref(false);
 
 const handleScroll = () => {
