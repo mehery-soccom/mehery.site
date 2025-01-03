@@ -196,7 +196,7 @@
             <CheckCircleIcon class="w-6 h-6 text-gray-900 mt-1 flex-shrink-0" />
             <div>
               <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Segmented Channel-Specific Daily Analytics</span>
-              <p class="mt-2 text-gray-600">  Drill down into the number of inbound and outbound messages and conversations handled by each channel, broken down by hour and day.  </p>
+              <p class="mt-2 text-gray-600">  Drill down into the number of inbound and outbound messages and conversations handled by each channel, broken down by hour and day.</p>
             </div>
           </div>
 
