@@ -78,65 +78,7 @@
     </transition>
   </nav>
   
-  <div class="min-h-screen px-4 md:px-20 bg-white">
-    <!-- Existing Hero Section -->
-    <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 lg:pr-20">
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8">
-          Engage Customers Seamlessly with Unified Messaging
-        </h1>
-        <p class="text-gray-600 text-lg mb-8">
-          Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As
-          a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
-        </p>
-        <button class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-medium transition-colors duration-300">
-          Free Trial
-        </button>
-      </div>
-      <div class="md:w-1/2 mt-12 md:mt-0 relative">
-        <div class="relative">
-          <div class="relative w-full h-[400px]">
-            <div class="absolute top-0 right-0 flex space-x-4">
-              <img src="../../@assets/images/header.svg" alt="Header Image" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- New Features Section -->
-    <div class="scroll-mt-[60px]" id="solutions">
-      <div class="container mx-auto px-6">
-        <Service />
-      </div>
-    </div>
-    <div class="scroll-mt-[60px]" id="features">
-      <div class="container mx-auto px-6">
-        <Features />
-      </div>
-    </div>
-    <div class="scroll-mt-[60px]" id="WhatsApp">
-      <div class="container mx-auto px-6">
-        <WhatsApp />
-      </div>
-    </div>
-    <div class="scroll-mt-[60px]" id="pricing">
-      <div class="container mx-auto px-6">
-        <Pricing />
-      </div>
-    </div>
-    <div class="scroll-mt-[60px]" id="faqs">
-      <div class="container mx-auto px-6">
-        <FAQ />
-      </div>
-    </div>
-  </div>
-
-  <div class="scroll-mt-[60px]" id="">
-    <div class="">
-      <Footer />
-    </div>
-  </div>
+  <!-- Rest of the template -->
 </template>
 
 <script setup>
