@@ -77,8 +77,8 @@
       </div>
     </transition>
   </nav>
-  <div class="min-h-screen px-20 bg-white">
-
+  
+  <div class="min-h-screen px-4 md:px-20 bg-white">
     <!-- Existing Hero Section -->
     <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 lg:pr-20">
@@ -130,12 +130,12 @@
         <FAQ />
       </div>
     </div>
-    
   </div>
+
   <div class="scroll-mt-[60px]" id="">
-      <div class="">
-        <Footer />
-      </div>
+    <div class="">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -149,6 +149,7 @@ import FAQ from './FAQ.vue';
 import Footer from './Footer.vue';
 
 const isScrolled = ref(false);
+const mobileMenuOpen = ref(false); 
 
 const navItems = [
   { id: 'solutions', label: 'Solutions' },
