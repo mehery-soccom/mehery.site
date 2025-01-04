@@ -1,13 +1,13 @@
 <template>
-  <footer class="bg-[#1C1C1F] text-white py-16">
-    <div class="container px-4 md:px-12 mx-auto">
+  <footer class="bg-[#1C1C1F] text-white px-12 py-16">
+    
       <!-- Top Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <!-- Left Side -->
         <div class="space-y-8">
           <!-- Logo -->
           <div class="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-300">
-            <img src="../../@assets/images/logo.svg" alt="Mehery Logo" class="h-20" />
+            <img src="../../@assets/images/logo.svg" alt="Mehery Logo" class="h-30" />
           </div>
           
           <!-- Navigation -->
@@ -91,7 +91,6 @@
           </a>
         </div>
       </div>
-    </div>
   </footer>
 </template>
 
