@@ -92,6 +92,11 @@
         <WhatsApp />
       </div>
     </div>
+    <div class="">
+      <div class="container mx-auto px-6">
+        <Pricing />
+      </div>
+    </div>
       
   </div>
 </template>
@@ -101,6 +106,8 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import Service from './Service.vue';
 import Features from './Features.vue';
 import WhatsApp from './Whatsapp.vue';
+import Pricing from './Pricing.vue';
+
 const isScrolled = ref(false);
 
 const handleScroll = () => {
