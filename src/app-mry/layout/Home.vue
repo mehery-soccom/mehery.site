@@ -1,55 +1,83 @@
 <template>
-  <div class="min-h-screen px-20 bg-white">
-    <!-- Existing Navigation -->
-    <nav
-      :class="{
-        'bg-white shadow-md py-4': isScrolled,
-        'py-4': !isScrolled
-      }"
-      class="container  transition-all duration-300 sticky top-0 z-50"
+  <nav
+    :class="{
+      'bg-white/90 shadow-sm py-2': isScrolled,
+      'py-4': !isScrolled
+    }"
+    class="container transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
+  >
+    <div class="flex items-center justify-between px-4">
+      <!-- Logo Section -->
+      <div class="flex items-center">
+        <img
+          class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
+          src="../../@assets/images/logo.svg"
+          alt="Logo"
+        />
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-6">
+        <template v-for="item in navItems" :key="item.id">
+          <a
+            @click="scrollToSection(item.id)"
+            class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-200 relative group"
+          >
+            {{ item.label }}
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+        </template>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button 
+          @click="toggleMobileMenu" 
+          class="text-gray-700 hover:text-gray-900 focus:outline-none p-1.5 rounded-lg transition-colors duration-200"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <transition
+      enter-active-class="transition duration-150 ease-out"
+      enter-from-class="transform -translate-y-1 opacity-0"
+      enter-to-class="transform translate-y-0 opacity-100"
+      leave-active-class="transition duration-150 ease-in"
+      leave-from-class="transform translate-y-0 opacity-100"
+      leave-to-class="transform -translate-y-1 opacity-0"
     >
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <img
-            class="w-40 sm:w-48 md:w-52"
-            src="../../@assets/images/logo.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#" class="text-gray-800 hover:text-gray-600">Solutions</a>
-          <a href="#" class="text-gray-800 hover:text-gray-600">Features</a>
-          <a href="#" class="text-gray-800 hover:text-gray-600">Pricing</a>
-          <a href="#" class="text-gray-800 hover:text-gray-600">FAQs</a>
-        </div>
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button @click="toggleMobileMenu" class="text-gray-800 hover:text-gray-600 focus:outline-none">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
+      <div 
+        v-if="mobileMenuOpen" 
+        class="md:hidden mt-2 space-y-1 px-4 py-2 bg-white/95 rounded-md shadow-sm"
+      >
+        <template v-for="item in navItems" :key="item.id">
+          <a
+            @click="scrollToSection(item.id)"
+            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-200"
+          >
+            {{ item.label }}
+          </a>
+        </template>
       </div>
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden mt-4 space-y-2">
-        <a href="#" class="block text-gray-800 hover:text-gray-600">Solutions</a>
-        <a href="#" class="block text-gray-800 hover:text-gray-600">Features</a>
-        <a href="#" class="block text-gray-800 hover:text-gray-600">Pricing</a>
-        <a href="#" class="block text-gray-800 hover:text-gray-600">FAQs</a>
-      </div>
-    </nav>
+    </transition>
+  </nav>
+  <div class="min-h-screen px-20 bg-white">
 
     <!-- Existing Hero Section -->
     <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
@@ -77,32 +105,37 @@
     </div>
 
     <!-- New Features Section -->
-    <div class="">
+    <div class="scroll-mt-[60px]" id="solutions">
       <div class="container mx-auto px-6">
         <Service />
       </div>
     </div>
-    <div class="">
+    <div class="scroll-mt-[60px]" id="features">
       <div class="container mx-auto px-6">
         <Features />
       </div>
     </div>
-    <div class="">
+    <div class="scroll-mt-[60px]" id="WhatsApp">
       <div class="container mx-auto px-6">
         <WhatsApp />
       </div>
     </div>
-    <div class="">
+    <div class="scroll-mt-[60px]" id="pricing">
       <div class="container mx-auto px-6">
         <Pricing />
       </div>
     </div>
-    <div class="">
+    <div class="scroll-mt-[60px]" id="faqs">
       <div class="container mx-auto px-6">
         <FAQ />
       </div>
     </div>
-      
+    
+  </div>
+  <div class="scroll-mt-[60px]" id="">
+      <div class="">
+        <Footer />
+      </div>
   </div>
 </template>
 
@@ -113,19 +146,47 @@ import Features from './Features.vue';
 import WhatsApp from './Whatsapp.vue';
 import Pricing from './Pricing.vue';
 import FAQ from './FAQ.vue';
+import Footer from './Footer.vue';
+
 const isScrolled = ref(false);
 
+const navItems = [
+  { id: 'solutions', label: 'Solutions' },
+  { id: 'features', label: 'Features' },
+  { id: 'pricing', label: 'Pricing' },
+  { id: 'faqs', label: 'FAQs' }
+];
+
+const scrollToSection = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+    mobileMenuOpen.value = false
+  }
+}
+
+const scrollPadding = ref(false)
+
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50;
-};
+  const navbarHeight = 60;
+  isScrolled.value = window.scrollY > -40
+  scrollPadding.value = window.scrollY > navbarHeight;
+}
+
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
+  window.addEventListener('scroll', handleScroll)
+})
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped>
