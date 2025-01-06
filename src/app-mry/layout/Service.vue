@@ -15,7 +15,9 @@
             <h2 class="text-2xl font-bold mb-4">Management</h2>
           <img src="../../@assets/images/tokyo-magnifier-web-search-with-elements 2.svg?height=50&width=50" alt="" class="absolute right-0 top-0 size-44" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-2">
+        <button 
+        @click="handleCustomer"
+        class="inline-flex items-center text-black hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon.svg" class="w-10 h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -29,7 +31,7 @@
             <h2 class="text-2xl font-bold">Management</h2>
           <img src="../../@assets/images/tokyo-selecting-a-value-in-the-browser-window 1.svg?height=120&width=120" alt="" class="absolute size-48 right-0 top-0" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-2">
+        <button @click="handleLead" class="inline-flex items-center text-black hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon.svg" class="w-10 h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -43,7 +45,7 @@
             <h2 class="text-2xl font-bold">Management</h2>
           <img src="../../@assets/images/tokyo-browser-window-with-emoticon-likes-and-stars-around 2.svg?height=120&width=120" alt="" class="absolute right-0 top-0 size-44" />
         </div>
-        <button class="inline-flex items-center text-white hover:opacity-75 gap-2">
+        <button @click="handleRelation" class="inline-flex items-center text-white hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon(1).svg" class="w-10  h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -57,7 +59,7 @@
             <h2 class="text-2xl font-bold">Management</h2>
           <img src="../../@assets//images/tokyo-sending-messages-from-one-place-to-another 1.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-2">
+        <button @click="handleConvo" class="inline-flex items-center text-black hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon.svg" class="w-10 h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -71,7 +73,7 @@
             <h2 class="text-2xl font-bold">Services</h2>
           <img src="../../@assets/images/tokyo-many-browser-windows-with-different-information 1.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-2">
+        <button @click="handleApi" class="inline-flex items-center text-black hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon.svg" class="w-10 h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -85,7 +87,7 @@
             <h2 class="text-2xl font-bold">Management</h2>
           <img src="../../@assets/images/tokyo-volumetric-analytics-of-different-types-in-web-browsers 2.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
         </div>
-        <button class="inline-flex items-center text-white hover:opacity-75 gap-2">
+        <button @click="handleCampaign" class="inline-flex items-center text-white hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon(1).svg" class="w-10  h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -100,7 +102,7 @@
         <p class="mb-6 text-gray-800">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
-        <button class="bg-[#1D1D26] text-white px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
+        <button @click="handleBot" class="bg-[#1D1D26] text-white px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
           Get your free trial
         </button>
       </div>
@@ -115,6 +117,37 @@
 
 <script setup>
 import { ArrowRightIcon } from 'vue-feather-icons';
+import Customer from './Customer.vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const handleCustomer = () => {
+  router.push('/customer');
+}
+
+const handleLead = () => {
+  router.push('/lead');
+}
+
+const handleRelation = () => {
+  router.push('/relation');
+}
+
+const handleConvo = () => {
+  router.push('/conversation');
+}
+
+const handleApi = () => {
+  router.push('/api');
+}
+
+const handleCampaign = () => {
+  router.push('/campaign');
+}
+
+const handleBot = () => {
+  router.push('/bot');
+}
 </script>
 
 <style scoped>

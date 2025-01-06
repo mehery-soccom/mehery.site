@@ -58,12 +58,6 @@ const features = [
     description: 'One-tap autofill authentication templates allow you to send a one-time password or code along with an one-tap autofill button to your users. When a WhatsApp user taps the autofill button, the WhatsApp client triggers an activity',
     dotColor: 'bg-red-500',
     darkButton: true
-  },
-  {
-    title: 'WhatsApp - Insurance Quote',
-    description: 'Flows allow you a variety of data elements for capturing responses - email id, dates, numbers, text, radio buttons, check boxes, drop down and opt-in.',
-    dotColor: 'bg-orange-500',
-    darkButton: true
   }
 ]
 </script>
