@@ -191,5 +191,5 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Add any additional custom styles here if needed */
+/* Add any additional custom styles here if needed and if not delete it */
 </style>
