@@ -47,12 +47,16 @@
         </button>
       </div>
 
-      <div class="bg-gray-100 rounded-lg aspect-video w-full"></div>
+      <div class="rounded-lg ">
+        <img src="../../@assets/images/feature1.png">
+      </div>
     </div>
 
     <!-- BOT Builder Section -->
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="bg-gray-100 rounded-lg aspect-video w-full lg:order-1 order-2"></div>
+    <div class="grid lg:grid-cols-2 gap-12 mb-24 items-center">
+      <div class=" mr-20 rounded-lg ">
+        <img src="../../@assets/images/feature2.png">
+      </div>
 
       <div class="space-y-8 lg:order-2 order-1">
         <div>
@@ -90,7 +94,7 @@
 
         <button class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-6 py-2 rounded-md font-medium transition-colors">
           Learn More
-        </button>
+        </button> 
       </div>
     </div>
     <!-- Marketing Campaign Section -->
@@ -134,12 +138,16 @@
         </button>
       </div>
 
-      <div class="bg-gray-100 rounded-lg aspect-video w-full"></div>
+      <div class=" rounded-lg ">
+        <img src="../../@assets/images/feature3.png">
+      </div>
     </div>
 
-    <!-- BOT Builder Section -->
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="bg-gray-100 rounded-lg aspect-video w-full lg:order-1 order-2"></div>
+    <!-- Customer Cohort Section -->
+    <div class="grid lg:grid-cols-2 gap-12 mb-24 items-center">
+      <div class=" rounded-lg ">
+        <img src="../../@assets/images/feature4.png">
+      </div>
 
       <div class="space-y-8 lg:order-2 order-1">
         <div>
@@ -174,7 +182,7 @@
         </button>
       </div>
     </div>
-    <div class="grid lg:grid-cols-2 gap-12 mb-24 items-center">
+    <div class="grid lg:grid-cols-2 gap-12 mb-16 items-center">
       <div class="space-y-8">
         <div>
           <h3 class="text-2xl font-bold mb-4">Analytics</h3>
@@ -221,7 +229,9 @@
         </button>
       </div>
 
-      <div class="bg-gray-100 rounded-lg aspect-video w-full"></div>
+      <div class="rounded-lg ">
+        <img src="../../@assets/images/feature5.png">
+      </div>
     </div>
   </div>
 </template>
