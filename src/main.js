@@ -17,7 +17,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import WOW from "wowjs";
 import "animate.css";
 
-import "@assets/base.css";
+import "../src/@assets/base.css";
 import "@assets/base.scss";
 
 import { createHead } from "@vueuse/head";

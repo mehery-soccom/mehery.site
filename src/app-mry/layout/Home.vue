@@ -1,436 +1,222 @@
 <template>
-    <div id="page-top">
-        <!-- Header -->
-        <Header></Header>
+    <nav
+        :class="{
+            'bg-white/90 shadow-sm py-2': isScrolled,
+            'py-4': !isScrolled
+        }"
+        class="w-full transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
+    >
+        <div class="flex items-center justify-between px-4">
+            <div class="flex items-center">
+                <img
+                    class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
+                    src="../../@assets/images/logo.svg"
+                    alt="Logo"
+                />
+            </div>
 
-        <!-- Sections -->
-        <div class="page-section-wrapper">
-            <!-- Masthead -->
-            <header class="masthead">
-                <div class="container">
-                    <div class="masthead-subheading">Welcome To Our Studio!</div>
-                    <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                    <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-                </div>
-            </header>
-            <!-- Services -->
-            <section class="page-section" id="services">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Services</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3">E-Commerce</h4>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                                quo inventore harum ex magni, dicta impedit.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3">Responsive Design</h4>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                                quo inventore harum ex magni, dicta impedit.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3">Web Security</h4>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                                quo inventore harum ex magni, dicta impedit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Portfolio Grid -->
-            <SectionPortfolio></SectionPortfolio>
-            <!-- About -->
-            <section class="page-section" id="about">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">About</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/1.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/2.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/3.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2015</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="@assets/images/about/4.jpeg" alt="..." />
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2020</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
-                                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>
-                                    Be Part
-                                    <br />
-                                    Of Our
-                                    <br />
-                                    Story!
-                                </h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Team -->
-            <section class="page-section bg-light" id="team">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="@assets/images/team/1.jpeg" alt="..." />
-                                <h4>Parveen Anand</h4>
-                                <p class="text-muted">Lead Designer</p>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Parveen Anand Twitter Profile"
-                                    ><i class="fab fa-twitter"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Parveen Anand Facebook Profile"
-                                    ><i class="fab fa-facebook-f"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Parveen Anand LinkedIn Profile"
-                                    ><i class="fab fa-linkedin-in"></i
-                                ></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="@assets/images/team/2.jpeg" alt="..." />
-                                <h4>Diana Petersen</h4>
-                                <p class="text-muted">Lead Marketer</p>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Diana Petersen Twitter Profile"
-                                    ><i class="fab fa-twitter"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Diana Petersen Facebook Profile"
-                                    ><i class="fab fa-facebook-f"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Diana Petersen LinkedIn Profile"
-                                    ><i class="fab fa-linkedin-in"></i
-                                ></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="@assets/images/team/3.jpeg" alt="..." />
-                                <h4>Larry Parker</h4>
-                                <p class="text-muted">Lead Developer</p>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Larry Parker Twitter Profile"
-                                    ><i class="fab fa-twitter"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Larry Parker Facebook Profile"
-                                    ><i class="fab fa-facebook-f"></i
-                                ></a>
-                                <a
-                                    class="btn btn-dark btn-social mx-2"
-                                    href="#!"
-                                    aria-label="Larry Parker LinkedIn Profile"
-                                    ><i class="fab fa-linkedin-in"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto text-center">
-                            <p class="large text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
-                                veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Clients -->
-            <div class="py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/microsoft.svg"
-                                    alt="..."
-                                    aria-label="Microsoft Logo"
-                            /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/google.svg"
-                                    alt="..."
-                                    aria-label="Google Logo"
-                            /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/facebook.svg"
-                                    alt="..."
-                                    aria-label="Facebook Logo"
-                            /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"
-                                ><img
-                                    class="img-fluid img-brand d-block mx-auto"
-                                    src="@assets/images/logos/ibm.svg"
-                                    alt="..."
-                                    aria-label="IBM Logo"
-                            /></a>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6">
+                <template v-for="item in navItems" :key="item.id">
+                    <a
+                        @click="scrollToSection(item.id)"
+                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
+                    >
+                        {{ item.label }}
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"
+                        ></span>
+                    </a>
+                </template>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button
+                    @click="toggleMobileMenu"
+                    class="text-gray-700 hover:text-gray-900 focus:outline-none p-1.5 rounded-lg transition-colors duration-300"
+                >
+                    <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <transition
+            enter-active-class="transition ease-out duration-300"
+            enter-from-class="transform -translate-y-2 opacity-0"
+            enter-to-class="transform translate-y-0 opacity-100"
+            leave-active-class="transition ease-in duration-200"
+            leave-from-class="transform translate-y-0 opacity-100"
+            leave-to-class="transform -translate-y-2 opacity-0"
+        >
+            <div
+                v-if="mobileMenuOpen"
+                class="md:hidden mt-2 space-y-1 px-4 py-2 bg-white/95 rounded-md shadow-sm w-full"
+            >
+                <template v-for="item in navItems" :key="item.id">
+                    <a
+                        @click="scrollToSection(item.id)"
+                        class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                    >
+                        {{ item.label }}
+                    </a>
+                </template>
+            </div>
+        </transition>
+    </nav>
+
+    <div class="min-h-screen px-4 md:px-20 bg-white">
+        <!-- Existing Hero Section -->
+        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 lg:pr-20">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8">
+                    Engage Customers Seamlessly with Unified Messaging
+                </h1>
+                <p class="text-gray-600 text-lg mb-8">
+                    Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As
+                    a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
+                </p>
+                <button
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-medium transition-colors duration-300"
+                >
+                    Free Trial
+                </button>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 relative">
+                <div class="relative">
+                    <div class="relative w-full h-[400px]">
+                        <div class="absolute top-0 right-0 flex space-x-4">
+                            <img src="../../@assets/images/header.svg" alt="Header Image" />
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Contact -->
-            <section class="page-section" id="contact">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Contact Us</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <div class="row align-items-stretch mb-5">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <!-- Name input-->
-                                    <input
-                                        class="form-control"
-                                        id="name"
-                                        type="text"
-                                        placeholder="Your Name *"
-                                        data-sb-validations="required"
-                                    />
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">
-                                        A name is required.
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <!-- Email address input-->
-                                    <input
-                                        class="form-control"
-                                        id="email"
-                                        type="email"
-                                        placeholder="Your Email *"
-                                        data-sb-validations="required,email"
-                                    />
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">
-                                        An email is required.
-                                    </div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">
-                                        Email is not valid.
-                                    </div>
-                                </div>
-                                <div class="form-group mb-md-0">
-                                    <!-- Phone number input-->
-                                    <input
-                                        class="form-control"
-                                        id="phone"
-                                        type="tel"
-                                        placeholder="Your Phone *"
-                                        data-sb-validations="required"
-                                    />
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">
-                                        A phone number is required.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group form-group-textarea mb-md-0">
-                                    <!-- Message input-->
-                                    <textarea
-                                        class="form-control"
-                                        id="message"
-                                        placeholder="Your Message *"
-                                        data-sb-validations="required"
-                                    ></textarea>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">
-                                        A message is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center text-white mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms"
-                                    >https://startbootstrap.com/solution/contact-forms</a
-                                >
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="text-center">
-                            <button
-                                class="btn btn-primary btn-xl text-uppercase disabled"
-                                id="submitButton"
-                                type="submit"
-                            >
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <!-- Example -->
-            <!-- <ArticleList :contentType="'banner'" v-slot="{ loading, results }">
-                <div v-if="loading" class="skeleton skeleton-banner"></div>
-                <div v-else>
-                    <Banner :banner="results" />
-                </div>
-            </ArticleList> -->
         </div>
 
-        <!-- Footer-->
-        <Footer></Footer>
+        <!-- New Features Section -->
+        <div class="scroll-mt-[60px]" id="solutions">
+            <div class="container mx-auto px-6">
+                <Service />
+            </div>
+        </div>
+        <div class="scroll-mt-[60px]" id="features">
+            <div class="container mx-auto px-6">
+                <Features />
+            </div>
+        </div>
+        <div class="scroll-mt-[60px]" id="WhatsApp">
+            <div class="container mx-auto px-6">
+                <WhatsApp />
+            </div>
+        </div>
+        <div class="scroll-mt-[60px]" id="pricing">
+            <div class="container mx-auto px-6">
+                <Pricing />
+            </div>
+        </div>
+        <div class="scroll-mt-[60px]" id="faqs">
+            <div class="container mx-auto px-6">
+                <FAQ />
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-mt-[60px]" id="">
+        <div class="">
+            <Footer />
+        </div>
     </div>
 </template>
 
-<script>
-console.log("AppLayout loaded");
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+import Service from "./Service.vue";
+import Features from "./Features.vue";
+import WhatsApp from "./Whatsapp.vue";
+import Pricing from "./Pricing.vue";
+import FAQ from "./FAQ.vue";
+import Footer from "./Footer.vue";
+import Customer from "./Customer.vue";
 
-import { defineComponent } from "vue";
-import SectionPortfolio from "@src/app/modules/SectionPortfolio.vue";
-import Header from "@layout/Header.vue";
-import Footer from "@layout/Footer.vue";
-import ArticleList from "@components/ArticleList.vue";
+const routes = {
+    "/": "home",
+    "/customer": "customer",
+    "/lead": "lead",
+    "/relation": "relation",
+    "/conversation": "conversation",
+    "/api": "api",
+    "/campaign": "campaign",
+    "/bot": "bot",
+    "/inbox": "inbox",
+    "/botbuilder": "botbuilder",
+    "/market": "market",
+    "/cohort": "cohort",
+    "/analytics": "analytics",
 
-export default defineComponent({
-    name: "AppLayout",
-    components: {
-        Header,
-        SectionPortfolio,
-        Footer,
-        ArticleList
+    "/clickConnect": "click-to-connect",
+    '/flows' : "flows",
+    "/media": "media",
+    "/singleProduct": "single-product",
+    "/authentication": "authentication",
+    
+};
+
+const isScrolled = ref(false);
+const mobileMenuOpen = ref(false);
+
+const navItems = [
+    { id: "solutions", label: "Solutions" },
+    { id: "features", label: "Features" },
+    { id: "pricing", label: "Pricing" },
+    { id: "faqs", label: "FAQs" }
+];
+
+const scrollToSection = id => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+        mobileMenuOpen.value = false;
     }
+};
+
+const scrollPadding = ref(false);
+
+const handleScroll = () => {
+    const navbarHeight = 60;
+    isScrolled.value = window.scrollY > -40;
+    scrollPadding.value = window.scrollY > navbarHeight;
+};
+
+const toggleMobileMenu = () => {
+    mobileMenuOpen.value = !mobileMenuOpen.value;
+};
+
+onMounted(() => {
+    window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
-<style lang="css"></style>
+<style scoped>
+/* Add any additional custom styles here if needed and if not delete it */
+</style>

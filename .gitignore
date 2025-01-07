@@ -7,3 +7,5 @@ node_modules
 resources/*/meta.json
 
 /package-lock.json
+
+.vscode
