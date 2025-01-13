@@ -11,8 +11,8 @@
       <!-- Customer Management -->
       <div class="rounded-3xl bg-[#FF9B2F] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
-          <h2 class="text-2xl font-bold ">Customer</h2>
-            <h2 class="text-2xl font-bold mb-4">Management</h2>
+          <h2 class="text-3xl font-bold ">Customer</h2>
+            <h2 class="text-3xl font-bold mb-4">Management</h2>
           <img src="../../@assets/images/tokyo-magnifier-web-search-with-elements 2.svg?height=50&width=50" alt="" class="absolute right-0 top-0 size-44" />
         </div>
         <button 
@@ -27,8 +27,8 @@
       <!-- Lead Management -->
       <div class="rounded-3xl bg-[#26B9B3] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
-          <h2 class="text-2xl font-bold ">Lead </h2>
-            <h2 class="text-2xl font-bold">Management</h2>
+          <h2 class="text-3xl font-bold ">Lead </h2>
+            <h2 class="text-3xl font-bold">Management</h2>
           <img src="../../@assets/images/tokyo-selecting-a-value-in-the-browser-window 1.svg?height=120&width=120" alt="" class="absolute size-48 right-0 top-0" />
         </div>
         <button @click="handleLead" class="inline-flex items-center text-black hover:opacity-75 gap-2">
@@ -41,8 +41,8 @@
       <!-- Relationship Management -->
       <div class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
-          <h2 class="text-2xl font-bold">Relationship </h2>
-            <h2 class="text-2xl font-bold">Management</h2>
+          <h2 class="text-3xl font-bold">Relationship </h2>
+            <h2 class="text-3xl font-bold">Management</h2>
           <img src="../../@assets/images/tokyo-browser-window-with-emoticon-likes-and-stars-around 2.svg?height=120&width=120" alt="" class="absolute right-0 top-0 size-44" />
         </div>
         <button @click="handleRelation" class="inline-flex items-center text-white hover:opacity-75 gap-2">
@@ -55,8 +55,8 @@
       <!-- Conversation Management -->
       <div class="rounded-3xl bg-[#FF9B2F] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
-          <h2 class="text-2xl font-bold ">Conversation </h2>
-            <h2 class="text-2xl font-bold">Management</h2>
+          <h2 class="text-3xl font-bold ">Conversation </h2>
+            <h2 class="text-3xl font-bold">Management</h2>
           <img src="../../@assets//images/tokyo-sending-messages-from-one-place-to-another 1.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
         </div>
         <button @click="handleConvo" class="inline-flex items-center text-black hover:opacity-75 gap-2">
@@ -69,8 +69,8 @@
       <!-- API Services -->
       <div class="rounded-3xl bg-[#26B9B3] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
-          <h2 class="text-2xl font-bold ">API</h2>
-            <h2 class="text-2xl font-bold">Services</h2>
+          <h2 class="text-3xl font-bold ">API</h2>
+            <h2 class="text-3xl font-bold">Services</h2>
           <img src="../../@assets/images/tokyo-many-browser-windows-with-different-information 1.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
         </div>
         <button @click="handleApi" class="inline-flex items-center text-black hover:opacity-75 gap-2">
@@ -83,8 +83,8 @@
       <!-- Campaign Management -->
       <div class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
-          <h2 class="text-2xl font-bold">Campaign</h2>
-            <h2 class="text-2xl font-bold">Management</h2>
+          <h2 class="text-3xl font-bold">Campaign</h2>
+            <h2 class="text-3xl font-bold">Management</h2>
           <img src="../../@assets/images/tokyo-volumetric-analytics-of-different-types-in-web-browsers 2.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
         </div>
         <button @click="handleCampaign" class="inline-flex items-center text-white hover:opacity-75 gap-2">
@@ -98,7 +98,7 @@
     <!-- BOTs Section -->
     <div class="rounded-3xl bg-[#FF9B2F] p-8 relative overflow-hidden border-b-4 border-[#000]">
       <div class="max-w-lg">
-        <h2 class="text-2xl font-bold mb-4">BOTs & BOT Services</h2>
+        <h2 class="text-3xl font-bold mb-4">BOTs & BOT Services</h2>
         <p class="mb-6 text-gray-800">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
