@@ -5,6 +5,9 @@
             <section id="" class="lg: mt-24">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="relative -mt-14">
+                            <img src="../../@assets/images/feature2.png" />
+                        </div>
                         <div class="space-y-6">
                             <h3
                                 class="text-6xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:-mt-20"
@@ -24,9 +27,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="relative -mt-32">
-                            <img src="../../@assets/images/feature1.png" />
-                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -41,13 +42,11 @@ import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
 
 const bulletPoints = ref([
-    "Centralized Inbox for All Channels: Communicate with customers on WhatsApp, Messenger, Instagram DM, Telegram, Email (Outlook and corporate Gmail accounts can be configured), Web Chat, and App Chat.",
-    "Predefined Message Templates: Start new conversations or continue existing ones using predefined messages according to channel-specific rules.",
-    "Prioritization: Enable team members to prioritize conversations based on time unattended or unanswered, minimizing customer wait times.",
-    "Internal Notes: Write brief notes for teammates when transferring a conversation, providing quick insights. These notes are not visible to customers.",
-    "Session Tags: Create categories and tags to define critical conversation elements, allowing users and admins to review or create cohorts for marketing analysis.",
-    "Follow-Up Reminders: Set up follow-up reminders with notes to ensure timely continuation of customer conversations",
-    "Conversation History: Access a complete audit trail of all past conversations with each customer.",
-    "Customer Profiling: Integrate with the Customer Management module to view all relevant customer data points."
+    "Intuitive BOT Flow Builder: Create bots using an extremely user-friendly, UI-based BOT flow builder.",
+    "Quick Deployment: Build and deploy bots within minutes to drive seamless customer engagement.",
+    "Event-Driven and Timed Responses: Set bots to respond to specific events and include time-delayed responses as needed.",
+    "Infrastructure for Native App Integration: Use our infrastructure to build native apps that connect to downstream applications via webhooks, enabling two-way communication and seamless BOT integration.",
+    "Template Creation and Flow Stitching: Create templates and combine them on an easy-to-use UI flow builder, providing a bird's-eye view of the customer journey.",
+    "Versatile BOT Triggers: Trigger bots based on external events, such as inbound conversations, responses to outbound campaigns, events in your transactional system, or CRM activities."
 ]);
 </script>
