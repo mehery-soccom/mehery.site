@@ -227,6 +227,7 @@
                 </div>
 
                 <button
+                    @click="handleCohort"
                     class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-6 py-2 rounded-md font-medium transition-colors"
                 >
                     Learn More
@@ -323,6 +324,10 @@ const handleBotBuilder = () => {
 
 const handleMarketing = () => {
   router.push("/marketing")
+}
+
+const handleCohort = () => {
+  router.push("/cohort")
 }
 
 const handleAnalytics = () => {
