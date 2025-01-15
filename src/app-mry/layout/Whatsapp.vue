@@ -48,40 +48,48 @@ const features = [
             "Ads that click to WhatsApp can be placed across Facebook and Instagram (News Feed, Stories, and Marketplace) and help support business objectives across lead generation, sales and marketing",
         dotColor: "bg-blue-500",
         darkButton: true,
-        route: "/Connect"
+        route: "/Connect",
+        hash: "#click-to-connect"
     },
     {
         title: "WhatsApp - Flows",
         description:
             "WhatsApp Flows is a way to build structured interactions for business messaging. With Flows, businesses can define, configure, and customize messages with rich interactions that give customers more structure in the way they communicate",
         dotColor: "bg-red-500",
-        darkButton: true
+        darkButton: true,
+        route: "/Connect",
+        hash: "#flows"
     },
     {
         title: "WhatsApp - Media Card Carousel",
         description:
             "Media card carousel templates allow you to send a single text message accompanied by a set of up to 10 media cards in a horizontally scrollable view.",
         dotColor: "bg-orange-500",
-        darkButton: true
+        darkButton: true,
+        route: "/Connect",
+        hash: "#carousel"
     },
     {
         title: "Whatsapp - Single Product Message",
         description:
             "SPM templates are marketing templates that allow you to present a single product from your ecommerce catalog, accompanied by a product image",
         dotColor: "bg-blue-500",
-        darkButton: true
+        darkButton: true,
+        route: "/Connect",
+        hash: "#single-product"
     },
     {
         title: "WhatsApp - Authentication",
         description:
             "One-tap autofill authentication templates allow you to send a one-time password or code along with an one-tap autofill button to your users. When a WhatsApp user taps the autofill button, the WhatsApp client triggers an activity",
         dotColor: "bg-red-500",
-        darkButton: true
+        darkButton: true,
+        route: "/Connect",
+        hash: "#authentication"
     }
 ];
 
 const handleCardClick = (feature) => {
-  router.push(feature.route);
+  router.push(`${feature.route}${feature.hash}`);
 };
-
 </script>
