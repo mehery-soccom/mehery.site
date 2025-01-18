@@ -80,6 +80,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
 const navItems = [
   { id: 'solutions', label: 'Solutions' },
   { id: 'features', label: 'Features' },
@@ -87,34 +89,34 @@ const navItems = [
   { id: 'faqs', label: 'FAQs' }
 ];
 
+const isScrolled = ref(false); // Declare isScrolled as a reactive variable
+const mobileMenuOpen = ref(false); // Declare mobileMenuOpen as a reactive variable
+
 const scrollToSection = (id) => {
-  const element = document.getElementById(id)
+  const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
-    })
-    mobileMenuOpen.value = false
+    });
+    mobileMenuOpen.value = false; // Update reactive variable
   }
-}
-
-const scrollPadding = ref(false)
+};
 
 const handleScroll = () => {
   const navbarHeight = 60;
-  isScrolled.value = window.scrollY > -40
-  scrollPadding.value = window.scrollY > navbarHeight;
-}
+  isScrolled.value = window.scrollY > navbarHeight; // Update reactive variable
+};
 
 const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value
-}
+  mobileMenuOpen.value = !mobileMenuOpen.value; // Toggle reactive variable
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+  window.addEventListener('scroll', handleScroll);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
