@@ -1,16 +1,19 @@
 <template>
     <nav
         :class="{
-            'bg-white/90 shadow-sm py-2': isScrolled,
-            'py-4': !isScrolled
+            'shadow-sm py-2': isScrolled,
+            'py-4 bg-gray-400': !isScrolled
         }"
         class="w-full transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
     >
         <div class="flex items-center justify-between px-4">
-            <div class="flex items-center">
+            <div
+                class="flex items-center relative"
+                
+            >
                 <img
                     class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
-                    src="../../@assets/images/logo.svg"
+                    src="../../@assets/images/logo.png"
                     alt="Logo"
                 />
             </div>
@@ -168,11 +171,10 @@ const routes = {
     "/analytics": "analytics",
 
     "/clickConnect": "click-to-connect",
-    '/flows' : "flows",
+    "/flows": "flows",
     "/media": "media",
     "/singleProduct": "single-product",
-    "/authentication": "authentication",
-    
+    "/authentication": "authentication"
 };
 
 const isScrolled = ref(false);
