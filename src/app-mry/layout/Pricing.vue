@@ -291,6 +291,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { CheckIcon as checkIcon, XIcon as xIcon } from "vue-feather-icons";
+import { detectUserCountry } from "@utils";
 
 const currency = ref("INR");
 const activeView = ref("pricing");
@@ -307,6 +308,8 @@ const periodDiscounts = {
   quarterly: 0.9,
   yearly: 0.8
 };
+
+
 
 const plans = ref([
   {
