@@ -2,7 +2,7 @@
     <nav
         :class="{
             'shadow-sm py-2': isScrolled,
-            'py-4 bg-gray-400': !isScrolled
+            'py-4': !isScrolled
         }"
         class="w-full transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
     >
@@ -13,7 +13,7 @@
             >
                 <img
                     class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
-                    src="../../@assets/images/logo.png"
+                    src="../../@assets/images/logo2.png"
                     alt="Logo"
                 />
             </div>
