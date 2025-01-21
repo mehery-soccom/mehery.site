@@ -2,7 +2,7 @@
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
         <main class="mb-10">
-            <section id="relation" class="lg:-mt-2">
+            <section id="about" class="lg:-mt-2">
                 <div class="container text-start mx-auto px-4 sm:px-6 lg:px-8">
                     <div class=" gap-12 items-center">
                         <div class="space-y-6">
