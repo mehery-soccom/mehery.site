@@ -139,6 +139,7 @@ const navLinks = [
   { type: 'route', path: '/career', label: 'Career' },
   { type: 'route', path: '/privacy', label: 'Privacy Policy' },
   { type: 'route', path: '/terms', label: 'Terms of Service' },
+  { type: 'route', path: '/partner', label: 'Partner' },
 ]
 
 const handleScroll = (id) => {

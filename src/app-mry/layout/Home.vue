@@ -17,7 +17,7 @@
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6">
-                <template v-for="item in navItems" :key="item.id">
+                <template v-for="item in navItems || navLinks" :key="item.id">
                     <a
                         @click="scrollToSection(item.id)"
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
@@ -144,6 +144,7 @@
                 <FAQ />
             </div>
         </div>
+        
     </div>
 
     <div class="scroll-mt-[60px]" id="">
@@ -162,6 +163,7 @@ import Pricing from "./Pricing.vue";
 import FAQ from "./FAQ.vue";
 import Footer from "./Footer.vue";
 import Customer from "./Customer.vue";
+import Partner from "./Partner.vue";
 
 const routes = {
     "/": "home",
@@ -192,8 +194,13 @@ const navItems = [
     { id: "solutions", label: "Solutions" },
     { id: "features", label: "Features" },
     { id: "pricing", label: "Pricing" },
-    { id: "faqs", label: "FAQs" }
+    { id: "faqs", label: "FAQs" },
+   
 ];
+
+const navLinks = [
+    { id: "docs" ,type: 'route', path: '/docs', label: 'Docs' },
+]
 
 const scrollToSection = id => {
     const element = document.getElementById(id);

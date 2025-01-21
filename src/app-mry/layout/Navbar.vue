@@ -86,7 +86,8 @@ const navItems = [
   { id: 'solutions', label: 'Solutions' },
   { id: 'features', label: 'Features' },
   { id: 'pricing', label: 'Pricing' },
-  { id: 'faqs', label: 'FAQs' }
+  { id: 'faqs', label: 'FAQs' },
+  { id: 'partner', label: 'Partner' }
 ];
 
 const isScrolled = ref(false); // Declare isScrolled as a reactive variable
