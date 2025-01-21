@@ -7,10 +7,7 @@
         class="w-full transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
     >
         <div class="flex items-center justify-between px-4">
-            <div
-                class="flex items-center relative"
-                
-            >
+            <div class="flex items-center relative">
                 <img
                     class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
                     src="../../@assets/images/logo2.png"
@@ -31,6 +28,12 @@
                         ></span>
                     </a>
                 </template>
+                <button
+                    v-if="isScrolled"
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
+                >
+                    Free Trial
+                </button>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -78,6 +81,11 @@
                         {{ item.label }}
                     </a>
                 </template>
+                <button
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
+                >
+                    Free Trial
+                </button>
             </div>
         </transition>
     </nav>
@@ -217,6 +225,8 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
 });
+
+
 </script>
 
 <style scoped>
