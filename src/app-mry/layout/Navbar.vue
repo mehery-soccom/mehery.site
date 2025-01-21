@@ -11,7 +11,7 @@
       <div class="flex items-center">
         <img
           class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
-          src="../../@assets/images/logo.svg"
+          src="../../@assets/images/logo2.png"
           alt="Logo"
         />
       </div>
@@ -86,7 +86,8 @@ const navItems = [
   { id: 'solutions', label: 'Solutions' },
   { id: 'features', label: 'Features' },
   { id: 'pricing', label: 'Pricing' },
-  { id: 'faqs', label: 'FAQs' }
+  { id: 'faqs', label: 'FAQs' },
+  { id: 'partner', label: 'Partner' }
 ];
 
 const isScrolled = ref(false); // Declare isScrolled as a reactive variable

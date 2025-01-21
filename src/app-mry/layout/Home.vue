@@ -1,23 +1,23 @@
 <template>
     <nav
         :class="{
-            'bg-white/90 shadow-sm py-2': isScrolled,
+            'shadow-sm py-2': isScrolled,
             'py-4': !isScrolled
         }"
         class="w-full transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
     >
         <div class="flex items-center justify-between px-4">
-            <div class="flex items-center">
+            <div class="flex items-center relative">
                 <img
                     class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
-                    src="../../@assets/images/logo.svg"
+                    src="../../@assets/images/logo2.png"
                     alt="Logo"
                 />
             </div>
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6">
-                <template v-for="item in navItems" :key="item.id">
+                <template v-for="item in navItems || navLinks" :key="item.id">
                     <a
                         @click="scrollToSection(item.id)"
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
@@ -28,6 +28,12 @@
                         ></span>
                     </a>
                 </template>
+                <button
+                    v-if="isScrolled"
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
+                >
+                    Free Trial
+                </button>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -75,6 +81,11 @@
                         {{ item.label }}
                     </a>
                 </template>
+                <button
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
+                >
+                    Free Trial
+                </button>
             </div>
         </transition>
     </nav>
@@ -133,6 +144,7 @@
                 <FAQ />
             </div>
         </div>
+        
     </div>
 
     <div class="scroll-mt-[60px]" id="">
@@ -151,6 +163,7 @@ import Pricing from "./Pricing.vue";
 import FAQ from "./FAQ.vue";
 import Footer from "./Footer.vue";
 import Customer from "./Customer.vue";
+import Partner from "./Partner.vue";
 
 const routes = {
     "/": "home",
@@ -168,11 +181,10 @@ const routes = {
     "/analytics": "analytics",
 
     "/clickConnect": "click-to-connect",
-    '/flows' : "flows",
+    "/flows": "flows",
     "/media": "media",
     "/singleProduct": "single-product",
-    "/authentication": "authentication",
-    
+    "/authentication": "authentication"
 };
 
 const isScrolled = ref(false);
@@ -182,8 +194,13 @@ const navItems = [
     { id: "solutions", label: "Solutions" },
     { id: "features", label: "Features" },
     { id: "pricing", label: "Pricing" },
-    { id: "faqs", label: "FAQs" }
+    { id: "faqs", label: "FAQs" },
+   
 ];
+
+const navLinks = [
+    { id: "docs" ,type: 'route', path: '/docs', label: 'Docs' },
+]
 
 const scrollToSection = id => {
     const element = document.getElementById(id);
@@ -215,6 +232,8 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
 });
+
+
 </script>
 
 <style scoped>
