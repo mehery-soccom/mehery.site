@@ -19,13 +19,15 @@
             <div class="hidden md:flex items-center space-x-6">
                 <template v-for="item in navItems || navLinks" :key="item.id">
                     <router-link
-              v-if="item.type === 'route'"
-              :to="item.path"
-              class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
-            >
-              {{ item.label }}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </router-link>
+                        v-if="item.type === 'route'"
+                        :to="item.path"
+                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
+                    >
+                        {{ item.label }}
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
+                        ></span>
+                    </router-link>
                 </template>
                 <button
                     v-if="isScrolled"
@@ -74,19 +76,20 @@
             >
                 <template v-for="item in navItems || navLinks" :key="item.id">
                     <router-link
-              v-if="item.type === 'route'"
-              :to="item.path"
-              class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
-            >
-              {{ item.label }}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </router-link>
+                        v-if="item.type === 'route'"
+                        :to="item.path"
+                        class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                    >
+                        {{ item.label }}
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
+                        ></span>
+                    </router-link>
                 </template>
                 <button
                     class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
                 >
                     Free Trial
-                    
                 </button>
             </div>
         </transition>
@@ -146,9 +149,12 @@
                 <FAQ />
             </div>
         </div>
-        
     </div>
-
+    <div>
+        <div>
+            <ConversationalBot />
+        </div>
+    </div>
     <div class="scroll-mt-[60px]" id="">
         <div class="">
             <Footer />
@@ -166,6 +172,7 @@ import FAQ from "./FAQ.vue";
 import Footer from "./Footer.vue";
 import Customer from "./Customer.vue";
 import Partner from "./Partner.vue";
+import ConversationalBot from "./Conversational.vue";
 
 const routes = {
     "/": "home",
@@ -197,14 +204,14 @@ const mobileMenuOpen = ref(false);
 //     { id: "features", label: "Features" },
 //     { id: "pricing", label: "Pricing" },
 //     { id: "faqs", label: "FAQs" },
-   
+
 // ];
 
 const navLinks = [
-    { type: 'route', path: 'about', label: 'About Us' },
-    { type: 'route', path: 'partner', label: 'Partner' },
-    { type: 'route', path: 'privacy', label: 'Privacy' },
-]
+    { type: "route", path: "about", label: "About Us" },
+    { type: "route", path: "partner", label: "Partner" },
+    { type: "route", path: "privacy", label: "Privacy" }
+];
 
 const scrollToSection = id => {
     const element = document.getElementById(id);
@@ -236,8 +243,6 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
 });
-
-
 </script>
 
 <style scoped>
