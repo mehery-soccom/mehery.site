@@ -18,15 +18,14 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6">
                 <template v-for="item in navItems || navLinks" :key="item.id">
-                    <a
-                        @click="scrollToSection(item.id)"
-                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
-                    >
-                        {{ item.label }}
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"
-                        ></span>
-                    </a>
+                    <router-link
+              v-if="item.type === 'route'"
+              :to="item.path"
+              class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
+            >
+              {{ item.label }}
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
+            </router-link>
                 </template>
                 <button
                     v-if="isScrolled"
@@ -73,18 +72,21 @@
                 v-if="mobileMenuOpen"
                 class="md:hidden mt-2 space-y-1 px-4 py-2 bg-white/95 rounded-md shadow-sm w-full"
             >
-                <template v-for="item in navItems" :key="item.id">
-                    <a
-                        @click="scrollToSection(item.id)"
-                        class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
-                    >
-                        {{ item.label }}
-                    </a>
+                <template v-for="item in navItems || navLinks" :key="item.id">
+                    <router-link
+              v-if="item.type === 'route'"
+              :to="item.path"
+              class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+            >
+              {{ item.label }}
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
+            </router-link>
                 </template>
                 <button
                     class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
                 >
                     Free Trial
+                    
                 </button>
             </div>
         </transition>
@@ -190,16 +192,18 @@ const routes = {
 const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
 
-const navItems = [
-    { id: "solutions", label: "Solutions" },
-    { id: "features", label: "Features" },
-    { id: "pricing", label: "Pricing" },
-    { id: "faqs", label: "FAQs" },
+// const navItems = [
+//     { id: "solutions", label: "Solutions" },
+//     { id: "features", label: "Features" },
+//     { id: "pricing", label: "Pricing" },
+//     { id: "faqs", label: "FAQs" },
    
-];
+// ];
 
 const navLinks = [
-    { id: "docs" ,type: 'route', path: '/docs', label: 'Docs' },
+    { type: 'route', path: 'about', label: 'About Us' },
+    { type: 'route', path: 'partner', label: 'Partner' },
+    { type: 'route', path: 'privacy', label: 'Privacy' },
 ]
 
 const scrollToSection = id => {
