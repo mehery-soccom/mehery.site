@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
-        <main class="">
+        <main class="mt-12">
             <section id="relation" class="lg:-mt-2">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">

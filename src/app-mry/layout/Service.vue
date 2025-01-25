@@ -9,11 +9,11 @@
     <!-- Services Grid -->
     <div @click="handleCustomer" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
       <!-- Customer Management -->
-      <div class="rounded-3xl bg-[#686867] text-white  p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
+      <div class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
           <h2 class="text-3xl font-bold ">Customer</h2>
             <h2 class="text-3xl font-bold mb-4">Management</h2>
-          <img src="../../@assets/images/tokyo-magnifier-web-search-with-elements 2.svg?height=50&width=50" alt="" class="absolute right-0 top-0 size-44" />
+          <img src="../../@assets/images/tokyo-many-browser-windows-with-different-information 1.svg" alt="" class="absolute right-0 top-0 size-44" />
         </div>
         <button 
         
@@ -25,7 +25,7 @@
       </div>
 
       <!-- Lead Management -->
-      <div @click="handleLead" class="rounded-3xl bg-[slateblue] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
+      <div @click="handleLead" class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
           <h2 class="text-3xl font-bold ">Lead </h2>
             <h2 class="text-3xl font-bold">Management</h2>
@@ -53,7 +53,7 @@
       </div>
 
       <!-- Conversation Management -->
-      <div @click="handleConvo"  class="rounded-3xl bg-[#FF9B2F] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
+      <div @click="handleConvo"  class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
           <h2 class="text-3xl font-bold ">Conversation </h2>
             <h2 class="text-3xl font-bold">Management</h2>
@@ -67,13 +67,13 @@
       </div>
 
       <!-- API Services -->
-      <div class="rounded-3xl bg-[#26B9B3] p-8 transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
+      <div @click="handleApi" class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
           <h2 class="text-3xl font-bold ">API</h2>
             <h2 class="text-3xl font-bold">Services</h2>
-          <img src="../../@assets/images/tokyo-many-browser-windows-with-different-information 1.svg?height=120&width=120" alt="" class="absolute right-0 top-0" />
+          <img src="../../@assets/images/tokyo-magnifier-web-search-with-elements 2.svg" alt="" class="absolute right-0 top-0" />
         </div>
-        <button @click="handleApi" class="inline-flex items-center text-black hover:opacity-75 gap-2">
+        <button  class="inline-flex items-center text-black hover:opacity-75 gap-2">
             <img src="../../@assets/images/Icon.svg" class="w-10 h-10" />
           <span classname="text-xl ">Learn more</span>
           
@@ -81,7 +81,7 @@
       </div>
 
       <!-- Campaign Management -->
-      <div @click="handleCampaign" class="rounded-3xl bg-[#af5497] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
+      <div @click="handleCampaign" class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
         <div class="h-48 relative">
           <h2 class="text-3xl font-bold">Campaign</h2>
             <h2 class="text-3xl font-bold">Management</h2>
@@ -96,13 +96,13 @@
     </div>
 
     <!-- BOTs Section -->
-    <div @click="handleBot" class="rounded-3xl bg-[#FF9B2F] p-8 relative overflow-hidden border-b-4 border-[#000]">
+    <div @click="handleBot" class="rounded-3xl bg-[#1D1D26] p-8 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000]">
       <div class="max-w-lg">
         <h2 class="text-3xl font-bold mb-4">BOTs & BOT Services</h2>
-        <p class="mb-6 text-gray-800">
+        <p class="mb-6 text-gray-100">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
-        <button  class="bg-[#1D1D26] text-white px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
+        <button  class="bg-white text-black px-6 py-3 rounded-xl hover:opacity-90 transition-opacity">
           Get your free trial
         </button>
       </div>
