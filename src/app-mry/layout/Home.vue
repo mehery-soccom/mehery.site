@@ -4,7 +4,7 @@
             'shadow-sm py-2': isScrolled,
             'py-4': !isScrolled
         }"
-        class="w-full transition-all duration-300 sticky top-0 z-50 backdrop-blur-md"
+        class="w-full transition-all duration-300 sticky top-0 z-50 bg-white"
     >
         <div class="flex items-center justify-between px-4">
             <div class="flex items-center relative">
