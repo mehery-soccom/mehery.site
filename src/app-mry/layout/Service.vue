@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto py-8">
     <!-- Header Section -->
-    <h1 class="text-4xl mr-8 mx-4 font-bold mb-3">Solutions</h1>
+    <h1 class="text-4xl  mx-4 font-bold mb-3">Solutions</h1>
     <p class="text-gray-600 mb-8 mx-4 max-w-2xl text-lg">
       At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
     </p>
