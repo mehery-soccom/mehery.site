@@ -122,6 +122,11 @@
         </section>
       </div>
     </main>
+    <div>
+        <div>
+            <ConversationalBot />
+        </div>
+    </div>
     <Footer />
   </div>
 </template>
@@ -130,6 +135,7 @@
 import { ref } from "vue";
 import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
+import ConversationalBot from "./Conversational.vue";
 
 const bulletPoints = ref([
   "Fixed preset text: <VERIFICATION_CODE> is your verification code.",
