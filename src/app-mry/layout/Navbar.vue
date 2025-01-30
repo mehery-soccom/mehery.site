@@ -6,7 +6,8 @@
         }"
         class="w-full transition-all duration-300 sticky top-0 z-50 bg-white"
     >
-        <div class="flex items-center justify-between px-4">
+        <div class="flex items-center px-4">
+            <!-- Logo -->
             <div class="flex items-center relative">
                 <img
                     class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
@@ -16,28 +17,68 @@
             </div>
 
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-6">
-                <template v-for="item in navItems || navLinks" :key="item.id">
-                    <router-link
-              v-if="item.type === 'route'"
-              :to="item.path"
-              
-              class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
-            >
-              {{ item.label }}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </router-link>
-                </template>
+            <div class="hidden md:flex items-center space-x-6 ml-4">
+                <router-link
+                    to="/about"
+                    class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
+                >
+                    About Us
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
+                    ></span>
+                </router-link>
+
+                <router-link
+                    to="/partner"
+                    class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
+                >
+                    Partner
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
+                    ></span>
+                </router-link>
+                
+                <!-- Updated Features Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
+                    >
+                        <span>Features</span>
+                        <svg
+                            class="w-4 h-4 transform transition-transform group-hover:rotate-180"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100"
+                    >
+                        <router-link
+                            v-for="(label, path) in featuresMenu"
+                            :key="path"
+                            :to="path"
+                            class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm cursor-pointer transition-colors"
+                        >
+                            {{ label }}
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Free Trial Button -->
+            <div class="hidden md:block ml-auto">
                 <button
-                    v-if="isScrolled"
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-xl font-medium transition-colors duration-300"
                 >
                     Free Trial
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
-            <div class="md:hidden">
+            <div class="md:hidden ml-auto">
                 <button
                     @click="toggleMobileMenu"
                     class="text-gray-700 hover:text-gray-900 focus:outline-none p-1.5 rounded-lg transition-colors duration-300"
@@ -54,7 +95,7 @@
                             stroke-linejoin="round"
                             stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"
-                        ></path>
+                        />
                     </svg>
                 </button>
             </div>
@@ -73,21 +114,49 @@
                 v-if="mobileMenuOpen"
                 class="md:hidden mt-2 space-y-1 px-4 py-2 bg-white/95 rounded-md shadow-sm w-full"
             >
-                <template v-for="item in navItems || navLinks" :key="item.id">
-                    <router-link
-              v-if="item.type === 'route'"
-              :to="item.path"
-              class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
-            >
-              {{ item.label }}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </router-link>
-                </template>
+                <router-link
+                    to="/about"
+                    class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                >
+                    About Us
+                </router-link>
+                <router-link
+                    to="/partner"
+                    class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                >
+                    Partner
+                </router-link>
+                <div class="relative">
+                    <button
+                        @click="toggleFeaturesMenu"
+                        class="w-full text-left py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300 flex items-center justify-between"
+                    >
+                        <span>Features</span>
+                        <svg
+                            class="w-4 h-4 transform transition-transform"
+                            :class="{ 'rotate-180': featuresMenuOpen }"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div v-if="featuresMenuOpen" class="pl-4">
+                        <router-link
+                            v-for="(route, path) in routes"
+                            :key="path"
+                            :to="path"
+                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm"
+                        >
+                            {{ route }}
+                        </router-link>
+                    </div>
+                </div>
                 <button
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-2 py-2 rounded-xl font-medium transition-colors duration-300"
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-xl font-medium transition-colors duration-300 w-full text-sm"
                 >
                     Free Trial
-                    
                 </button>
             </div>
         </transition>
