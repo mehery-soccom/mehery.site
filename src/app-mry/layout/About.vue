@@ -1,47 +1,67 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
-        <main class="mb-16 mt-8">
-            <section id="about" class="lg:mt-4">
-                <div class="container text-start mx-auto px-6 sm:px-8 lg:px-12 max-w-8xl">
+        <main class="mb-12 mt-6">
+            <section id="about">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <div class="space-y-8">
-                        <div class="space-y-8">
-                            <h3 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-12">
-                                About Us
-                            </h3>
-                            <p class="text-gray-600 text-lg sm:text-xl leading-relaxed">
-                                At Mehery, we believe in the power of conversations. Conversations are the cornerstone of building strong customer relationships and play a pivotal role in converting prospects into loyal customers. Sales, the lifeblood of every business, thrives on these meaningful exchanges. 
-                            </p>
-                            <p class="text-gray-600 text-lg leading-relaxed">
+                        <!-- Hero Section with Image -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div class="order-2 md:order-1">
+                                <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+                                    About Us
+                                </h3>
+                                <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                                    At Mehery, we believe in the power of conversations. Conversations are the cornerstone of building strong customer relationships and play a pivotal role in converting prospects into loyal customers.
+                                </p>
+                            </div>
+                            <div class="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[300px]">
+                                <img 
+                                    src="https://picsum.photos/600/300" 
+                                    alt="About Us" 
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Content Sections -->
+                        <div class="space-y-6">
+                            <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
                                 While large enterprises have the resources to create bespoke tools for customer interactions, small and medium-sized businesses often lack the expertise and infrastructure to do so. That's where Mehery comes in. We make it easy for businesses of all sizes to automate customer interactions, transforming conversations into transactions with ease.
                             </p>
-                            <p class="text-gray-600 text-lg leading-relaxed">
+
+                            <!-- Team Photo Section -->
+                            <div class="my-8 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[250px]">
+                                <img 
+                                    src="https://picsum.photos/600/250" 
+                                    alt="Our Team" 
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
                                 Founded three years ago, Mehery is the brainchild of a team of technocrats and technologists with over a century of collective experience. With deep roots in enterprise digitization, digital transformation, and building scalable social media management systems, our mission is to empower businesses to succeed in the digital era.
                             </p>
-                            <p class="text-gray-600 text-lg leading-relaxed">
-                                We are driven by the vision to democratize customer engagement—be it informative, acquisitive, proactive, or reactive—across all digital assets of an enterprise. Our no-code, data-driven solutions are designed to simplify the complexities of digitalization, helping businesses focus on what truly matters: growth and customer satisfaction.
-                            </p>
-                            <p class="text-gray-600 text-lg leading-relaxed">
-                                Our customers are more than clients—they are our partners in mutual success. Together, we aim to redefine what's possible in customer engagement, creating innovative solutions that meet today's needs and anticipate tomorrow's challenges.
-                            </p>
-                            
-                            <div class="mt-16">
-                                <p class="text-gray-600 font-bold text-2xl mb-8">
+
+                            <!-- Values Section -->
+                            <div class="mt-8 bg-white rounded-lg p-6 sm:p-8 shadow-sm">
+                                <h4 class="text-gray-800 font-bold text-xl mb-6">
                                     Our Core Values: Guiding Principles That Define Us
-                                </p>
-                                <ul class="space-y-4 mb-12 text-gray-600">
+                                </h4>
+                                <ul class="space-y-4 text-gray-600">
                                     <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start">
-                                        <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2.5 mr-4 flex-shrink-0"></span>
-                                        <span class="text-lg leading-relaxed">{{ point }}</span>
+                                        <span class="inline-block w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="text-base leading-relaxed">{{ point }}</span>
                                     </li>
                                 </ul>
                             </div>
 
-                            <div class="mt-16">
-                                <p class="text-gray-600 font-bold text-2xl mb-8">
-                                    Our Journey:
-                                </p>
-                                <p class="text-gray-600 text-lg leading-relaxed">
+                            <!-- Journey Section -->
+                            <div class="mt-8 border-l-4 border-blue-500 pl-4">
+                                <h4 class="text-gray-800 font-bold text-xl mb-4">
+                                    Our Journey
+                                </h4>
+                                <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
                                     Our story is one of innovation, collaboration, and a relentless pursuit of excellence. Though young, our journey has only just begun, and we invite you to join us as we shape the future of customer engagement—one meaningful conversation at a time.
                                 </p>
                             </div>
@@ -75,3 +95,9 @@ const bulletPoints = ref([
     "Leading with Integrity: We stand by our commitments, take ownership of our actions, and make decisions that reflect our values."
 ]);
 </script>
+
+<style scoped>
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+</style>

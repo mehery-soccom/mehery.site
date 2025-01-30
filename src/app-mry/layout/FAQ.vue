@@ -60,35 +60,15 @@ import { ref } from 'vue'
 
 const faqs = ref([
   {
-    title: 'Consultation',
-    content: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-    isOpen: true
-  },
-  {
-    title: 'Research and Strategy Development',
-    content: 'We conduct thorough market research and develop comprehensive strategies tailored to your business objectives.',
+    title: 'How many channels of social media messengers can I add on the Mehery platform?',
+    content: 'Based upon what license you have procured, you can have 1,2,7 or more channels being managed on the same platform. These channels can be of one kind e.g. messenger only, or for a mix of the available channels.',
     isOpen: false
   },
   {
-    title: 'Implementation',
-    content: 'Our team executes the developed strategies with precision and attention to detail.',
+    title: 'How easy is it to add a channel on the Mehery platform?',
+    content: 'With the auto-configure capability, you can add a channel at will. ',
     isOpen: false
   },
-  {
-    title: 'Monitoring and Optimization',
-    content: 'We continuously monitor performance metrics and optimize strategies for maximum effectiveness.',
-    isOpen: false
-  },
-  {
-    title: 'Reporting and Communication',
-    content: 'Regular reports and updates keep you informed about progress and results.',
-    isOpen: false
-  },
-  {
-    title: 'Continual Improvement',
-    content: 'We constantly refine and improve our approaches based on performance data and feedback.',
-    isOpen: false
-  }
 ])
 
 const toggleFaq = (index) => {
