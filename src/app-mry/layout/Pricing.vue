@@ -189,13 +189,13 @@ const formatUtilityKey = (key) => {
 const plans = ref([
   {
     name: 'Lite',
-    prices: { inr: '999', usd: '12' },
+    prices: { inr: '-', usd: '-' },
     buttonText: 'Get Started',
-    fixedFees: { inr: '₹999/month', usd: '$12/month' },
+    fixedFees: { inr: '-', usd: '$12/month' },
     usageBasedFees: {
-      DAU: { inr: '0.015', usd: '0.00018' },
-      'Image Creation': { inr: '0.003', usd: '0.00004' },
-      ChatGPT: { inr: '0.006', usd: '0.00007' }
+      DAU: { inr: '1.25', usd: '0.050' },
+      'Image Creation': { inr: '0.025', usd: '0.012' },
+      ChatGPT: { inr: '0.50', usd: '0.012' }
     },
     freeUtilities: {
       monthlyDAU: '100',
@@ -205,9 +205,9 @@ const plans = ref([
   },
   {
     name: 'Eco',
-    prices: { inr: '1,999', usd: '24' },
+    prices: { inr: '₹2,499', usd: '$65' },
     buttonText: 'Get Started',
-    fixedFees: { inr: '₹1,999/month', usd: '$24/month' },
+    fixedFees: { inr: '₹2,499/month', usd: '$65/month' },
     usageBasedFees: {
       DAU: { inr: '0.005', usd: '0.00006' },
       'Image Creation': { inr: '0.0015', usd: '0.00002' },
