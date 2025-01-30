@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto py-8">
+  <div class="mx-12 py-8">
     <!-- Header Section -->
     <h1 class="text-4xl  mx-4 font-bold mb-3">Solutions</h1>
     <p class="text-gray-600 mb-8 mx-4 max-w-2xl text-lg">
@@ -11,7 +11,7 @@
       <!-- Customer Management -->
       <div 
         @click="handleCustomer"
-        class="rounded-2xl bg-[#1D1D26] p-6 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#bde6d4] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Customer</h2>
@@ -20,8 +20,8 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-white hover:opacity-75 gap-1">
-          <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
+        <button class="inline-flex items-center text-black hover:opacity-75 gap-1">
+          <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
       </div>
@@ -30,7 +30,7 @@
       <!-- Lead Management -->
       <div 
         @click="handleLead"
-        class="rounded-2xl bg-[#1D1D26] p-6 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Lead</h2>
@@ -48,7 +48,7 @@
       <!-- Relationship Management -->
       <div 
         @click="handleRelation"
-        class="rounded-2xl bg-[#1D1D26] p-6 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Relationship</h2>
@@ -66,7 +66,7 @@
       <!-- Conversation Management -->
       <div 
         @click="handleConvo"
-        class="rounded-2xl bg-[#1D1D26] p-6 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#bde6d4] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Conversation</h2>
@@ -84,7 +84,7 @@
       <!-- API Services -->
       <div 
         @click="handleApi"
-        class="rounded-2xl bg-[#1D1D26] p-6 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#bde6d4] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">API</h2>
@@ -102,7 +102,7 @@
       <!-- Campaign Management -->
       <div 
         @click="handleCampaign"
-        class="rounded-2xl bg-[#1D1D26] p-6 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Campaign</h2>
@@ -121,11 +121,11 @@
     <!-- BOTs Section -->
     <div 
       @click="handleBot"
-      class="rounded-2xl bg-[#1D1D26] p-6 mx-4 text-white transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer relative"
+      class="rounded-2xl bg-[#bde6d4] p-6 text-black mx-4 transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer relative"
     >
       <div class="max-w-md">
         <h2 class="text-2xl font-bold mb-3">BOTs & BOT Services</h2>
-        <p class="mb-4 text-gray-100 text-sm">
+        <p class="mb-4 text-sm">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
         <button class="bg-white text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm">
