@@ -19,7 +19,17 @@ const routes = [
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: () => import(/* webpackChunkName: "NotFound" */ "@src/@components/NotFound.vue")
-    }
+    },
+    {
+        path: `/partner`,
+        name: "Partner",
+        component: () => import("@src/app-mry/layout/Partner.vue")
+    },
+    {
+        path: `/about`,
+        name: "About",
+        component: () => import("@src/app-mry/layout/About.vue")
+    },
 ];
 
 const router = createRouter({

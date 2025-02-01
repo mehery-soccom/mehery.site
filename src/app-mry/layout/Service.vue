@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 py-8">
     <!-- Header Section -->
-    <h1 class="text-4xl  mx-4 font-bold mb-3">Solutions</h1>
+    <h1 class="text-4xl mx-4 font-bold mb-3">Solutions</h1>
     <p class="text-gray-600 mb-8 mx-4 max-w-2xl text-lg">
       At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
     </p>
@@ -11,7 +11,7 @@
       <!-- Customer Management -->
       <div 
         @click="handleCustomer"
-        class="rounded-2xl bg-[#bde6d4] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-blue-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-blue-200 cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Customer</h2>
@@ -20,17 +20,16 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-1">
+        <button class="inline-flex items-center text-blue-600 hover:text-blue-700 gap-1">
           <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
       </div>
 
-      <!-- Other Service Cards (Apply same scaling to all) -->
       <!-- Lead Management -->
       <div 
         @click="handleLead"
-        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-purple-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-purple-200 cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Lead</h2>
@@ -39,7 +38,7 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-white hover:opacity-75 gap-1">
+        <button class="inline-flex items-center text-purple-600 hover:text-purple-700 gap-1">
           <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
@@ -48,7 +47,7 @@
       <!-- Relationship Management -->
       <div 
         @click="handleRelation"
-        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-teal-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-teal-200 cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Relationship</h2>
@@ -57,7 +56,7 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-white hover:opacity-75 gap-1">
+        <button class="inline-flex items-center text-teal-600 hover:text-teal-700 gap-1">
           <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
@@ -66,7 +65,7 @@
       <!-- Conversation Management -->
       <div 
         @click="handleConvo"
-        class="rounded-2xl bg-[#bde6d4] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-indigo-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-indigo-200 cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Conversation</h2>
@@ -75,7 +74,7 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-1">
+        <button class="inline-flex items-center text-indigo-600 hover:text-indigo-700 gap-1">
           <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
@@ -84,7 +83,7 @@
       <!-- API Services -->
       <div 
         @click="handleApi"
-        class="rounded-2xl bg-[#bde6d4] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-rose-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-rose-200 cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">API</h2>
@@ -93,7 +92,7 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-black hover:opacity-75 gap-1">
+        <button class="inline-flex items-center text-rose-600 hover:text-rose-700 gap-1">
           <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
@@ -102,7 +101,7 @@
       <!-- Campaign Management -->
       <div 
         @click="handleCampaign"
-        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-amber-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-amber-200 cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Campaign</h2>
@@ -111,7 +110,7 @@
                alt="" 
                class="absolute right-0 top-0 w-32 h-32" />
         </div>
-        <button class="inline-flex items-center text-white hover:opacity-75 gap-1">
+        <button class="inline-flex items-center text-amber-600 hover:text-amber-700 gap-1">
           <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
           <span class="text-lg">Learn more</span>
         </button>
@@ -121,16 +120,13 @@
     <!-- BOTs Section -->
     <div 
       @click="handleBot"
-      class="rounded-2xl bg-[#bde6d4] p-6 text-black mx-4 transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer relative"
+      class="rounded-2xl bg-emerald-50 p-6 text-gray-800 mx-4 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer relative"
     >
       <div class="max-w-md">
         <h2 class="text-2xl font-bold mb-3">BOTs & BOT Services</h2>
         <p class="mb-4 text-sm">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
-        <button class="bg-white text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm">
-          Get your free trial
-        </button>
       </div>
       <img 
         src="../../@assets/images/Illustration(1).svg" 
@@ -145,7 +141,7 @@
 import { useRouter } from 'vue-router';
 const router = useRouter();
 
-// Keep the same router functions as before
+// Router functions
 const handleCustomer = () => router.push('/customer');
 const handleLead = () => router.push('/lead');
 const handleRelation = () => router.push('/relation');
@@ -154,10 +150,3 @@ const handleApi = () => router.push('/api');
 const handleCampaign = () => router.push('/campaign');
 const handleBot = () => router.push('/bot');
 </script>
-
-<style scoped>
-/* Optional: Add custom scaling if needed */
-.cursor-pointer {
-  cursor: pointer;
-}
-</style>

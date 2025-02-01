@@ -48,7 +48,10 @@ module.exports = {
                     to: "resources"
                 }
             ]
-        })
+        }),
+        new MiniCssExtractPlugin({
+            ignoreOrder: true, 
+        }),
     ],
 
     module: {

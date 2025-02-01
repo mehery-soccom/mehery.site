@@ -8,7 +8,7 @@
                 v-for="(feature, index) in features"
                 :key="index"
                 @click="handleCardClick(feature)"
-                class="bg-white rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                :class="`bg-gradient-to-br ${feature.bgTint} rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer`"
             >
                 <!-- Dot Indicator -->
                 <div :class="`w-2 h-2 rounded-full mb-6 ${feature.dotColor}`"></div>
@@ -49,7 +49,8 @@ const features = [
         dotColor: "bg-blue-500",
         darkButton: true,
         route: "/Connect",
-        hash: "#click-to-connect"
+        hash: "#click-to-connect",
+        bgTint: "from-blue-50 to-white" // Subtle blue tint
     },
     {
         title: "WhatsApp - Flows",
@@ -58,7 +59,8 @@ const features = [
         dotColor: "bg-red-500",
         darkButton: true,
         route: "/Connect",
-        hash: "#flows"
+        hash: "#flows",
+        bgTint: "from-red-50 to-white" // Subtle red tint
     },
     {
         title: "WhatsApp - Media Card Carousel",
@@ -67,7 +69,8 @@ const features = [
         dotColor: "bg-orange-500",
         darkButton: true,
         route: "/Connect",
-        hash: "#carousel"
+        hash: "#carousel",
+        bgTint: "from-orange-50 to-white" // Subtle orange tint
     },
     {
         title: "Whatsapp - Single Product Message",
@@ -76,7 +79,8 @@ const features = [
         dotColor: "bg-blue-500",
         darkButton: true,
         route: "/Connect",
-        hash: "#single-product"
+        hash: "#single-product",
+        bgTint: "from-blue-50 to-white" // Subtle blue tint
     },
     {
         title: "WhatsApp - Authentication",
@@ -85,7 +89,8 @@ const features = [
         dotColor: "bg-red-500",
         darkButton: true,
         route: "/Connect",
-        hash: "#authentication"
+        hash: "#authentication",
+        bgTint: "from-red-50 to-white" // Subtle red tint
     }
 ];
 

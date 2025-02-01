@@ -41,17 +41,17 @@
           <div class="space-y-3 text-gray-300">
             <p class="flex items-center gap-2 hover:text-white transition-colors">
               <MailIcon size="18" />
-              <a href="mailto:info@mehery.com">info@mehery.com</a>
+              <a href="mailto:info@mehery.com">sales@mehery.com</a>
             </p>
             <p class="flex items-center gap-2 hover:text-white transition-colors">
               <PhoneIcon size="18" />
-              <a href="tel:555-567-8901">555-567-8901</a>
+              <a href="tel:555-567-8901">+91 96192 03759</a>
             </p>
             <div class="flex items-start gap-2">
               <MapPinIcon size="18" class="mt-1 flex-shrink-0" />
               <div>
-                <p>1234 Main St</p>
-                <p>Moonstone City, Stardust State 12345</p>
+                <p>1-34, A H Wadia Baug</p>
+                <p>Parel Tank Road, Mumbai 400033</p>
               </div>
             </div>
           </div>
