@@ -9,7 +9,7 @@
         <div class="flex items-center px-4">
             <!-- Logo -->
             <div class="flex items-center relative">
-                <router-link to="/">
+                <router-link :to="{ name: 'Home' }">
                     <img
                         class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
                         src="../../@assets/images/logo2.png"
@@ -22,7 +22,7 @@
             <div class="hidden md:flex items-center space-x-6 ml-4">
                 <!-- About Us Link -->
                 <router-link
-                    to="/about"
+                    :to="{ name: 'About' }"
                     class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
                 >
                     About Us
@@ -33,7 +33,7 @@
 
                 <!-- Partner Link -->
                 <router-link
-                    to="/partner"
+                    :to="{ name: 'Partner' }"
                     class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
                 >
                     Partner
@@ -123,7 +123,7 @@
             >
                 <!-- About Us Link (Mobile) -->
                 <router-link
-                    to="/about"
+                    :to="{ name: 'About' }"
                     class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                     @click="toggleMobileMenu"
                 >
@@ -132,7 +132,7 @@
 
                 <!-- Partner Link (Mobile) -->
                 <router-link
-                    to="/partner"
+                    :to="{ name: 'Partner' }"
                     class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                     @click="toggleMobileMenu"
                 >
@@ -182,8 +182,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
-import Partner from "./Partner.vue";
-import About from "./About.vue"
 
 const router = useRouter();
 
@@ -196,26 +194,26 @@ const featuresMenu = {
     "faqs": "FAQs"
 };
 
-const isScrolled = ref(false); // Declare isScrolled as a reactive variable
-const mobileMenuOpen = ref(false); // Declare mobileMenuOpen as a reactive variable
-const featuresMenuOpen = ref(false); // Declare featuresMenuOpen as a reactive variable
+const isScrolled = ref(false);
+const mobileMenuOpen = ref(false);
+const featuresMenuOpen = ref(false);
 
 const toggleFeaturesMenu = () => {
-    featuresMenuOpen.value = !featuresMenuOpen.value; // Toggle reactive variable
+    featuresMenuOpen.value = !featuresMenuOpen.value;
 };
 
 const toggleMobileMenu = () => {
-    mobileMenuOpen.value = !mobileMenuOpen.value; // Toggle reactive variable
+    mobileMenuOpen.value = !mobileMenuOpen.value;
 };
 
 const scrollToSection = async (id) => {
     // If not on the home page, navigate to home first
-    if (router.currentRoute.value.path !== '/') {
-        await router.push('/'); // Navigate to home page
+    if (router.currentRoute.value.name !== 'Home') {
+        await router.push({ name: 'Home' });
+        
+        // Wait for a short moment to ensure the home page has loaded
+        await new Promise(resolve => setTimeout(resolve, 100));
     }
-
-    // Wait for the home page to load
-    await nextTick();
 
     // Scroll to the section
     const element = document.getElementById(id);
@@ -226,14 +224,14 @@ const scrollToSection = async (id) => {
         });
     }
 
-    // Close dropdown and mobile menu
+    // Close menus
     mobileMenuOpen.value = false;
     featuresMenuOpen.value = false;
 };
 
 const handleScroll = () => {
     const navbarHeight = 60;
-    isScrolled.value = window.scrollY > navbarHeight; // Update reactive variable
+    isScrolled.value = window.scrollY > navbarHeight;
 };
 
 onMounted(() => {

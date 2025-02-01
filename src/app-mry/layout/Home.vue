@@ -13,10 +13,27 @@
                     a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
                 </p>
                 <button
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-medium transition-colors duration-300"
-                >
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-medium transition-colors duration-300">
                     Free Trial
                 </button>
+                <div class="mt-2 space-y-1 flex gap-3">
+                    <div class="flex items-center text-gray-600 text-sm">
+                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span>15 days</span>
+                    </div>
+                    <div class="flex items-center text-gray-600 text-sm">
+                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span>All Features Unlocked</span>
+                    </div>
+                </div>
             </div>
             <div class="md:w-1/2 mt-12 md:mt-0 relative">
                 <div class="relative">
@@ -27,9 +44,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- New Features Section -->
+        </div> <!-- New Features Section -->
         <div class="scroll-mt-[60px]" id="solutions">
             <div class="container mx-auto px-6">
                 <Service />
@@ -96,6 +111,8 @@ const routes = {
     "/market": "market",
     "/cohort": "cohort",
     "/analytics": "analytics",
+    "/about" : "About",
+    "/partner" : "Partner",
 
     "/clickConnect": "click-to-connect",
     "/flows": "flows",
