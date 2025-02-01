@@ -3,7 +3,8 @@
     <!-- Header Section -->
     <div class="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
       <h2 class="text-3xl font-bold">
-        Compare Our <span class="text-red-500">Pricings</span>
+
+        Affordable, Transparent, and Flexible <span class="text-red-500">Pricing Plans for Every Stage of Growth</span>
       </h2>
       
       <div class="flex gap-4">
@@ -189,12 +190,12 @@ const formatUtilityKey = (key) => {
 const plans = ref([
   {
     name: 'Lite',
-    prices: { inr: '-', usd: '-' },
+    prices: { inr: 'NA', usd: 'NA' },
     buttonText: 'Get Started',
-    fixedFees: { inr: '-', usd: '$12/month' },
+    fixedFees: { inr: 'NA', usd: 'NA' },
     usageBasedFees: {
-      DAU: { inr: '1.25', usd: '0.050' },
-      'Image Creation': { inr: '0.025', usd: '0.012' },
+      DAU: { inr: '1.25', usd: '0.05' },
+      'Image Creation': { inr: '0.25', usd: '0.012' },
       ChatGPT: { inr: '0.50', usd: '0.012' }
     },
     freeUtilities: {
@@ -209,46 +210,46 @@ const plans = ref([
     buttonText: 'Get Started',
     fixedFees: { inr: '₹2,499/month', usd: '$65/month' },
     usageBasedFees: {
-      DAU: { inr: '0.005', usd: '0.00006' },
-      'Image Creation': { inr: '0.0015', usd: '0.00002' },
+      DAU: { inr: '0.04', usd: '0.006' },
+      'Image Creation': { inr: '0.12', usd: '0.006' },
       ChatGPT: 'x'
     },
     freeUtilities: {
-      monthlyDAU: '200',
-      freeImages: '100',
-      freeBotConversations: '150'
+      monthlyDAU: '100',
+      freeImages: '50',
+      freeBotConversations: '100'
     }
   },
   {
     name: 'Pro',
-    prices: { inr: '3,999', usd: '48' },
+    prices: { inr: '₹3,999', usd: '$149' },
     buttonText: 'Get Started',
-    fixedFees: { inr: '₹3,999/month', usd: '$48/month' },
+    fixedFees: { inr: '₹3,999/month', usd: '$149/month' },
     usageBasedFees: {
-      DAU: { inr: '0.004', usd: '0.00005' },
-      'Image Creation': { inr: '0.0015', usd: '0.00002' },
+      DAU: { inr: '0.03', usd: '0.006' },
+      'Image Creation': { inr: '0.12', usd: '0.006' },
       ChatGPT: 'x'
     },
     freeUtilities: {
-      monthlyDAU: '500',
-      freeImages: '200',
-      freeBotConversations: '200'
+      monthlyDAU: '100',
+      freeImages: '50',
+      freeBotConversations: '100'
     }
   },
   {
     name: 'Enterprise',
-    prices: { inr: 'Custom', usd: 'Custom' },
+    prices: { inr: 'On Request', usd: 'On Request' },
     buttonText: 'Contact Sales',
-    fixedFees: { inr: 'Tailored Pricing', usd: 'Tailored Pricing' },
+    fixedFees: { inr: 'On Request', usd: 'On Request' },
     usageBasedFees: {
-      DAU: { inr: '0.004', usd: '0.00005' },
-      'Image Creation': { inr: '0.0015', usd: '0.00002' },
-      ChatGPT: { inr: '0.003', usd: '0.00004' }
+      DAU: { inr: '0.03', usd: '0.006' },
+      'Image Creation': { inr: '0.12', usd: '0.006' },
+      ChatGPT: { inr: '0.25', usd: '0.006' }
     },
     freeUtilities: {
-      monthlyDAU: '1000',
-      freeImages: '500',
-      freeBotConversations: '500'
+      monthlyDAU: '100',
+      freeImages: '50',
+      freeBotConversations: '100'
     }
   }
 ]);
@@ -261,15 +262,17 @@ const features = ref({
   ],
   ConversationsInbound: [
     { name: 'Team Inbox, Auto-routing, Tags, Masking, Grouping, Analytics', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Agent Paraphrase - Open AI', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Chat GPT Paraphrase', availability: ['Y', 'X', 'Y', 'Y'] },
     { name: 'Follow-up, Appointments, Table Bookings', availability: ['Y', 'X', 'Y', 'Y'] }
   ],
   Bots: [
     { name: 'Basic chatbots, Auto responders, OOO', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Advanced Interconnected BOTs', availability: ['X', 'Y', 'Y', 'Y'] }
+    { name: 'Advanced Interconnected BOTs', availability: ['Y', 'Y', 'Y', 'Y'] }
   ],
   OpenAIChatGPT: [
-    { name: 'AI Handovers, Summaries, Sentiment Analysis', availability: ['X', 'Y', 'Y', 'Y'] }
+    { name: 'Instructor, Knowledgebase', availability: ['Y', 'X', 'X', 'Y'] },
+    { name: 'Agent AI conversational BOT', availability: ['Y', 'X', 'X', 'Y'] },
+    { name: 'Custom BOT Scripting with OpenAI', availability: ['Y', 'X', 'X', 'Y'] }
   ],
   WhatsApp: [
     { name: 'Text, image, video messaging', availability: ['Y', 'Y', 'Y', 'Y'] },

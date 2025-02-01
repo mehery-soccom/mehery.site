@@ -9,15 +9,18 @@
         <div class="flex items-center px-4">
             <!-- Logo -->
             <div class="flex items-center relative">
-                <img
-                    class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
-                    src="../../@assets/images/logo2.png"
-                    alt="Logo"
-                />
+                <router-link to="/">
+                    <img
+                        class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
+                        src="../../@assets/images/logo2.png"
+                        alt="Logo"
+                    />
+                </router-link>
             </div>
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 ml-4">
+                <!-- About Us Link -->
                 <router-link
                     to="/about"
                     class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
@@ -28,6 +31,7 @@
                     ></span>
                 </router-link>
 
+                <!-- Partner Link -->
                 <router-link
                     to="/partner"
                     class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 relative group"
@@ -38,14 +42,16 @@
                     ></span>
                 </router-link>
                 
-                <!-- Updated Features Dropdown -->
-                <div class="relative group">
+                <!-- Features Dropdown -->
+                <div class="relative">
                     <button
+                        @click="toggleFeaturesMenu"
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-sm font-medium transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
                     >
                         <span>Features</span>
                         <svg
-                            class="w-4 h-4 transform transition-transform group-hover:rotate-180"
+                            class="w-4 h-4 transform transition-transform"
+                            :class="{ 'rotate-180': featuresMenuOpen }"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -54,16 +60,17 @@
                         </svg>
                     </button>
                     <div
-                        class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100"
+                        v-if="featuresMenuOpen"
+                        class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
                     >
-                        <router-link
-                            v-for="(label, path) in featuresMenu"
-                            :key="path"
-                            :to="path"
+                        <a
+                            v-for="(label, id) in featuresMenu"
+                            :key="id"
+                            @click="scrollToSection(id)"
                             class="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm cursor-pointer transition-colors"
                         >
                             {{ label }}
-                        </router-link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -114,18 +121,25 @@
                 v-if="mobileMenuOpen"
                 class="md:hidden mt-2 space-y-1 px-4 py-2 bg-white/95 rounded-md shadow-sm w-full"
             >
+                <!-- About Us Link (Mobile) -->
                 <router-link
                     to="/about"
                     class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                    @click="toggleMobileMenu"
                 >
                     About Us
                 </router-link>
+
+                <!-- Partner Link (Mobile) -->
                 <router-link
                     to="/partner"
                     class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                    @click="toggleMobileMenu"
                 >
                     Partner
                 </router-link>
+
+                <!-- Features Dropdown (Mobile) -->
                 <div class="relative">
                     <button
                         @click="toggleFeaturesMenu"
@@ -143,16 +157,18 @@
                         </svg>
                     </button>
                     <div v-if="featuresMenuOpen" class="pl-4">
-                        <router-link
-                            v-for="(route, path) in routes"
-                            :key="path"
-                            :to="path"
-                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm"
+                        <a
+                            v-for="(label, id) in featuresMenu"
+                            :key="id"
+                            @click="scrollToSection(id)"
+                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                         >
-                            {{ route }}
-                        </router-link>
+                            {{ label }}
+                        </a>
                     </div>
                 </div>
+
+                <!-- Free Trial Button (Mobile) -->
                 <button
                     class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-xl font-medium transition-colors duration-300 w-full text-sm"
                 >
@@ -164,42 +180,67 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, nextTick } from 'vue';
+import { useRouter } from 'vue-router';
+import Partner from "./Partner.vue";
+import About from "./About.vue"
 
-const navLinks = [
-  { type: 'route', path: '/about', label: 'About Us' },
-  { type: 'route', path: '/partner', label: 'Partner' },
-  { type: 'route', path: '/privacy', label: 'Privacy' }
-];
+const router = useRouter();
+
+// Features dropdown menu (scroll to sections)
+const featuresMenu = {
+    "solutions": "Solutions",
+    "features": "Core Features",
+    "WhatsApp": "WhatsApp Integration",
+    "pricing": "Pricing Plans",
+    "faqs": "FAQs"
+};
 
 const isScrolled = ref(false); // Declare isScrolled as a reactive variable
 const mobileMenuOpen = ref(false); // Declare mobileMenuOpen as a reactive variable
+const featuresMenuOpen = ref(false); // Declare featuresMenuOpen as a reactive variable
 
-const scrollToSection = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-    mobileMenuOpen.value = false; // Update reactive variable
-  }
-};
-
-const handleScroll = () => {
-  const navbarHeight = 60;
-  isScrolled.value = window.scrollY > navbarHeight; // Update reactive variable
+const toggleFeaturesMenu = () => {
+    featuresMenuOpen.value = !featuresMenuOpen.value; // Toggle reactive variable
 };
 
 const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value; // Toggle reactive variable
+    mobileMenuOpen.value = !mobileMenuOpen.value; // Toggle reactive variable
+};
+
+const scrollToSection = async (id) => {
+    // If not on the home page, navigate to home first
+    if (router.currentRoute.value.path !== '/') {
+        await router.push('/'); // Navigate to home page
+    }
+
+    // Wait for the home page to load
+    await nextTick();
+
+    // Scroll to the section
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+
+    // Close dropdown and mobile menu
+    mobileMenuOpen.value = false;
+    featuresMenuOpen.value = false;
+};
+
+const handleScroll = () => {
+    const navbarHeight = 60;
+    isScrolled.value = window.scrollY > navbarHeight; // Update reactive variable
 };
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', handleScroll);
 });
 </script>

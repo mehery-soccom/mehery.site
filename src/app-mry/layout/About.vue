@@ -1,6 +1,8 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
+        <ConversationalBot />
+
         <main class="mb-12 mt-6">
             <section id="about">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -78,6 +80,8 @@
 import { ref, onMounted } from "vue";
 import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
+import ConversationalBot from "./Conversational.vue";
+
 
 onMounted(() => {
     window.scrollTo({
@@ -96,8 +100,8 @@ const bulletPoints = ref([
 ]);
 </script>
 
-<style scoped>
+<!-- <style scoped>
 .shadow-sm {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-</style>
+</style> -->

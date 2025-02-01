@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 py-8">
     <!-- Header Section -->
-    <h1 class="text-4xl  mx-4 font-bold mb-3">Solutions</h1>
+    <h1 class="text-4xl mx-4 font-bold mb-3">Solutions</h1>
     <p class="text-gray-600 mb-8 mx-4 max-w-2xl text-lg">
       At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
     </p>
@@ -11,7 +11,7 @@
       <!-- Customer Management -->
       <div 
         @click="handleCustomer"
-        class="rounded-2xl bg-[#bde6d4] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#d4f1e0] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Customer</h2>
@@ -26,11 +26,10 @@
         </button>
       </div>
 
-      <!-- Other Service Cards (Apply same scaling to all) -->
       <!-- Lead Management -->
       <div 
         @click="handleLead"
-        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#92bba9] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Lead</h2>
@@ -48,7 +47,7 @@
       <!-- Relationship Management -->
       <div 
         @click="handleRelation"
-        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#92bba9] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Relationship</h2>
@@ -66,7 +65,7 @@
       <!-- Conversation Management -->
       <div 
         @click="handleConvo"
-        class="rounded-2xl bg-[#bde6d4] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#d4f1e0] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Conversation</h2>
@@ -84,7 +83,7 @@
       <!-- API Services -->
       <div 
         @click="handleApi"
-        class="rounded-2xl bg-[#bde6d4] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#d4f1e0] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">API</h2>
@@ -102,7 +101,7 @@
       <!-- Campaign Management -->
       <div 
         @click="handleCampaign"
-        class="rounded-2xl bg-[#92bba9] p-6 text-black  transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
+        class="rounded-2xl bg-[#92bba9] p-6 text-black transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer"
       >
         <div class="h-40 relative">
           <h2 class="text-2xl font-bold">Campaign</h2>
@@ -121,16 +120,13 @@
     <!-- BOTs Section -->
     <div 
       @click="handleBot"
-      class="rounded-2xl bg-[#bde6d4] p-6 text-black mx-4 transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer relative"
+      class="rounded-2xl bg-[#d4f1e0] p-6 text-black mx-4 transition-transform hover:scale-[1.02] border-b-4 border-[#000] cursor-pointer relative"
     >
       <div class="max-w-md">
         <h2 class="text-2xl font-bold mb-3">BOTs & BOT Services</h2>
         <p class="mb-4 text-sm">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
-        <button class="bg-white text-black px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm">
-          Get your free trial
-        </button>
       </div>
       <img 
         src="../../@assets/images/Illustration(1).svg" 

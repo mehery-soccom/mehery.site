@@ -8,6 +8,7 @@ console.log("app loaded");
 import { defineComponent } from "vue";
 import "@assets/app/app.scss";
 
+
 export default defineComponent({
     name: "App"
 });

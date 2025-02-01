@@ -1,13 +1,20 @@
 <template>
   <div @click="handleClickOutside" class="font-sans">
-    <!-- Bot Icon -->
-    <button
-      @click.stop="toggleBot"
-      class="fixed bottom-6 right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full p-4 shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 group"
-      aria-label="Open chat"
-    >
-      <message-circle-icon size="24" class="group-hover:rotate-12 transition-transform duration-300" />
-    </button>
+    <!-- Bot Icon with Tooltip -->
+    <div class="fixed bottom-6 right-6 group">
+      <!-- Tooltip -->
+      <div class="absolute -top-8 right-16 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-100">
+        Chat with us
+      </div>
+      <!-- Bot Button -->
+      <button
+        @click.stop="toggleBot"
+        class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full p-4 shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 group"
+        aria-label="Open chat"
+      >
+        <message-circle-icon size="24" class="group-hover:rotate-12 transition-transform duration-300" />
+      </button>
+    </div>
 
     <!-- Bot Popup -->
     <transition name="slide-fade">
