@@ -1,0 +1,28 @@
+{
+  "urls": [
+    {
+      "loc": "https://www.mehery.com/home",
+      "lastmod": "2024-08-19",
+      "changefreq": "daily",
+      "priority": 1.0
+    },
+    {
+      "loc": "https://www.mehery.com/faq",
+      "lastmod": "2024-08-18",
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "loc": "https://www.mehery.com/news",
+      "lastmod": "2024-08-18",
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "loc": "https://www.mehery.com/about-us",
+      "lastmod": "2024-08-17",
+      "changefreq": "monthly",
+      "priority": 0.5
+    }
+  ]
+}

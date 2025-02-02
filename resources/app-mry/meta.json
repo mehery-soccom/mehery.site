@@ -1,0 +1,49 @@
+{
+    "resources": [
+        {
+            "contentType": "blog",
+            "file": "blog-name-or-id.html",
+            "filePath": "resources/app-mry/content/blog/blog-name-or-id.html",
+            "fileName": "blog-name-or-id",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {}
+        },
+        {
+            "contentType": "campaign",
+            "file": "campaign-name-or-id.html",
+            "filePath": "resources/app-mry/content/campaign/campaign-name-or-id.html",
+            "fileName": "campaign-name-or-id",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {}
+        },
+        {
+            "contentType": "content",
+            "file": "content-name-or-id.html",
+            "filePath": "resources/app-mry/content/content-name-or-id.html",
+            "fileName": "content-name-or-id",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {}
+        },
+        {
+            "contentType": "news",
+            "file": "news-name-or-id.html",
+            "filePath": "resources/app-mry/content/news/news-name-or-id.html",
+            "fileName": "news-name-or-id",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {}
+        }
+    ],
+    "updateTime": {
+        "str": "2025-02-02T15:36:26.068Z",
+        "offset": "00.0",
+        "stamp": 1738510586068
+    }
+}

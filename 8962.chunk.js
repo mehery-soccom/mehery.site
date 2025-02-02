@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmehery_site=self.webpackChunkmehery_site||[]).push([[8962],{8962:(e,n,t)=>{t.r(n),t.d(n,{default:()=>u});var o=t(9142);const r=(0,o.defineComponent)({name:"NotFound"}),u=(0,t(1535).A)(r,[["render",function(e,n,t,r,u,c){return(0,o.openBlock)(),(0,o.createElementBlock)("div",null,"404 - App not found")}]])}}]);
