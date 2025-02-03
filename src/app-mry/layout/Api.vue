@@ -1,12 +1,12 @@
 <template>
   <div class="min-h-screen flex flex-col bg-gray-50">
     <Navbar />
-    <main class="">
-      <section id="api" class="">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-              <h3 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight lg:-mt-10">
+    <main class="py-16 px-4 sm:px-6 lg:px-8">
+            <section id="customer" class="max-w-7xl mx-auto">
+                <div class="container mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8 max-w-2xl">
+                            <h3 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 API Services
               </h3>
               <p class="text-gray-600 text-lg sm:text-xl">
