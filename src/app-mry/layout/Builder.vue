@@ -1,14 +1,14 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
-        <main class="mb-10">
-            <section id="" class="lg: mt-24">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <main class="py-16 mr-16 scale-90 sm:px-6 lg:px-8">
+            <section id="" class="max-w-7xl mt-24 mx-auto">
+                <div class="container sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
                         <div class="relative -mt-14">
                             <img src="../../@assets/images/feature2.png" />
                         </div>
-                        <div class="space-y-6">
+                        <div class="space-y-8 max-w-2xl">
                             <h3
                                 class="text-6xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:-mt-20"
                             >

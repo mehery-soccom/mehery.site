@@ -1,19 +1,18 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
-        <main class="mb-10">
-            <section id="" class="lg: mt-24">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <main class="py-16 mr-16 sm:px-6 lg:px-8">
+            <section id="" class="max-w-7xl mt-24 mx-auto">
+                <div class="container sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
                         <div class="space-y-6">
                             <h3
                                 class="text-6xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:-mt-20"
                             >
-                                Bot Builder
+                                Team Inbox
                             </h3>
                             <p class="text-gray-600 text-lg sm:text-xl">
-                                Our BOT Builder empowers marketing teams to create and deploy bots independently,
-                                without needing a developer. It’s a DIY toolkit designed to give you a competitive edge.
+                                Empower your team to engage with customers seamlessly through a centralized inbox that aggregates all conversations across multiple channels. Our inbox is highly optimized to manage hundreds of conversations effectively. Key features include:
                             </p>
                             <ul class="space-y-3 mb-10 text-gray-600">
                                 <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start">

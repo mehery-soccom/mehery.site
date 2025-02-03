@@ -4,114 +4,148 @@
     <div class="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
       <h2 class="text-3xl font-bold">
 
-        Affordable, Transparent, and Flexible <span class="text-red-500">Pricing Plans for Every Stage of Growth</span>
+        Affordable, Transparent, and Flexible
+        <div class="text-[#00AEEF]">Pricing Plans for Every Stage of Growth</div>
       </h2>
-      
+
       <div class="flex gap-4">
-        <div class="flex items-center gap-2">
+        <!-- <div class="flex items-center gap-2">
           <span class="text-sm font-medium">Currency:</span>
-          <button 
-            @click="toggleCurrency"
-            class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
-          >
+          <button @click="toggleCurrency" class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors">
             {{ showUSD ? 'USD' : 'INR' }}
           </button>
-        </div>
-        
+        </div> -->
+
         <div class="flex items-center gap-2">
           <span class="text-sm font-medium">Features:</span>
-          <button 
-            @click="toggleView"
-            class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
-          >
+          <button @click="toggleView" class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors">
             {{ showFeatures ? 'Show Pricing' : 'Show Features' }}
           </button>
         </div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-sm font-medium">Billing Cycle:</span>
+          <button @click="toggleBillingCycle"
+            class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors">
+            {{ billingCycle }}
+          </button>
+        </div>
+
+
       </div>
     </div>
 
     <!-- Pricing Cards -->
-    <div v-if="!showFeatures" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-      <div 
-        v-for="(plan, planIndex) in plans" 
-        :key="plan.name" 
-        class="border p-6 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow"
-      >
+    <div v-if="!showFeatures" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-sm">
+      <div v-for="(plan, planIndex) in plans" :key="plan.name"
+        class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow">
         <!-- Plan Header -->
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold mb-2">{{ plan.name }}</h3>
-          <div class="text-3xl font-bold mb-4">
-            {{ showUSD ? plan.prices.usd : plan.prices.inr }}
-            <span class="text-sm font-normal text-gray-500">/month</span>
+        <div class="mb-6">
+          <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
+          <div class="text-2xl font-bold mb-3">
+            {{ showUSD ? plan.fixedFees[billingCycle.toLowerCase()] : plan.fixedFees[billingCycle.toLowerCase()] }}
+            <span class="text-xs font-normal text-gray-500">/{{ billingCycle.toLowerCase() }}</span>
           </div>
-          <button class="w-full py-3 rounded-md bg-red-500 hover:bg-red-600 text-white transition-colors">
+          <button class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors">
             {{ plan.buttonText }}
           </button>
         </div>
 
         <!-- Plan Features -->
-        <div class="space-y-6 flex-1">
+        <div class="space-y-4 flex-1">
           <!-- Fixed Fees -->
           <div>
-            <h4 class="font-semibold mb-3 border-b pb-2">Fixed Fees</h4>
-            <div class="flex items-center">
-              <check-icon size="18" class="text-green-500 mr-2 flex-shrink-0"/>
-              <span>{{ showUSD ? plan.fixedFees.usd : plan.fixedFees.inr }}</span>
-            </div>
+            <h4 class="font-semibold mb-2 border-b pb-1">Fixed Fees</h4>
+            <ul>
+              <li class="flex justify-between"><span>Monthly</span><span>{{ plan.fixedFees.monthly }}</span></li>
+              <li class="flex justify-between"><span>Quarterly</span><span>{{ plan.fixedFees.quarterly }}</span></li>
+              <li class="flex justify-between"><span>Annual</span><span>{{ plan.fixedFees.annual }}</span></li>
+            </ul>
           </div>
 
-          <!-- Usage-Based Fees -->
+          <!-- Mehery Fees - Per Conversation Fees -->
           <div>
-            <h4 class="font-semibold mb-3 border-b pb-2">Usage Based Fees</h4>
-            <ul class="space-y-2">
-              <li 
-                v-for="(value, key) in plan.usageBasedFees" 
-                :key="key" 
-                class="flex items-center"
-              >
-                <template v-if="value !== 'x'">
-                  <check-icon size="16" class="text-green-500 mr-2 flex-shrink-0"/>
-                  <span>{{ key }}: {{ currencySymbol }}{{ showUSD ? value.usd : value.inr }}</span>
-                </template>
-                <template v-else>
-                  <x-icon size="16" class="text-gray-300 mr-2 flex-shrink-0"/>
-                  <span class="text-gray-400">{{ key }}: Not included</span>
-                </template>
+            <h4 class="font-semibold mb-2 border-b pb-1">Per Conversation Fees</h4>
+            <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
+              class="text-blue-500 underline">Whatsapp Conversation Fees</a>
+
+            <ul>
+              <li v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']" :key="key"
+                class="flex justify-between">
+                <span>{{ key }}</span>
+                <span :class="{ 'text-gray-400': value === 'X' }">{{ value === 'X' ? '✗' : (showUSD ? value.usd :
+                  value.inr) }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Setup Fees -->
+          <!-- <div>
+        <h4 class="font-semibold mb-2 border-b pb-1">Setup Fees</h4>
+        <ul>
+          <li v-for="(value, key) in plan.setupFees" :key="key" class="flex justify-between">
+            <span>{{ key }}</span>
+            <span :class="{ 'text-gray-400': value === 'X' }">{{ value === 'X' ? '✗' : value }}</span>
+          </li>
+        </ul>
+      </div> -->
+
+          <!-- Deposits -->
+          <div>
+            <h4 class="font-semibold mb-2 border-b pb-1">Deposit Fees</h4>
+            <ul>
+              <li class="flex justify-between"><span>Minimum Deposit</span><span>{{ plan.depositFees.minimumDeposit
+                  }}</span></li>
+            </ul>
+          </div>
+
+          <!-- Number of Users -->
+          <div>
+            <h4 class="font-semibold mb-2 border-b pb-1">Users</h4>
+            <ul>
+              <li class="flex justify-between"><span>Admin Agent</span><span>{{ plan.users.adminAgent }}</span></li>
+              <li class="flex justify-between"><span>Additional User</span><span>{{ plan.users.additionalUser }}</span>
               </li>
             </ul>
           </div>
 
           <!-- Free Utilities -->
           <div>
-            <h4 class="font-semibold mb-3 border-b pb-2">Free Utilities</h4>
-            <ul class="space-y-2">
-              <li 
-                v-for="(value, key) in plan.freeUtilities" 
-                :key="key" 
-                class="flex items-center"
-              >
-                <check-icon size="16" class="text-green-500 mr-2 flex-shrink-0"/>
-                <span>{{ formatUtilityKey(key) }}: {{ value }}</span>
+            <h4 class="font-semibold mb-2 border-b pb-1">Free Utilities</h4>
+            <!-- <ul>
+          <li v-for="(value, key) in plan.freeUtilities" :key="key" class="flex justify-between">
+            <span>{{ key }}</span>
+            <span>{{ value }}</span>
+          </li>
+        </ul> -->
+            <ul>
+              <li class="flex justify-between"><span>Free DAU</span><span>{{ plan.freeUtilities.monthlyDAU }}</span>
               </li>
+              <li class="flex justify-between"><span>Free Images</span><span>{{ plan.freeUtilities.freeImages }}</span>
+              </li>
+              <li class="flex justify-between"><span>Free BOT conversations</span><span>{{
+                plan.freeUtilities.freeBotConversations }}</span></li>
             </ul>
+
           </div>
         </div>
       </div>
     </div>
-
     <!-- Feature Comparison -->
     <div v-else class="bg-white rounded-lg shadow-lg p-8">
       <div class="overflow-x-auto">
         <table class="w-full">
           <thead>
-            <tr class="border-b">
-              <th class="text-left py-4 px-4 w-1/3">Feature</th>
-              <th v-for="plan in plans" :key="plan.name" class="text-center py-4 px-4">
-                {{ plan.name }}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
+  <tr class="border-b">
+    <th class="text-left py-4 px-4 w-1/3">Feature</th>
+    <th v-for="plan in plans" :key="plan.name" class="text-center py-4 px-4">
+      <div class="text-lg font-bold">{{ plan.name }}</div>
+      <div class="text-sm text-gray-500">
+        {{ plan.fixedFees[billingCycle.toLowerCase()] }} / {{ billingCycle.toLowerCase() }}
+      </div>
+    </th>
+  </tr>
+</thead>          <tbody>
             <template v-for="(section, sectionKey) in features" :key="sectionKey">
               <!-- Section Header -->
               <tr class="bg-gray-50">
@@ -119,33 +153,14 @@
                   {{ formatSectionTitle(sectionKey) }}
                 </td>
               </tr>
-              
+
               <!-- Section Features -->
-              <tr 
-                v-for="feature in section" 
-                :key="feature.name"
-                class="border-b hover:bg-gray-50 transition-colors"
-              >
+              <tr v-for="feature in section" :key="feature.name" class="border-b hover:bg-gray-50 transition-colors">
                 <td class="py-4 px-4">{{ feature.name }}</td>
-                <td 
-                  v-for="(available, idx) in feature.availability" 
-                  :key="idx"
-                  class="text-center py-4 px-4"
-                >
-                  <check-icon 
-                    v-if="available === 'Y'" 
-                    size="20" 
-                    class="inline-block text-green-500" 
-                  />
-                  <x-icon 
-                    v-else-if="available === 'X'" 
-                    size="20" 
-                    class="inline-block text-gray-300" 
-                  />
-                  <span 
-                    v-else 
-                    class="text-sm"
-                  >{{ available }}</span>
+                <td v-for="(available, idx) in feature.availability" :key="idx" class="text-center py-4 px-4">
+                  <check-icon v-if="available === 'Y'" size="20" class="inline-block text-green-500" />
+                  <x-icon v-else-if="available === 'X'" size="20" class="inline-block text-gray-300" />
+                  <span v-else class="text-sm">{{ available }}</span>
                 </td>
               </tr>
             </template>
@@ -162,6 +177,7 @@ import { CheckIcon, XIcon } from 'vue-feather-icons';
 
 const showUSD = ref(false);
 const showFeatures = ref(false);
+const billingCycle = ref('Monthly');
 
 const toggleCurrency = () => {
   showUSD.value = !showUSD.value;
@@ -169,6 +185,16 @@ const toggleCurrency = () => {
 
 const toggleView = () => {
   showFeatures.value = !showFeatures.value;
+};
+
+const toggleBillingCycle = () => {
+  if (billingCycle.value === 'Monthly') {
+    billingCycle.value = 'Quarterly';
+  } else if (billingCycle.value === 'Quarterly') {
+    billingCycle.value = 'Annual';
+  } else {
+    billingCycle.value = 'Monthly';
+  }
 };
 
 const currencySymbol = computed(() => {
@@ -179,12 +205,12 @@ const formatSectionTitle = (key) => {
   return key.split(/(?=[A-Z])/).join(' ');
 };
 
-const formatUtilityKey = (key) => {
-  return key
-    .replace(/([A-Z])/g, ' $1')
-    .replace(/^./, str => str.toUpperCase())
-    .replace('Dau', 'DAU');
-};
+// const formatUtilityKey = (key) => {
+//   return key
+//     .replace(/([A-Z])/g, ' $1')
+//     .replace(/^./, str => str.toUpperCase())
+//     .replace('Dau', 'DAU');
+// };
 
 // Pricing Data
 const plans = ref([
@@ -192,11 +218,18 @@ const plans = ref([
     name: 'Lite',
     prices: { inr: 'NA', usd: 'NA' },
     buttonText: 'Get Started',
-    fixedFees: { inr: 'NA', usd: 'NA' },
-    usageBasedFees: {
-      DAU: { inr: '1.25', usd: '0.05' },
-      'Image Creation': { inr: '0.25', usd: '0.012' },
-      ChatGPT: { inr: '0.50', usd: '0.012' }
+    fixedFees: { monthly: 'NA', quarterly: 'NA', annual: 'NA' },
+    "Mehery Fees – Per conversation Fees": {
+      DAU: { inr: '1.25', usd: '0.050' },
+      'Image Creation Fee - per image': { inr: '0.25', usd: '0.012' },
+      'CHAT GPT - Per conversation': { inr: '0.50', usd: '0.012' }
+    },
+    users: { adminAgent: '1', additionalUser: '$9.9' },
+    depositFees: { minimumDeposit: '$25' },
+    setupFees: {
+      facebookBusinessSetup: '$50',
+      openAISetupTraining: 'Price On Request',
+      openAIBotDevelopment: 'Based upon scope of work'
     },
     freeUtilities: {
       monthlyDAU: '100',
@@ -206,13 +239,20 @@ const plans = ref([
   },
   {
     name: 'Eco',
-    prices: { inr: '₹2,499', usd: '$65' },
+    prices: { inr: '₹5,499', usd: '$69' },
     buttonText: 'Get Started',
-    fixedFees: { inr: '₹2,499/month', usd: '$65/month' },
-    usageBasedFees: {
+    fixedFees: { monthly: '$69', quarterly: '$189', annual: '$649' },
+    "Mehery Fees – Per conversation Fees": {
       DAU: { inr: '0.04', usd: '0.006' },
-      'Image Creation': { inr: '0.12', usd: '0.006' },
-      ChatGPT: 'x'
+      'Image Creation Fee - per image': { inr: '0.12', usd: '0.006' },
+      'CHAT GPT - Per conversation': 'X'
+    },
+    users: { adminAgent: '5', additionalUser: '$9.9' },
+    depositFees: { minimumDeposit: '$25' },
+    setupFees: {
+      facebookBusinessSetup: '$50',
+      openAISetupTraining: 'X',
+      openAIBotDevelopment: 'Based upon scope of work'
     },
     freeUtilities: {
       monthlyDAU: '100',
@@ -222,13 +262,20 @@ const plans = ref([
   },
   {
     name: 'Pro',
-    prices: { inr: '₹3,999', usd: '$149' },
+    prices: { inr: '₹12,499', usd: '$149' },
     buttonText: 'Get Started',
-    fixedFees: { inr: '₹3,999/month', usd: '$149/month' },
-    usageBasedFees: {
+    fixedFees: { monthly: '$149', quarterly: '$399', annual: '$1,399' },
+    "Mehery Fees – Per conversation Fees": {
       DAU: { inr: '0.03', usd: '0.006' },
-      'Image Creation': { inr: '0.12', usd: '0.006' },
-      ChatGPT: 'x'
+      'Image Creation Fee - per image': { inr: '0.12', usd: '0.006' },
+      'CHAT GPT - Per conversation': 'X'
+    },
+    users: { adminAgent: '7', additionalUser: '$19.9' },
+    depositFees: { minimumDeposit: '$25' },
+    setupFees: {
+      facebookBusinessSetup: '$50',
+      openAISetupTraining: 'X',
+      openAIBotDevelopment: 'Based upon scope of work'
     },
     freeUtilities: {
       monthlyDAU: '100',
@@ -240,11 +287,18 @@ const plans = ref([
     name: 'Enterprise',
     prices: { inr: 'On Request', usd: 'On Request' },
     buttonText: 'Contact Sales',
-    fixedFees: { inr: 'On Request', usd: 'On Request' },
-    usageBasedFees: {
-      DAU: { inr: '0.03', usd: '0.006' },
-      'Image Creation': { inr: '0.12', usd: '0.006' },
-      ChatGPT: { inr: '0.25', usd: '0.006' }
+    fixedFees: { monthly: 'On Request', quarterly: 'On Request', annual: 'On Request' },
+    "Mehery Fees – Per conversation Fees": {
+      DAU: { inr: 'On Request', usd: 'On Request' },
+      'Image Creation Fee - per image': { inr: 'On Request', usd: 'On Request' },
+      'CHAT GPT - Per conversation': { inr: 'On Request', usd: 'On Request' }
+    },
+    users: { adminAgent: '10', additionalUser: 'On Request' },
+    depositFees: { minimumDeposit: '$25' },
+    setupFees: {
+      facebookBusinessSetup: '$50',
+      openAISetupTraining: 'Price On Request',
+      openAIBotDevelopment: 'Based upon scope of work'
     },
     freeUtilities: {
       monthlyDAU: '100',
@@ -256,50 +310,76 @@ const plans = ref([
 
 // Features Data
 const features = ref({
-  SmartConversations: [
-    { name: 'Users – Admin / Agent', availability: ['1', '5', '7', '10'] },
-    { name: 'Communication Channels', availability: ['1', 'Any 2', 'Any 3', 'All'] }
+  Channels: [
+    { name: 'WhatsApp', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Webchat', availability: ['X', 'Y', 'Y', 'Y'] },
+    { name: 'Facebook Messenger', availability: ['X', 'X', 'Y', 'Y'] },
+    { name: 'Instagram DM', availability: ['X', 'Y', 'Y', 'Y'] },
+    { name: 'Telegram', availability: ['X', 'X', 'Y', 'Y'] },
+    { name: 'App Chat', availability: ['X', 'X', 'X', 'Y'] },
+    { name: 'Email', availability: ['X', 'X', 'X', 'Y'] }
   ],
-  ConversationsInbound: [
-    { name: 'Team Inbox, Auto-routing, Tags, Masking, Grouping, Analytics', availability: ['Y', 'Y', 'Y', 'Y'] },
+  SmartConversations: [
+    { name: 'Team Inbox', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Chat Assignment / Auto routing', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Session Tags', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Number Masking', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'User roles/skills', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Conversation Analytics', availability: ['Y', 'Y', 'Y', 'Y'] },
     { name: 'Chat GPT Paraphrase', availability: ['Y', 'X', 'Y', 'Y'] },
-    { name: 'Follow-up, Appointments, Table Bookings', availability: ['Y', 'X', 'Y', 'Y'] }
+    { name: 'Follow-up', availability: ['Y', 'X', 'Y', 'Y'] },
+    { name: 'Appointment / Table Booking', availability: ['Y', 'X', 'Y', 'Y'] }
   ],
   Bots: [
-    { name: 'Basic chatbots, Auto responders, OOO', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Advanced Interconnected BOTs', availability: ['Y', 'Y', 'Y', 'Y'] }
+    { name: 'Basic chatbots', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Advanced interconnected BOTs', availability: ['Y', 'X', 'Y', 'Y'] },
+    { name: 'Auto-reply BOTs', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Outside Working Hours, Weekends and Holidays', availability: ['Y', 'X', 'Y', 'Y'] }
   ],
   OpenAIChatGPT: [
     { name: 'Instructor, Knowledgebase', availability: ['Y', 'X', 'X', 'Y'] },
     { name: 'Agent AI conversational BOT', availability: ['Y', 'X', 'X', 'Y'] },
     { name: 'Custom BOT Scripting with OpenAI', availability: ['Y', 'X', 'X', 'Y'] }
   ],
-  WhatsApp: [
+  WhatsAppBusinessAPI: [
     { name: 'Text, image, video messaging', availability: ['Y', 'Y', 'Y', 'Y'] },
     { name: 'Custom Image Templates', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Flows, Catalog, Carousel, Single Product message, Authentication', availability: ['Y', 'Y', 'Y', 'Y'] }
+    { name: 'WhatsApp Flows', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'WhatsApp Carousels', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Authentication', availability: ['Y', 'Y', 'Y', 'Y'] }
   ],
   MarketingLeadGeneration: [
-    { name: 'Campaign Management, CTA tracking, Analytics', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Click to WhatsApp Ads Insights', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Campaign Scheduling - WA', availability: ['Y', 'X', 'Y', 'Y'] }
+    { name: 'Campaign Management', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Campaign Scheduling', availability: ['Y', 'X', 'Y', 'Y'] },
+    { name: 'Campaign Analytics, CTA Tracker', availability: ['Y', 'Y', 'Y', 'Y'] },
+    { name: 'Custom Image (and HTML source) Templates', availability: ['Y', 'X', 'Y', 'Y'] },
+    { name: 'Click to WhatsApp Ads Insights', availability: ['Y', 'Y', 'Y', 'Y'] }
+  ],
+  APIs: [
+    { name: 'APIs for Outbound communication', availability: ['X', 'Y', 'Y', 'Y'] }
   ],
   CustomerManagement: [
-    { name: 'Customer Management', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Dynamic Groups and filters', availability: ['Y', 'X', 'X', 'Y'] },
+    { name: 'Customer master', availability: ['Y', 'X', 'X', 'Y'] },
+    { name: 'Custom fields', availability: ['Y', 'X', 'X', 'Y'] },
+    { name: 'Custom Filters for grouping', availability: ['Y', 'X', 'X', 'Y'] },
+    { name: 'Customer Grouping for Campaigns', availability: ['Y', 'X', 'X', 'Y'] },
     { name: 'Relationship Management', availability: ['Y', 'X', 'X', 'Y'] }
   ],
   AgentMobileApp: [
-    { name: 'IOS and Android', availability: ['Y', 'Y', 'Y', 'Y'] }
+    { name: 'IOS and Android', availability: ['X', 'Y', 'Y', 'Y'] }
   ],
-  OnboardingAndSupportPlans: [
+  WebhookConnections: [
+    { name: 'Number of Webhook Connections', availability: ['X', '1', '2', 'Custom'] }
+  ],
+  SupportPlans: [
     { name: 'Assisted onboarding', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Email & WhatsApp support', availability: ['10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week'] },
-    { name: 'SLA - Response Times', availability: ['12 hrs', '6 hrs', '6 hrs', '4 hrs'] },
+    { name: 'SLA - Response Times', availability: ['12 hrs', '6 hrs', '4 hrs', '4 hrs'] },
+    { name: 'WhatsApp and Email support', availability: ['10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week'] },
     { name: 'WhatsApp, Email and Call based support', availability: ['X', 'X', 'included', 'included'] },
-    { name: 'WhatsApp, Email and Call based support 12 * 6', availability: ['X', 'X', 'X', 'included'] },
-    { name: 'Support Hours', availability: ['9am - 7pm', '9am - 7pm', '9am - 7pm', '9am - 7pm'] },
+    { name: 'WhatsApp, Email and Call based support 9h * 6d', availability: ['X', 'X', 'X', 'included'] },
+    { name: 'Support Hours', availability: ['9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm'] },
     { name: 'Support Days', availability: ['Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo'] }
   ]
 });
+
 </script>

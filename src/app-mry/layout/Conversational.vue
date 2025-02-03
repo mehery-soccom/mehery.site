@@ -1,41 +1,33 @@
 <template>
-  <div @click="handleClickOutside" class="font-sans">
+  <div @click="handleClickOutside" class="font-sans z-100">
     <!-- Bot Icon with Tooltip -->
-    <div class="fixed bottom-6 right-6 group">
+    <div class="fixed bottom-8 right-6 group">
       <!-- Tooltip -->
-      <div class="absolute -top-8 right-16 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-100">
+      <div class="absolute -top-0 right-20 bg-gray-800 text-white text-xs py-1 rounded w-auto px-2 whitespace-nowrap">
         Chat with us
       </div>
       <!-- Bot Button -->
-      <button
-        @click.stop="toggleBot"
+      <button @click.stop="toggleBot"
         class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full p-4 shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 group"
-        aria-label="Open chat"
-      >
+        aria-label="Open chat">
         <message-circle-icon size="24" class="group-hover:rotate-12 transition-transform duration-300" />
       </button>
     </div>
 
     <!-- Bot Popup -->
     <transition name="slide-fade">
-      <div 
-        v-if="isOpen" 
-        class="fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100" 
-        @click.stop
-      >
+      <div v-if="isOpen"
+        class="fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
+        @click.stop>
         <!-- Success Feedback Overlay -->
         <transition name="fade">
-          <div 
-            v-if="showSuccessOverlay" 
-            class="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 z-50 flex flex-col items-center justify-center text-white p-6 text-center"
-          >
+          <div v-if="showSuccessOverlay"
+            class="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 z-50 flex flex-col items-center justify-center text-white p-6 text-center">
             <check-circle-icon size="48" class="mb-4 animate-pulse" />
             <h3 class="text-xl font-bold mb-2">Partnership Request Submitted!</h3>
             <p class="text-sm mb-4">We'll review your application and get back to you soon.</p>
-            <button 
-              @click="closeSuccessOverlay"
-              class="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
-            >
+            <button @click="closeSuccessOverlay"
+              class="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
               Close
             </button>
           </div>
@@ -56,18 +48,11 @@
           </div>
         </div>
         <div class="input-container">
-          <input
-            v-model="userInput"
-            type="text"
-            placeholder="Type a message"
-          >
+          <input v-model="userInput" type="text" placeholder="Type a message">
           <button @click="handleUserResponse">Send</button>
         </div>
-        <button
-          @click="toggleBot"
-          class="absolute top-2 right-2 text-white hover:text-gray-200 focus:outline-none"
-          aria-label="Close chat"
-        >
+        <button @click="toggleBot" class="absolute top-2 right-2 text-white hover:text-gray-200 focus:outline-none"
+          aria-label="Close chat">
           <x-icon size="20" />
         </button>
       </div>
@@ -117,7 +102,7 @@ export default {
     },
     nextStep(input) {
       this.currentStep++;
-      switch(this.currentStep) {
+      switch (this.currentStep) {
         case 1:
           this.form.name = input;
           this.conversation.push({ type: 'bot', text: 'Great! What is your business email?' });
@@ -244,8 +229,15 @@ export default {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .input-container {

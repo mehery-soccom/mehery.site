@@ -30,6 +30,11 @@ const routes = [
         name: "About",
         component: () => import("@src/app-mry/layout/About.vue")
     },
+    {
+        path: `/blog`,
+        name: "Blog",
+        component: () => import("@src/app-mry/layout/Blog.vue")
+    },
 ];
 
 const router = createRouter({

@@ -1,42 +1,23 @@
 <template>
   <footer class="bg-[#1C1C1F] text-white px-12 py-16">
-    
+
     <!-- Top Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+    <div class="flex gap-12 justify-evenly mb-8">
       <!-- Left Side -->
       <div class="space-y-8">
         <!-- Logo -->
-        <div class="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-300">
-          <img src="../../@assets/images/logo2.png" alt="Mehery Logo" class="h-20" />
+        <!-- <div class="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-300">
+          <img src="../../@assets/images/logo-white.svg" alt="Mehery Logo" class="h-20" />
+        </div> -->
+        <div class="flex items-center transform hover:scale-105 transition-transform duration-300 mr-24">
+          <img src="../../@assets/images/logo.png" alt="Header Image" class="w-80 h-50 mr-10 "/>
         </div>
-        
+
+
         <!-- Navigation -->
-        <nav class="flex flex-wrap gap-8">
-          <template v-for="link in navLinks" :key="link.path">
-            <!-- Scroll Links -->
-            <button 
-              v-if="link.type === 'scroll'" 
-              @click="handleScroll(link.path)" 
-              class="text-gray-300 hover:text-white transition-colors relative group focus:outline-none"
-            >
-              {{ link.label }}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            
-            <!-- Route Links -->
-            <router-link
-              v-else-if="link.type === 'route'"
-              :to="link.path"
-              class="text-gray-300 hover:text-white transition-colors relative group"
-            >
-              {{ link.label }}
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </router-link>
-          </template>
-        </nav>
-        
+
         <!-- Contact Info -->
-        <div class="space-y-6">
+        <div class="space-y-6 ml-10">
           <h3 class="text-[#FFA726] font-semibold text-lg">Contact us:</h3>
           <div class="space-y-3 text-gray-300">
             <p class="flex items-center gap-2 hover:text-white transition-colors">
@@ -57,26 +38,49 @@
           </div>
         </div>
       </div>
+      
+      <div class="flex flex-col gap-2 mr-16">
+        <h3 class="text-[#FFA726] font-semibold text-lg">Quick Links</h3>
+
+          <template v-for="link in navLinks" :key="link.path" class="flex flex-row">
+            <!-- Scroll Links -->
+             <div v-if="link.type === 'scroll'">
+            <button  @click="handleScroll(link.path)"
+              class="text-gray-300 hover:text-white transition-colors  focus:outline-none">
+              {{ link.label }}
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
+            </button>
+          </div>
+
+            <!-- Route Links -->
+             <div v-else-if="link.type === 'route'">
+             <button >
+            <router-link  :to="link.path"
+              class="text-gray-300 hover:text-white transition-colors  ">
+              {{ link.label }}
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
+            </router-link>
+          </button>
+        </div>
+          </template>
+        </div>
+
 
       <!-- Right Side - Subscribe Form -->
-      <div class="bg-[#23232B] p-8 rounded-lg shadow-xl transform hover:scale-[1.02] transition-all duration-300">
+      <div class="bg-[#23232B] p-8 rounded-lg shadow-xl transform hover:scale-[1.02] transition-all duration-300 z-1">
         <h3 class="text-xl font-semibold mb-4">Stay Updated</h3>
         <p class="text-gray-300 mb-6">Subscribe to our blog for the latest updates and insights.</p>
         <form @submit.prevent="handleSubscribe" class="space-y-4">
           <div class="relative">
             <MailIcon class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size="18" />
-            <input
-              v-model="email"
-              type="email"
-              placeholder="Enter your email"
+            <input v-model="email" type="email" placeholder="Enter your email"
               class="w-full pl-10 pr-4 py-3 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
-              required
-            />
+              required />
           </div>
-          <button
-            type="submit"
-            class="w-full px-6 py-3 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transform hover:translate-y-[-2px] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FFA726] focus:ring-opacity-50"
-          >
+          <button type="submit"
+            class="w-full px-6 py-3 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transform hover:translate-y-[-2px] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FFA726] focus:ring-opacity-50">
             Subscribe to blog
           </button>
         </form>
@@ -91,16 +95,19 @@
           Privacy Policy
         </a>
       </div>
-      
+
       <!-- Social Icons -->
-      <div class="flex gap-6">
-        <a href="https://linkedin.com" class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
-          <LinkedinIcon size="24" />
+      <div class="flex gap-6 mr-20">
+        <a href="https://www.instagram.com/mehery_soccom/"
+          class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
+          <InstagramIcon size="24" />
         </a>
-        <a href="https://facebook.com" class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
+        <a href="https://www.facebook.com/MeherY.SocCom/"
+          class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
           <FacebookIcon size="24" />
         </a>
-        <a href="https://twitter.com" class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
+        <a href="https://x.com/mehery_soccom"
+          class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
           <TwitterIcon size="24" />
         </a>
       </div>
@@ -111,7 +118,7 @@
 <script setup>
 import { ref } from 'vue'
 import {
-  LinkedinIcon,
+  InstagramIcon,
   FacebookIcon,
   TwitterIcon,
   MailIcon,
@@ -132,7 +139,7 @@ const navLinks = [
   { type: 'scroll', path: 'features', label: 'Features' },
   { type: 'scroll', path: 'pricing', label: 'Pricing' },
   { type: 'scroll', path: 'faqs', label: 'FAQs' },
-  
+
   // Route Links
   { type: 'route', path: 'about', label: 'About Us' },
   { type: 'route', path: '/docs', label: 'Docs' },
