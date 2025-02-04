@@ -10,7 +10,7 @@
           <img src="../../@assets/images/logo-white.svg" alt="Mehery Logo" class="h-20" />
         </div> -->
         <div class="flex items-center transform hover:scale-105 transition-transform duration-300 mr-24">
-          <img src="../../@assets/images/logo.png" alt="Header Image" class="w-80 h-50 mr-10 "/>
+          <img src="../../@assets/images/logo.png" alt="Header Image" class="w-80 h-50 mr-10 " />
         </div>
 
 
@@ -38,38 +38,43 @@
           </div>
         </div>
       </div>
-      
-      <div class="flex flex-col gap-2 mr-16">
-        <h3 class="text-[#FFA726] font-semibold text-lg">Quick Links</h3>
 
-          <template v-for="link in navLinks" :key="link.path" class="flex flex-row">
+      <div class="flex justify-between  mr-16 gap-16">
+        <!-- Quick Links -->
+        <div class="flex flex-col gap-2">
+          <h3 class="text-[#FFA726] font-semibold text-lg">Quick Links</h3>
+          <template v-for="link in navLinks" :key="link.path">
             <!-- Scroll Links -->
-             <div v-if="link.type === 'scroll'">
-            <button  @click="handleScroll(link.path)"
-              class="text-gray-300 hover:text-white transition-colors  focus:outline-none">
-              {{ link.label }}
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </button>
-          </div>
-
-            <!-- Route Links -->
-             <div v-else-if="link.type === 'route'">
-             <button >
-            <router-link  :to="link.path"
-              class="text-gray-300 hover:text-white transition-colors  ">
-              {{ link.label }}
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
-            </router-link>
-          </button>
-        </div>
+            <div v-if="link.type === 'scroll'">
+              <button @click="handleScroll(link.path)"
+                class="text-gray-300 hover:text-white transition-colors focus:outline-none">
+                {{ link.label }}
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
+              </button>
+            </div>
           </template>
         </div>
 
+        <!-- Company Links -->
+        <div class="flex flex-col gap-2">
+          <h3 class="text-[#FFA726] font-semibold text-lg">Company</h3>
+          <template v-for="link in navLinks" :key="link.path">
+            <!-- Route Links -->
+            <div v-if="link.type === 'route'">
+              <router-link :to="link.path" class="text-gray-300 hover:text-white transition-colors">
+                {{ link.label }}
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"></span>
+              </router-link>
+            </div>
+          </template>
+        </div>
+      </div>
+
 
       <!-- Right Side - Subscribe Form -->
-      <div class="bg-[#23232B] p-8 rounded-lg shadow-xl transform hover:scale-[1.02] transition-all duration-300 z-1">
+      <div class="bg-[#23232B] p-8 rounded-lg shadow-xl transform hover:scale-[1.02] transition-all duration-300">
         <h3 class="text-xl font-semibold mb-4">Stay Updated</h3>
         <p class="text-gray-300 mb-6">Subscribe to our blog for the latest updates and insights.</p>
         <form @submit.prevent="handleSubscribe" class="space-y-4">
@@ -98,7 +103,7 @@
 
       <!-- Social Icons -->
       <div class="flex gap-6 mr-20">
-        <a href="https://www.instagram.com/mehery_soccom/"
+        <a href="https://www.instagram.com/meherysoccom/"
           class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
           <InstagramIcon size="24" />
         </a>
@@ -135,10 +140,10 @@ const router = useRouter()
 
 const navLinks = [
   // Scroll Links
-  { type: 'scroll', path: 'solutions', label: 'Solutions' },
   { type: 'scroll', path: 'features', label: 'Features' },
-  { type: 'scroll', path: 'pricing', label: 'Pricing' },
+  { type: 'scroll', path: 'solutions', label: 'Solutions' },
   { type: 'scroll', path: 'faqs', label: 'FAQs' },
+  { type: 'scroll', path: 'pricing', label: 'Pricing' },
 
   // Route Links
   { type: 'route', path: 'about', label: 'About Us' },
