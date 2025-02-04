@@ -83,7 +83,7 @@ const testimonials = ref([
     id: 1,
     name: 'Yuvraj Singh P',
     designation: 'Sales Head',
-    company: 'TechCorp Solutions',
+    company: 'Information Technology and services',
     rating: 5,
     comment: 'Working with this team has been an absolute pleasure. Their attention to detail and creative solutions have significantly improved our marketing efforts.',
     avatar: 'https://randomuser.me/api/portraits/men/1.jpg'
@@ -92,7 +92,7 @@ const testimonials = ref([
     id: 2,
     name: 'Devang T',
     designation: 'Software Developer',
-    company: 'InnovateX',
+    company: 'Financial Services',
     rating: 4,
     comment: 'I\'m impressed by the innovative approach and technical expertise. They delivered beyond our expectations and were always responsive to our needs.',
     avatar: 'https://randomuser.me/api/portraits/men/2.jpg'
@@ -101,7 +101,7 @@ const testimonials = ref([
     id: 3,
     name: 'Manish B',
     designation: 'HOD IT',
-    company: 'Global Systems Inc',
+    company: 'Financial Service',
     rating: 5,
     comment: 'The user-centric design approach and attention to accessibility have made our product stand out. It\'s been a game-changer for our user engagement.',
     avatar: 'https://randomuser.me/api/portraits/men/3.jpg'
@@ -110,7 +110,7 @@ const testimonials = ref([
     id: 4,
     name: 'Anurangi R',
     designation: 'Co-Founder & CEO',
-    company: 'FutureScale',
+    company: 'Educational managements',
     rating: 5,
     comment: 'The financial insights and strategic planning provided by this team have been instrumental in our company\'s growth. Highly recommended!',
     avatar: 'https://randomuser.me/api/portraits/men/4.jpg'
@@ -119,7 +119,7 @@ const testimonials = ref([
     id: 5,
     name: 'Jackson T',
     designation: 'Tech Support Engineer',
-    company: 'CloudNet Solutions',
+    company: 'Telecommunications',
     rating: 4,
     comment: 'Their agile approach and ability to adapt to changing requirements made our product launch a huge success. Great communication throughout the project.',
     avatar: 'https://randomuser.me/api/portraits/women/5.jpg'
