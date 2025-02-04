@@ -1,9 +1,9 @@
 <template>
-  <div @click="handleClickOutside" class="font-sans z-100">
+  <div @click="handleClickOutside" class="font-sans chatbot-container">
     <!-- Bot Icon with Tooltip -->
-    <div class="fixed bottom-8 right-6 group">
+    <div class="fixed bottom-8 right-6 group chatbot-element">
       <!-- Tooltip -->
-      <div class="absolute -top-0 right-20 bg-gray-800 text-white text-xs py-1 rounded w-auto px-2 whitespace-nowrap">
+      <div class="absolute -top-0 right-20 bg-gray-800 text-white text-xs py-1 rounded w-auto px-2 whitespace-nowrap chatbot-tooltip">
         Chat with us
       </div>
       <!-- Bot Button -->
@@ -17,7 +17,7 @@
     <!-- Bot Popup -->
     <transition name="slide-fade">
       <div v-if="isOpen"
-        class="fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
+        class="fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 chatbot-popup"
         @click.stop>
         <!-- Success Feedback Overlay -->
         <transition name="fade">
@@ -42,7 +42,7 @@
         </div>
         <div class="chat-container">
           <div v-for="(message, index) in conversation" :key="index" :class="['message', message.type]">
-            <img v-if="message.type === 'bot'" src="/path/to/bot-avatar.png" alt="Bot" class="avatar">
+            <img v-if="message.type === 'bot'" src="../../@assets/images/bot.svg" alt="Bot" class="avatar">
             <img v-else src="../../@assets/images/bot.svg" alt="You" class="avatar">
             <div class="bubble">{{ message.text }}</div>
           </div>
@@ -152,9 +152,31 @@ export default {
 </script>
 
 <style scoped>
+/* Base container styles with high z-index */
+.chatbot-container {
+  position: relative;
+  z-index: 99999 !important;
+}
+
+.chatbot-element {
+  position: fixed;
+  z-index: 99999 !important;
+}
+
+.chatbot-popup {
+  position: fixed;
+  z-index: 99999 !important;
+}
+
+.chatbot-tooltip {
+  z-index: 100000 !important;
+}
+
+/* Transitions */
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99999 !important;
 }
 
 .slide-fade-enter-from,
@@ -173,10 +195,11 @@ export default {
   opacity: 0;
 }
 
+/* Chat container styles */
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 300px;
   overflow-y: auto;
   padding: 10px;
   background-color: #f5f5f5;
@@ -233,13 +256,13 @@ export default {
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* Input container styles */
 .input-container {
   display: flex;
   padding: 10px;
@@ -253,10 +276,10 @@ export default {
   border: 1px solid #ddd;
   border-radius: 20px;
   outline: none;
+  margin-right: 10px;
 }
 
 .input-container button {
-  margin-left: 10px;
   padding: 10px 20px;
   background-color: #0b93f6;
   color: #fff;

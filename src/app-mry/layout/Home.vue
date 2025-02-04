@@ -74,7 +74,7 @@
                 <Pricing />
             </div>
         </div>
-        <div class="scroll-mt-[60px]" id="pricing">
+        <div class="scroll-mt-[60px]" id="testimonial">
             <div class="container mx-auto px-6">
                 <Testimonial />
             </div>
