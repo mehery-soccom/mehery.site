@@ -75,7 +75,7 @@ import {
   StarIcon, 
   ChevronLeftIcon, 
   ChevronRightIcon,
-  QuoteIcon 
+
 } from 'vue-feather-icons';
 
 const testimonials = ref([
