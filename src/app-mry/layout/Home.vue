@@ -74,6 +74,11 @@
                 <Pricing />
             </div>
         </div>
+        <div class="scroll-mt-[60px]" id="pricing">
+            <div class="container mx-auto px-6">
+                <Testimonial />
+            </div>
+        </div>
         <div class="scroll-mt-[60px] -mb-28" id="faqs">
             <div class="container mx-auto px-6">
                 <FAQ />
@@ -105,7 +110,7 @@ import Customer from "./Customer.vue";
 import About from "./About.vue"
 import Partner from "./Partner.vue";
 import ConversationalBot from "./Conversational.vue";
-
+import Testimonial from "./Testimonials.vue"
 const routes = {
     "/": "home",
     "/customer": "customer",
