@@ -17,16 +17,16 @@
         </div> -->
 
         <div class="flex items-center gap-2">
-          <span class="text-sm font-medium">Features:</span>
-          <button @click="toggleView" class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors">
+          <!-- <span class="text-sm font-medium">Features:</span> -->
+          <button @click="toggleView" class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors ">
             {{ showFeatures ? 'Show Pricing' : 'Show Features' }}
           </button>
         </div>
 
         <div class="flex items-center gap-2">
-          <span class="text-sm font-medium">Billing Cycle:</span>
+          <!-- <span class="text-sm font-medium">Billing Cycle:</span> -->
           <button @click="toggleBillingCycle"
-            class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors">
+            class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white">
             {{ billingCycle }}
           </button>
         </div>
