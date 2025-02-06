@@ -10,16 +10,12 @@
         <transition name="fade" mode="out-in">
           <div :key="currentTestimonial.id" class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
             <div class="p-8 md:p-10">
-              <!-- Quote Icon -->
               <QuoteIcon class="absolute top-8 right-8 text-indigo-100 w-16 h-16 transform rotate-180" />
               
-              <!-- Content -->
               <div class="relative z-10">
-                <!-- Rating -->
                 <div class="flex items-center mb-6 space-x-1">
                   <template v-for="i in 5" :key="i">
                     <div :class="i <= currentTestimonial.rating ? 'text-yellow-400' : 'text-gray-200'" class="w-6 h-6">
-                      <!-- Custom Star SVG for better design -->
                       <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
                         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                       </svg>
@@ -27,13 +23,12 @@
                   </template>
                 </div>
 
-                <!-- Testimonial Text -->
                 <p class="text-xl text-gray-700 leading-relaxed mb-8 italic">{{ currentTestimonial.comment }}</p>
 
-                <!-- Author Info -->
                 <div class="flex items-center">
-                  <img :src="currentTestimonial.avatar" :alt="currentTestimonial.name" 
-                       class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg" />
+                  <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center border-4 border-white shadow-lg">
+                    <UserIcon class="w-10 h-10 text-gray-600" />
+                  </div>
                   <div class="ml-6">
                     <h3 class="text-xl font-semibold text-gray-900">{{ currentTestimonial.name }}</h3>
                     <p class="text-gray-600 mb-1">{{ currentTestimonial.designation }}</p>
@@ -45,7 +40,6 @@
           </div>
         </transition>
 
-        <!-- Navigation Buttons -->
         <button @click="prevTestimonial" 
                 class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200">
           <ChevronLeftIcon class="w-6 h-6 text-gray-600" />
@@ -56,7 +50,6 @@
         </button>
       </div>
 
-      <!-- Pagination Dots -->
       <div class="flex justify-center mt-8 space-x-2">
         <button v-for="(_, index) in testimonials" 
                 :key="index" 
@@ -72,10 +65,9 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { 
-  StarIcon, 
   ChevronLeftIcon, 
-  ChevronRightIcon,
-
+  ChevronRightIcon, 
+  UserIcon 
 } from 'vue-feather-icons';
 
 const testimonials = ref([

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 ">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-4xl font-bold mb-16 text-start">FAQs</h2>
       
@@ -14,7 +14,7 @@
           ]"
           @click="toggleFaq(index)"
         >
-          <div class="flex items-start justify-between gap-8">
+          <div class="flex items-start justify-between gap-6 scale-90">
             <div class="flex gap-8 items-start flex-1">
               <span class="text-4xl font-medium text-gray-300 font-mono">
                 {{ String(index + 1).padStart(2, '0') }}

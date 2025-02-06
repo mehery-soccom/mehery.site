@@ -21,10 +21,9 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 ml-4">
                 <!-- Product Dropdown -->
-                <div class="relative">
+                <div class="relative" @mouseenter="productMenuOpen = true" >
                     <button
-                        @click="toggleProductMenu"
-                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
+                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"  @mousedown="productMenuOpen = !productMenuOpen"
                     >
                         <span>Product</span>
                         <svg
@@ -33,6 +32,7 @@
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
+                            
                         >
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
@@ -40,12 +40,14 @@
                     <div
                         v-if="productMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
+                        @mouseenter="productMenuOpen = true"
+                       
                     >
-                        <a
-                            @click="scrollToSection('WhatsApp')"
+                    <a
+                            @click="scrollToSection('solutions')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
-                            WhatsApp
+                            Solutions
                         </a>
                         <a
                             @click="scrollToSection('features')"
@@ -53,21 +55,23 @@
                         >
                             Features
                         </a>
+                
                         <a
-                            @click="scrollToSection('solutions')"
+                            @click="scrollToSection('WhatsApp')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
-                            Solutions
+                            WhatsApp
                         </a>
+
                     </div>
                 </div>
 
                 <!-- Resources Dropdown -->
-                <div class="relative">
+                <div class="relative" @mouseenter="resourcesMenuOpen = true">
                     <button
-                        @click="toggleResourcesMenu"
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
-                    >
+                         @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
+                        >
                         <span>Resources</span>
                         <svg
                             class="w-4 h-4 transform transition-transform"
@@ -82,6 +86,7 @@
                     <div
                         v-if="resourcesMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
+                        @mouseenter="resourcesMenuOpen = true"
                     >
                         <!-- About Us Link -->
                         <router-link
@@ -318,14 +323,6 @@ const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
 const productMenuOpen = ref(false);
 const resourcesMenuOpen = ref(false);
-
-const toggleProductMenu = () => {
-    productMenuOpen.value = !productMenuOpen.value;
-};
-
-const toggleResourcesMenu = () => {
-    resourcesMenuOpen.value = !resourcesMenuOpen.value;
-};
 
 const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value;
