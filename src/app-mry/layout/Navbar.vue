@@ -87,7 +87,6 @@
                         v-if="resourcesMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
                         @mouseenter="resourcesMenuOpen = true"
-                        @mouseleave="resourcesMenuOpen = false"
                     >
                         <!-- About Us Link -->
                         <router-link

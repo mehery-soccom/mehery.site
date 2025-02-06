@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 py-8">
+  <div class="max-w-7xl mx-auto  py-8">
     <!-- Header Section -->
     <div class="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
       <h2 class="text-3xl font-bold">
@@ -18,7 +18,8 @@
 
         <div class="flex items-center gap-2">
           <!-- <span class="text-sm font-medium">Features:</span> -->
-          <button @click="toggleView" class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors ">
+          <button @click="toggleView"
+            class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors ">
             {{ showFeatures ? 'Show Pricing' : 'Show Features' }}
           </button>
         </div>
@@ -36,7 +37,7 @@
     </div>
 
     <!-- Pricing Cards -->
-    <div v-if="!showFeatures" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-sm">
+    <div v-if="!showFeatures" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12 text-sm">
       <div v-for="(plan, planIndex) in plans" :key="plan.name"
         class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow">
         <!-- Plan Header -->
@@ -54,21 +55,18 @@
         <!-- Plan Features -->
         <div class="space-y-4 flex-1">
           <!-- Fixed Fees -->
-          <div>
+          <!-- <div>
             <h4 class="font-semibold mb-2 border-b pb-1">Fixed Fees</h4>
             <ul>
               <li class="flex justify-between"><span>Monthly</span><span>{{ plan.fixedFees.monthly }}</span></li>
               <li class="flex justify-between"><span>Quarterly</span><span>{{ plan.fixedFees.quarterly }}</span></li>
               <li class="flex justify-between"><span>Annual</span><span>{{ plan.fixedFees.annual }}</span></li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- Mehery Fees - Per Conversation Fees -->
           <div>
             <h4 class="font-semibold mb-2 border-b pb-1">Per Conversation Fees</h4>
-            <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
-              class="text-blue-500 underline">Whatsapp Conversation Fees</a>
-
             <ul>
               <li v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']" :key="key"
                 class="flex justify-between">
@@ -100,24 +98,19 @@
           </div>
 
           <!-- Number of Users -->
-          <div>
+          <div class="mb-2">
             <h4 class="font-semibold mb-2 border-b pb-1">Users</h4>
             <ul>
               <li class="flex justify-between"><span>Admin Agent</span><span>{{ plan.users.adminAgent }}</span></li>
               <li class="flex justify-between"><span>Additional User</span><span>{{ plan.users.additionalUser }}</span>
               </li>
+              
             </ul>
           </div>
 
           <!-- Free Utilities -->
-          <div>
+          <div v-if="plan.name === 'Free Forever'" class="mb-2">
             <h4 class="font-semibold mb-2 border-b pb-1">Free Utilities</h4>
-            <!-- <ul>
-          <li v-for="(value, key) in plan.freeUtilities" :key="key" class="flex justify-between">
-            <span>{{ key }}</span>
-            <span>{{ value }}</span>
-          </li>
-        </ul> -->
             <ul>
               <li class="flex justify-between"><span>Free DAU</span><span>{{ plan.freeUtilities.monthlyDAU }}</span>
               </li>
@@ -126,48 +119,52 @@
               <li class="flex justify-between"><span>Free BOT conversations</span><span>{{
                 plan.freeUtilities.freeBotConversations }}</span></li>
             </ul>
-
           </div>
+          <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
+              class="text-blue-500 underline">Whatsapp Conversation Fees</a>
+
+
         </div>
       </div>
     </div>
     <!-- Feature Comparison -->
     <div v-else class="bg-white rounded-lg shadow-lg p-8">
-      <div class="overflow-x-auto">
-        <table class="w-full">
-          <thead>
-  <tr class="border-b">
-    <th class="text-left py-4 px-4 w-1/3">Feature</th>
-    <th v-for="plan in plans" :key="plan.name" class="text-center py-4 px-4">
-      <div class="text-lg font-bold">{{ plan.name }}</div>
-      <div class="text-sm text-gray-500">
-        {{ plan.fixedFees[billingCycle.toLowerCase()] }} / {{ billingCycle.toLowerCase() }}
-      </div>
-    </th>
-  </tr>
-</thead>          <tbody>
-            <template v-for="(section, sectionKey) in features" :key="sectionKey">
-              <!-- Section Header -->
-              <tr class="bg-gray-50">
-                <td colspan="5" class="py-4 px-4 font-bold text-lg">
-                  {{ formatSectionTitle(sectionKey) }}
-                </td>
-              </tr>
+  <div class="overflow-x-auto">
+    <table class="w-full border border-gray-300">
+      <thead class="bg-gray-100">
+        <tr class="border-b border-gray-300">
+          <th class="text-left py-4 px-4 w-1/3 border-r border-gray-300">Feature</th>
+          <th v-for="plan in plans" :key="plan.name" class="text-center py-4 px-4 border-r border-gray-300">
+            <div class="text-lg font-bold">{{ plan.name }}</div>
+            <div class="text-sm text-gray-500">
+              {{ plan.fixedFees[billingCycle.toLowerCase()] }} / {{ billingCycle.toLowerCase() }}
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-300">
+        <template v-for="(section, sectionKey) in features" :key="sectionKey">
+          <!-- Section Header -->
+          <tr class="bg-gray-50 border-b border-gray-300">
+            <td colspan="6" class="py-4 px-4 font-bold text-lg  border-gray-300">
+              {{ formatSectionTitle(sectionKey) }}
+            </td>
+          </tr>
 
-              <!-- Section Features -->
-              <tr v-for="feature in section" :key="feature.name" class="border-b hover:bg-gray-50 transition-colors">
-                <td class="py-4 px-4">{{ feature.name }}</td>
-                <td v-for="(available, idx) in feature.availability" :key="idx" class="text-center py-4 px-4">
-                  <check-icon v-if="available === 'Y'" size="20" class="inline-block text-green-500" />
-                  <x-icon v-else-if="available === 'X'" size="20" class="inline-block text-gray-300" />
-                  <span v-else class="text-sm">{{ available }}</span>
-                </td>
-              </tr>
-            </template>
-          </tbody>
-        </table>
-      </div>
-    </div>
+          <!-- Section Features -->
+          <tr v-for="feature in section" :key="feature.name" class="border-b border-gray-300 hover:bg-gray-50 transition-colors">
+            <td class="py-4 px-4 border-r border-gray-300">{{ feature.name }}</td>
+            <td v-for="(available, idx) in feature.availability" :key="idx" class="text-center py-4 px-4 border-r border-gray-300">
+              <check-icon v-if="available === 'Y'" size="20" class="inline-block text-green-500" />
+              <x-icon v-else-if="available === 'X'" size="20" class="inline-block text-gray-300" />
+              <span v-else class="text-sm">{{ available }}</span>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
+</div>
   </div>
 </template>
 
@@ -215,6 +212,29 @@ const formatSectionTitle = (key) => {
 // Pricing Data
 const plans = ref([
   {
+    name: 'Free Forever',
+    prices: { inr: 'Free', usd: 'Free' },
+    buttonText: 'Get Started',
+    fixedFees: { monthly: 'Free', quarterly: 'Free', annual: 'Free' },
+    "Mehery Fees – Per conversation Fees": {
+      DAU: { inr: 'Up to 100', usd: 'Up to 100' },
+      'Image Creation': { inr: 'Up to 50', usd: 'Up to 50' },
+      'CHAT GPT ': { inr: 'Up to 100', usd: 'Up to 100' }
+    },
+    users: { adminAgent: '1', additionalUser: 'N/A' },
+    depositFees: { minimumDeposit: 'N/A' },
+    setupFees: {
+      facebookBusinessSetup: 'N/A',
+      openAISetupTraining: 'N/A',
+      openAIBotDevelopment: 'N/A'
+    },
+    freeUtilities: {
+      monthlyDAU: '100',
+      freeImages: '50',
+      freeBotConversations: '100'
+    }
+  },
+  {
     name: 'Lite',
     prices: { inr: 'NA', usd: 'NA' },
     buttonText: 'Get Started',
@@ -230,11 +250,6 @@ const plans = ref([
       facebookBusinessSetup: '$50',
       openAISetupTraining: 'Price On Request',
       openAIBotDevelopment: 'Based upon scope of work'
-    },
-    freeUtilities: {
-      monthlyDAU: '100',
-      freeImages: '50',
-      freeBotConversations: '100'
     }
   },
   {
@@ -253,11 +268,6 @@ const plans = ref([
       facebookBusinessSetup: '$50',
       openAISetupTraining: 'X',
       openAIBotDevelopment: 'Based upon scope of work'
-    },
-    freeUtilities: {
-      monthlyDAU: '100',
-      freeImages: '50',
-      freeBotConversations: '100'
     }
   },
   {
@@ -276,11 +286,6 @@ const plans = ref([
       facebookBusinessSetup: '$50',
       openAISetupTraining: 'X',
       openAIBotDevelopment: 'Based upon scope of work'
-    },
-    freeUtilities: {
-      monthlyDAU: '100',
-      freeImages: '50',
-      freeBotConversations: '100'
     }
   },
   {
@@ -289,97 +294,90 @@ const plans = ref([
     buttonText: 'Contact Sales',
     fixedFees: { monthly: 'On Request', quarterly: 'On Request', annual: 'On Request' },
     "Mehery Fees – Per conversation Fees": {
-      DAU: { inr: 'On Request', usd: 'On Request' },
-      'Image Creation Fee - per image': { inr: 'On Request', usd: 'On Request' },
-      'CHAT GPT - Per conversation': { inr: 'On Request', usd: 'On Request' }
+      DAU: { inr: 'On Req', usd: 'On Req' },
+      'Image Creation Fee': { inr: 'On Req', usd: 'On Req' },
+      'CHAT GPT': { inr: 'On Req', usd: 'On Req' }
     },
-    users: { adminAgent: '10', additionalUser: 'On Request' },
+    users: { adminAgent: '10', additionalUser: 'On Req' },
     depositFees: { minimumDeposit: '$25' },
     setupFees: {
       facebookBusinessSetup: '$50',
       openAISetupTraining: 'Price On Request',
       openAIBotDevelopment: 'Based upon scope of work'
-    },
-    freeUtilities: {
-      monthlyDAU: '100',
-      freeImages: '50',
-      freeBotConversations: '100'
     }
   }
 ]);
-
 // Features Data
 const features = ref({
   Channels: [
-    { name: 'WhatsApp', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Webchat', availability: ['X', 'Y', 'Y', 'Y'] },
-    { name: 'Facebook Messenger', availability: ['X', 'X', 'Y', 'Y'] },
-    { name: 'Instagram DM', availability: ['X', 'Y', 'Y', 'Y'] },
-    { name: 'Telegram', availability: ['X', 'X', 'Y', 'Y'] },
-    { name: 'App Chat', availability: ['X', 'X', 'X', 'Y'] },
-    { name: 'Email', availability: ['X', 'X', 'X', 'Y'] }
+    { name: 'WhatsApp', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Webchat', availability: ['X', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Facebook Messenger', availability: ['X', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'Instagram DM', availability: ['X', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Telegram', availability: ['X', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'App Chat', availability: ['X', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Email', availability: ['X', 'X', 'X', 'Y', 'Y'] }
   ],
   SmartConversations: [
-    { name: 'Team Inbox', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Chat Assignment / Auto routing', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Session Tags', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Number Masking', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'User roles/skills', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Conversation Analytics', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Chat GPT Paraphrase', availability: ['Y', 'X', 'Y', 'Y'] },
-    { name: 'Follow-up', availability: ['Y', 'X', 'Y', 'Y'] },
-    { name: 'Appointment / Table Booking', availability: ['Y', 'X', 'Y', 'Y'] }
+    { name: 'Team Inbox', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Chat Assignment / Auto routing', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Session Tags', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Number Masking', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'User roles/skills', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Conversation Analytics', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Chat GPT Paraphrase', availability: ['Y', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'Follow-up', availability: ['Y', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'Appointment / Table Booking', availability: ['Y', 'X', 'Y', 'Y', 'Y'] }
   ],
   Bots: [
-    { name: 'Basic chatbots', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Advanced interconnected BOTs', availability: ['Y', 'X', 'Y', 'Y'] },
-    { name: 'Auto-reply BOTs', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Outside Working Hours, Weekends and Holidays', availability: ['Y', 'X', 'Y', 'Y'] }
+    { name: 'Basic chatbots', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Advanced interconnected BOTs', availability: ['Y', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'Auto-reply BOTs', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Outside Working Hours, Weekends and Holidays', availability: ['Y', 'X', 'Y', 'Y', 'Y'] }
   ],
   OpenAIChatGPT: [
-    { name: 'Instructor, Knowledgebase', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Agent AI conversational BOT', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Custom BOT Scripting with OpenAI', availability: ['Y', 'X', 'X', 'Y'] }
+    { name: 'Instructor, Knowledgebase', availability: ['Y', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Agent AI conversational BOT', availability: ['Y', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Custom BOT Scripting with OpenAI', availability: ['Y', 'X', 'X', 'Y', 'Y'] }
   ],
   WhatsAppBusinessAPI: [
-    { name: 'Text, image, video messaging', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Custom Image Templates', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'WhatsApp Flows', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'WhatsApp Carousels', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Authentication', availability: ['Y', 'Y', 'Y', 'Y'] }
+    { name: 'Text, image, video messaging', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Custom Image Templates', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'WhatsApp Flows', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'WhatsApp Carousels', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Authentication', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] }
   ],
   MarketingLeadGeneration: [
-    { name: 'Campaign Management', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Campaign Scheduling', availability: ['Y', 'X', 'Y', 'Y'] },
-    { name: 'Campaign Analytics, CTA Tracker', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'Custom Image (and HTML source) Templates', availability: ['Y', 'X', 'Y', 'Y'] },
-    { name: 'Click to WhatsApp Ads Insights', availability: ['Y', 'Y', 'Y', 'Y'] }
+    { name: 'Campaign Management', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Campaign Scheduling', availability: ['Y', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'Campaign Analytics, CTA Tracker', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'Custom Image (and HTML source) Templates', availability: ['Y', 'X', 'Y', 'Y', 'Y'] },
+    { name: 'Click to WhatsApp Ads Insights', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] }
   ],
   APIs: [
-    { name: 'APIs for Outbound communication', availability: ['X', 'Y', 'Y', 'Y'] }
+    { name: 'APIs for Outbound communication', availability: ['X', 'Y', 'Y', 'Y', 'Y'] }
   ],
   CustomerManagement: [
-    { name: 'Customer master', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Custom fields', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Custom Filters for grouping', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Customer Grouping for Campaigns', availability: ['Y', 'X', 'X', 'Y'] },
-    { name: 'Relationship Management', availability: ['Y', 'X', 'X', 'Y'] }
+    { name: 'Customer master', availability: ['Y', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Custom fields', availability: ['Y', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Custom Filters for grouping', availability: ['Y', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Customer Grouping for Campaigns', availability: ['Y', 'X', 'X', 'Y', 'Y'] },
+    { name: 'Relationship Management', availability: ['Y', 'X', 'X', 'Y', 'Y'] }
   ],
   AgentMobileApp: [
-    { name: 'IOS and Android', availability: ['X', 'Y', 'Y', 'Y'] }
+    { name: 'IOS and Android', availability: ['X', 'Y', 'Y', 'Y', 'Y'] }
   ],
   WebhookConnections: [
-    { name: 'Number of Webhook Connections', availability: ['X', '1', '2', 'Custom'] }
+    { name: 'Number of Webhook Connections', availability: ['X', '1', '2', 'Custom', 'Custom'] }
   ],
   SupportPlans: [
-    { name: 'Assisted onboarding', availability: ['Y', 'Y', 'Y', 'Y'] },
-    { name: 'SLA - Response Times', availability: ['12 hrs', '6 hrs', '4 hrs', '4 hrs'] },
-    { name: 'WhatsApp and Email support', availability: ['10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week'] },
-    { name: 'WhatsApp, Email and Call based support', availability: ['X', 'X', 'included', 'included'] },
-    { name: 'WhatsApp, Email and Call based support 9h * 6d', availability: ['X', 'X', 'X', 'included'] },
-    { name: 'Support Hours', availability: ['9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm'] },
-    { name: 'Support Days', availability: ['Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo'] }
+    { name: 'Assisted onboarding', availability: ['Y', 'Y', 'Y', 'Y', 'Y'] },
+    { name: 'SLA - Response Times', availability: ['12 hrs', '6 hrs', '4 hrs', '4 hrs', '4 hrs'] },
+    { name: 'WhatsApp and Email support', availability: ['10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week', '10 hrs/day x 7 days/week'] },
+    { name: 'WhatsApp, Email and Call based support', availability: ['X', 'X', 'included', 'included', 'included'] },
+    { name: 'WhatsApp, Email and Call based support 9h * 6d', availability: ['X', 'X', 'X', 'included', 'included'] },
+    { name: 'Support Hours', availability: ['9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm', '9 am - 7 pm'] },
+    { name: 'Support Days', availability: ['Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo', 'Week Days, local Geo'] }
   ]
 });
-
 </script>
