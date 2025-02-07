@@ -17,9 +17,9 @@
                                     At Mehery, we believe in the power of conversations. Conversations are the cornerstone of building strong customer relationships and play a pivotal role in converting prospects into loyal customers.
                                 </p>
                             </div>
-                            <div class="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[300px]">
+                            <div class="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[350px]">
                                 <img 
-                                    src="https://picsum.photos/600/300" 
+                                    src="../../@assets/images/Screenshot 2025-02-07 133422.png" 
                                     alt="About Us" 
                                     class="w-full h-full object-cover"
                                 />
@@ -33,9 +33,9 @@
                             </p>
 
                             <!-- Team Photo Section -->
-                            <div class="my-8 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[250px]">
+                            <div class="my-8 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[450px]">
                                 <img 
-                                    src="https://picsum.photos/600/250" 
+                                    src="../../@assets/images/5439.jpg" 
                                     alt="Our Team" 
                                     class="w-full h-full object-cover"
                                 />
