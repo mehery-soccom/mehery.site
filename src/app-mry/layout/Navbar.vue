@@ -21,9 +21,10 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 ml-4">
                 <!-- Product Dropdown -->
-                <div class="relative" @mouseenter="productMenuOpen = true" >
+                <div class="relative" @mouseenter="productMenuOpen = true" @mouseleave="productMenuOpen = false">
                     <button
-                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"  @mousedown="productMenuOpen = !productMenuOpen"
+                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
+                        @mousedown="productMenuOpen = !productMenuOpen"
                     >
                         <span>Product</span>
                         <svg
@@ -32,7 +33,6 @@
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
-                            
                         >
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
@@ -40,10 +40,8 @@
                     <div
                         v-if="productMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
-                        @mouseenter="productMenuOpen = true"
-                       
                     >
-                    <a
+                        <a
                             @click="scrollToSection('solutions')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
@@ -55,23 +53,22 @@
                         >
                             Features
                         </a>
-                
+
                         <a
                             @click="scrollToSection('WhatsApp')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
                             WhatsApp
                         </a>
-
                     </div>
                 </div>
 
                 <!-- Resources Dropdown -->
-                <div class="relative" @mouseenter="resourcesMenuOpen = true">
+                <div class="relative" @mouseenter="resourcesMenuOpen = true" @mouseleave="resourcesMenuOpen = false">
                     <button
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
-                         @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
-                        >
+                        @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
+                    >
                         <span>Resources</span>
                         <svg
                             class="w-4 h-4 transform transition-transform"
@@ -86,7 +83,6 @@
                     <div
                         v-if="resourcesMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
-                        @mouseenter="resourcesMenuOpen = true"
                     >
                         <!-- About Us Link -->
                         <router-link
@@ -317,7 +313,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
@@ -328,12 +324,12 @@ const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value;
 };
 
-const scrollToSection = (id) => {
+const scrollToSection = id => {
     const element = document.getElementById(id);
     if (element) {
         element.scrollIntoView({
             behavior: "smooth",
-            block: "start",
+            block: "start"
         });
     }
 
@@ -349,10 +345,10 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 });
 
 onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener("scroll", handleScroll);
 });
 </script>
