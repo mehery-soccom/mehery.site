@@ -132,12 +132,13 @@
                 <!-- Pricing Link -->
                 <a
                     @click="scrollToSection('pricing')"
-                    class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 relative group"
+                    class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 relative group hover:no-underline"
+                    @mouseenter="productMenuOpen = false,resourcesMenuOpen = false"
                 >
                     Pricing
-                    <span
+                    <!-- <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
-                    ></span>
+                    ></span> -->
                 </a>
             </div>
 

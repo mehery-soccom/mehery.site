@@ -87,7 +87,7 @@
     </div>
     <div>
         <div>
-            <ConversationalBot />
+    <ConversationalBot />
         </div>
     </div>
     <div class="scroll-mt-[60px]" id="">
