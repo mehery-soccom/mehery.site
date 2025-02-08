@@ -142,7 +142,6 @@ const navLinks = [
   // Scroll Links
   { type: 'scroll', path: 'features', label: 'Features' },
   { type: 'scroll', path: 'solutions', label: 'Solutions' },
-  { type: 'scroll', path: 'faqs', label: 'FAQs' },
   { type: 'scroll', path: 'pricing', label: 'Pricing' },
 
   // Route Links
@@ -152,6 +151,8 @@ const navLinks = [
   { type: 'route', path: '/privacy', label: 'Privacy Policy' },
   { type: 'route', path: '/terms', label: 'Terms of Service' },
   { type: 'route', path: '/partner', label: 'Partner' },
+  { type: 'route', path: '/faq', label: 'FAQs' },
+
 ]
 
 const handleScroll = (id) => {

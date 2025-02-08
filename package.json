@@ -68,7 +68,7 @@
     "vue-meta": "^2.4.0",
     "vue-parallax-js": "^0.2.3",
     "vue-recaptcha": "^2.0.3",
-    "vue-router": "^4.3.2",
+    "vue-router": "^4.5.0",
     "vue-router-sitemap": "^0.0.4",
     "vue-select": "^4.0.0-beta.6",
     "vue3-google-map": "^0.20.0",

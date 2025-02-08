@@ -1,4 +1,5 @@
 <template>
+  <Navbar />
   <div class="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 ">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-4xl font-bold mb-16 text-start">FAQs</h2>
@@ -53,10 +54,13 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import Navbar from './Navbar.vue';
+import Footer from './Footer.vue';
 
 const faqs = ref([
   {

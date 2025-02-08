@@ -21,7 +21,7 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 ml-4">
                 <!-- Product Dropdown -->
-                <div class="relative" @mouseenter="productMenuOpen = true" @mouseleave="productMenuOpen = false">
+                <div class="relative" @mouseenter="productMenuOpen = true,resourcesMenuOpen = false" >
                     <button
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
                         @mousedown="productMenuOpen = !productMenuOpen"
@@ -39,6 +39,7 @@
                     </button>
                     <div
                         v-if="productMenuOpen"
+                         @mouseleave="productMenuOpen = false"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
                     >
                         <a
@@ -64,7 +65,8 @@
                 </div>
 
                 <!-- Resources Dropdown -->
-                <div class="relative" @mouseenter="resourcesMenuOpen = true" @mouseleave="resourcesMenuOpen = false">
+                <div class="relative" @mouseenter="resourcesMenuOpen = true, productMenuOpen = false"
+                >
                     <button
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
                         @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
@@ -83,6 +85,7 @@
                     <div
                         v-if="resourcesMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
+                        @mouseleave="resourcesMenuOpen = false"
                     >
                         <!-- About Us Link -->
                         <router-link
@@ -314,6 +317,10 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
 
 const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
@@ -324,31 +331,50 @@ const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value;
 };
 
-const scrollToSection = id => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    }
-
+const scrollToSection = (id) => {
     // Close menus
     mobileMenuOpen.value = false;
     productMenuOpen.value = false;
     resourcesMenuOpen.value = false;
+
+    // Check if the current route is the home page
+    if (route.name === "Home") {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    } else {
+        // Navigate to the home page with a hash or query parameter
+        router.push({ name: "Home", hash: `#${id}` });
+    }
 };
 
-const handleScroll = () => {
-    const navbarHeight = 60;
-    isScrolled.value = window.scrollY > navbarHeight;
-};
-
+// Handle hash changes after navigation to the home page
 onMounted(() => {
     window.addEventListener("scroll", handleScroll);
+
+    // Check for a hash in the URL after the page loads
+    if (route.name === "Home" && route.hash) {
+        const sectionId = route.hash.replace("#", "");
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
 });
 
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
 });
+
+const handleScroll = () => {
+    const navbarHeight = 60;
+    isScrolled.value = window.scrollY > navbarHeight;
+};
 </script>
