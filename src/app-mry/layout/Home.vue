@@ -79,15 +79,15 @@
                 <Testimonial />
             </div>
         </div>
-        <div class="scroll-mt-[60px] -mb-28" id="faqs">
+        <!-- <div class="scroll-mt-[60px] -mb-28" id="faqs">
             <div class="container mx-auto px-6">
                 <FAQ />
             </div>
-        </div>
+        </div> -->
     </div>
     <div>
         <div>
-            <ConversationalBot />
+    <ConversationalBot />
         </div>
     </div>
     <div class="scroll-mt-[60px]" id="">

@@ -35,6 +35,11 @@ const routes = [
         name: "Blog",
         component: () => import("@src/app-mry/layout/Blog.vue")
     },
+    {
+        path: `/faq`,
+        name: "Faq",
+        component: () => import("@src/app-mry/layout/FAQ.vue")
+    },
 ];
 
 const router = createRouter({

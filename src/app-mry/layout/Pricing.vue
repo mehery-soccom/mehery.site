@@ -89,11 +89,13 @@
       </div> -->
 
           <!-- Deposits -->
-          <div>
+          <div v-if="plan.depositFees.minimumDeposit !== 'N/A'">
             <h4 class="font-semibold mb-2 border-b pb-1">Deposit Fees</h4>
             <ul>
-              <li class="flex justify-between"><span>Minimum Deposit</span><span>{{ plan.depositFees.minimumDeposit
-                  }}</span></li>
+              <li class="flex justify-between">
+                <span>Minimum Deposit</span>
+                <span>{{ plan.depositFees.minimumDeposit }}</span>
+              </li>
             </ul>
           </div>
 
@@ -102,9 +104,10 @@
             <h4 class="font-semibold mb-2 border-b pb-1">Users</h4>
             <ul>
               <li class="flex justify-between"><span>Admin Agent</span><span>{{ plan.users.adminAgent }}</span></li>
-              <li class="flex justify-between"><span>Additional User</span><span>{{ plan.users.additionalUser }}</span>
+                
+              <li v-if="plan.users.additionalUser !== 'N/A'" class="flex justify-between"><span>Additional User</span><span>{{ plan.users.additionalUser }}</span>
               </li>
-              
+
             </ul>
           </div>
 
@@ -121,22 +124,22 @@
             </ul>
           </div>
           <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
-              class="text-blue-500 underline">Whatsapp Conversation Fees</a>
+            class="text-blue-500 underline">Whatsapp Conversation Fees</a>
 
 
         </div>
       </div>
     </div>
     <!-- Feature Comparison -->
-    <div v-else class="bg-white rounded-lg shadow-lg p-8">
+    <div v-else class="bg-white rounded-lg shadow-lg p-4"> <!-- Reduced padding from p-8 to p-4 -->
   <div class="overflow-x-auto">
     <table class="w-full border border-gray-300">
       <thead class="bg-gray-100">
         <tr class="border-b border-gray-300">
-          <th class="text-left py-4 px-4 w-1/3 border-r border-gray-300">Feature</th>
-          <th v-for="plan in plans" :key="plan.name" class="text-center py-4 px-4 border-r border-gray-300">
-            <div class="text-lg font-bold">{{ plan.name }}</div>
-            <div class="text-sm text-gray-500">
+          <th class="text-left py-2 px-2 w-1/3 border-r border-gray-300">Feature</th> <!-- Reduced padding from py-4 px-4 to py-2 px-2 -->
+          <th v-for="plan in plans" :key="plan.name" class="text-center py-2 px-2 border-r border-gray-300"> <!-- Reduced padding -->
+            <div class="text-md font-bold">{{ plan.name }}</div> <!-- Reduced font size from text-lg to text-md -->
+            <div class="text-xs text-gray-500"> <!-- Reduced font size from text-sm to text-xs -->
               {{ plan.fixedFees[billingCycle.toLowerCase()] }} / {{ billingCycle.toLowerCase() }}
             </div>
           </th>
@@ -146,18 +149,20 @@
         <template v-for="(section, sectionKey) in features" :key="sectionKey">
           <!-- Section Header -->
           <tr class="bg-gray-50 border-b border-gray-300">
-            <td colspan="6" class="py-4 px-4 font-bold text-lg  border-gray-300">
+            <td colspan="6" class="py-2 px-2 font-semibold text-md border-gray-300"> <!-- Reduced padding and font size -->
               {{ formatSectionTitle(sectionKey) }}
             </td>
           </tr>
 
           <!-- Section Features -->
-          <tr v-for="feature in section" :key="feature.name" class="border-b border-gray-300 hover:bg-gray-50 transition-colors">
-            <td class="py-4 px-4 border-r border-gray-300">{{ feature.name }}</td>
-            <td v-for="(available, idx) in feature.availability" :key="idx" class="text-center py-4 px-4 border-r border-gray-300">
-              <check-icon v-if="available === 'Y'" size="20" class="inline-block text-green-500" />
-              <x-icon v-else-if="available === 'X'" size="20" class="inline-block text-gray-300" />
-              <span v-else class="text-sm">{{ available }}</span>
+          <tr v-for="feature in section" :key="feature.name"
+              class="border-b border-gray-300 hover:bg-gray-50 transition-colors">
+            <td class="py-2 px-2 border-r border-gray-300">{{ feature.name }}</td> <!-- Reduced padding -->
+            <td v-for="(available, idx) in feature.availability" :key="idx"
+                class="text-center py-2 px-2 border-r border-gray-300"> <!-- Reduced padding -->
+              <check-icon v-if="available === 'Y'" size="16" class="inline-block text-green-500" /> <!-- Reduced icon size from 20 to 16 -->
+              <x-icon v-else-if="available === 'X'" size="16" class="inline-block text-gray-300" /> <!-- Reduced icon size -->
+              <span v-else class="text-xs">{{ available }}</span> <!-- Reduced font size -->
             </td>
           </tr>
         </template>
@@ -241,8 +246,8 @@ const plans = ref([
     fixedFees: { monthly: 'NA', quarterly: 'NA', annual: 'NA' },
     "Mehery Fees – Per conversation Fees": {
       DAU: { inr: '1.25', usd: '0.050' },
-      'Image Creation Fee - per image': { inr: '0.25', usd: '0.012' },
-      'CHAT GPT - Per conversation': { inr: '0.50', usd: '0.012' }
+      'Image Creation Fee': { inr: '0.25', usd: '0.012' },
+      'CHAT GPT': { inr: '0.50', usd: '0.012' }
     },
     users: { adminAgent: '1', additionalUser: '$9.9' },
     depositFees: { minimumDeposit: '$25' },
@@ -259,8 +264,8 @@ const plans = ref([
     fixedFees: { monthly: '$69', quarterly: '$189', annual: '$649' },
     "Mehery Fees – Per conversation Fees": {
       DAU: { inr: '0.04', usd: '0.006' },
-      'Image Creation Fee - per image': { inr: '0.12', usd: '0.006' },
-      'CHAT GPT - Per conversation': 'X'
+      'Image Creation Fee': { inr: '0.12', usd: '0.006' },
+      'CHAT GPT': 'X'
     },
     users: { adminAgent: '5', additionalUser: '$9.9' },
     depositFees: { minimumDeposit: '$25' },
@@ -277,8 +282,8 @@ const plans = ref([
     fixedFees: { monthly: '$149', quarterly: '$399', annual: '$1,399' },
     "Mehery Fees – Per conversation Fees": {
       DAU: { inr: '0.03', usd: '0.006' },
-      'Image Creation Fee - per image': { inr: '0.12', usd: '0.006' },
-      'CHAT GPT - Per conversation': 'X'
+      'Image Creation Fee': { inr: '0.12', usd: '0.006' },
+      'CHAT GPT': 'X'
     },
     users: { adminAgent: '7', additionalUser: '$19.9' },
     depositFees: { minimumDeposit: '$25' },
@@ -290,9 +295,9 @@ const plans = ref([
   },
   {
     name: 'Enterprise',
-    prices: { inr: 'On Request', usd: 'On Request' },
+    prices: { inr: 'On Req', usd: 'On Req' },
     buttonText: 'Contact Sales',
-    fixedFees: { monthly: 'On Request', quarterly: 'On Request', annual: 'On Request' },
+    fixedFees: { monthly: 'On Req.', quarterly: 'On Req.', annual: 'On Req.' },
     "Mehery Fees – Per conversation Fees": {
       DAU: { inr: 'On Req', usd: 'On Req' },
       'Image Creation Fee': { inr: 'On Req', usd: 'On Req' },

@@ -120,18 +120,18 @@
     <!-- BOTs Section -->
     <div 
       @click="handleBot"
-      class="rounded-2xl bg-emerald-50 p-6 text-gray-800 mx-4 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer relative"
+      class="rounded-2xl bg-emerald-50 p-6 text-gray-800 mx-4 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer relative flex justify-between"
     >
-      <div class="max-w-md">
+      <div class="max-w-md mt-3">
         <h2 class="text-2xl font-bold mb-3">BOTs & BOT Services</h2>
         <p class="mb-4 text-sm">
           Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
         </p>
       </div>
       <img 
-        src="../../@assets/images/Illustration(1).svg" 
+        src="../../@assets/images/botService.png" 
         alt="" 
-        class="absolute right-6 bottom-6 w-48 h-48"
+        class="  w-48 h-40"
       />
     </div>
   </div>

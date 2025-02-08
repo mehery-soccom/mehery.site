@@ -21,9 +21,10 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 ml-4">
                 <!-- Product Dropdown -->
-                <div class="relative" @mouseenter="productMenuOpen = true" >
+                <div class="relative" @mouseenter="productMenuOpen = true,resourcesMenuOpen = false" >
                     <button
-                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"  @mousedown="productMenuOpen = !productMenuOpen"
+                        class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
+                        @mousedown="productMenuOpen = !productMenuOpen"
                     >
                         <span>Product</span>
                         <svg
@@ -32,18 +33,16 @@
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
-                            
                         >
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
                         v-if="productMenuOpen"
+                         @mouseleave="productMenuOpen = false"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
-                        @mouseenter="productMenuOpen = true"
-                       
                     >
-                    <a
+                        <a
                             @click="scrollToSection('solutions')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
@@ -55,23 +54,23 @@
                         >
                             Features
                         </a>
-                
+
                         <a
                             @click="scrollToSection('WhatsApp')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
                             WhatsApp
                         </a>
-
                     </div>
                 </div>
 
                 <!-- Resources Dropdown -->
-                <div class="relative" @mouseenter="resourcesMenuOpen = true">
+                <div class="relative" @mouseenter="resourcesMenuOpen = true, productMenuOpen = false"
+                >
                     <button
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
-                         @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
-                        >
+                        @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
+                    >
                         <span>Resources</span>
                         <svg
                             class="w-4 h-4 transform transition-transform"
@@ -86,7 +85,7 @@
                     <div
                         v-if="resourcesMenuOpen"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
-                        @mouseenter="resourcesMenuOpen = true"
+                        @mouseleave="resourcesMenuOpen = false"
                     >
                         <!-- About Us Link -->
                         <router-link
@@ -133,12 +132,13 @@
                 <!-- Pricing Link -->
                 <a
                     @click="scrollToSection('pricing')"
-                    class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 relative group"
+                    class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 relative group hover:no-underline"
+                    @mouseenter="productMenuOpen = false,resourcesMenuOpen = false"
                 >
                     Pricing
-                    <span
+                    <!-- <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
-                    ></span>
+                    ></span> -->
                 </a>
             </div>
 
@@ -317,7 +317,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
 
 const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
@@ -329,30 +333,49 @@ const toggleMobileMenu = () => {
 };
 
 const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
-    }
-
     // Close menus
     mobileMenuOpen.value = false;
     productMenuOpen.value = false;
     resourcesMenuOpen.value = false;
+
+    // Check if the current route is the home page
+    if (route.name === "Home") {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    } else {
+        // Navigate to the home page with a hash or query parameter
+        router.push({ name: "Home", hash: `#${id}` });
+    }
 };
+
+// Handle hash changes after navigation to the home page
+onMounted(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Check for a hash in the URL after the page loads
+    if (route.name === "Home" && route.hash) {
+        const sectionId = route.hash.replace("#", "");
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
+});
+
+onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+});
 
 const handleScroll = () => {
     const navbarHeight = 60;
     isScrolled.value = window.scrollY > navbarHeight;
 };
-
-onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
-});
 </script>
