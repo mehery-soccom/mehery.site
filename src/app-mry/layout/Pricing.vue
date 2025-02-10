@@ -8,20 +8,24 @@
             </h2>
 
             <div class="flex gap-4">
-
-
+                <!-- Features Toggle -->
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Features:</span> -->
-                    <button @click="toggleView"
-                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors">
+                    <button
+                        @click="toggleView"
+                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors"
+                    >
                         {{ showFeatures ? "Show Pricing" : "Show Features" }}
                     </button>
                 </div>
 
+                <!-- Billing Cycle Toggle -->
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Billing Cycle:</span> -->
-                    <button @click="toggleBillingCycle"
-                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white">
+                    <button
+                        @click="toggleBillingCycle"
+                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white"
+                    >
                         {{ billingCycle }}
                     </button>
                 </div>
@@ -34,14 +38,10 @@
                 class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow ">
                 <!-- Plan Header -->
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2 text-center">{{ plan.name }}</h3>
-                    <div class="text-2xl font-bold mb-3 text-center">
-                        {{
-                            showUSD
-                                ? plan.fixedFees[billingCycle.toLowerCase()].usd
-                                : plan.fixedFees[billingCycle.toLowerCase()].inr
-                        }}
-                        <!-- <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span> -->
+                    <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
+                    <div class="text-2xl font-bold mb-3">
+                        {{ showUSD ? plan.fixedFees[billingCycle.toLowerCase()] : plan.prices.inr }}
+                        <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span>
                     </div>
                     <button
                         class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center">
