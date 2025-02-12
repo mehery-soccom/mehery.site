@@ -48,7 +48,11 @@
                 <div class="mb-6">
                     <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
                     <div class="text-2xl font-bold mb-3">
-                        {{ showUSD ? plan.fixedFees[billingCycle.toLowerCase()] : plan.prices.inr }}
+                        {{
+                            showUSD
+                                ? plan.fixedFees[billingCycle.toLowerCase()].usd
+                                : plan.fixedFees[billingCycle.toLowerCase()].inr
+                        }}
                         <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span>
                     </div>
                     <button
@@ -248,7 +252,6 @@ const formatSectionTitle = key => {
 
 onMounted(async () => {
     try {
-        // Ip vala systumm (also showUSD mai changes hai upar dekh le)
         const response = await fetch("https://ipapi.co/json/");
         if (response.ok) {
             const data = await response.json();
@@ -265,9 +268,12 @@ onMounted(async () => {
 const plans = ref([
     {
         name: "Free Forever",
-        prices: { inr: "Free", usd: "Free" },
         buttonText: "Get Started",
-        fixedFees: { monthly: "Free", quarterly: "Free", annual: "Free" },
+        fixedFees: {
+            monthly: { usd: "Free", inr: "Free" },
+            quarterly: { usd: "Free", inr: "Free" },
+            annual: { usd: "Free", inr: "Free" }
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "Up to 100", usd: "Up to 100" },
             "Image Creation": { inr: "Up to 50", usd: "Up to 50" },
@@ -288,9 +294,12 @@ const plans = ref([
     },
     {
         name: "Lite",
-        prices: { inr: "NA", usd: "NA" },
         buttonText: "Get Started",
-        fixedFees: { monthly: "NA", quarterly: "NA", annual: "NA" },
+        fixedFees: {
+            monthly: { usd: "NA", inr: "NA" },
+            quarterly: { usd: "NA", inr: "NA" },
+            annual: { usd: "NA", inr: "NA" }
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "1.25", usd: "0.050" },
             "Image Creation Fee": { inr: "0.25", usd: "0.012" },
@@ -306,9 +315,12 @@ const plans = ref([
     },
     {
         name: "Eco",
-        prices: { inr: "₹5,499", usd: "$69" },
         buttonText: "Get Started",
-        fixedFees: { monthly: "$69", quarterly: "$189", annual: "$649" },
+        fixedFees: {
+            monthly: { usd: "$69", inr: "₹2,499" }, // Updated INR value
+            quarterly: { usd: "$189", inr: "₹6,750" }, // Updated INR value
+            annual: { usd: "$649", inr: "₹2,400" } // Updated INR value
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "0.04", usd: "0.006" },
             "Image Creation Fee": { inr: "0.012", usd: "0.006" },
@@ -324,9 +336,12 @@ const plans = ref([
     },
     {
         name: "Pro",
-        prices: { inr: "₹12,499", usd: "$149" },
         buttonText: "Get Started",
-        fixedFees: { monthly: "$149", quarterly: "$399", annual: "$1,399" },
+        fixedFees: {
+            monthly: { usd: "$149", inr: "₹3,999" }, // Updated INR value
+            quarterly: { usd: "$399", inr: "₹11,000" }, // Updated INR value
+            annual: { usd: "$1,399", inr: "₹39,000" } // Updated INR value
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "0.03", usd: "0.006" },
             "Image Creation Fee": { inr: "0.12", usd: "0.006" },
@@ -342,9 +357,12 @@ const plans = ref([
     },
     {
         name: "Enterprise",
-        prices: { inr: "On Req", usd: "On Req" },
         buttonText: "Contact Sales",
-        fixedFees: { monthly: "On Req.", quarterly: "On Req.", annual: "On Req." },
+        fixedFees: {
+            monthly: { usd: "On Req", inr: "On Req" },
+            quarterly: { usd: "On Req", inr: "On Req" },
+            annual: { usd: "On Req", inr: "On Req" }
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "On Req", usd: "On Req" },
             "Image Creation Fee": { inr: "On Req", usd: "On Req" },
@@ -359,6 +377,7 @@ const plans = ref([
         }
     }
 ]);
+
 // Features Data
 const features = ref({
     Channels: [
