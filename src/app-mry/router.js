@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { MRY_APP_CONTEXT } from "@utils/globals";
+import { fakeAuth } from "./utils/auth";
+import AdminLogin from "./views/AdminLogin.vue";
+import BlogEditor from "./views/BlogEditor.vue";
 
 const base = MRY_APP_CONTEXT;
 
@@ -35,11 +38,20 @@ const routes = [
         name: "Blog",
         component: () => import("@src/app-mry/layout/Blog.vue")
     },
+    { path: "/admin/login", name: "AdminLogin", component: AdminLogin },
+    {
+        path: "/admin/edit",
+        name: "BlogEditor",
+        component: BlogEditor,
+        beforeEnter: (to, from, next) => {
+            fakeAuth.checkAuth() ? next() : next("/admin/login");
+        }
+    },
     {
         path: `/faq`,
         name: "Faq",
         component: () => import("@src/app-mry/layout/FAQ.vue")
-    },
+    }
 ];
 
 const router = createRouter({
@@ -54,7 +66,7 @@ const router = createRouter({
                         behavior: "smooth",
                         top: 132
                     });
-                }, 250); 
+                }, 250);
             });
         }
         return { top: 0 };
