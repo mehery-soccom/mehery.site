@@ -1,17 +1,17 @@
 <template>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold mb-12">WhatsApp Specific Features</h1>
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold mb-6">WhatsApp Specific Features</h1>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             <!-- Feature Cards -->
             <div
                 v-for="(feature, index) in features"
                 :key="index"
                 @click="handleCardClick(feature)"
-                :class="`bg-gradient-to-br ${feature.bgTint} rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer`"
+                :class="`bg-gradient-to-br ${feature.bgTint} rounded-xl p-4 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer`"
             >
                 <!-- Dot Indicator -->
-                <div :class="`w-2 h-2 rounded-full mb-6 ${feature.dotColor}`"></div>
+                <div :class="`w-2 h-2 rounded-full mb-3 ${feature.dotColor}`"></div>
 
                 <!-- Content -->
                 <div class="space-y-4 pr-12">
@@ -20,8 +20,8 @@
                 </div>
 
                 <!-- Arrow Button -->
-                <div
-                    :class="`absolute right-8 top-1/2 -translate-y-1/2 p-3 rounded-full transition-colors duration-300 
+                <!-- <div
+                    :class="`absolute right-8 top-2 translate-y-1 p-3 rounded-full transition-colors duration-300 
           ${
               feature.darkButton
                   ? 'bg-black hover:bg-gray-800'
@@ -29,7 +29,7 @@
           }`"
                 >
                     <ArrowRightIcon :class="`w-4 h-4 ${feature.darkButton ? 'text-white' : 'text-black'}`" />
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

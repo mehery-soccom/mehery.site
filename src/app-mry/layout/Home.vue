@@ -5,7 +5,7 @@
         <!-- Existing Hero Section -->
         <div class="container mx-auto px-6 py-16 pt-7 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 lg:pr-20">
-                <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-8">
+                <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-8 text-left">
                     Engage Customers Seamlessly with Unified Messaging
                 </h1>
                 <p class="text-gray-600 text-lg font-bold mb-6">
@@ -85,11 +85,17 @@
             </div>
         </div> -->
     </div>
-    <div>
-        <div>
-    <ConversationalBot />
-        </div>
+    <div class="fixed bottom-8 right-6 flex flex-col items-end gap-4">
+      <!-- Chatbot -->
+      <div class="relative z-50">
+        <ConversationalBot />
+      </div>
+      <!-- Social Media Popup -->
+      <div class="relative z-40">
+        <SOcialPopup />
+      </div>
     </div>
+
     <div class="scroll-mt-[60px]" id="">
         <div class="">
             <Footer />
@@ -110,6 +116,7 @@ import Customer from "./Customer.vue";
 import About from "./About.vue"
 import Partner from "./Partner.vue";
 import ConversationalBot from "./Conversational.vue";
+import SOcialPopup from "./SOcialPopup.vue";
 import Testimonial from "./Testimonials.vue"
 const routes = {
     "/": "home",

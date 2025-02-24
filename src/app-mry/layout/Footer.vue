@@ -102,7 +102,7 @@
       </div>
 
       <!-- Social Icons -->
-      <div class="flex gap-6 mr-20">
+      <!-- <div class="flex gap-6 mr-20">
         <a href="https://www.instagram.com/meherysoccom/"
           class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
           <InstagramIcon size="24" />
@@ -115,7 +115,7 @@
           class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
           <TwitterIcon size="24" />
         </a>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>

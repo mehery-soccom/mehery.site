@@ -8,29 +8,20 @@
             </h2>
 
             <div class="flex gap-4">
-                <!-- <div class="flex items-center gap-2">
-          <span class="text-sm font-medium">Currency:</span>
-          <button @click="toggleCurrency" class="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors">
-            {{ showUSD ? 'USD' : 'INR' }}
-          </button>
-        </div> -->
+
 
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Features:</span> -->
-                    <button
-                        @click="toggleView"
-                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors"
-                    >
+                    <button @click="toggleView"
+                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors">
                         {{ showFeatures ? "Show Pricing" : "Show Features" }}
                     </button>
                 </div>
 
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Billing Cycle:</span> -->
-                    <button
-                        @click="toggleBillingCycle"
-                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white"
-                    >
+                    <button @click="toggleBillingCycle"
+                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white">
                         {{ billingCycle }}
                     </button>
                 </div>
@@ -39,21 +30,21 @@
 
         <!-- Pricing Cards -->
         <div v-if="!showFeatures" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12 text-sm">
-            <div
-                v-for="(plan, planIndex) in plans"
-                :key="plan.name"
-                class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow"
-            >
+            <div v-for="(plan, planIndex) in plans" :key="plan.name"
+                class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow ">
                 <!-- Plan Header -->
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
-                    <div class="text-2xl font-bold mb-3">
-                        {{ showUSD ? plan.fixedFees[billingCycle.toLowerCase()] : plan.prices.inr }}
-                        <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span>
+                    <h3 class="text-xl font-bold mb-2 text-center">{{ plan.name }}</h3>
+                    <div class="text-2xl font-bold mb-3 text-center">
+                        {{
+                            showUSD
+                                ? plan.fixedFees[billingCycle.toLowerCase()].usd
+                                : plan.fixedFees[billingCycle.toLowerCase()].inr
+                        }}
+                        <!-- <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span> -->
                     </div>
                     <button
-                        class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors"
-                    >
+                        class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center">
                         {{ plan.buttonText }}
                     </button>
                 </div>
@@ -74,11 +65,8 @@
                     <div>
                         <h4 class="font-semibold mb-2 border-b pb-1">Per Conversation Fees</h4>
                         <ul>
-                            <li
-                                v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']"
-                                :key="key"
-                                class="flex justify-between"
-                            >
+                            <li v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']" :key="key"
+                                class="flex justify-between">
                                 <span>{{ key }}</span>
                                 <span :class="{ 'text-gray-400': value === 'X' }">{{
                                     value === "X" ? "✗" : showUSD ? value.usd : value.inr
@@ -123,17 +111,12 @@
                                 <span>Free Images</span><span>{{ plan.freeUtilities.freeImages }}</span>
                             </li>
                             <li class="flex justify-between">
-                                <span>Free BOT conversations</span
-                                ><span>{{ plan.freeUtilities.freeBotConversations }}</span>
+                                <span>Free BOT conversations</span><span>{{ plan.freeUtilities.freeBotConversations
+                                }}</span>
                             </li>
                         </ul>
                     </div>
-                    <a
-                        href="https://developers.facebook.com/docs/whatsapp/pricing/"
-                        target="_blank"
-                        class="text-blue-500 underline"
-                        >Whatsapp Conversation Fees</a
-                    >
+
                 </div>
             </div>
         </div>
@@ -146,17 +129,17 @@
                         <tr class="border-b border-gray-300">
                             <th class="text-left py-2 px-2 w-1/3 border-r border-gray-300">Feature</th>
                             <!-- Reduced padding from py-4 px-4 to py-2 px-2 -->
-                            <th
-                                v-for="plan in plans"
-                                :key="plan.name"
-                                class="text-center py-2 px-2 border-r border-gray-300"
-                            >
+                            <th v-for="plan in plans" :key="plan.name" class=" py-2 px-2 border-r border-gray-300 ">
                                 <!-- Reduced padding -->
-                                <div class="text-md font-bold">{{ plan.name }}</div>
+                                <div class=" text-center !important text-md font-bold">{{ plan.name }}</div>
                                 <!-- Reduced font size from text-lg to text-md -->
-                                <div class="text-xs text-gray-500">
+                                <div class="text-center text-xs text-gray-500">
                                     <!-- Reduced font size from text-sm to text-xs -->
-                                    {{ plan.fixedFees[billingCycle.toLowerCase()] }} / {{ billingCycle.toLowerCase() }}
+                                    {{
+                                        showUSD
+                                            ? plan.fixedFees[billingCycle.toLowerCase()].usd
+                                            : plan.fixedFees[billingCycle.toLowerCase()].inr
+                                    }}
                                 </div>
                             </th>
                         </tr>
@@ -172,24 +155,15 @@
                             </tr>
 
                             <!-- Section Features -->
-                            <tr
-                                v-for="feature in section"
-                                :key="feature.name"
-                                class="border-b border-gray-300 hover:bg-gray-50 transition-colors"
-                            >
+                            <tr v-for="feature in section" :key="feature.name"
+                                class="border-b border-gray-300 hover:bg-gray-50 transition-colors">
                                 <td class="py-2 px-2 border-r border-gray-300">{{ feature.name }}</td>
                                 <!-- Reduced padding -->
-                                <td
-                                    v-for="(available, idx) in feature.availability"
-                                    :key="idx"
-                                    class="text-center py-2 px-2 border-r border-gray-300"
-                                >
+                                <td v-for="(available, idx) in feature.availability" :key="idx"
+                                    class="text-center py-2 px-2 border-r border-gray-300">
                                     <!-- Reduced padding -->
-                                    <check-icon
-                                        v-if="available === 'Y'"
-                                        size="16"
-                                        class="inline-block text-green-500"
-                                    />
+                                    <check-icon v-if="available === 'Y'" size="16"
+                                        class="inline-block text-green-500" />
                                     <!-- Reduced icon size from 20 to 16 -->
                                     <x-icon v-else-if="available === 'X'" size="16" class="inline-block text-red-500" />
                                     <!-- Reduced icon size -->
@@ -202,6 +176,11 @@
                 </table>
             </div>
         </div>
+        <div class="flex align-center justify-center mt-4 text-xl">
+            <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
+                class="text-blue-500 ">Whatsapp Conversation Fees</a>
+        </div>
+
     </div>
 </template>
 
@@ -248,7 +227,6 @@ const formatSectionTitle = key => {
 
 onMounted(async () => {
     try {
-        // Ip vala systumm (also showUSD mai changes hai upar dekh le)
         const response = await fetch("https://ipapi.co/json/");
         if (response.ok) {
             const data = await response.json();
@@ -264,14 +242,17 @@ onMounted(async () => {
 // Pricing Data
 const plans = ref([
     {
-        name: "Free Forever",
-        prices: { inr: "Free", usd: "Free" },
+        name: "FREE FOREVER",
         buttonText: "Get Started",
-        fixedFees: { monthly: "Free", quarterly: "Free", annual: "Free" },
+        fixedFees: {
+            monthly: { usd: "Free", inr: "Free" },
+            quarterly: { usd: "Free", inr: "Free" },
+            annual: { usd: "Free", inr: "Free" }
+        },
         "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "Up to 100", usd: "Up to 100" },
-            "Image Creation": { inr: "Up to 50", usd: "Up to 50" },
-            "CHAT GPT ": { inr: "Up to 100", usd: "Up to 100" }
+            DAU: { inr: "Up to 10", usd: "Up to 10" },
+            "Image Creation": { inr: "Up to 10", usd: "Up to 10" },
+            "CHAT GPT ": { inr: "Up to 10", usd: "Up to 10" }
         },
         users: { adminAgent: "1", additionalUser: "N/A" },
         depositFees: { minimumDeposit: "N/A" },
@@ -287,10 +268,13 @@ const plans = ref([
         }
     },
     {
-        name: "Lite",
-        prices: { inr: "NA", usd: "NA" },
+        name: "LITE",
         buttonText: "Get Started",
-        fixedFees: { monthly: "NA", quarterly: "NA", annual: "NA" },
+        fixedFees: {
+            monthly: { usd: "NA", inr: "NA" },
+            quarterly: { usd: "NA", inr: "NA" },
+            annual: { usd: "NA", inr: "NA" }
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "1.25", usd: "0.050" },
             "Image Creation Fee": { inr: "0.25", usd: "0.012" },
@@ -305,14 +289,17 @@ const plans = ref([
         }
     },
     {
-        name: "Eco",
-        prices: { inr: "₹5,499", usd: "$69" },
+        name: "ECO",
         buttonText: "Get Started",
-        fixedFees: { monthly: "$69", quarterly: "$189", annual: "$649" },
+        fixedFees: {
+            monthly: { usd: "$69", inr: "₹2,499" }, // Updated INR value
+            quarterly: { usd: "$189", inr: "₹6,750" }, // Updated INR value
+            annual: { usd: "$649", inr: "₹2,400" } // Updated INR value
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "0.04", usd: "0.006" },
             "Image Creation Fee": { inr: "0.012", usd: "0.006" },
-            "CHAT GPT": "X"
+            // "CHAT GPT": "X"
         },
         users: { adminAgent: "5", additionalUser: "$9.9" },
         depositFees: { minimumDeposit: "$25" },
@@ -323,14 +310,17 @@ const plans = ref([
         }
     },
     {
-        name: "Pro",
-        prices: { inr: "₹12,499", usd: "$149" },
+        name: "PRO",
         buttonText: "Get Started",
-        fixedFees: { monthly: "$149", quarterly: "$399", annual: "$1,399" },
+        fixedFees: {
+            monthly: { usd: "$149", inr: "₹3,999" }, // Updated INR value
+            quarterly: { usd: "$399", inr: "₹11,000" }, // Updated INR value
+            annual: { usd: "$1,399", inr: "₹39,000" } // Updated INR value
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "0.03", usd: "0.006" },
             "Image Creation Fee": { inr: "0.12", usd: "0.006" },
-            "CHAT GPT": "X"
+            // "CHAT GPT": "X"
         },
         users: { adminAgent: "7", additionalUser: "$19.9" },
         depositFees: { minimumDeposit: "$25" },
@@ -341,10 +331,13 @@ const plans = ref([
         }
     },
     {
-        name: "Enterprise",
-        prices: { inr: "On Req", usd: "On Req" },
+        name: "ENTERPRISE",
         buttonText: "Contact Sales",
-        fixedFees: { monthly: "On Req.", quarterly: "On Req.", annual: "On Req." },
+        fixedFees: {
+            monthly: { usd: "On Req", inr: "On Req" },
+            quarterly: { usd: "On Req", inr: "On Req" },
+            annual: { usd: "On Req", inr: "On Req" }
+        },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "On Req", usd: "On Req" },
             "Image Creation Fee": { inr: "On Req", usd: "On Req" },
@@ -359,6 +352,7 @@ const plans = ref([
         }
     }
 ]);
+
 // Features Data
 const features = ref({
     Channels: [
