@@ -2,10 +2,10 @@
   <div class="relative py-16 bg-gradient-to-br from-gray-50 to-white">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2 tracking-tight text-center">
           What Our Clients Say
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto text-center">
           Discover why companies trust us to deliver exceptional results
         </p>
       </div>
@@ -49,18 +49,18 @@
                   <div
                     class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center border-4 border-white shadow-lg"
                   >
-                    <UserIcon class="w-10 h-10 text-gray-600" />
-                  </div>
+    <img :src="currentTestimonial.avatar" alt="Testimonial Avatar" />
+                </div>
                   <div class="ml-6">
                     <h3 class="text-xl font-semibold text-gray-900">
                       {{ currentTestimonial.name }}
-                      <a
+                      <!-- <a
                         href="https://www.capterra.com/p/241882/Mehery/"
                         target="_blank"
                         class="text-indigo-600 font-large text-sm ml-2"
                       >
                         Source
-                      </a>
+                      </a> -->
                     </h3>
                     <p class="text-gray-600 mb-1">{{ currentTestimonial.designation }}</p>
                     <p class="text-indigo-600 font-medium">{{ currentTestimonial.company }}</p>
@@ -115,7 +115,7 @@ const testimonials = ref([
     rating: 5,
     comment:
       "Working with this team has been an absolute pleasure. Their attention to detail and creative solutions have significantly improved our marketing efforts.",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    avatar: "https://avatar.iran.liara.run/public/1",
   },
   {
     id: 2,
@@ -125,7 +125,7 @@ const testimonials = ref([
     rating: 4,
     comment:
       "I'm impressed by the innovative approach and technical expertise. They delivered beyond our expectations and were always responsive to our needs.",
-    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
+    avatar: "https://avatar.iran.liara.run/public/2",
   },
   {
     id: 3,
@@ -135,7 +135,7 @@ const testimonials = ref([
     rating: 5,
     comment:
       "The user-centric design approach and attention to accessibility have made our product stand out. It's been a game-changer for our user engagement.",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    avatar: "https://avatar.iran.liara.run/public/3",
   },
   {
     id: 4,
@@ -145,7 +145,7 @@ const testimonials = ref([
     rating: 5,
     comment:
       "The financial insights and strategic planning provided by this team have been instrumental in our company's growth. Highly recommended!",
-    avatar: "https://randomuser.me/api/portraits/men/4.jpg",
+    avatar: "https://avatar.iran.liara.run/public/4",
   },
   {
     id: 5,
@@ -155,7 +155,7 @@ const testimonials = ref([
     rating: 4,
     comment:
       "Their agile approach and ability to adapt to changing requirements made our product launch a huge success. Great communication throughout the project.",
-    avatar: "https://randomuser.me/api/portraits/women/5.jpg",
+    avatar: "https://avatar.iran.liara.run/public/5",
   },
 ]);
 
