@@ -22,9 +22,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Centralized Inbox for All Channel</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">
+                                Centralized Inbox for All Channel</span>
                             <p class="mt-1 text-gray-600">
                                 Communicate with customers on WhatsApp, Messenger, Instagram DM, Telegram
                             </p>
@@ -34,9 +33,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Predefined Message Templates</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Predefined Message
+                                Templates</span>
                             <p class="mt-1 text-gray-600">
                                 Start new conversations or continue existing ones using predefined messages
                             </p>
@@ -48,16 +46,15 @@
                         <div>
                             <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Prioritization</span>
                             <p class="mt-1 text-gray-600">
-                                Start new conversations or continue existing ones using predefined messages
+                                Enable team members to prioritize conversations based on time unattended or unanswered,
+                                minimizing customer wait times.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <button
-                    @click="handleteamInbox"
-                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors"
-                >
+                <button @click="handleteamInbox"
+                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors">
                     Learn More
                 </button>
             </div>
@@ -86,9 +83,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Intuitive BOT Flow Builder</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Intuitive BOT Flow
+                                Builder</span>
                             <p class="mt-1 text-gray-600">
                                 Create bots using an extremely user-friendly, UI-based BOT flow builder.
                             </p>
@@ -100,7 +96,7 @@
                         <div>
                             <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Quick Deployment</span>
                             <p class="mt-1 text-gray-600">
-                                Start new conversations or continue existing ones using predefined messages
+                                Build and deploy bots within minutes to drive seamless customer engagement.
                             </p>
                         </div>
                     </div>
@@ -108,20 +104,17 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Event-Driven and Timed Responses</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Event-Driven and Timed
+                                Responses</span>
                             <p class="mt-1 text-gray-600">
-                                Start new conversations or continue existing ones using predefined messages
+                                Set bots to respond to specific events and include time-delayed responses as needed.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <button
-                    @click="handleBotBuilder"
-                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors"
-                >
+                <button @click="handleBotBuilder"
+                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors">
                     Learn More
                 </button>
             </div>
@@ -154,9 +147,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Flexible Campaign Execution</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Flexible Campaign
+                                Execution</span>
                             <p class="mt-1 text-gray-600">
                                 Run campaigns on demand or schedule them for optimal dates and times to suit your
                                 customers
@@ -176,10 +168,8 @@
                     </div>
                 </div>
 
-                <button
-                    @click="handleMarketing"
-                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors"
-                >
+                <button @click="handleMarketing"
+                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors">
                     Learn More
                 </button>
             </div>
@@ -208,9 +198,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Effortless Cohort Creation</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Effortless Cohort
+                                Creation</span>
                             <p class="mt-1 text-gray-600">Easily create cohorts from the Customer Management module.</p>
                         </div>
                     </div>
@@ -227,10 +216,8 @@
                     </div>
                 </div>
 
-                <button
-                    @click="handleCohort"
-                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors"
-                >
+                <button @click="handleCohort"
+                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors">
                     Learn More
                 </button>
             </div>
@@ -251,9 +238,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Conversational Analytics</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Conversational
+                                Analytics</span>
                             <p class="mt-1 text-gray-600">
                                 Get a bird’s-eye view of inbound and outbound communication, with insights on agent,
                                 channel, and team-specific performance, as well as response and closure analytics.
@@ -264,9 +250,8 @@
                     <div class="flex items-start gap-3">
                         <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
                         <div>
-                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm"
-                                >Segmented Channel-Specific Daily Analytics</span
-                            >
+                            <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">Segmented Channel-Specific
+                                Daily Analytics</span>
                             <p class="mt-1 text-gray-600">
                                 Drill down into the number of inbound and outbound messages and conversations handled by
                                 each channel, broken down by hour and day.
@@ -297,10 +282,8 @@
                     </div>
                 </div>
 
-                <button
-                    @click="handleAnalytics"
-                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors"
-                >
+                <button @click="handleAnalytics"
+                    class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors">
                     Learn More
                 </button>
             </div>
@@ -323,18 +306,18 @@ const handleteamInbox = () => {
 };
 
 const handleBotBuilder = () => {
-  router.push("/builder")
+    router.push("/builder")
 }
 
 const handleMarketing = () => {
-  router.push("/marketing")
+    router.push("/marketing")
 }
 
 const handleCohort = () => {
-  router.push("/cohort")
+    router.push("/cohort")
 }
 
 const handleAnalytics = () => {
-  router.push("/analytics")
+    router.push("/analytics")
 }
 </script>

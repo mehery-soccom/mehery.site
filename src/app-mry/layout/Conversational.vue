@@ -1,7 +1,7 @@
 <template>
   <div @click="handleClickOutside" class="font-sans chatbot-container">
     <!-- Bot Icon with Tooltip -->
-    <div class="fixed bottom-8 right-6 group chatbot-element">
+    <div class=" bottom-32 right-6 group chatbot-element">
       <!-- Tooltip -->
       <div class="absolute -top-0 right-20 bg-gray-800 text-white text-xs py-1 rounded w-auto px-2 whitespace-nowrap chatbot-tooltip">
         Chat with us
@@ -144,6 +144,9 @@ export default {
   },
   mounted() {
     document.addEventListener('click', this.handleClickOutside);
+    setTimeout(() => {
+    this.isOpen = true;
+  }, 5000);
   },
   beforeDestroy() {
     document.removeEventListener('click', this.handleClickOutside);
