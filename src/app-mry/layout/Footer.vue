@@ -74,18 +74,15 @@
 
 
       <!-- Right Side - Subscribe Form -->
-      <div class="bg-[#23232B] p-8 rounded-lg shadow-xl transform hover:scale-[1.02] transition-all duration-300 z-[0]">
+      <div class="">
         <h3 class="text-xl font-semibold mb-4">Stay Updated</h3>
         <p class="text-gray-300 mb-6">Subscribe to our blog for the latest updates and insights.</p>
-        <form @submit.prevent="handleSubscribe" class="space-y-4 z-[0]">
-          <div class="relative z-[0]">
-            <MailIcon class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size="18" />
-            <input v-model="email" type="email" placeholder="Enter your email"
-              class="z-[0] w-full pl-10 pr-4 py-3 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
+        <form @submit.prevent="handleSubscribe" class="space-y-4 z-[0] ">
+            <input v-model="email" type="email" placeholder="  Enter your email"
+              class=" w-full pl-3 py-3 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
               required />
-          </div>
           <button type="submit"
-            class=" z-[0] w-full px-6 py-3 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transform hover:translate-y-[-2px] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FFA726] focus:ring-opacity-50">
+            class=" z-[0] w-full px-6 py-3 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800]  transition-all duration-300 ">
             Subscribe to blog
           </button>
         </form>

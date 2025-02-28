@@ -1,31 +1,84 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-gray-50">
+    <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
         <Navbar />
-        <main class="py-16 mr-16 sm:px-6 lg:px-8">
-            <section id="" class="max-w-7xl mt-24 mx-auto">
-                <div class="container sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        
-                        <div class="space-y-6">
-                            <h3
-                                class="text-6xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:-mt-20"
-                            >
-                                Analytics
+        <main class="py-6 px-4 sm:px-6 lg:px-8">
+            <section id="analytics" class="max-w-7xl mx-auto">
+                <div class="container mx-auto">
+                    <!-- Left: Text, Right: Image -->
+                    <div class="grid lg:grid-cols-2 gap-10 items-center mb-3">
+                        <div class="space-y-6 max-w-2xl">
+                            <h3 class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                                Comprehensive Analytics for Smarter Decisions 📊📈
                             </h3>
-                            <p class="text-gray-600 text-lg sm:text-xl">
-                                Analytics is a crucial component of any customer engagement system. Our analytics cover various segments of the platform based on utility and applicability.
-                            </p>
-                            <ul class="space-y-3 mb-10 text-gray-600">
-                                <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start">
-                                    <span
-                                        class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"
-                                    ></span>
-                                    <span class="text-lg">{{ point }}</span>
-                                </li>
-                            </ul>
+                            <div class="space-y-4">
+                                <p class="text-gray-600 text-base sm:text-lg">
+                                    Gain deep insights into your customer engagement system with powerful, real-time analytics designed for better performance tracking and optimization.
+                                </p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600">📌</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">Conversational Analytics 🔍</h4>
+                                            <p class="text-gray-600 text-sm">Get a bird’s-eye view of inbound & outbound communication, agent performance, channel efficiency, and response analytics.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-purple-600">📊</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">Segmented Channel-Specific Daily Analytics 📅</h4>
+                                            <p class="text-gray-600 text-sm">Analyze message flow per channel with hourly and daily breakdowns of inbound & outbound conversations.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600">📢</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">Campaign Analytics 🎯</h4>
+                                            <p class="text-gray-600 text-sm">Track campaign performance, including delivery rates, read rates, and response metrics—view data online or download for deeper analysis.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-purple-600">🤖</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">BOT Analytics 🚀</h4>
+                                            <p class="text-gray-600 text-sm">Monitor BOT flow execution, ensuring success criteria are met while improving BOT efficiency & customer interactions.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="relative -mt-32">
-                            <img src="../../@assets/images/feature5.png" />
+                        <div class="relative lg:pl-8">
+                            <img
+                                src="../../@assets/images/feature5.png"
+                                alt="Analytics Illustration"
+                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Left: Image, Right: Text -->
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <!-- <div class="relative lg:order-1">
+                            <img
+                                src="../../@assets/images/feature5.png"
+                                alt="Analytics Illustration"
+                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                            />
+                        </div> -->
+                        <div class="space-y-6 max-w-2xl lg:order-2">
+                            <div class="space-y-4">
+                                <ul class="space-y-4">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600">📈</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">Turn Data into Actionable Insights 🔥</h4>
+                                            <p class="text-gray-600 text-sm">Optimize customer engagement with data-driven decisions and real-time performance tracking.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="text-gray-600 text-base sm:text-lg font-semibold">
+                                    Transform your customer engagement with smart, scalable, and easy-to-use analytics! 🚀
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -36,14 +89,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
 
-const bulletPoints = ref([
-    "Conversational Analytics: Get a bird’s-eye view of inbound and outbound communication, with insights on agent, channel, and team-specific performance, as well as response and closure analytics.",
-    "Segmented Channel-Specific Daily Analytics: Drill down into the number of inbound and outbound messages and conversations handled by each channel, broken down by hour and day.",
-    "Campaign Analytics: Monitor campaign delivery, read rates, and response rates, along with user-specific responses. View analytics online or download data for further analysis.",
-    "BOT Analytics: Track BOT flow execution to determine if success criteria are met, providing visibility into BOT performance and customer interactions.",
-]);
+onMounted(() => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 </script>
