@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
-        <ConversationalBot />
+        <!-- <ConversationalBot /> -->
 
         <main class="mb-12 mt-6">
             <section id="partner">

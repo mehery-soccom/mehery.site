@@ -110,16 +110,16 @@
             </div>
         </div> -->
     </div>
-    <div class="fixed bottom-8 right-6 flex flex-col items-end gap-4">
+    <!-- <div class="fixed bottom-8 right-6 flex flex-col items-end gap-4"> -->
       <!-- Chatbot -->
-      <div class="relative z-50">
-        <ConversationalBot />
-      </div>
+      <!-- <div class="relative z-50"> -->
+        <!-- <ConversationalBot /> -->
+      <!-- </div> -->
       <!-- Social Media Popup -->
-      <div class="relative z-40">
-        <SOcialPopup />
-      </div>
-    </div>
+      <!-- <div class="relative z-40"> -->
+        <!-- <SOcialPopup /> -->
+      <!-- </div> -->
+    <!-- </div> -->
 
     <div class="scroll-mt-[60px]" id="">
         <div class="">
