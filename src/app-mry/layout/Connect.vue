@@ -251,7 +251,7 @@
     </main>
     <div>
       <div>
-        <ConversationalBot />
+        <!-- <ConversationalBot /> -->
         <!-- <SocialPopup /> -->
       </div>
     </div>
