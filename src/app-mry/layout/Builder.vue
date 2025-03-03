@@ -71,7 +71,7 @@
                         </div>
 
                         <!-- Image on the right -->
-                        <div class="relative lg:pl-8">
+                        <div class="relative lg:pl-24">
                             <img
                                 src="../../@assets/images/feature2.png"
                                 alt="Bot Builder Illustration"

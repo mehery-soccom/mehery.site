@@ -3,7 +3,7 @@
         <Navbar />
         <main class="py-6 px-4 sm:px-6 lg:px-8">
             <section id="customer" class="max-w-7xl mx-auto">
-                <div class="container mx-auto">
+                <div class="container mx-auto ">
                     <!-- Left: Text, Right: Image -->
                     <div class="grid lg:grid-cols-2 gap-10 items-center mb-16">
                         <div class="space-y-6 max-w-2xl">
@@ -41,7 +41,7 @@
                         </div>
                         <div class="relative lg:pl-8">
                             <img
-                                src="../../@assets/images/bot.svg"
+                                src="../../@assets/images/image12.png"
                                 alt="AI Chatbot Illustration"
                                 class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
                             />
@@ -49,10 +49,10 @@
                     </div>
 
                     <!-- Left: Image, Right: Text -->
-                    <div class="grid lg:grid-cols-2 gap-10 items-center mb-16">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center ">
                         <div class="relative lg:order-1">
                             <img
-                                src="../../@assets/images/bot.svg"
+                                src="../../@assets/images/image10.png"
                                 alt="AI Chatbot Illustration"
                                 class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
                             />
@@ -111,11 +111,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="relative lg:pl-8">
+                        <div class="relative ">
                             <img
                                 src="../../@assets/images/bot.svg"
                                 alt="AI Chatbot Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                                class="w-100 h-80  ml-16 pb-10"
                             />
                         </div>
                     </div>

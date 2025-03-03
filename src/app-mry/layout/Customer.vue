@@ -55,11 +55,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="relative lg:pl-8">
+                        <div class="relative lg:p-16">
                             <img
-                                src="../../@assets/images/image 2.svg"
+                                src="../../@assets/images/image3.png"
                                 alt="Customer Management Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                                class="w-full h-auto max-w-2xl mx-auto transition-transform duration-300"
                             />
                         </div>
                     </div>

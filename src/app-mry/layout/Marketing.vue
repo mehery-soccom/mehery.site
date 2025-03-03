@@ -36,6 +36,23 @@
                                             <p class="text-gray-600 text-sm">Optimize campaigns by testing different variations with a small audience before rolling them out at scale.</p>
                                         </div>
                                     </li>
+                                              <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-purple-600">📞</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">Customer Response Tracking 📡</h4>
+                                            <p class="text-gray-600 text-sm">Monitor customer responses in real-time and connect them to BOT flows for automated, goal-driven interactions.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600">🔗</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">API-Driven Campaigns 🔄</h4>
+                                            <p class="text-gray-600 text-sm">Launch campaigns via external APIs and trigger BOT responses based on customer feedback.</p>
+                                        </div>
+                                    </li>
+                                <p class="text-gray-600 text-base sm:text-lg font-semibold">
+                                    Drive Engagement, Convert More Leads & Grow Your Business! 🚀
+                                </p>
                                 </ul>
                             </div>
                         </div>
@@ -43,13 +60,13 @@
                             <img
                                 src="../../@assets/images/feature3.png"
                                 alt="Marketing Campaigns Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                                class="w-full h-auto max-w-2xl mx-auto transform  duration-300"
                             />
                         </div>
                     </div>
 
                     <!-- Left: Image, Right: Text -->
-                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <!-- <div class="grid lg:grid-cols-2 gap-10 items-center">
                         <div class="relative lg:order-1">
                             <img
                                 src="../../@assets/images/feature3.png"
@@ -80,7 +97,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </main>

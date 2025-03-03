@@ -22,7 +22,7 @@
                             </div>
                             <div class="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[300px]">
                                 <img 
-                                    src="https://picsum.photos/600/300" 
+                                    src="../../@assets/images/partner.png" 
                                     alt="Partner Program" 
                                     class="w-full h-full object-cover"
                                 />

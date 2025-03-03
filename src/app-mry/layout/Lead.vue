@@ -48,11 +48,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="relative lg:pl-8">
+                        <div class="relative -">
                             <img
-                                src="../../@assets/images/image 4.svg"
+                                src="../../@assets/images/image1.png"
                                 alt="Lead Management Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                                class="w-full h-auto max-w-2xl  transform  transition-transform duration-300 ml-28 scale-105 "
                             />
                         </div>
                     </div>
