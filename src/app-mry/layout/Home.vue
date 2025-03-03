@@ -3,58 +3,83 @@
     <Navbar />
     <div class="min-h-screen px-4 md:px-20 bg-white">
         <!-- Existing Hero Section -->
-        <div class="container mx-auto px-6 py-16 pt-7 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 lg:pr-20">
-                <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-8 text-left">
-                    Engage Customers Seamlessly with Unified Messaging
-                </h1>
-                <p class="text-gray-600 text-lg font-bold mb-6">
-                    WhatsApp, Email, SMS, Facebook Messenger, Instagram, Webchat, and More
-                </p>
-                <p class="text-gray-600  text-md mb-3">
-                    Our platform offers a seamless, omnichannel experience that unifies all customer interactions across
-                    multiple messaging platforms. With native connections to WhatsApp Business API, Facebook Messenger,
-                    Instagram DM, WebChat, AppChat, Email, and SMS, we enable businesses to manage inbound and outbound
-                    communications in one place.
-                </p>
-                <p class="text-gray-600 text-md mb-4">
-                    Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As
-                    a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
-                </p>
-                <button
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-bold transition-colors duration-300">
-                    START FREE TRIAL
-                </button>
-                <div class="mt-2 space-y-1 flex gap-3">
-                    <div class="flex items-center text-gray-600 text-sm">
-                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        <span>Free Forever Plan</span>
-                    </div>
-                    <div class="flex items-center text-gray-600 text-sm">
-                        <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        <span>All Features Unlocked</span>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-1/2 mt-10 md:mt-0 relative">
-                <div class="relative">
-                    <div class="relative w-full h-[400px]">
-                        <div class="absolute -top-12 right-0 flex space-x-4">
-                            <img src="../../@assets/images/header.svg" alt="Header Image" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- New Features Section -->
-        <div class="scroll-mt-[60px]" id="solutions">
+        <div class="container mx-auto px-4 sm:px-6 py-16 pt-7 flex flex-col md:flex-row items-center">
+  <!-- Left Side (Text Content) -->
+  <div class="md:w-1/2 lg:pr-20">
+    <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-8 text-left">
+      Engage Customers Seamlessly with Unified Messaging
+    </h1>
+    <p class="text-gray-600 text-lg font-bold mb-6">
+      WhatsApp, Email, SMS, Facebook Messenger, Instagram, Webchat, and More
+    </p>
+    <p class="text-gray-600 text-md mb-3">
+      Our platform offers a seamless, omnichannel experience that unifies all customer interactions across
+      multiple messaging platforms. With native connections to WhatsApp Business API, Facebook Messenger,
+      Instagram DM, WebChat, AppChat, Email, and SMS, we enable businesses to manage inbound and outbound
+      communications in one place.
+    </p>
+    <p class="text-gray-600 text-md mb-4">
+      Set up is fast and intuitive, with automatic configuration to get you up and running in minutes. As
+      a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels.
+    </p>
+    <button
+      class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-bold transition-colors duration-300"
+    >
+      START FREE TRIAL
+    </button>
+    <div class="mt-2 space-y-1 flex gap-3">
+      <div class="flex items-center text-gray-600 text-sm">
+        <svg
+          class="w-4 h-4 mr-2 text-green-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+          ></path>
+        </svg>
+        <span>Free Forever Plan</span>
+      </div>
+      <div class="flex items-center text-gray-600 text-sm">
+        <svg
+          class="w-4 h-4 mr-2 text-green-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+          ></path>
+        </svg>
+        <span>All Features Unlocked</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side (Image) -->
+  <div class="md:w-1/2 mt-10 md:mt-0 relative hidden sm:block">
+    <div class="relative">
+      <div class="relative w-full h-[400px]">
+        <div class="absolute -top-12 right-0 flex space-x-4">
+          <img
+            class="hidden sm:block w-full h-auto"
+            src="../../@assets/images/header.svg"
+            alt="Header Image"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>        <div class="scroll-mt-[60px]" id="solutions">
             <div class="container mx-auto px-6">
                 <Service />
             </div>

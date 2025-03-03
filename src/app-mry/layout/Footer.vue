@@ -1,23 +1,16 @@
 <template>
-  <footer class="bg-[#1C1C1F] text-white px-12 py-16 z-0" >
-
+  <footer class="bg-[#1C1C1F] text-white px-4 sm:px-12 py-8 sm:py-16 z-0">
     <!-- Top Section -->
-    <div class="flex gap-12 justify-evenly mb-8">
+    <div class="flex flex-col sm:flex-row gap-8 sm:gap-12 justify-evenly mb-8">
       <!-- Left Side -->
       <div class="space-y-8">
         <!-- Logo -->
-        <!-- <div class="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-300">
-          <img src="../../@assets/images/logo-white.svg" alt="Mehery Logo" class="h-20" />
-        </div> -->
-        <div class="flex items-center transform hover:scale-105 transition-transform duration-300 mr-24">
-          <img src="../../@assets/images/logo.png" alt="Header Image" class="w-80 h-50 mr-10 " />
+        <div class="flex items-center transform hover:scale-105 transition-transform duration-300 sm:mr-24">
+          <img src="../../@assets/images/logo.png" alt="Header Image" class="w-48 sm:w-80 h-auto sm:h-50" />
         </div>
 
-
-        <!-- Navigation -->
-
         <!-- Contact Info -->
-        <div class="space-y-6 ml-10">
+        <div class="space-y-6 sm:ml-10">
           <h3 class="text-[#FFA726] font-semibold text-lg">Contact us:</h3>
           <div class="space-y-3 text-gray-300">
             <p class="flex items-center gap-2 hover:text-white transition-colors">
@@ -39,7 +32,7 @@
         </div>
       </div>
 
-      <div class="flex justify-between  mr-16 gap-16">
+      <div class="flex flex-col sm:flex-row justify-between sm:mr-16 gap-8 sm:gap-16">
         <!-- Quick Links -->
         <div class="flex flex-col gap-2">
           <h3 class="text-[#FFA726] font-semibold text-lg">Quick Links</h3>
@@ -72,17 +65,16 @@
         </div>
       </div>
 
-
       <!-- Right Side - Subscribe Form -->
-      <div class="">
+      <div class="w-full sm:w-auto">
         <h3 class="text-xl font-semibold mb-4">Stay Updated</h3>
         <p class="text-gray-300 mb-6">Subscribe to our blog for the latest updates and insights.</p>
-        <form @submit.prevent="handleSubscribe" class="space-y-4 z-[0] ">
-            <input v-model="email" type="email" placeholder="  Enter your email"
-              class=" w-full pl-3 py-3 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
-              required />
+        <form @submit.prevent="handleSubscribe" class="space-y-4 z-[0]">
+          <input v-model="email" type="email" placeholder="Enter your email"
+            class="w-full pl-3 py-3 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
+            required />
           <button type="submit"
-            class=" z-[0] w-full px-6 py-3 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800]  transition-all duration-300 ">
+            class="w-full px-6 py-3 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transition-all duration-300">
             Subscribe to blog
           </button>
         </form>
@@ -97,22 +89,6 @@
           Privacy Policy
         </a>
       </div>
-
-      <!-- Social Icons -->
-      <!-- <div class="flex gap-6 mr-20">
-        <a href="https://www.instagram.com/meherysoccom/"
-          class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
-          <InstagramIcon size="24" />
-        </a>
-        <a href="https://www.facebook.com/MeherY.SocCom/"
-          class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
-          <FacebookIcon size="24" />
-        </a>
-        <a href="https://x.com/mehery_soccom"
-          class="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300">
-          <TwitterIcon size="24" />
-        </a>
-      </div> -->
     </div>
   </footer>
 </template>
@@ -133,8 +109,6 @@ const email = ref('')
 
 const router = useRouter()
 
-// const navLinks = ['Solutions', 'Feature', 'Pricing', 'FAQ', 'About Us', 'Docs', 'Career','Privacy', 'Terms of Service']
-
 const navLinks = [
   // Scroll Links
   { type: 'scroll', path: 'features', label: 'Features' },
@@ -149,7 +123,6 @@ const navLinks = [
   { type: 'route', path: '/terms', label: 'Terms of Service' },
   { type: 'route', path: '/partner', label: 'Partner' },
   { type: 'route', path: '/faq', label: 'FAQs' },
-
 ]
 
 const handleScroll = (id) => {
@@ -183,6 +156,4 @@ const handleSubscribe = () => {
     email.value = ''
   }
 }
-
-
 </script>

@@ -1,16 +1,6 @@
 <template>
     <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
         <Navbar />
-         <div class="fixed bottom-8 right-6 flex flex-col items-end gap-4">
-            <!-- Chatbot -->
-            <div class="relative z-50">
-                <ConversationalBot />
-            </div>
-            <!-- Social Media Popup -->
-            <div class="relative z-40">
-                <SOcialPopup />
-            </div>
-    </div>
 
     <main class="py-6 px-4 sm:px-6 lg:px-8">
         <section id="about" class="max-w-7xl mx-auto">
@@ -79,9 +69,9 @@
                             future of customer engagement—one meaningful conversation at a time.
                         </p>
                     </div>
-                    <div class="relative pl-48">
+                    <div class="relative pl-48 ">
                         <img src="../../@assets/images/journey.jpg" alt="Our Journey Illustration"
-                            class="w-full h-auto max-w-2xl   " />
+                            class="w-full h-auto max-w-2xlp  " />
                     </div>
                 </div>
             </div>
