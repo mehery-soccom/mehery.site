@@ -116,7 +116,7 @@ import Customer from "./Customer.vue";
 import About from "./About.vue"
 import Partner from "./Partner.vue";
 import ConversationalBot from "./Conversational.vue";
-import SOcialPopup from "./SOcialPopup.vue";
+import SOcialPopup from "./SocialPopup.vue";
 import Testimonial from "./Testimonials.vue"
 const routes = {
     "/": "home",
