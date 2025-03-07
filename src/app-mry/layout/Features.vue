@@ -7,8 +7,55 @@
             engage with your users effectively. More on WhatsApp and the channel capability, is available here
         </p>
 
+
+        <ArticleList :contentType="'features'" v-slot="{ loading, results }">
+            console.log(results)
+
+            <div v-if="loading">
+                <div>Loading team inbox features...</div>
+            </div>
+            
+            <div v-else>
+                <div v-for="(item, index) in results" :key="index" @click="handleNavigation(item.info.hyperlink)"
+                    class="grid lg:grid-cols-2 gap-8 mb-8 items-center">
+                    <!-- Left Column: Text Content -->
+                    <div class="space-y-6">
+                        <!-- Title and Description -->
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">{{ item.info.title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ item.info.description }}</p>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="space-y-4">
+                            <div v-for="(feature, featureIndex) in item.info.features" :key="featureIndex"
+                                class="flex items-start gap-3">
+                                <CheckCircleIcon class="w-5 h-5 text-gray-900 mt-1 flex-shrink-0" />
+                                <div>
+                                    <span class="bg-gray-900 text-white px-2 py-1 rounded text-sm">{{ 
+                                    }}</span>
+                                    <p class="mt-1 text-gray-600">{{ feature.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Learn More Button -->
+                        <button @click="handleNavigation(item.info.hyperlink)"
+                            class="bg-[#FFA726] hover:bg-[#FB8C00] text-black px-4 py-1 rounded-md font-medium transition-colors">
+                            {{ item.info.button.text }}
+                        </button>
+                    </div>
+
+                    <!-- Right Column: Image -->
+                    <div class="rounded-lg">
+                        <img :src="item.info.image" alt="Feature Image" class="w-full h-auto" />
+                    </div>
+                </div>
+            </div>
+        </ArticleList>
+
         <!-- Team Inbox Section -->
-        <div class="grid lg:grid-cols-2 gap-8 mb-8 items-center">
+        <!-- <div class="grid lg:grid-cols-2 gap-8 mb-8 items-center">
             <div class="space-y-6">
                 <div>
                     <h3 class="text-xl font-bold mb-2">Team Inbox</h3>
@@ -62,10 +109,10 @@
             <div class="rounded-lg">
                 <img src="../../@assets/images/feature1.png" class="w-full h-auto" />
             </div>
-        </div>
+        </div> -->
 
         <!-- BOT Builder Section -->
-        <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
+        <!-- <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
             <div class="rounded-lg">
                 <img src="../../@assets/images/feature2.png" class="w-full h-auto" />
             </div>
@@ -118,10 +165,10 @@
                     Learn More
                 </button>
             </div>
-        </div>
+        </div> -->
 
         <!-- Marketing Campaign Section -->
-        <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
+        <!-- <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
             <div class="space-y-6">
                 <div>
                     <h3 class="text-xl font-bold mb-2">Marketing Campaigns</h3>
@@ -177,10 +224,10 @@
             <div class="rounded-lg">
                 <img src="../../@assets/images/feature3.png" class="w-full h-auto" />
             </div>
-        </div>
+        </div> -->
 
         <!-- Customer Cohort Section -->
-        <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
+        <!-- <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
             <div class="rounded-lg">
                 <img src="../../@assets/images/feature4.png" class="w-full h-auto" />
             </div>
@@ -221,10 +268,10 @@
                     Learn More
                 </button>
             </div>
-        </div>
+        </div> -->
 
         <!-- Analytics Section -->
-        <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
+        <!-- <div class="grid lg:grid-cols-2 gap-8 mb-16 items-center">
             <div class="space-y-6">
                 <div>
                     <h3 class="text-xl font-bold mb-2">Analytics</h3>
@@ -291,33 +338,20 @@
             <div class="rounded-lg">
                 <img src="../../@assets/images/feature5.png" class="w-full h-auto" />
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script setup>
 import { CheckCircleIcon } from "vue-feather-icons";
 import { useRouter } from "vue-router";
+import ArticleList from "@components/ArticleList.vue";
+
 
 const router = useRouter();
 
-const handleteamInbox = () => {
-    router.push("/inbox");
+const handleNavigation = (link) => {
+    router.push(link);
 };
 
-const handleBotBuilder = () => {
-    router.push("/builder")
-}
-
-const handleMarketing = () => {
-    router.push("/marketing")
-}
-
-const handleCohort = () => {
-    router.push("/cohort")
-}
-
-const handleAnalytics = () => {
-    router.push("/analytics")
-}
 </script>

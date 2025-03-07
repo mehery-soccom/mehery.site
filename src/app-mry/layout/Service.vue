@@ -21,8 +21,9 @@
               backgroundColor: item.info.divcolor,
               borderBottom: `4px solid ${item.info.bordercolor}`
             }">
-            <div class="h-28 relative">
-              <h2 class="text-xl sm:text-2xl font-bold">{{ item.info.title }}</h2>
+            <div class="h-28 relative ">
+              <h2 class="text-xl sm:text-2xl font-bold ">{{ item.info.title }}</h2>
+              <h2 class="text-xl sm:text-2xl font-bold ">{{ item.info.subtitle }}</h2>
               <img :src="item.info.image" alt="Service Image"
                 class="hidden sm:block absolute right-0 top-0 w-32 h-28" />
             </div>
