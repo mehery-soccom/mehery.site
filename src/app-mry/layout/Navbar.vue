@@ -110,6 +110,14 @@
                         >
                             Partner
                         </router-link>
+                       
+                        <router-link
+                            :to="{ name: 'Faq' }"
+                            class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
+                        >
+                            FAQ
+                        </router-link>
+                       
 
                         <!-- Testimonials Link -->
                         <a
@@ -120,12 +128,13 @@
                         </a>
 
                         <!-- FAQs Link -->
-                        <a
+                        <!-- <a
                             @click="scrollToSection('faqs')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
                             FAQs
-                        </a>
+                        </a> -->
+                  
                     </div>
                 </div>
 

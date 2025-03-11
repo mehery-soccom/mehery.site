@@ -51,6 +51,16 @@ const routes = [
         path: `/faq`,
         name: "Faq",
         component: () => import("@src/app-mry/layout/FAQ.vue")
+    },
+    {
+        path: `/privacy`,
+        name: "Privacy",
+        component: () => import("@src/app-mry/layout/Privacy.vue")
+    },
+    {
+        path: `/career`,
+        name: "Career",
+        component: () => import("@src/app-mry/layout/Career.vue")
     }
 ];
 

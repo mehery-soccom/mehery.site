@@ -93,7 +93,7 @@
                         <h4 class="font-semibold mb-2 border-b pb-1">Users</h4>
                         <ul>
                             <li class="flex justify-between">
-                                <span>Admin Agent</span><span>{{ plan.users.adminAgent }}</span>
+                                <span>Admin/Agent</span><span>{{ plan.users.adminAgent }}</span>
                             </li>
 
                             <li v-if="plan.users.additionalUser.inr && plan.users.additionalUser.inr !== 'X'"
@@ -121,6 +121,8 @@
                             </li>
                         </ul>
                     </div>
+                    <!--set up fees-->
+                    
 
                 </div>
             </div>
@@ -299,7 +301,7 @@ const plans = ref([
         fixedFees: {
             monthly: { usd: "$69", inr: "₹2,499" }, // Updated INR value
             quarterly: { usd: "$189", inr: "₹6,750" }, // Updated INR value
-            annual: { usd: "$649", inr: "₹2,400" } // Updated INR value
+            annual: { usd: "$649", inr: "₹24,000" } // Updated INR value
         },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "0.04", usd: "0.006" },
