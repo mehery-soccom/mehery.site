@@ -45,7 +45,7 @@
   
   <script>
   import { BIconFacebook, BIconInstagram, BIconWhatsapp } from 'bootstrap-vue';
-import { Share2Icon, InstagramIcon, FacebookIcon, TwitterIcon, XIcon  } from 'vue-feather-icons'
+  import { Share2Icon, InstagramIcon, FacebookIcon, TwitterIcon, XIcon  } from 'vue-feather-icons'
   
   export default {
     components: {
