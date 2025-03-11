@@ -110,7 +110,7 @@ const task = {
             for (const app of apps) {
                 const __path_level_1 = `${__path_level_0}/${app}`;
                 if (isDirectory({ dir: __path_level_1 }) && isAppDirectory(app)) {
-                    console.log(`processing ${app}`);
+                    // console.log(`processing ${app}`);
 
                     const updateTime = getStamp();
                     const siteData = JSON.parse(fs.readFileSync(`${__path_level_1}/site.json`));
@@ -254,7 +254,7 @@ const task = {
                                         let tagName = childNode.tagName.toLowerCase().split("info-")[1];
 
                                         let tagValue = "";
-                                        console.log(`Parsed ${tagName}:`, tagValue);
+                                        // console.log(`Parsed ${tagName}:`, tagValue);
                                         for (let _index = 0; _index < childNode.childNodes?.length; _index++) {
                                             const _childNode = childNode.childNodes[_index];
 
