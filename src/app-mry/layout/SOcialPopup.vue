@@ -34,10 +34,6 @@
               <BIconWhatsapp class="w-6 h-6" />
             </a>
           </div>
-          <!-- <button @click="toggleBot" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 focus:outline-none"
-            aria-label="Close social media links">
-            <x-icon size="20" />
-          </button> -->
         </div>
       </transition>
     </div>
@@ -72,9 +68,6 @@
     },
     mounted() {
       document.addEventListener('click', this.handleClickOutside);
-    //   setTimeout(() => {
-    //     this.isOpen = true;
-    //   }, 5000);
     },
     beforeDestroy() {
       document.removeEventListener('click', this.handleClickOutside);

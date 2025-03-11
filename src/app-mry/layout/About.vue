@@ -85,8 +85,8 @@
 import { ref, onMounted } from "vue";
 import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
-import ConversationalBot from "./Conversational.vue";
-import SOcialPopup from "./SocialPopup.vue";
+// import ConversationalBot from "./Conversational.vue";
+// import SOcialPopup from "./SocialPopup.vue";
 
 onMounted(() => {
     window.scrollTo({
