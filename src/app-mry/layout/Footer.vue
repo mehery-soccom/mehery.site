@@ -85,9 +85,9 @@
     <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-700">
       <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-6 md:mb-0">
         <p class="text-gray-400">© 2024 Mehery. All Rights Reserved.</p>
-        <a href="#privacy" class="text-gray-400 hover:text-white transition-colors">
+        <router-link :to="{ name: 'Privacy' }" class="text-gray-400 hover:text-white transition-colors">
           Privacy Policy
-        </a>
+        </router-link>
       </div>
     </div>
   </footer>
@@ -117,10 +117,10 @@ const navLinks = [
 
   // Route Links
   { type: 'route', path: 'about', label: 'About Us' },
-  { type: 'route', path: '/docs', label: 'Docs' },
+  // { type: 'route', path: '/docs', label: 'Docs' },
   { type: 'route', path: '/career', label: 'Career' },
   { type: 'route', path: '/privacy', label: 'Privacy Policy' },
-  { type: 'route', path: '/terms', label: 'Terms of Service' },
+  // { type: 'route', path: '/terms', label: 'Terms of Service' },
   { type: 'route', path: '/partner', label: 'Partner' },
   { type: 'route', path: '/faq', label: 'FAQs' },
 ]
