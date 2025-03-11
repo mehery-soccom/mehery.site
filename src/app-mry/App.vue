@@ -13,7 +13,7 @@
 <script>
 import { defineComponent } from "vue";
 import ConversationalBot from "./layout/Conversational.vue"; // Adjust the path as needed
-import SocialPopup from "./layout/SocialPopup.vue"; // Adjust the path as needed
+import SocialPopup from "../app-mry/layout/SocialPopup.vue"; // Adjust the path as needed
 import "@assets/app/app.scss";
 
 export default defineComponent({

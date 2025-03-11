@@ -250,10 +250,11 @@ const task = {
                                 for (let index = 0; index < infoTagNode.childNodes.length; index++) {
                                     const childNode = infoTagNode.childNodes[index];
 
-                                    if (childNode.tagName?.indexOf("info-") === 0) {
-                                        let tagName = childNode.tagName.split("info-")[1];
+                                    if (childNode.tagName && childNode.tagName.toLowerCase().indexOf("info-") === 0) {
+                                        let tagName = childNode.tagName.toLowerCase().split("info-")[1];
 
                                         let tagValue = "";
+                                        console.log(`Parsed ${tagName}:`, tagValue);
                                         for (let _index = 0; _index < childNode.childNodes?.length; _index++) {
                                             const _childNode = childNode.childNodes[_index];
 
