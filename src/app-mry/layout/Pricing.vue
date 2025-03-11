@@ -8,24 +8,20 @@
             </h2>
 
             <div class="flex gap-4">
-                <!-- Features Toggle -->
+
+
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Features:</span> -->
-                    <button
-                        @click="toggleView"
-                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors"
-                    >
+                    <button @click="toggleView"
+                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors">
                         {{ showFeatures ? "Show Pricing" : "Show Features" }}
                     </button>
                 </div>
 
-                <!-- Billing Cycle Toggle -->
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Billing Cycle:</span> -->
-                    <button
-                        @click="toggleBillingCycle"
-                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white"
-                    >
+                    <button @click="toggleBillingCycle"
+                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white">
                         {{ billingCycle }}
                     </button>
                 </div>
@@ -38,10 +34,14 @@
                 class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow ">
                 <!-- Plan Header -->
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
-                    <div class="text-2xl font-bold mb-3">
-                        {{ showUSD ? plan.fixedFees[billingCycle.toLowerCase()] : plan.prices.inr }}
-                        <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span>
+                    <h3 class="text-xl font-bold mb-2 text-center">{{ plan.name }}</h3>
+                    <div class="text-2xl font-bold mb-3 text-center">
+                        {{
+                            showUSD
+                                ? plan.fixedFees[billingCycle.toLowerCase()].usd
+                                : plan.fixedFees[billingCycle.toLowerCase()].inr
+                        }}
+                        <!-- <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span> -->
                     </div>
                     <button
                         class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center">
@@ -70,7 +70,7 @@
                                 <span>{{ key }}</span>
                                 <span :class="{ 'text-gray-400': value === 'X' }">{{
                                     value === "X" ? "✗" : showUSD ? value.usd : value.inr
-                                }}</span>
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
@@ -81,21 +81,26 @@
                         <ul>
                             <li class="flex justify-between">
                                 <span>Minimum Deposit</span>
-                                <span>{{ plan.depositFees.minimumDeposit }}</span>
+                                <span>{{ 
+                                    showUSD ? plan.depositFees.minimumDeposit.usd : plan.depositFees.minimumDeposit.inr
+                                }}</span>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Number of Users -->
-                    <div class="mb-2">
+                    <div class="mb-2 ">
                         <h4 class="font-semibold mb-2 border-b pb-1">Users</h4>
                         <ul>
                             <li class="flex justify-between">
                                 <span>Admin Agent</span><span>{{ plan.users.adminAgent }}</span>
                             </li>
 
-                            <li v-if="plan.users.additionalUser !== 'N/A'" class="flex justify-between">
-                                <span>Additional User</span><span>{{ plan.users.additionalUser }}</span>
+                            <li v-if="plan.users.additionalUser.inr && plan.users.additionalUser.inr !== 'X'"
+                                class="flex justify-between">
+                                <span>Additional User</span>
+                                <span> {{ showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
@@ -112,7 +117,7 @@
                             </li>
                             <li class="flex justify-between">
                                 <span>Free BOT conversations</span><span>{{ plan.freeUtilities.freeBotConversations
-                                }}</span>
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
@@ -178,13 +183,16 @@
         </div>
         <div class="flex align-center justify-center mt-4 text-xl">
             <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
-                class="text-blue-500 ">Whatsapp Conversation Fees</a>
+                class="text-blue-500 ">Whatsapp
+                Conversation Fees</a>
         </div>
 
     </div>
 </template>
 
 <script setup>
+import axios from "axios";
+
 import { ref, computed, onMounted } from "vue";
 import { CheckIcon, XIcon } from "vue-feather-icons";
 
@@ -192,9 +200,9 @@ const showUSD = ref(false);
 const showFeatures = ref(false);
 const billingCycle = ref("Monthly");
 
-const toggleCurrency = () => {
-    showUSD.value = !showUSD.value;
-};
+// const toggleCurrency = () => {
+//     showUSD.value = !showUSD.value;
+// };
 
 const toggleView = () => {
     showFeatures.value = !showFeatures.value;
@@ -218,27 +226,21 @@ const formatSectionTitle = key => {
     return key.split(/(?=[A-Z])/).join(" ");
 };
 
-// const formatUtilityKey = (key) => {
-//   return key
-//     .replace(/([A-Z])/g, ' $1')
-//     .replace(/^./, str => str.toUpperCase())
-//     .replace('Dau', 'DAU');
-// };
+
 
 onMounted(async () => {
     try {
-        const response = await fetch("https://ipapi.co/json/");
-        if (response.ok) {
-            const data = await response.json();
-            showUSD.value = data.country_code !== "IN";
+        const response = await axios.get('https://ipinfo.io/json?token=1bfc162a759fb1');
+        if (response.data.country === "IN") {
+            showUSD.value = false; // Show INR prices for Indian users
         } else {
-            showUSD.value = true;
+            showUSD.value = true; // Show USD prices for non-Indian users
         }
     } catch (error) {
-        showUSD.value = true;
+        console.error("Error fetching IP data:", error);
+        showUSD.value = true; // Default to USD prices if there's an error
     }
 });
-
 // Pricing Data
 const plans = ref([
     {
@@ -254,7 +256,7 @@ const plans = ref([
             "Image Creation": { inr: "Up to 10", usd: "Up to 10" },
             "CHAT GPT ": { inr: "Up to 10", usd: "Up to 10" }
         },
-        users: { adminAgent: "1", additionalUser: "N/A" },
+        users: { adminAgent: "1", additionalUser: { inr: "X", usd: "X" } },
         depositFees: { minimumDeposit: "N/A" },
         setupFees: {
             facebookBusinessSetup: "N/A",
@@ -280,8 +282,11 @@ const plans = ref([
             "Image Creation Fee": { inr: "0.25", usd: "0.012" },
             "CHAT GPT": { inr: "0.50", usd: "0.012" }
         },
-        users: { adminAgent: "1", additionalUser: "$9.9" },
-        depositFees: { minimumDeposit: "$25" },
+        users: {
+            adminAgent: "1",
+            additionalUser: { inr: "500", usd: "9.9" }
+        },
+        depositFees: { minimumDeposit: { inr: "1000", usd: "25" }},
         setupFees: {
             facebookBusinessSetup: "$50",
             openAISetupTraining: "Price On Request",
@@ -298,11 +303,11 @@ const plans = ref([
         },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "0.04", usd: "0.006" },
-            "Image Creation Fee": { inr: "0.012", usd: "0.006" },
+            "Image Creation Fee": { inr: "0.12", usd: "0.006" },
             // "CHAT GPT": "X"
         },
-        users: { adminAgent: "5", additionalUser: "$9.9" },
-        depositFees: { minimumDeposit: "$25" },
+        users: { adminAgent: "5", additionalUser: { inr: "500", usd: "9.9" } },
+        depositFees: { minimumDeposit:  { inr: "1000", usd: "25" }},
         setupFees: {
             facebookBusinessSetup: "$50",
             openAISetupTraining: "X",
@@ -322,8 +327,8 @@ const plans = ref([
             "Image Creation Fee": { inr: "0.12", usd: "0.006" },
             // "CHAT GPT": "X"
         },
-        users: { adminAgent: "7", additionalUser: "$19.9" },
-        depositFees: { minimumDeposit: "$25" },
+        users: { adminAgent: "7", additionalUser: { inr: "600", usd: "19.9" } },
+        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
             facebookBusinessSetup: "$50",
             openAISetupTraining: "X",
@@ -343,8 +348,8 @@ const plans = ref([
             "Image Creation Fee": { inr: "On Req", usd: "On Req" },
             "CHAT GPT": { inr: "On Req", usd: "On Req" }
         },
-        users: { adminAgent: "10", additionalUser: "On Req" },
-        depositFees: { minimumDeposit: "$25" },
+        users: { adminAgent: "10", additionalUser: { inr: "On Req", usd: "On Req" } },
+        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
             facebookBusinessSetup: "$50",
             openAISetupTraining: "Price On Request",
@@ -357,12 +362,12 @@ const plans = ref([
 const features = ref({
     Channels: [
         { name: "WhatsApp", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "Webchat", availability: ["X", "Y", "Y", "Y", "Y"] },
-        { name: "Facebook Messenger", availability: ["X", "X", "Y", "Y", "Y"] },
-        { name: "Instagram DM", availability: ["X", "Y", "Y", "Y", "Y"] },
-        { name: "Telegram", availability: ["X", "X", "Y", "Y", "Y"] },
-        { name: "App Chat", availability: ["X", "X", "X", "Y", "Y"] },
-        { name: "Email", availability: ["X", "X", "X", "Y", "Y"] }
+        { name: "Webchat", availability: ["X", "X", "Y", "Y", "Y"] },
+        { name: "Facebook Messenger", availability: ["X", "X", "X", "Y", "Y"] },
+        { name: "Instagram DM", availability: ["X", "X", "Y", "Y", "Y"] },
+        { name: "Telegram", availability: ["X", "X", "X", "Y", "Y"] },
+        { name: "App Chat", availability: ["X", "X", "X", "X", "Y"] },
+        { name: "Email", availability: ["X", "X", "X", "X", "Y"] }
     ],
     SmartConversations: [
         { name: "Team Inbox", availability: ["Y", "Y", "Y", "Y", "Y"] },
@@ -371,20 +376,20 @@ const features = ref({
         { name: "Number Masking", availability: ["Y", "Y", "Y", "Y", "Y"] },
         { name: "User roles/skills", availability: ["Y", "Y", "Y", "Y", "Y"] },
         { name: "Conversation Analytics", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "Chat GPT Paraphrase", availability: ["Y", "X", "Y", "Y", "Y"] },
-        { name: "Follow-up", availability: ["Y", "X", "Y", "Y", "Y"] },
-        { name: "Appointment / Table Booking", availability: ["Y", "X", "Y", "Y", "Y"] }
+        { name: "Chat GPT Paraphrase", availability: ["Y", "Y", "X", "Y", "Y"] },
+        { name: "Follow-up", availability: ["Y", "Y", "X", "Y", "Y"] },
+        { name: "Appointment / Table Booking", availability: ["Y", "Y", "X", "Y", "Y"] }
     ],
     Bots: [
         { name: "Basic chatbots", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "Advanced interconnected BOTs", availability: ["Y", "X", "Y", "Y", "Y"] },
+        { name: "Advanced interconnected BOTs", availability: ["Y", "Y", "X", "Y", "Y"] },
         { name: "Auto-reply BOTs", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "Outside Working Hours, Weekends and Holidays", availability: ["Y", "X", "Y", "Y", "Y"] }
+        { name: "Outside Working Hours, Weekends and Holidays", availability: ["Y", "Y", "X", "Y", "Y"] }
     ],
     OpenAIChatGPT: [
-        { name: "Instructor, Knowledgebase", availability: ["Y", "X", "X", "Y", "Y"] },
-        { name: "Agent AI conversational BOT", availability: ["Y", "X", "X", "Y", "Y"] },
-        { name: "Custom BOT Scripting with OpenAI", availability: ["Y", "X", "X", "Y", "Y"] }
+        { name: "Instructor, Knowledgebase", availability: ["Y", "Y", "X", "X", "Y"] },
+        { name: "Agent AI conversational BOT", availability: ["Y", "Y", "X", "X", "Y"] },
+        { name: "Custom BOT Scripting with OpenAI", availability: ["Y", "Y", "X", "X", "Y"] }
     ],
     WhatsAppBusinessAPI: [
         { name: "Text, image, video messaging", availability: ["Y", "Y", "Y", "Y", "Y"] },
@@ -395,12 +400,12 @@ const features = ref({
     ],
     MarketingLeadGeneration: [
         { name: "Campaign Management", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "Campaign Scheduling", availability: ["Y", "X", "Y", "Y", "Y"] },
+        { name: "Campaign Scheduling", availability: ["Y", "Y", "X", "Y", "Y"] },
         { name: "Campaign Analytics, CTA Tracker", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "Custom Image (and HTML source) Templates", availability: ["Y", "X", "Y", "Y", "Y"] },
+        { name: "Custom Image (and HTML source) Templates", availability: ["Y", "Y", "X", "Y", "Y"] },
         { name: "Click to WhatsApp Ads Insights", availability: ["Y", "Y", "Y", "Y", "Y"] }
     ],
-    APIs: [{ name: "APIs for Outbound communication", availability: ["X", "Y", "Y", "Y", "Y"] }],
+    APIs: [{ name: "APIs for Outbound communication", availability: ["X", "X", "Y", "Y", "Y"] }],
     CustomerManagement: [
         { name: "Customer master", availability: ["Y", "X", "X", "Y", "Y"] },
         { name: "Custom fields", availability: ["Y", "X", "X", "Y", "Y"] },
@@ -408,11 +413,11 @@ const features = ref({
         { name: "Customer Grouping for Campaigns", availability: ["Y", "X", "X", "Y", "Y"] },
         { name: "Relationship Management", availability: ["Y", "X", "X", "Y", "Y"] }
     ],
-    AgentMobileApp: [{ name: "IOS and Android", availability: ["X", "Y", "Y", "Y", "Y"] }],
-    WebhookConnections: [{ name: "Number of Webhook Connections", availability: ["X", "1", "2", "Custom", "Custom"] }],
+    AgentMobileApp: [{ name: "IOS and Android", availability: ["X", "X", "Y", "Y", "Y"] }],
+    WebhookConnections: [{ name: "Number of Webhook Connections", availability: ["X", "X", "1", "2", "Custom"] }],
     SupportPlans: [
         { name: "Assisted onboarding", availability: ["Y", "Y", "Y", "Y", "Y"] },
-        { name: "SLA - Response Times", availability: ["12 hrs", "6 hrs", "4 hrs", "4 hrs", "4 hrs"] },
+        { name: "SLA - Response Times", availability: ["12 hrs", "12 hrs", " 6hrs", "4 hrs", "4 hrs"] },
         {
             name: "WhatsApp and Email support",
             availability: [
@@ -425,11 +430,11 @@ const features = ref({
         },
         {
             name: "WhatsApp, Email and Call based support",
-            availability: ["X", "X", "included", "included", "included"]
+            availability: ["X", "X", "X", "included", "included"]
         },
         {
             name: "WhatsApp, Email and Call based support 9h * 6d",
-            availability: ["X", "X", "X", "included", "included"]
+            availability: ["X", "X", "X", "X", "included"]
         },
         {
             name: "Support Hours",

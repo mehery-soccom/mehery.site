@@ -14,15 +14,12 @@
                 <!-- Results -->
                 <template v-else>
                     <!-- Loop through results and render cards -->
-                    <div
-                        v-for="(item, index) in results"
-                        :key="index"
-                        @click="handleCardClick(item)"
-                        :class="`bg-gradient-to-br ${item.info.bgtint} rounded-xl p-4 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer`"
-                    >
+                    <div v-for="(item, index) in results" :key="index" @click="handleCardClick(item)"
+                        :class="`bg-gradient-to-br  ${item.info.bgtint} rounded-xl p-4 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer`">
                         <!-- Dot Indicator -->
                         <div :class="`w-2 h-2 rounded-full mb-3 ${item.info.dotcolor}`"></div>
-
+                        <!-- console.log({item.info.bgtint}) -->
+                        {{ item.info.bgtint }}
                         <!-- Content -->
                         <div class="space-y-4 pr-12">
                             <h2 class="text-xl font-semibold">{{ item.info.title }}</h2>

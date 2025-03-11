@@ -166,5 +166,9 @@ const handleNavigation = (path) => {
   if (path) router.push(path);
 };
 
+const handleBot = () => {
+  router.push('/builder');
+};
+
 
 </script>
