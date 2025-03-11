@@ -48,10 +48,10 @@
           </div>
         </div>
         <div class="input-container">
-          <input v-model="userInput" type="text" placeholder="Type a message">
-          <button @click="handleUserResponse">Send</button>
+          <input v-model="userInput" type="text" placeholder="Type a message"  @keydown.enter="handleUserResponse" >
+          <button @click="handleUserResponse" >Send</button>
         </div>
-        <button @click="toggleBot" class="absolute top-2 right-2 text-white hover:text-gray-200 focus:outline-none"
+        <button @click="toggleBot"  class="absolute top-2 right-2 text-white hover:text-gray-200 focus:outline-none"
           aria-label="Close chat">
           <x-icon size="20" />
         </button>
