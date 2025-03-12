@@ -1,6 +1,6 @@
 <template>
 
-    <!-- <component :is="componentInstance" /> -->
+    <component :is="componentInstance" />
     <Navbar />
 
     <div>
