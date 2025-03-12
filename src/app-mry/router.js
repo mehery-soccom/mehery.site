@@ -3,7 +3,7 @@ import { MRY_APP_CONTEXT } from "@utils/globals";
 import { fakeAuth } from "./utils/auth";
 import AdminLogin from "./views/AdminLogin.vue";
 import BlogEditor from "./views/BlogEditor.vue";
-
+import FaqEditor from './views/FAQEditor.vue' 
 const base = MRY_APP_CONTEXT;
 
 const routes = [
@@ -51,6 +51,11 @@ const routes = [
         path: `/faq`,
         name: "Faq",
         component: () => import("@src/app-mry/layout/FAQ.vue")
+    },
+    {
+        path: "/admin/faq-editor", 
+        name: "FaqEditor",
+        component: FaqEditor
     },
     {
         path: `/privacy`,

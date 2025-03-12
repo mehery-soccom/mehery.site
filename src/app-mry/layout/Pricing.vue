@@ -409,11 +409,11 @@ const features = ref({
     ],
     APIs: [{ name: "APIs for Outbound communication", availability: ["X", "X", "Y", "Y", "Y"] }],
     CustomerManagement: [
-        { name: "Customer master", availability: ["Y", "X", "X", "Y", "Y"] },
-        { name: "Custom fields", availability: ["Y", "X", "X", "Y", "Y"] },
-        { name: "Custom Filters for grouping", availability: ["Y", "X", "X", "Y", "Y"] },
-        { name: "Customer Grouping for Campaigns", availability: ["Y", "X", "X", "Y", "Y"] },
-        { name: "Relationship Management", availability: ["Y", "X", "X", "Y", "Y"] }
+        { name: "Customer master", availability: ["Y", "Y", "X", "X", "Y"] },
+        { name: "Custom fields", availability: ["Y", "Y", "X", "X", "Y"] },
+        { name: "Custom Filters for grouping", availability: ["Y", "Y", "X", "X", "Y"] },
+        { name: "Customer Grouping for Campaigns", availability: ["Y", "Y", "X", "X", "Y"] },
+        { name: "Relationship Management", availability: ["Y", "Y", "X", "X", "Y"] }
     ],
     AgentMobileApp: [{ name: "IOS and Android", availability: ["X", "X", "Y", "Y", "Y"] }],
     WebhookConnections: [{ name: "Number of Webhook Connections", availability: ["X", "X", "1", "2", "Custom"] }],
