@@ -1,7 +1,7 @@
 <template>
 
     <component :is="componentInstance" />
-    <Navbar />
+    <!-- <Navbar />
 
     <div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +20,7 @@
             </main>
         </div>
     </div>
-    <Footer />
+    <Footer /> -->
 
 </template>
 
