@@ -39,6 +39,6 @@ import ArticleList from "@components/ArticleList.vue";
 const router = useRouter();
 
 const handleCardClick = (item) => {
-    router.push(`/Connect${item.info.hash}`);
+    router.push(`/connect${item.info.hash}`);
 };
 </script>

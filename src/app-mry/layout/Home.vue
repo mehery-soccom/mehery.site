@@ -160,29 +160,29 @@ import Partner from "./Partner.vue";
 import ConversationalBot from "./Conversational.vue";
 // import SOcialPopup from "./SocialPopup.vue";
 import Testimonial from "./Testimonials.vue"
-const routes = {
-    "/": "home",
-    "/customer": "customer",
-    "/lead": "lead",
-    "/relation": "relation",
-    "/conversation": "conversation",
-    "/api": "api",
-    "/campaign": "campaign",
-    "/bot": "bot",
-    "/inbox": "inbox",
-    "/botbuilder": "botbuilder",
-    "/market": "market",
-    "/cohort": "cohort",
-    "/analytics": "analytics",
-    "/about": "About",
-    "/partner": "Partner",
+// const routes = {
+//     "/": "home",
+//     "/customer": "customer",
+//     "/lead": "lead",
+//     "/relation": "relation",
+//     "/conversation": "conversation",
+//     "/api": "api",
+//     "/campaign": "campaign",
+//     "/bot": "bot",
+//     "/inbox": "inbox",
+//     "/botbuilder": "botbuilder",
+//     "/market": "market",
+//     "/cohort": "cohort",
+//     "/analytics": "analytics",
+//     "/about": "About",
+//     "/partner": "Partner",
 
-    "/clickConnect": "click-to-connect",
-    "/flows": "flows",
-    "/media": "media",
-    "/singleProduct": "single-product",
-    "/authentication": "authentication"
-};
+//     "/clickConnect": "click-to-connect",
+//     "/flows": "flows",
+//     "/media": "media",
+//     "/singleProduct": "single-product",
+//     "/authentication": "authentication"
+// };
 
 // const featuresMenu = {
 //     "/solutions": "Solutions",
