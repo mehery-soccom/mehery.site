@@ -70,7 +70,7 @@
                                 <span>{{ key }}</span>
                                 <span :class="{ 'text-gray-400': value === 'X' }">{{
                                     value === "X" ? "✗" : showUSD ? value.usd : value.inr
-                                    }}</span>
+                                }}</span>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +81,7 @@
                         <ul>
                             <li class="flex justify-between">
                                 <span>Minimum Deposit</span>
-                                <span>{{ 
+                                <span>{{
                                     showUSD ? plan.depositFees.minimumDeposit.usd : plan.depositFees.minimumDeposit.inr
                                 }}</span>
                             </li>
@@ -100,7 +100,7 @@
                                 class="flex justify-between">
                                 <span>Additional User</span>
                                 <span> {{ showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr
-                                    }}</span>
+                                }}</span>
                             </li>
                         </ul>
                     </div>
@@ -117,12 +117,12 @@
                             </li>
                             <li class="flex justify-between">
                                 <span>Free BOT conversations</span><span>{{ plan.freeUtilities.freeBotConversations
-                                    }}</span>
+                                }}</span>
                             </li>
                         </ul>
                     </div>
                     <!--set up fees-->
-                    
+
 
                 </div>
             </div>
@@ -183,10 +183,20 @@
                 </table>
             </div>
         </div>
-        <div class="flex align-center justify-center mt-4 text-xl">
-            <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
-                class="text-blue-500 ">Whatsapp
-                Conversation Fees</a>
+        <div class="flex align-center justify-center mt-4 text-xl gap-4">
+            <div>
+                <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
+                    class="text-blue-500 ">Whatsapp
+                    Conversation Fees</a>
+            </div>
+            <div>
+                <p class="text-blue-500 ">•</p>
+            </div>
+            <div>
+                <a href="https://openai.com/api/pricing/" target="_blank" class="text-blue-500 ">Chat GPT
+                    Charges</a><span>, GPT
+                    4o Mini is required for Mehery Services.</span>
+            </div>
         </div>
 
     </div>
@@ -288,7 +298,7 @@ const plans = ref([
             adminAgent: "1",
             additionalUser: { inr: "500", usd: "9.9" }
         },
-        depositFees: { minimumDeposit: { inr: "1000", usd: "25" }},
+        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
             facebookBusinessSetup: "$50",
             openAISetupTraining: "Price On Request",
@@ -309,7 +319,7 @@ const plans = ref([
             // "CHAT GPT": "X"
         },
         users: { adminAgent: "5", additionalUser: { inr: "500", usd: "9.9" } },
-        depositFees: { minimumDeposit:  { inr: "1000", usd: "25" }},
+        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
             facebookBusinessSetup: "$50",
             openAISetupTraining: "X",
