@@ -64,7 +64,7 @@
                         </div>
                         <div class="relative pl-36">
                             <img
-                                src="../../@assets/images/image 4.svg"
+                                src="../../@assets/images/camp1.png"
                                 alt="Campaign Management Illustration"
                                 class="w-full h-auto max-w-2xl mx-auto transform  transition-transform duration-300"
                             />

@@ -8,7 +8,7 @@
                     <div class="grid lg:grid-cols-2 gap-10 items-center">
                         <div class="relative">
                             <img
-                                src="../../@assets/images/feature4.png"
+                                src="../../@assets/images/custom1.png"
                                 alt="Customer Cohorts Illustration"
                                 class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
                             />

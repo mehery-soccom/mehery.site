@@ -42,7 +42,7 @@
             </div>
             <div class="relative">
               <img
-                src="../../@assets/images/image 13.svg"
+                src="../../@assets/images/greenthingy.png"
                 alt="Click to Connect"
                 class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
               />
@@ -55,9 +55,9 @@
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <div class="relative">
               <img
-                src="../../@assets/images/image 14.svg"
+                src="../../@assets/images/flow.png"
                 alt="WhatsApp Flows"
-                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 scale-125 hover:scale-150"
               />
             </div>
             <div class="space-y-6 max-w-2xl">
@@ -142,9 +142,9 @@
             </div>
             <div class="relative">
               <img
-                src="../../@assets/images/image 16(1).svg"
+                src="../../@assets/images/spm.png"
                 alt="Media Card Carousel"
-                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 scale-75 hover:scale-90"
               />
             </div>
           </div>
@@ -155,9 +155,9 @@
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <div class="relative">
               <img
-                src="../../@assets/images/image 17.svg"
+                src="../../@assets/images/spm.png"
                 alt="Single Product Message"
-                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 scale-75 hover:scale-90"
               />
             </div>
             <div class="space-y-6 max-w-2xl">
@@ -240,7 +240,7 @@
             </div>
             <div class="relative">
               <img
-                src="../../@assets/images/image 18.svg"
+                src="../../@assets/images/auth2.png"
                 alt="Secure Authentication"
                 class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
               />

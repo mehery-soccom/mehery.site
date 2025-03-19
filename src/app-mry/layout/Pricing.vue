@@ -87,6 +87,24 @@
                             </li>
                         </ul>
                     </div>
+                    <!--isko theek karle mere paas excel nahi hai-->
+                    <div>
+                        <h4 class="font-semibold mb-2 border-b pb-1">Set-Up Fees</h4>
+                        <ul>
+                            <li class="flex justify-between">
+                                <span>facebook</span>
+                                <span>{{ plan.setupFees.facebookBusinessSetup }}</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>OpenAI</span>
+                                <span>{{ plan.setupFees.openAISetupTraining }}</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>OpenAI Bot</span>
+                                <span>{{ plan.setupFees.openAIBotDevelopment }}</span>
+                            </li>
+                        </ul>
+                    </div>
 
                     <!-- Number of Users -->
                     <div class="mb-2 ">
