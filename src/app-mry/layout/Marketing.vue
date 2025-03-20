@@ -58,7 +58,7 @@
                         </div>
                         <div class="relative lg:pl-8">
                             <img
-                                src="../../@assets/images/feature3.png"
+                                src="../../@assets/images/camp1.png"
                                 alt="Marketing Campaigns Illustration"
                                 class="w-full h-auto max-w-2xl mx-auto transform  duration-300"
                             />

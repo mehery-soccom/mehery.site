@@ -73,9 +73,9 @@
                         <!-- Image on the right -->
                         <div class="relative lg:pl-24">
                             <img
-                                src="../../@assets/images/feature2.png"
+                                src="../../@assets/images/bot1.png"
                                 alt="Bot Builder Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                                class="w-full h-auto max-w-2xl mx-auto transform  scale-125 transition-transform duration-300"
                             />
                         </div>
                     </div>

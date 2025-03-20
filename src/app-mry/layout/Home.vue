@@ -65,7 +65,7 @@
         
       </div>
     </div>
-    <div class="flex flex-col justify-center items-center"> 
+      <div class="flex flex-col justify-center items-center"> 
         <p class="text-gray-600 text-md italic font-bold">
           "As a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels."
         </p>
