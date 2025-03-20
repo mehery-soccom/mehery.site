@@ -65,13 +65,6 @@
         
       </div>
     </div>
-      <div class="flex flex-col justify-center items-center"> 
-        <p class="text-gray-600 text-md italic font-bold">
-          "As a proud Meta Technology Partner, we ensure top-tier integration and reliability across channels."
-        </p>
-        <img src="../../@assets/images/meta.png" alt="Hero Image" class="hidden sm:block w-72 " />      
-      </div>
-
     <div class="scroll-mt-[60px]" id="solutions">
       <div class="container mx-auto px-6">
         <Service />
