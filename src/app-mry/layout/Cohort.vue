@@ -10,7 +10,7 @@
                             <img
                                 src="../../@assets/images/custom1.png"
                                 alt="Customer Cohorts Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300"
+                                class="w-full h-auto max-w-2xl mx-auto transform transition-transform duration-300"
                             />
                         </div>
                         <div class="space-y-6 max-w-2xl">

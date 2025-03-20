@@ -75,7 +75,7 @@
                             <img
                                 src="../../@assets/images/bot1.png"
                                 alt="Bot Builder Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform hover:scale-150 scale-125 transition-transform duration-300"
+                                class="w-full h-auto max-w-2xl mx-auto transform  scale-125 transition-transform duration-300"
                             />
                         </div>
                     </div>
