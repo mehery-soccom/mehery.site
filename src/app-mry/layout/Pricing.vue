@@ -10,20 +10,16 @@
             <div class="flex gap-4">
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Features:</span> -->
-                    <button
-                        @click="toggleView"
-                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors"
-                    >
+                    <button @click="toggleView"
+                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors">
                         {{ showFeatures ? "Show Pricing" : "Show Features" }}
                     </button>
                 </div>
 
                 <div class="flex items-center gap-2">
                     <!-- <span class="text-sm font-medium">Billing Cycle:</span> -->
-                    <button
-                        @click="toggleBillingCycle"
-                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white"
-                    >
+                    <button @click="toggleBillingCycle"
+                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white">
                         {{ billingCycle }}
                     </button>
                 </div>
@@ -32,11 +28,8 @@
 
         <!-- Pricing Cards -->
         <div v-if="!showFeatures" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12 text-sm">
-            <div
-                v-for="(plan, planIndex) in plans"
-                :key="plan.name"
-                class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow"
-            >
+            <div v-for="(plan, planIndex) in plans" :key="plan.name"
+                class="border p-4 rounded-lg shadow-lg flex flex-col hover:shadow-xl transition-shadow">
                 <!-- Plan Header -->
                 <div class="mb-6">
                     <h3 class="text-xl font-bold mb-2 text-center">{{ plan.name }}</h3>
@@ -49,8 +42,7 @@
                         <!-- <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span> -->
                     </div>
                     <button
-                        class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center"
-                    >
+                        class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center">
                         {{ plan.buttonText }}
                     </button>
                 </div>
@@ -71,15 +63,12 @@
                     <div>
                         <h4 class="font-semibold mb-2 border-b pb-1">Per Conversation Fees</h4>
                         <ul>
-                            <li
-                                v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']"
-                                :key="key"
-                                class="flex justify-between"
-                            >
+                            <li v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']" :key="key"
+                                class="flex justify-between">
                                 <span>{{ key }}</span>
                                 <span :class="{ 'text-gray-400': value === 'X' }">{{
                                     value === "X" ? "✗" : showUSD ? value.usd : value.inr
-                                }}</span>
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
@@ -92,30 +81,44 @@
                                 <span>Minimum Deposit</span>
                                 <span>{{
                                     showUSD ? plan.depositFees.minimumDeposit.usd : plan.depositFees.minimumDeposit.inr
-                                }}</span>
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
-                    <div
-                        v-if="
-                            plan.setupFees.facebookBusinessSetup !== 'N/A' ||
-                            plan.setupFees.openAISetupTraining !== 'N/A' ||
-                            plan.setupFees.openAIBotDevelopment !== 'N/A'
-                        "
-                    >
+                    <div v-if="
+                        plan.setupFees.facebookBusinessSetup !== 'N/A' ||
+                        plan.setupFees.openAISetupTraining !== 'N/A' ||
+                        plan.setupFees.openAIBotDevelopment !== 'N/A'
+                    ">
                         <h4 class="font-semibold mb-2 border-b pb-1">Set-Up Fees</h4>
                         <ul>
                             <li class="flex justify-between">
                                 <span>facebook</span>
-                                <span>{{ plan.setupFees.facebookBusinessSetup }}</span>
+                                <span>
+                                    {{
+                                        showUSD
+                                            ? plan.setupFees.facebookBusinessSetup.usd
+                                            : plan.setupFees.facebookBusinessSetup.inr
+                                    }}
+                                </span>
                             </li>
                             <li class="flex justify-between">
                                 <span>OpenAI</span>
-                                <span>{{ plan.setupFees.openAISetupTraining }}</span>
+                                <span>
+                                    {{
+                                        showUSD
+                                            ? plan.setupFees.openAISetupTraining.usd
+                                            : plan.setupFees.openAISetupTraining.inr
+                                    }}
+                                </span>
                             </li>
                             <li class="flex justify-between">
-                                <span>OpenAI Bot</span>
-                                <span>{{ plan.setupFees.openAIBotDevelopment }}</span>
+                                <span>Bot</span>
+                                <span> {{
+                                    showUSD
+                                        ? plan.setupFees.openAIBotDevelopment.usd
+                                        : plan.setupFees.openAIBotDevelopment.inr
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
@@ -128,14 +131,11 @@
                                 <span>Admin/Agent</span><span>{{ plan.users.adminAgent }}</span>
                             </li>
 
-                            <li
-                                v-if="plan.users.additionalUser.inr && plan.users.additionalUser.inr !== 'X'"
-                                class="flex justify-between"
-                            >
+                            <li v-if="plan.users.additionalUser.inr && plan.users.additionalUser.inr !== 'X'"
+                                class="flex justify-between">
                                 <span>Additional User</span>
                                 <span>
-                                    {{ showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr }}</span
-                                >
+                                    {{ showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr }}</span>
                             </li>
                         </ul>
                     </div>
@@ -151,8 +151,8 @@
                                 <span>Free Images</span><span>{{ plan.freeUtilities.freeImages }}</span>
                             </li>
                             <li class="flex justify-between">
-                                <span>Free BOT conversations</span
-                                ><span>{{ plan.freeUtilities.freeBotConversations }}</span>
+                                <span>Free BOT conversations</span><span>{{ plan.freeUtilities.freeBotConversations
+                                    }}</span>
                             </li>
                         </ul>
                     </div>
@@ -195,24 +195,15 @@
                             </tr>
 
                             <!-- Section Features -->
-                            <tr
-                                v-for="feature in section"
-                                :key="feature.name"
-                                class="border-b border-gray-300 hover:bg-gray-50 transition-colors"
-                            >
+                            <tr v-for="feature in section" :key="feature.name"
+                                class="border-b border-gray-300 hover:bg-gray-50 transition-colors">
                                 <td class="py-2 px-2 border-r border-gray-300">{{ feature.name }}</td>
                                 <!-- Reduced padding -->
-                                <td
-                                    v-for="(available, idx) in feature.availability"
-                                    :key="idx"
-                                    class="text-center py-2 px-2 border-r border-gray-300"
-                                >
+                                <td v-for="(available, idx) in feature.availability" :key="idx"
+                                    class="text-center py-2 px-2 border-r border-gray-300">
                                     <!-- Reduced padding -->
-                                    <check-icon
-                                        v-if="available === 'Y'"
-                                        size="16"
-                                        class="inline-block text-green-500"
-                                    />
+                                    <check-icon v-if="available === 'Y'" size="16"
+                                        class="inline-block text-green-500" />
                                     <!-- Reduced icon size from 20 to 16 -->
                                     <x-icon v-else-if="available === 'X'" size="16" class="inline-block text-red-500" />
                                     <!-- Reduced icon size -->
@@ -227,16 +218,17 @@
         </div>
         <div class="flex align-center justify-center mt-4 text-xl gap-4">
             <div>
-                <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" class="text-blue-500"
-                    >Whatsapp Conversation Fees</a
-                >
+                <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank"
+                    class="text-blue-500">Whatsapp
+                    Conversation Fees</a>
             </div>
             <div>
                 <p class="text-blue-500">•</p>
             </div>
             <div>
-                <a href="https://openai.com/api/pricing/" target="_blank" class="text-blue-500">Chat GPT Charges</a
-                ><span>, GPT 4o Mini is required for Mehery Services.</span>
+                <a href="https://openai.com/api/pricing/" target="_blank" class="text-blue-500">Chat GPT
+                    Charges</a><span>, GPT
+                    4o Mini is required for Mehery Services.</span>
             </div>
         </div>
     </div>
@@ -338,9 +330,9 @@ const plans = ref([
         },
         depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
-            facebookBusinessSetup: "₹5000",
-            openAISetupTraining: "Price On Request",
-            openAIBotDevelopment: "Based upon scope of work"
+            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            openAISetupTraining: { inr: "X", usd: "X" },
+            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
     },
     {
@@ -359,9 +351,9 @@ const plans = ref([
         users: { adminAgent: "5", additionalUser: { inr: "500", usd: "9.9" } },
         depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
-            facebookBusinessSetup: "₹5000",
-            openAISetupTraining: "X",
-            openAIBotDevelopment: "Based upon scope of work"
+            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            openAISetupTraining: { inr: "X", usd: "X" },
+            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
     },
     {
@@ -380,9 +372,9 @@ const plans = ref([
         users: { adminAgent: "7", additionalUser: { inr: "600", usd: "19.9" } },
         depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
-            facebookBusinessSetup: "₹5000",
-            openAISetupTraining: "X",
-            openAIBotDevelopment: "Based upon scope of work"
+            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            openAISetupTraining: { inr: "X", usd: "X" },
+            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
     },
     {
@@ -401,9 +393,9 @@ const plans = ref([
         users: { adminAgent: "10", additionalUser: { inr: "On Req", usd: "On Req" } },
         depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
-            facebookBusinessSetup: "₹5000",
-            openAISetupTraining: "Price On Request",
-            openAIBotDevelopment: "Based upon scope of work"
+            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            openAISetupTraining: { inr: "On Req", usd: "On Req" },
+            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
     }
 ]);

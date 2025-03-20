@@ -144,7 +144,7 @@
               <img
                 src="../../@assets/images/spm.png"
                 alt="Media Card Carousel"
-                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 scale-75 hover:scale-90"
+                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>
@@ -155,9 +155,9 @@
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <div class="relative">
               <img
-                src="../../@assets/images/spm.png"
+                src="../../@assets/images/spm01.png"
                 alt="Single Product Message"
-                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 scale-75 hover:scale-90"
+                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="space-y-6 max-w-2xl">
