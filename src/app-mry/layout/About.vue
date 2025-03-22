@@ -45,7 +45,7 @@
                         </h4>
                         <ul class="space-y-4">
                             <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">📌</span>
+                                <span class="text-xl text-blue-600"></span>
                                 <div>
                                     <p class="text-gray-600 text-sm">{{ point }}</p>
                                 </div>

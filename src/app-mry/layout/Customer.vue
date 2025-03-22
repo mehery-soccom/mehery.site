@@ -15,37 +15,37 @@
                                 </p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">✅</span>
+                                        <span class="text-xl text-blue-600"> </span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">360° Customer View 🔍</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">360° Customer View </h4>
                                             <p class="text-gray-600 text-sm">Integrate interactions across multiple channels to get a complete picture of each customer, ensuring personalized and effective engagement.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🎯</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Intelligent Segmentation 📊</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Intelligent Segmentation </h4>
                                             <p class="text-gray-600 text-sm">Group customers dynamically based on custom criteria, enabling highly targeted campaigns that resonate with their needs.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🔗</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Seamless Data Integration 🔄</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Seamless Data Integration </h4>
                                             <p class="text-gray-600 text-sm">Effortlessly import customer data from your eCommerce or transactional systems, equipping your team with the insights they need to boost productivity.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🤝</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Dedicated Relationship Management 👤</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Dedicated Relationship Management </h4>
                                             <p class="text-gray-600 text-sm">Assign Relationship Managers to nurture personalized connections, with every interaction centrally recorded for compliance and oversight.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">📅</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Automated Campaigns & Outreach 🚀</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Automated Campaigns & Outreach </h4>
                                             <p class="text-gray-600 text-sm">Build custom cohorts and schedule structured campaigns to maintain consistent, high-touch engagement with your customers.</p>
                                         </div>
                                     </li>

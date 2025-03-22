@@ -23,7 +23,7 @@
                         </h4>
                         <ul class="space-y-4">
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">✅</span>
+                                <span class="text-xl text-blue-600"> </span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Remote & Hybrid Work Culture:</span> We understand the importance of flexibility in today’s world. Our team works remotely, with the option of a hybrid setup when needed. But distance doesn’t mean disconnect—we frequently come together for dinners, team outings, and even two-day trips that strengthen our bond beyond work.
@@ -31,7 +31,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">✅</span>
+                                <span class="text-xl text-blue-600"> </span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Competitive Compensation:</span> We value talent and hard work, offering salaries at par with industry standards. Your contributions are recognized and rewarded.
@@ -39,7 +39,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">✅</span>
+                                <span class="text-xl text-blue-600"> </span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">A Culture of Learning & Growth:</span> We are always curious, eager to raise our standards, and committed to bettering ourselves. If you love solving challenges, working with cutting-edge digital solutions, and being part of a team that fosters innovation, Mehery is the place for you.
@@ -47,7 +47,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">✅</span>
+                                <span class="text-xl text-blue-600"> </span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Diverse & Inclusive Team:</span> We embrace different perspectives and believe that diversity fuels creativity. At Mehery, respect and collaboration define our work environment.
@@ -55,7 +55,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">✅</span>
+                                <span class="text-xl text-blue-600"> </span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Impact-Driven Work:</span> We are on a mission to democratize customer engagement for businesses of all sizes. Every role at Mehery contributes to building smarter, simpler, and more effective digital solutions.
@@ -75,7 +75,7 @@
                             If you're excited about working in a dynamic, fast-paced environment where your ideas matter, we’d love to hear from you!
                         </p>
                         <p class="text-gray-600 text-base sm:text-lg">
-                            📩 Send your resume to <a href="mailto:hr@mehery.com" class="text-blue-600 hover:underline">hr@mehery.com</a> and let’s start a conversation!
+                             Send your resume to <a href="mailto:hr@mehery.com" class="text-blue-600 hover:underline">hr@mehery.com</a> and let’s start a conversation!
                         </p>
                     </div>
 
@@ -87,7 +87,7 @@
                         </h4>
                         <ul class="space-y-4">
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">🔹</span>
+                                <span class="text-xl text-blue-600">-</span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Lead Generation Specialist</span> (Remote, 1-3 years experience)
@@ -95,7 +95,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">🔹</span>
+                                <span class="text-xl text-blue-600">-</span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Customer Support Executive</span> (Remote/Hybrid, 1-3 years experience)
@@ -103,7 +103,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">🔹</span>
+                                <span class="text-xl text-blue-600">-</span>
                                 <div>
                                     <p class="text-gray-600 text-sm">
                                         <span class="font-semibold">Software Developer (Full Stack – JavaScript & Node.js)</span> (Remote, 2-5 years experience)

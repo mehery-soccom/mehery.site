@@ -7,7 +7,7 @@
                     <div class="grid lg:grid-cols-2 gap-10 items-center">
                         <div class="space-y-6 max-w-2xl">
                             <h3 class="text-left text-2xl sm:text-4xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                Stronger Relationships, Greater Loyalty 🤝
+                                Stronger Relationships, Greater Loyalty 
                             </h3>
                             <div class="space-y-4">
                                 <p class="text-gray-600 text-base sm:text-md">
@@ -15,37 +15,37 @@
                                 </p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🌟</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Dedicated Relationship Managers 👤</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Dedicated Relationship Managers </h4>
                                             <p class="text-gray-600 text-sm">Assign Relationship Managers or Sales Agents to high-value customers, adding a personal touch that boosts loyalty and retention.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🔄</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Seamless Integration 🔗</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Seamless Integration </h4>
                                             <p class="text-gray-600 text-sm">Sync effortlessly with Customer and Lead Management to gain a 360° view of each customer's journey.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">📊</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Data-Driven Personalization 💡</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Data-Driven Personalization </h4>
                                             <p class="text-gray-600 text-sm">Equip your team with customer insights and communication history across multiple channels for impactful, personalized interactions.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">📌</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Organized & Structured Outreach 📅</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Organized & Structured Outreach </h4>
                                             <p class="text-gray-600 text-sm">All interactions are centrally recorded, ensuring better monitoring, compliance, and seamless coordination across teams.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🚀</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Maximize Revenue Potential 💰</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Maximize Revenue Potential </h4>
                                             <p class="text-gray-600 text-sm">Deepen customer relationships, enhance engagement, and drive long-term business growth through meaningful, tailored support.</p>
                                         </div>
                                     </li>
