@@ -7,6 +7,10 @@
       </button>
     </div>
 
+    <div v-if="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+      {{ errorMessage }}
+    </div>
+    
     <form @submit.prevent="savePost" class="space-y-6">
       <div>
         <input v-model="post.title" placeholder="Blog Title" required
@@ -21,7 +25,7 @@
                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
       </div>
       <div class="space-y-2">
-        <label for="file-upload" class="block text-sm font-medium text-gray-700">Upload Image</label>
+        <label for="file-upload" class="block text-sm font-medium text-gray-700">Upload Image (smaller than 900KB)</label>
         <input id="file-upload" type="file" @change="handleImageUpload" accept="image/*"
                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
       </div>
@@ -51,7 +55,7 @@
 </template>
 
 <script>
-import { fakeAuth } from "../utils/auth";
+import { blogService, authService } from "../../firebase/index";
 
 export default {
   data() {
@@ -63,37 +67,75 @@ export default {
         date: "",
         image: ""
       },
-      posts: []
+      posts: [],
+      errorMessage: ""
     };
   },
   mounted() {
     this.loadPosts();
+    console.log("BlogEditor component mounted");
   },
   methods: {
-    loadPosts() {
-      this.posts = JSON.parse(localStorage.getItem("blogPosts") || "[]");
-    },
-    savePost() {
-      const existingPosts = JSON.parse(localStorage.getItem("blogPosts") || "[]");
-      const newPost = {
-        ...this.post,
-        id: Date.now(),
-        date: new Date().toLocaleDateString()
-      };
-      const updatedPosts = [newPost, ...existingPosts];
-      localStorage.setItem("blogPosts", JSON.stringify(updatedPosts));
-      
-      // Check if the toast plugin is available
-      if (this.$toast) {
-        this.$toast.success("Post saved successfully!", { duration: 3000 });
-      } else {
-        console.log("Post saved successfully!");
+    async loadPosts() {
+      console.log("Loading blog posts");
+      try {
+        this.posts = await blogService.getPosts();
+        console.log("Posts loaded:", this.posts.length);
+      } catch (error) {
+        this.errorMessage = "Error loading posts: " + error.message;
       }
+    },
+    async savePost() {
+      console.log("Saving blog post");
+      this.errorMessage = "";
       
-      this.resetForm();
-      this.loadPosts();
-      // Redirect to blog page to see the new post
-      this.$router.push("/blog");
+      try {
+        const newPost = {
+          ...this.post,
+          date: new Date().toLocaleDateString()
+        };
+        
+        console.log("Saving post:", newPost.title);
+        const result = await blogService.savePost(newPost);
+        console.log("Post saved:", result);
+        
+        if (result) {
+          alert("Post published successfully!");
+          this.resetForm();
+          await this.loadPosts();
+          
+          // Uncomment if you want to navigate to blog page
+          // this.$router.push("/blog");
+        }
+      } catch (error) {
+        console.error("Error saving post:", error);
+        this.errorMessage = "Error saving post: " + error.message;
+      }
+    },
+    async deletePost(id) {
+      console.log("Deleting post:", id);
+      try {
+        await blogService.deletePost(id);
+        alert("Post deleted successfully");
+        await this.loadPosts();
+      } catch (error) {
+        this.errorMessage = "Error deleting post: " + error.message;
+      }
+    },
+    handleImageUpload(e) {
+      const file = e.target.files[0];
+      if (file) {
+        if (file.size > 900000) {
+          this.errorMessage = "Image is too large. Please select an image smaller than 900KB.";
+          return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.post.image = reader.result;
+        };
+        reader.readAsDataURL(file);
+      }
     },
     resetForm() {
       this.post = {
@@ -104,36 +146,13 @@ export default {
         image: ""
       };
     },
-    handleImageUpload(e) {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = () => {
-          this.post.image = reader.result;
-        };
-        reader.readAsDataURL(file);
-      }
-    },
-    deletePost(id) {
-      const posts = JSON.parse(localStorage.getItem("blogPosts") || "[]");
-      const updatedPosts = posts.filter(post => post.id !== id);
-      localStorage.setItem("blogPosts", JSON.stringify(updatedPosts));
-      this.loadPosts();
-      if (this.$toast) {
-        this.$toast.success("Post deleted successfully!", { duration: 3000 });
-      } else {
-        console.log("Post deleted successfully!");
-      }
-    },
-    logout() {
-      fakeAuth.logout(() => {
+    async logout() {
+      try {
+        await authService.logout();
         this.$router.push("/admin/login");
-        if (this.$toast) {
-          this.$toast.info("You have been logged out.", { duration: 3000 });
-        } else {
-          console.log("You have been logged out.");
-        }
-      });
+      } catch (error) {
+        this.errorMessage = "Error during logout: " + error.message;
+      }
     }
   }
 };

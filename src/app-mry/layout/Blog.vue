@@ -61,6 +61,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { blogService } from "../../firebase/index";
 import Navbar from "./Navbar.vue";
 import Footer from "./Footer.vue";
 
@@ -76,13 +77,13 @@ const closeModal = () => {
 };
 
 const truncated = (text) => {
-  const maxLength = 100; // adjust excerpt length as needed
+  const maxLength = 100;
   if (!text) return "";
   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 };
 
-onMounted(() => {
-  posts.value = JSON.parse(localStorage.getItem("blogPosts") || "[]");
+onMounted(async () => {
+  posts.value = await blogService.getPosts();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>

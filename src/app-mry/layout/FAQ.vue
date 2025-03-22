@@ -59,8 +59,10 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
+import { faqService } from '../../firebase/index';
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
+
 
 // Predefined FAQs
 // const predefinedFaqs = [
@@ -502,7 +504,6 @@ const predefinedFaqs = [
 const faqs = ref([]);
 const searchQuery = ref('');
 
-// Computed property to filter FAQs
 const filteredFaqs = computed(() => {
   if (!searchQuery.value) return faqs.value;
   const query = searchQuery.value.toLowerCase();
@@ -513,24 +514,29 @@ const filteredFaqs = computed(() => {
   );
 });
 
-// Load FAQs from local storage or initialize with predefined FAQs
-const loadFaqs = () => {
-  const storedFaqs = JSON.parse(localStorage.getItem('faqs') || '[]');
-  // Merge stored FAQs with predefined FAQs, avoiding duplicates
+const loadFaqs = async () => {
+  // Get stored FAQs from Firebase
+  const storedFaqs = await faqService.getFaqs();
+  
+  // Merge with predefined FAQs
   const mergedFaqs = [...predefinedFaqs, ...storedFaqs.filter(storedFaq =>
     !predefinedFaqs.some(predefinedFaq => predefinedFaq.title === storedFaq.title)
   )];
+  
+  // Add isOpen property if not exists
+  mergedFaqs.forEach(faq => {
+    if (!faq.hasOwnProperty('isOpen')) {
+      faq.isOpen = false;
+    }
+  });
+  
   faqs.value = mergedFaqs;
-  // Save the merged list back to local storage
-  localStorage.setItem('faqs', JSON.stringify(mergedFaqs));
 };
 
-// Toggle FAQ open/close state
 const toggleFaq = (index) => {
   faqs.value[index].isOpen = !faqs.value[index].isOpen;
 };
 
-// Load FAQs on component mount
 onMounted(() => {
   loadFaqs();
 });
