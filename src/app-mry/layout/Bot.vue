@@ -8,7 +8,7 @@
                     <div class="grid lg:grid-cols-2 gap-10 items-center mb-16">
                         <div class="space-y-6 max-w-2xl">
                             <h3 class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                Transform Customer Interactions with AI-Powered Chatbots 🤖✨
+                                Transform Customer Interactions with AI-Powered Chatbots 
                             </h3>
                             <div class="space-y-4">
                                 <p class="text-gray-600 text-base sm:text-lg">
@@ -16,23 +16,23 @@
                                 </p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🚀</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">No-Code BOT Builder & Seamless Integration 🛠️</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">No-Code BOT Builder & Seamless Integration </h4>
                                             <p class="text-gray-600 text-sm">Easily design custom BOT workflows with our intuitive no-code scripting tools and ChatGPT integration for smarter automation.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🎯</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Personalized Conversational Journeys 💡</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Personalized Conversational Journeys </h4>
                                             <p class="text-gray-600 text-sm">Create custom BOT flows for different channels and user profiles, ensuring a tailored experience that enhances engagement.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">📱</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Native WhatsApp BOTs for Richer Interactions 💬</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Native WhatsApp BOTs for Richer Interactions </h4>
                                             <p class="text-gray-600 text-sm">Leverage WhatsApp’s native capabilities for collaborative, real-time engagements that improve response times and customer satisfaction.</p>
                                         </div>
                                     </li>
@@ -61,23 +61,23 @@
                             <div class="space-y-4">
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🔍</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Advanced Lead Management & Engagement 📊</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Advanced Lead Management & Engagement </h4>
                                             <p class="text-gray-600 text-sm">Design customizable, segmented flows to nurture leads and drive meaningful customer interactions.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">✍️</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">ChatGPT Paraphraser for On-Brand Communication 📝</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">ChatGPT Paraphraser for On-Brand Communication </h4>
                                             <p class="text-gray-600 text-sm">Maintain consistent, engaging, and high-quality messaging with built-in AI-powered paraphrasing.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🌍</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">An AI Chatbot That’s Available Anytime, Anywhere 💡</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">An AI Chatbot That’s Available Anytime, Anywhere </h4>
                                             <p class="text-gray-600 text-sm">Keep customers engaged across all platforms with Mehery’s omnichannel chatbot maker.</p>
                                         </div>
                                     </li>
@@ -92,22 +92,22 @@
                             <div class="space-y-4">
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">⚡</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Custom AI Chatbot with Generative AI & LLMs 🤖</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Custom AI Chatbot with Generative AI & LLMs </h4>
                                             <p class="text-gray-600 text-sm">Infuse ChatGPT-4o’s advanced LLM to create brand-aligned chatbots. Customize brand tone, voice, and answer length for a unique personality.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">🌐</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Multi-Language Support for Global Reach 🌍</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Multi-Language Support for Global Reach </h4>
                                             <p class="text-gray-600 text-sm">Engage users worldwide with contextual conversations based on real-time interactions.</p>
                                         </div>
                                     </li>
                                 </ul>
                                 <p class="text-gray-600 text-base sm:text-lg font-semibold">
-                                    Empower your business with AI-driven automation that enhances customer experience, efficiency, and satisfaction at every touchpoint! 🚀
+                                    Empower your business with AI-driven automation that enhances customer experience, efficiency, and satisfaction at every touchpoint! 
                                 </p>
                             </div>
                         </div>

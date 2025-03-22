@@ -85,7 +85,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div v-if="
+                    <!-- <div v-if="
                         plan.setupFees.facebookBusinessSetup !== 'N/A' ||
                         plan.setupFees.openAISetupTraining !== 'N/A' ||
                         plan.setupFees.openAIBotDevelopment !== 'N/A'
@@ -121,7 +121,7 @@
                                     }}</span>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <!-- Number of Users -->
                     <div class="mb-2">
@@ -156,7 +156,6 @@
                             </li>
                         </ul>
                     </div>
-                    <!--set up fees-->
                 </div>
             </div>
         </div>
@@ -390,7 +389,7 @@ const plans = ref([
             "Image Creation Fee": { inr: "On Req", usd: "On Req" },
             "CHAT GPT": { inr: "On Req", usd: "On Req" }
         },
-        users: { adminAgent: "10", additionalUser: { inr: "On Req", usd: "On Req" } },
+        users: { adminAgent: "On Req", additionalUser: { inr: "On Req", usd: "On Req" } },
         depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
         setupFees: {
             facebookBusinessSetup: { inr: "5000", usd: "50" },

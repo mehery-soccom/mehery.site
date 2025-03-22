@@ -8,7 +8,7 @@
                     <div class="grid lg:grid-cols-2 gap-10 items-center mb-16">
                         <div class="space-y-6 max-w-2xl">
                             <h3 class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                Powerful & Smart Marketing Campaigns 📢🚀
+                                Powerful & Smart Marketing Campaigns 
                             </h3>
                             <div class="space-y-4">
                                 <p class="text-gray-600 text-base sm:text-lg">
@@ -16,42 +16,42 @@
                                 </p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">📌</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Cohort Creation 🎯</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Cohort Creation </h4>
                                             <p class="text-gray-600 text-sm">Build customer cohorts using dynamic filters, session tags from conversations, or external data sources for precise targeting.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">⏳</span>
+                                        <span class="text-xl text-purple-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Flexible Campaign Execution 🕒</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Flexible Campaign Execution </h4>
                                             <p class="text-gray-600 text-sm">Run campaigns on demand or schedule them for the best time to maximize customer engagement.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🔬</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">A/B Testing for Better Performance 📊</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">A/B Testing for Better Performance </h4>
                                             <p class="text-gray-600 text-sm">Optimize campaigns by testing different variations with a small audience before rolling them out at scale.</p>
                                         </div>
                                     </li>
                                               <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600">📞</span>
+                                        <span class="text-xl text-purple-600">   </span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Customer Response Tracking 📡</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">Customer Response Tracking </h4>
                                             <p class="text-gray-600 text-sm">Monitor customer responses in real-time and connect them to BOT flows for automated, goal-driven interactions.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🔗</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">API-Driven Campaigns 🔄</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">API-Driven Campaigns </h4>
                                             <p class="text-gray-600 text-sm">Launch campaigns via external APIs and trigger BOT responses based on customer feedback.</p>
                                         </div>
                                     </li>
                                 <p class="text-gray-600 text-base sm:text-lg font-semibold">
-                                    Drive Engagement, Convert More Leads & Grow Your Business! 🚀
+                                    Drive Engagement, Convert More Leads & Grow Your Business! 
                                 </p>
                                 </ul>
                             </div>
@@ -85,15 +85,15 @@
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600">🔗</span>
+                                        <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">API-Driven Campaigns 🔄</h4>
+                                            <h4 class="text-base font-semibold text-gray-800">API-Driven Campaigns </h4>
                                             <p class="text-gray-600 text-sm">Launch campaigns via external APIs and trigger BOT responses based on customer feedback.</p>
                                         </div>
                                     </li>
                                 </ul>
                                 <p class="text-gray-600 text-base sm:text-lg font-semibold">
-                                    Drive Engagement, Convert More Leads & Grow Your Business! 🚀
+                                    Drive Engagement, Convert More Leads & Grow Your Business! 
                                 </p>
                             </div>
                         </div>

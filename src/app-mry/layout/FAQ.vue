@@ -6,15 +6,12 @@
       <div class="flex justify-between items-center mb-8">
         <h2 class="text-3xl font-bold">FAQs</h2>
         <div class="relative">
-          <input
-            v-model="searchQuery"
-            type="text"
-            placeholder="Search FAQs..."
-            class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <input v-model="searchQuery" type="text" placeholder="Search FAQs..."
+            class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
           <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
             <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </span>
         </div>
@@ -22,16 +19,11 @@
 
       <!-- FAQs List -->
       <div class="space-y-8">
-        <div
-          v-for="(faq, index) in filteredFaqs"
-          :key="index"
-          class="border-2 rounded-3xl p-2 cursor-pointer transition-all duration-300"
-          :class="[
+        <div v-for="(faq, index) in filteredFaqs" :key="index"
+          class="border-2 rounded-3xl p-2 cursor-pointer transition-all duration-300" :class="[
             faq.isOpen ? 'shadow-lg' : 'hover:shadow-md',
             'hover:border-gray-400'
-          ]"
-          @click="toggleFaq(index)"
-        >
+          ]" @click="toggleFaq(index)">
           <div class="flex items-start justify-between gap-3 scale-90">
             <div class="flex gap-8 items-start flex-1">
               <span class="text-4xl font-medium text-gray-300 font-mono">
@@ -39,14 +31,10 @@
               </span>
               <div class="flex- min-w-0">
                 <h3 class="text-xl font-medium mb-4 pt-2">{{ faq.title }}</h3>
-                <Transition
-                  enter-active-class="transition duration-300 ease-out"
-                  enter-from-class="transform scale-95 opacity-0"
-                  enter-to-class="transform scale-100 opacity-100"
+                <Transition enter-active-class="transition duration-300 ease-out"
+                  enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100"
                   leave-active-class="transition duration-200 ease-in"
-                  leave-from-class="transform scale-100 opacity-100"
-                  leave-to-class="transform scale-95 opacity-0"
-                >
+                  leave-from-class="transform scale-100 opacity-100" leave-to-class="transform scale-95 opacity-0">
                   <div v-show="faq.isOpen" class="text-gray-600 text-lg leading-relaxed" v-html="faq.content"></div>
                 </Transition>
               </div>
@@ -55,8 +43,7 @@
               class="rounded-full border-2 w-10 h-10 flex justify-center text-2xl transition-all duration-300 flex-shrink-0 mt-2"
               :class="faq.isOpen
                 ? 'bg-black text-white border-black'
-                : 'bg-white text-black hover:bg-gray-50'"
-            >
+                : 'bg-white text-black hover:bg-gray-50'">
               <span class="transform transition-transform duration-300" :class="faq.isOpen ? 'rotate-180' : ''">
                 {{ faq.isOpen ? '−' : '+' }}
               </span>
@@ -148,7 +135,11 @@ const predefinedFaqs = [
       <ul class="list-disc pl-5 space-y-1 mt-2">
         <li>Businesses are charged per 24-hour messaging session with a customer.</li>
         <li>Multiple messages within a 24-hour period incur a single charge for that session.</li>
-        <li>For more details, refer to WhatsApp’s official pricing documentation.</li>
+        <li>For more details, refer to 
+          <span class = "text-blue-500"> 
+            <a href = "https://developers.facebook.com/docs/whatsapp/pricing/"> WhatsApp’s official pricing documentation. <a/>
+          </span>
+        </li>
       </ul>
     `,
     isOpen: false
@@ -160,7 +151,12 @@ const predefinedFaqs = [
       <ul class="list-disc pl-5 space-y-1 mt-2">
         <li>Based on conversation pricing.</li>
         <li>Costs vary depending on the customer's country code and the type of message templates used.</li>
-        <li>For pricing details, visit WhatsApp’s official pricing page.</li>
+        <li>For pricing details, visit 
+          <span class = "text-blue-500"> 
+            <a href = "https://developers.facebook.com/docs/whatsapp/pricing/"> WhatsApp’s official pricing documentation. <a/>
+          </span>
+  
+        </li>
       </ul>
     `,
     isOpen: false
@@ -351,7 +347,7 @@ const predefinedFaqs = [
       With the Free Forever Plan, you get free access to all Mehery features. However, there are certain messaging restrictions if your Facebook Business Verification is pending:
       Messaging Limits:
       <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>✅ Unlimited inbound messages – You can receive unlimited messages from users.</li>
+        <li>  Unlimited inbound messages – You can receive unlimited messages from users.</li>
         <li>🚫 Limited outbound chats – You can chat with only 10 unique users per day.</li>
         <li>🚫 Limited notifications – You can send WhatsApp template notifications to only 10 unique users per day. (Templates must be pre-approved by Facebook.)</li>
       </ul>
@@ -376,10 +372,10 @@ const predefinedFaqs = [
       Factors Affecting Approval:
       WhatsApp considers multiple factors, including:
       <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>✅ Brand credibility & recognition</li>
-        <li>✅ Social media following</li>
-        <li>✅ Mentions in external media</li>
-        <li>✅ Website domain ranking</li>
+        <li>  Brand credibility & recognition</li>
+        <li>  Social media following</li>
+        <li>  Mentions in external media</li>
+        <li>  Website domain ranking</li>
       </ul>
       If Your Application is Rejected:
       <ul class="list-disc pl-5 space-y-1 mt-2">
@@ -405,7 +401,7 @@ const predefinedFaqs = [
     content: `
       Before completing your Facebook Business Verification, WhatsApp allows you to send messages in a restricted manner:
       <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>✅ Unlimited inbound messages – You can receive unlimited messages from users.</li>
+        <li>  Unlimited inbound messages – You can receive unlimited messages from users.</li>
         <li>🚫 Limited outbound chats – You can chat with only 250 unique users per day.</li>
       </ul>
       Maximize Your Free Access:
@@ -491,11 +487,11 @@ const predefinedFaqs = [
     content: `
       The Instagram Messenger API supports the following media formats:
       <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>✅ Text Messages</li>
-        <li>✅ Stickers</li>
-        <li>✅ Images – JPG, PNG, ICO, BMP (max size: 8MB)</li>
-        <li>✅ Videos</li>
-        <li>✅ Buttons</li>
+        <li>  Text Messages</li>
+        <li>  Stickers</li>
+        <li>  Images – JPG, PNG, ICO, BMP (max size: 8MB)</li>
+        <li>  Videos</li>
+        <li>  Buttons</li>
         <li>🚫 Unsupported Media – Attachments of any kind are not supported.</li>
       </ul>
     `,
@@ -521,7 +517,7 @@ const filteredFaqs = computed(() => {
 const loadFaqs = () => {
   const storedFaqs = JSON.parse(localStorage.getItem('faqs') || '[]');
   // Merge stored FAQs with predefined FAQs, avoiding duplicates
-  const mergedFaqs = [...predefinedFaqs, ...storedFaqs.filter(storedFaq => 
+  const mergedFaqs = [...predefinedFaqs, ...storedFaqs.filter(storedFaq =>
     !predefinedFaqs.some(predefinedFaq => predefinedFaq.title === storedFaq.title)
   )];
   faqs.value = mergedFaqs;
