@@ -51,6 +51,7 @@
     "bootstrap-vue": "^2.23.1",
     "chart.js": "^4.4.4",
     "countup.js": "^2.8.0",
+    "firebase": "^11.5.0",
     "front-matter": "^4.0.2",
     "ipify": "^6.0.0",
     "lottie-web": "^5.12.2",

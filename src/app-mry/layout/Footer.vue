@@ -73,8 +73,9 @@
         </div>
 
         <!-- Bottom Section -->
-        <div class="flex flex-col md:flex-row gap-6  pt-6 border-t border-gray-700">
-            <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 ">
+        <div class="flex flex-col md:flex-row md:justify-between gap-6 pt-6 border-t border-gray-700">
+            <!-- Copyright and Privacy Policy -->
+            <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
                 <p class="text-gray-400">© 2024 Mehery. All Rights Reserved.</p>
                 <router-link :to="{ name: 'Privacy' }" class="text-gray-400 hover:text-white transition-colors">
                     Privacy Policy
@@ -82,19 +83,19 @@
             </div>
 
             <!-- Subscribe to Blogs Input and Button -->
-            <div class="flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row items-center gap-3 md:w-auto">
                 <input
                     v-model="email"
                     type="email"
                     placeholder="Enter your email"
-                    class="pl-3 py-2 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
+                    class="w-full pl-3 py-2 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
                     required
                 />
                 <button
                     @click="handleSubscribe"
-                    class="px-4 py-2 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transition-all duration-300"
+                    class="w-full sm:w-auto px-4 py-2 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transition-all duration-300"
                 >
-                    Subscribe to Blogs
+                    Subscribe
                 </button>
             </div>
         </div>
