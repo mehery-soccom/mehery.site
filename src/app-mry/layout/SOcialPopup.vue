@@ -1,7 +1,7 @@
 <template>
     <div @click="handleClickOutside" class="font-sans chatbot-container">
       <!-- Bot Icon with Tooltip -->
-      <div class="fixed bottom-8 right-6 group chatbot-element">
+      <div class="fixed bottom-24 right-6 group chatbot-element">
         <!-- Tooltip -->
         <div class="absolute -top-0 right-20 bg-gray-800 text-white text-xs py-1 rounded w-auto px-2 whitespace-nowrap chatbot-tooltip">
           Follow us
