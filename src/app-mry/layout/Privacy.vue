@@ -14,8 +14,8 @@
                             Effective date: Sept 1, 2021
                         </p>
                         <p class="text-gray-600 text-base sm:text-lg">
-                            Mehery SocCom Pvt Ltd (“us”, “we”, or “our”) operates the website and the Mehery
-                            application, which is a message aggregation and distribution service (the “Service”).
+                            Mehery SocCom Pvt Ltd ("us", "we", or "our") operates the website and the Mehery
+                            application, which is a message aggregation and distribution service (the "Service").
                             This page informs you of our policies regarding the collection, use, and disclosure of
                             personal data when you use our Service and the choices you have associated with that
                             data. We use your data to provide and improve the Service. By using the Service, you
@@ -44,11 +44,11 @@
                             and the address of the site from which you linked to our website when you visit us; We
                             may collect and retain your bank, payment card and other payment details when you use
                             our services and for use in future transactions and services; and We collect personal
-                            information on your online activity as described in the paragraph below titled “TRACKING
-                            and COOKIES DATA .” The personal information we collect includes, but is not limited to,
+                            information on your online activity as described in the paragraph below titled "TRACKING
+                            and COOKIES DATA ." The personal information we collect includes, but is not limited to,
                             name, address, and telephone number, information about the form of identification used
                             to send or receive messages, the products and services you have with us and your use of
-                            them, and your device’s IP address and other online activity details, the type of mobile
+                            them, and your device's IP address and other online activity details, the type of mobile
                             device you use, your mobile device unique ID, the IP address of your mobile device, your
                             mobile operating system, the type of mobile Internet browser you use, unique device
                             identifiers and other diagnostic data.
@@ -66,7 +66,7 @@
                         </h5>
                         <p class="text-gray-600 text-base sm:text-lg">
                             While using our Service, we may ask you to provide us with certain personally
-                            identifiable information that can be used to contact or identify you (“Personal Data”).
+                            identifiable information that can be used to contact or identify you ("Personal Data").
                             Personally identifiable information may include, but is not limited to:
                         </p>
                         <ul class="space-y-4">
@@ -87,8 +87,8 @@
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
                             We may also collect information that your browser sends whenever you visit our Service
-                            or when you access the Service by or through a computing device (“Usage Data”). This
-                            Usage Data may include information such as your computer’s Internet Protocol address
+                            or when you access the Service by or through a computing device ("Usage Data"). This
+                            Usage Data may include information such as your computer's Internet Protocol address
                             (e.g. IP address), browser type, browser version, the pages of our Service that you
                             visit, the time and date of your visit, the time spent on those pages, unique device
                             identifiers and other diagnostic data. When you access the Service by or through a
@@ -154,10 +154,20 @@
                             Firebase is analytics service provided by Google Inc. You may opt-out of certain
                             Firebase features through your mobile device settings, such as your device advertising
                             settings or by following the instructions provided by Google in their Privacy Policy:
-                            https://policies.google.com/privacy?hl=en We also encourage you to review the Google’s
-                            policy for safeguarding your data: https://support.google.com/analytics/answer/6004245.
-                            For more information on what type of information Firebase collects, please visit please
-                            visit the Google Privacy & Terms web page: https://policies.google.com/privacy?hl=en
+                            <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer" 
+                               class="text-blue-600 hover:text-blue-800 break-all whitespace-normal">
+                                https://policies.google.com/privacy?hl=en
+                            </a> 
+                            We also encourage you to review the Google's policy for safeguarding your data: 
+                            <a href="https://support.google.com/analytics/answer/6004245" target="_blank" rel="noopener noreferrer"
+                               class="text-blue-600 hover:text-blue-800 break-all whitespace-normal">
+                                https://support.google.com/analytics/answer/6004245
+                            </a>.
+                            For more information on what type of information Firebase collects, please visit
+                            <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer"
+                               class="text-blue-600 hover:text-blue-800 break-all whitespace-normal">
+                                https://policies.google.com/privacy?hl=en
+                            </a>
                         </p>
                     </div>
 
@@ -169,20 +179,28 @@
                         <p class="text-gray-600 text-base sm:text-lg">
                             Flurry Analytics service is provided by Yahoo! Inc. You can opt-out from Flurry
                             Analytics service to prevent Flurry Analytics from using and sharing your information by
-                            visiting the Flurry’s Opt-out page: https://dev.flurry.com/secure/optOut.do For more
-                            information on the privacy practices and policies of Yahoo!, please visit their Privacy
-                            Policy page: https://policies.yahoo.com/us/en/yahoo/privacy/policy/index.htm
+                            visiting the Flurry's Opt-out page: 
+                            <a href="https://dev.flurry.com/secure/optOut.do" target="_blank" rel="noopener noreferrer"
+                               class="text-blue-600 hover:text-blue-800 break-all whitespace-normal">
+                                https://dev.flurry.com/secure/optOut.do
+                            </a> 
+                            For more information on the privacy practices and policies of Yahoo!, please visit their Privacy
+                            Policy page: 
+                            <a href="https://policies.yahoo.com/us/en/yahoo/privacy/policy/index.htm" target="_blank" rel="noopener noreferrer"
+                               class="text-blue-600 hover:text-blue-800 break-all whitespace-normal">
+                                https://policies.yahoo.com/us/en/yahoo/privacy/policy/index.htm
+                            </a>
                         </p>
                     </div>
 
-                    <!-- Children’s Privacy -->
+                    <!-- Children's Privacy -->
                     <div class="space-y-6 mb-16">
                         <h4
                             class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                            Children’s Privacy
+                            Children's Privacy
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
-                            Our Service does not address anyone under the age of 18 (“Children”). We do not
+                            Our Service does not address anyone under the age of 18 ("Children"). We do not
                             knowingly collect personally identifiable information from anyone under the age of 18.
                             If you are a parent or guardian and you are aware that your Children has provided us
                             with Personal Data, please contact us. If we become aware that we have collected
@@ -201,7 +219,7 @@
                             We may update our Privacy Policy from time to time. We will notify you of any changes by
                             posting the new Privacy Policy on this page. We will let you know via email and/or a
                             prominent notice on our Service, prior to the change becoming effective and update the
-                            “effective date” at the top of this Privacy Policy. You are advised to review this
+                            "effective date" at the top of this Privacy Policy. You are advised to review this
                             Privacy Policy periodically for any changes. Changes to this Privacy Policy are
                             effective when they are posted on this page.
                         </p>
@@ -214,7 +232,7 @@
                             Contact Us
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
-                            If you have any questions about this Privacy Policy, please contact us at legal@mehery.com
+                            If you have any questions about this Privacy Policy, please contact us at <a href="mailto:legal@mehery.com" class="text-blue-600 hover:text-blue-800">legal@mehery.com</a>
                         </p>
                     </div>
                 </div>
