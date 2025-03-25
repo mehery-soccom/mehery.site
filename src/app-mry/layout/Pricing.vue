@@ -41,10 +41,12 @@
                         }}
                         <!-- <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span> -->
                     </div>
+                    <a href="https://app.mehery.com/partner/auth/register" target="_blank" rel="noopener noreferrer">
                     <button
                         class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center">
                         {{ plan.buttonText }}
                     </button>
+                    </a>
                 </div>
 
                 <!-- Plan Features -->
@@ -181,6 +183,9 @@
                                     }}
                                 </div>
                             </th>
+
+
+                            
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-300">

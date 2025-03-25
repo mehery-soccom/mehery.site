@@ -73,8 +73,9 @@
         </div>
 
         <!-- Bottom Section -->
-        <div class="flex flex-col md:flex-row md:justify-between gap-6 pt-6 border-t border-gray-700">
+        <div class="flex flex-col md:flex-row  gap-6 pt-6 border-t border-gray-700">
             <!-- Copyright and Privacy Policy -->
+
             <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
                 <p class="text-gray-400">© 2024 Mehery. All Rights Reserved.</p>
                 <router-link :to="{ name: 'Privacy' }" class="text-gray-400 hover:text-white transition-colors">

@@ -21,11 +21,14 @@
         <p class="text-gray-600 text-md mb-4">
           Set up is fast and intuitive, with automatic configuration to get you up and running in minutes.
         </p>
-        <button
-          class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-bold transition-colors duration-300">
-          START FREE TRIAL
-        </button>
-        
+        <a href="https://app.mehery.com/partner/auth/register" target="_blank" rel="noopener noreferrer">
+          <button
+            class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-3 rounded-xl font-bold transition-colors duration-300">
+            START FREE TRIAL
+          </button>
+        </a>
+
+
         <div class="mt-2 space-y-1 flex gap-3">
           <div class="flex items-center text-gray-600 text-sm">
             <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -62,7 +65,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
     <div class="scroll-mt-[60px]" id="solutions">

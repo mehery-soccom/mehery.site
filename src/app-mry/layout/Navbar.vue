@@ -126,15 +126,6 @@
                         >
                             Testimonials
                         </a>
-
-                        <!-- FAQs Link -->
-                        <!-- <a
-                            @click="scrollToSection('faqs')"
-                            class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
-                        >
-                            FAQs
-                        </a> -->
-                  
                     </div>
                 </div>
 
@@ -145,23 +136,20 @@
                     @mouseenter="productMenuOpen = false,resourcesMenuOpen = false"
                 >
                     Pricing
-                    <!-- <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFA726] transition-all duration-300 group-hover:w-full"
-                    ></span> -->
                 </a>
             </div>
 
             <!-- Free Trial Button -->
-            <div class="hidden md:block ml-auto space-x-4">
+            <div class="hidden md:flex ml-auto space-x-4">
                 <button
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300"
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300 whitespace-nowrap"
                 >
                     START FREE TRIAL
                 </button>
                 <a
-                    href="https://calendly.com/shekhars"
+                    href="https://app.mehery.com/partner/auth/register"
                     target="_blank"
-                    class="hover:bg-[#f3a840] hover:text-white border-2 border-[#F4B860] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300 no-underline hover:no-underline"
+                    class="hover:bg-[#f3a840] hover:text-white border-2 border-[#F4B860] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300 no-underline hover:no-underline whitespace-nowrap"
                 >
                     BOOK DEMO
                 </a>
@@ -202,13 +190,13 @@
         >
             <div
                 v-if="mobileMenuOpen"
-                class="md:hidden mt-2 space-y-1 px-4 py-2 bg-white/95 rounded-md shadow-sm w-full"
+                class="md:hidden mt-2 space-y-2 px-4 py-2 bg-white/95 rounded-md shadow-sm w-full"
             >
                 <!-- Product Dropdown (Mobile) -->
                 <div class="relative">
                     <button
                         @click="toggleProductMenu"
-                        class="w-full text-left py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300 flex items-center justify-between"
+                        class="w-full text-left py-2 text-gray-700 hover:text-gray-900 text-sm font-medium cursor-pointer transition-colors duration-300 flex items-center justify-between"
                     >
                         <span>Product</span>
                         <svg
@@ -221,21 +209,21 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div v-if="productMenuOpen" class="pl-4">
+                    <div v-if="productMenuOpen" class="pl-4 space-y-2 mt-2">
                         <a
-                            @click="scrollToSection('whatsapp')"
+                            @click="scrollToSection('WhatsApp')"
                             class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                         >
                             WhatsApp
                         </a>
                         <a
-                            @click="scrollToSection('features')"
+                            @click="handleMobileLinkClick('features')"
                             class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                         >
                             Features
                         </a>
                         <a
-                            @click="scrollToSection('solutions')"
+                            @click="handleMobileLinkClick('solutions')"
                             class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                         >
                             Solutions
@@ -247,7 +235,7 @@
                 <div class="relative">
                     <button
                         @click="toggleResourcesMenu"
-                        class="w-full text-left py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300 flex items-center justify-between"
+                        class="w-full text-left py-2 text-gray-700 hover:text-gray-900 text-sm font-medium cursor-pointer transition-colors duration-300 flex items-center justify-between"
                     >
                         <span>Resources</span>
                         <svg
@@ -260,7 +248,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div v-if="resourcesMenuOpen" class="pl-4">
+                    <div v-if="resourcesMenuOpen" class="pl-4 space-y-2 mt-2">
                         <!-- About Us Link (Mobile) -->
                         <router-link
                             :to="{ name: 'About' }"
@@ -288,38 +276,49 @@
                             Partner
                         </router-link>
 
+                        <!-- FAQ Link (Mobile) -->
+                        <router-link
+                            :to="{ name: 'Faq' }"
+                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                            @click="toggleMobileMenu"
+                        >
+                            FAQ
+                        </router-link>
+
                         <!-- Testimonials Link (Mobile) -->
                         <a
-                            @click="scrollToSection('testimonials')"
-                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                        @click="scrollToSection('WhatsApp')"
+                        class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                         >
                             Testimonials
-                        </a>
-
-                        <!-- FAQs Link (Mobile) -->
-                        <a
-                            @click="scrollToSection('faqs')"
-                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
-                        >
-                            FAQs
                         </a>
                     </div>
                 </div>
 
                 <!-- Pricing Link (Mobile) -->
                 <a
-                    @click="scrollToSection('pricing')"
-                    class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                    @click="handleMobileLinkClick('pricing')"
+                    class="block py-2 text-gray-700 hover:text-gray-900 text-sm font-medium cursor-pointer transition-colors duration-300"
                 >
                     Pricing
                 </a>
 
-                <!-- Free Trial Button (Mobile) -->
-                <button
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-xl font-medium transition-colors duration-300 w-full text-sm"
+                <!-- Action Buttons (Mobile) -->
+                <div class="flex flex-col space-y-2 pt-1">
+                    <a
+                        href="https://app.mehery.com/partner/auth/register"
+                        class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md text-sm font-medium text-center transition-colors duration-300"
                 >
-                    Free Trial
-                </button>
+                        START FREE TRIAL
+                    </a>
+                    <a
+                        href="https://calendly.com/shekhars"
+                        target="_blank"
+                        class="hover:bg-[#f3a840] hover:text-white border-2 border-[#F4B860] text-black px-4 py-2 rounded-md text-sm font-medium text-center transition-colors duration-300"
+                    >
+                        BOOK DEMO
+                    </a>
+                </div>
             </div>
         </transition>
     </nav>
@@ -341,12 +340,26 @@ const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value;
 };
 
-const scrollToSection = (id) => {
-    // Close menus
+const toggleProductMenu = () => {
+    productMenuOpen.value = !productMenuOpen.value;
+    // Close resources menu when opening product menu
+    if (productMenuOpen.value) resourcesMenuOpen.value = false;
+};
+
+const toggleResourcesMenu = () => {
+    resourcesMenuOpen.value = !resourcesMenuOpen.value;
+    // Close product menu when opening resources menu
+    if (resourcesMenuOpen.value) productMenuOpen.value = false;
+};
+
+const handleMobileLinkClick = (id) => {
     mobileMenuOpen.value = false;
     productMenuOpen.value = false;
     resourcesMenuOpen.value = false;
+    scrollToSection(id);
+};
 
+const scrollToSection = (id) => {
     // Check if the current route is the home page
     if (route.name === "Home") {
         const element = document.getElementById(id);
@@ -357,7 +370,7 @@ const scrollToSection = (id) => {
             });
         }
     } else {
-        // Navigate to the home page with a hash or query parameter
+        // Navigate to the home page with a hash
         router.push({ name: "Home", hash: `#${id}` });
     }
 };
@@ -371,10 +384,13 @@ onMounted(() => {
         const sectionId = route.hash.replace("#", "");
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
+            // Small timeout to ensure DOM is ready
+            setTimeout(() => {
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, 100);
         }
     }
 });

@@ -3,11 +3,11 @@
   <div class="min-h-screen bg-white py-6 px-4 sm:px-6 lg:px-8 pb-16">
     <div class="max-w-5xl mx-auto">
       <!-- Title and Search Bar -->
-      <div class="flex justify-between items-center mb-8">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <h2 class="text-3xl font-bold">FAQs</h2>
-        <div class="relative">
+        <div class="relative w-full sm:w-64">
           <input v-model="searchQuery" type="text" placeholder="Search FAQs..."
-            class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
           <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
             <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -18,29 +18,29 @@
       </div>
 
       <!-- FAQs List -->
-      <div class="space-y-8">
+      <div class="space-y-4 sm:space-y-8">
         <div v-for="(faq, index) in filteredFaqs" :key="index"
           class="border-2 rounded-3xl p-2 cursor-pointer transition-all duration-300" :class="[
             faq.isOpen ? 'shadow-lg' : 'hover:shadow-md',
             'hover:border-gray-400'
           ]" @click="toggleFaq(index)">
-          <div class="flex items-start justify-between gap-3 scale-90">
-            <div class="flex gap-8 items-start flex-1">
-              <span class="text-4xl font-medium text-gray-300 font-mono">
+          <div class="flex items-start justify-between gap-3 sm:scale-90">
+            <div class="flex gap-4 sm:gap-8 items-start flex-1">
+              <span class="text-2xl sm:text-4xl font-medium text-gray-300 font-mono">
                 {{ String(index + 1).padStart(2, '0') }}
               </span>
-              <div class="flex- min-w-0">
-                <h3 class="text-xl font-medium mb-4 pt-2">{{ faq.title }}</h3>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-4 pt-1 sm:pt-2">{{ faq.title }}</h3>
                 <Transition enter-active-class="transition duration-300 ease-out"
                   enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100"
                   leave-active-class="transition duration-200 ease-in"
                   leave-from-class="transform scale-100 opacity-100" leave-to-class="transform scale-95 opacity-0">
-                  <div v-show="faq.isOpen" class="text-gray-600 text-lg leading-relaxed" v-html="faq.content"></div>
+                  <div v-show="faq.isOpen" class="text-gray-600 text-base sm:text-lg leading-relaxed" v-html="faq.content"></div>
                 </Transition>
               </div>
             </div>
             <button
-              class="rounded-full border-2 w-10 h-10 flex justify-center text-2xl transition-all duration-300 flex-shrink-0 mt-2"
+              class="rounded-full border-2 w-8 h-8 sm:w-10 sm:h-10 flex justify-center text-xl sm:text-2xl transition-all duration-300 flex-shrink-0 mt-1 sm:mt-2"
               :class="faq.isOpen
                 ? 'bg-black text-white border-black'
                 : 'bg-white text-black hover:bg-gray-50'">
@@ -55,7 +55,6 @@
   </div>
   <Footer />
 </template>
-
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
