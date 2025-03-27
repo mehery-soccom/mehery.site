@@ -432,7 +432,7 @@ const features = ref({
         { name: "Instagram DM", availability: ["X", "X", "Y", "Y", "Y"] },
         { name: "Telegram", availability: ["X", "X", "X", "Y", "Y"] },
         { name: "App Chat", availability: ["X", "X", "X", "X", "Y"] },
-        { name: "Email", availability: ["X", "X", "X", "X", "Y"] }
+        { name: "Email", availability: ["Y", "Y", "Y", "Y", "Y"] }
     ],
     SmartConversations: [
         { name: "Team Inbox", availability: ["Y", "Y", "Y", "Y", "Y"] },
