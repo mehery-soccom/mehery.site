@@ -21,7 +21,7 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 ml-4">
                 <!-- Product Dropdown -->
-                <div class="relative" @mouseenter="productMenuOpen = true,resourcesMenuOpen = false" >
+                <div class="relative" @mouseenter="(productMenuOpen = true), (resourcesMenuOpen = false)">
                     <button
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
                         @mousedown="productMenuOpen = !productMenuOpen"
@@ -39,7 +39,7 @@
                     </button>
                     <div
                         v-if="productMenuOpen"
-                         @mouseleave="productMenuOpen = false"
+                        @mouseleave="productMenuOpen = false"
                         class="absolute left-0 mt-3 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
                     >
                         <a
@@ -65,8 +65,7 @@
                 </div>
 
                 <!-- Resources Dropdown -->
-                <div class="relative" @mouseenter="resourcesMenuOpen = true, productMenuOpen = false"
-                >
+                <div class="relative" @mouseenter="(resourcesMenuOpen = true), (productMenuOpen = false)">
                     <button
                         class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 flex items-center space-x-1 focus:outline-none"
                         @mousedown="resourcesMenuOpen = !resourcesMenuOpen"
@@ -110,14 +109,13 @@
                         >
                             Partner
                         </router-link>
-                       
+
                         <router-link
                             :to="{ name: 'Faq' }"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
                             FAQ
                         </router-link>
-                       
 
                         <!-- Testimonials Link -->
                         <a
@@ -133,7 +131,7 @@
                 <a
                     @click="scrollToSection('pricing')"
                     class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 relative group hover:no-underline"
-                    @mouseenter="productMenuOpen = false,resourcesMenuOpen = false"
+                    @mouseenter="(productMenuOpen = false), (resourcesMenuOpen = false)"
                 >
                     Pricing
                 </a>
@@ -147,7 +145,7 @@
                     START FREE TRIAL
                 </button>
                 <a
-                    href="https://app.mehery.com/partner/auth/register"
+                    href="https://calendly.com/shekhars"
                     target="_blank"
                     class="hover:bg-[#f3a840] hover:text-white border-2 border-[#F4B860] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300 no-underline hover:no-underline whitespace-nowrap"
                 >
@@ -287,8 +285,8 @@
 
                         <!-- Testimonials Link (Mobile) -->
                         <a
-                        @click="scrollToSection('WhatsApp')"
-                        class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
+                            @click="scrollToSection('WhatsApp')"
+                            class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
                         >
                             Testimonials
                         </a>
@@ -305,16 +303,19 @@
 
                 <!-- Action Buttons (Mobile) -->
                 <div class="flex flex-col space-y-2 pt-1">
-                    <a
+                    <div
                         href="https://app.mehery.com/partner/auth/register"
                         class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md text-sm font-medium text-center transition-colors duration-300"
-                >
+                        @click.stop
+                    >
                         START FREE TRIAL
-                    </a>
+                    </div>
                     <a
                         href="https://calendly.com/shekhars"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="hover:bg-[#f3a840] hover:text-white border-2 border-[#F4B860] text-black px-4 py-2 rounded-md text-sm font-medium text-center transition-colors duration-300"
+                        @click.stop
                     >
                         BOOK DEMO
                     </a>
@@ -352,21 +353,21 @@ const toggleResourcesMenu = () => {
     if (resourcesMenuOpen.value) productMenuOpen.value = false;
 };
 
-const handleMobileLinkClick = (id) => {
+const handleMobileLinkClick = id => {
     mobileMenuOpen.value = false;
     productMenuOpen.value = false;
     resourcesMenuOpen.value = false;
     scrollToSection(id);
 };
 
-const scrollToSection = (id) => {
+const scrollToSection = id => {
     // Check if the current route is the home page
     if (route.name === "Home") {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({
                 behavior: "smooth",
-                block: "start",
+                block: "start"
             });
         }
     } else {
@@ -388,7 +389,7 @@ onMounted(() => {
             setTimeout(() => {
                 element.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "start"
                 });
             }, 100);
         }
