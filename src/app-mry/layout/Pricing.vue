@@ -8,13 +8,13 @@
             </h2>
 
             <div class="flex gap-4">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-4 mr-2">
                     <!-- <span class="text-sm font-medium">Features:</span> -->
                     <button
                         @click="toggleView"
-                        class="px-4 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors"
+                        class="px-6 py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefd2] text-white transition-colors font-bold"
                     >
-                        {{ showFeatures ? "Show Pricing" : "Show Features" }}
+                        {{ showFeatures ? "Pricing" : "Features" }}
                     </button>
                 </div>
 
@@ -22,7 +22,7 @@
                     <!-- <span class="text-sm font-medium">Billing Cycle:</span> -->
                     <button
                         @click="toggleBillingCycle"
-                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white"
+                        class="px-4 py-2 rounded-md transition-colors bg-[#00AEEF] hover:bg-[#00afefd2] text-white font-bold"
                     >
                         {{ billingCycle }}
                     </button>
@@ -48,9 +48,9 @@
                         }}
                         <!-- <span class="text-xs font-normal text-gray-500"> /{{ billingCycle.toLowerCase() }} </span> -->
                     </div>
-                    <a href="https://calendly.com/shekhars" target="_blank" rel="noopener noreferrer">
+                    <a :href="plan.buttonLink" target="_blank" rel="noopener noreferrer">
                         <button
-                            class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center"
+                            class="w-full py-2 rounded-md bg-[#00AEEF] hover:bg-[#00afefca] text-white transition-colors text-center font-bold"
                         >
                             {{ plan.buttonText }}
                         </button>
@@ -71,7 +71,7 @@
 
                     <!-- Mehery Fees - Per Conversation Fees -->
                     <div>
-                        <h4 class="font-semibold mb-2 border-b pb-1">Per Conversation Fees</h4>
+                        <h4 class="font-semibold mb-2 border-b pb-1">Mehery Fees</h4>
                         <ul>
                             <li
                                 v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']"
@@ -79,7 +79,7 @@
                                 class="flex justify-between"
                             >
                                 <span>{{ key }}</span>
-                                <span :class="{ 'text-gray-400': value === 'X' }">{{
+                                <span :class="{ 'text-red-700': value === 'X'}" >{{
                                     value === "X" ? "✗" : showUSD ? value.usd : value.inr
                                 }}</span>
                             </li>
@@ -311,6 +311,7 @@ const plans = ref([
     {
         name: "FREE FOREVER",
         buttonText: "Get Started",
+        buttonLink: "https://app.mehery.com/partner/auth/register",
         fixedFees: {
             monthly: { usd: "Free", inr: "Free" },
             quarterly: { usd: "Free", inr: "Free" },
@@ -318,8 +319,9 @@ const plans = ref([
         },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "Up to 10", usd: "Up to 10" },
+            "Email ": { inr: "Up to 1000", usd: "Up to 1000" },
             "Image Creation": { inr: "Up to 10", usd: "Up to 10" },
-            "CHAT GPT ": { inr: "Up to 10", usd: "Up to 10" }
+            "Conversational Bot": { inr: "Up to 10", usd: "Up to 10" }
         },
         users: { adminAgent: "1", additionalUser: { inr: "X", usd: "X" } },
         depositFees: { minimumDeposit: "N/A" },
@@ -328,32 +330,29 @@ const plans = ref([
             openAISetupTraining: "N/A",
             openAIBotDevelopment: "N/A"
         }
-        // freeUtilities: {
-        //     monthlyDAU: "100",
-        //     freeImages: "50",
-        //     freeBotConversations: "100"
-        // }
     },
     {
         name: "LITE",
         buttonText: "Get Started",
+        buttonLink: "https://app.mehery.com/partner/auth/register",
         fixedFees: {
             monthly: { usd: "NA", inr: "NA" },
             quarterly: { usd: "NA", inr: "NA" },
             annual: { usd: "NA", inr: "NA" }
         },
         "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "1.25", usd: "0.050" },
-            "Image Creation Fee": { inr: "0.25", usd: "0.012" },
-            "CHAT GPT": { inr: "0.50", usd: "0.012" }
+            DAU: { inr: "₹1.25", usd: "$0.050" },
+            "Email (1000 Free)": { inr: "₹0.12", usd: "$0.0014" },
+            "Image Creation Fee": { inr: "₹0.25", usd: "$0.012" },
+            "Conversational Bot": { inr: "₹0.50", usd: "$0.012" }
         },
         users: {
             adminAgent: "1",
-            additionalUser: { inr: "500", usd: "9.9" }
+            additionalUser: { inr: "₹500", usd: "$9.9" }
         },
-        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
+        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
         setupFees: {
-            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
             openAISetupTraining: { inr: "X", usd: "X" },
             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
@@ -361,20 +360,22 @@ const plans = ref([
     {
         name: "ECO",
         buttonText: "Get Started",
+        buttonLink: "https://app.mehery.com/partner/auth/register",
         fixedFees: {
-            monthly: { usd: "$69", inr: "₹2,499" }, // Updated INR value
-            quarterly: { usd: "$189", inr: "₹6,750" }, // Updated INR value
-            annual: { usd: "$649", inr: "₹24,000" } // Updated INR value
+            monthly: { usd: "$69", inr: "₹2,499" },
+            quarterly: { usd: "$189", inr: "₹6,750" },
+            annual: { usd: "$649", inr: "₹24,000" }
         },
         "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "0.04", usd: "0.006" },
-            "Image Creation Fee": { inr: "0.12", usd: "0.006" }
-            // "CHAT GPT": "X"
+            DAU: { inr: "₹0.04", usd: "$0.006" },
+            "Email (1000 Free)": { inr: "₹0.08", usd: "$0.0009" },
+            "Image Creation Fee": { inr: "₹0.12", usd: "$0.006" },
+            "Conversational Bot": "X"
         },
-        users: { adminAgent: "5", additionalUser: { inr: "500", usd: "9.9" } },
-        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
+        users: { adminAgent: "5", additionalUser: { inr: "₹500", usd: "$9.9" } },
+        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
         setupFees: {
-            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
             openAISetupTraining: { inr: "X", usd: "X" },
             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
@@ -382,20 +383,22 @@ const plans = ref([
     {
         name: "PRO",
         buttonText: "Get Started",
+        buttonLink: "https://app.mehery.com/partner/auth/register",
         fixedFees: {
-            monthly: { usd: "$149", inr: "₹3,999" }, // Updated INR value
-            quarterly: { usd: "$399", inr: "₹11,000" }, // Updated INR value
-            annual: { usd: "$1,399", inr: "₹39,000" } // Updated INR value
+            monthly: { usd: "$149", inr: "₹3,999" },
+            quarterly: { usd: "$399", inr: "₹11,000" },
+            annual: { usd: "$1,399", inr: "₹39,000" }
         },
         "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "0.03", usd: "0.006" },
-            "Image Creation Fee": { inr: "0.12", usd: "0.006" }
-            // "CHAT GPT": "X"
+            DAU: { inr: "₹0.03", usd: "$0.006" },
+            "Email (1000 Free)": { inr: "₹0.07", usd: "$0.0008" },
+            "Image Creation Fee": { inr: "₹0.12", usd: "$0.006" },
+            "Conversational Bot": "X"
         },
-        users: { adminAgent: "7", additionalUser: { inr: "600", usd: "19.9" } },
-        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
+        users: { adminAgent: "7", additionalUser: { inr: "₹600", usd: "$19.9" } },
+        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
         setupFees: {
-            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
             openAISetupTraining: { inr: "X", usd: "X" },
             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }
@@ -403,6 +406,7 @@ const plans = ref([
     {
         name: "ENTERPRISE",
         buttonText: "Contact Sales",
+        buttonLink: "https://calendly.com/shekhars",
         fixedFees: {
             monthly: { usd: "On Req", inr: "On Req" },
             quarterly: { usd: "On Req", inr: "On Req" },
@@ -410,13 +414,14 @@ const plans = ref([
         },
         "Mehery Fees – Per conversation Fees": {
             DAU: { inr: "On Req", usd: "On Req" },
+            "Email (1000 Free)": { inr: "On Req", usd: "On Req" },
             "Image Creation Fee": { inr: "On Req", usd: "On Req" },
-            "CHAT GPT": { inr: "On Req", usd: "On Req" }
+            "Conversational Bot": { inr: "On Req", usd: "On Req" }
         },
         users: { adminAgent: "On Req", additionalUser: { inr: "On Req", usd: "On Req" } },
-        depositFees: { minimumDeposit: { inr: "1000", usd: "25" } },
+        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
         setupFees: {
-            facebookBusinessSetup: { inr: "5000", usd: "50" },
+            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
             openAISetupTraining: { inr: "On Req", usd: "On Req" },
             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
         }

@@ -140,9 +140,14 @@
             <!-- Free Trial Button -->
             <div class="hidden md:flex ml-auto space-x-4">
                 <button
-                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300 whitespace-nowrap"
+                    class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md font-bold transition-colors duration-300 whitespace-nowrap text-de"
+                >
+                <a
+                    href="https://app.mehery.com/partner/auth/register"
+                    target="_blank"
                 >
                     START FREE TRIAL
+                </a>
                 </button>
                 <a
                     href="https://calendly.com/shekhars"
@@ -303,13 +308,13 @@
 
                 <!-- Action Buttons (Mobile) -->
                 <div class="flex flex-col space-y-2 pt-1">
-                    <div
-                        href="https://app.mehery.com/partner/auth/register"
+                    <a
+                    href="https://app.mehery.com/partner/auth/register" target="_blank" rel="noopener noreferrer"
                         class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-4 py-2 rounded-md text-sm font-medium text-center transition-colors duration-300"
                         @click.stop
                     >
                         START FREE TRIAL
-                    </div>
+                    </a>
                     <a
                         href="https://calendly.com/shekhars"
                         target="_blank"

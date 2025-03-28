@@ -8,7 +8,7 @@
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <div class="space-y-8">
                         <!-- Hero Section with Image -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 ">
                             <div class="order-2 md:order-1">
                                 <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
                                     Partner Program
@@ -16,8 +16,7 @@
                                 <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
                                     Join forces with Mehery to unlock revenue opportunities while delivering innovative customer engagement solutions to your clients.
                                 </p>
-                                <button class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-6 py-3 rounded-lg font-bold mt-6 transition-colors duration-300">
-                                    Become a Partner
+                                <button class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-4 rounded-lg font-bold mt-20 text-lg transition-colors duration-300 ">BECOME A PARTNER
                                 </button>
                             </div>
                             <div class="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[300px]">
@@ -49,7 +48,7 @@
                             </p>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="bg-[#daf0ff] p-6 rounded-lg shadow-sm">
                                     <h5 class="text-xl font-bold text-gray-800">
                                         Independent Service Providers (ISV)
                                     </h5>
@@ -58,7 +57,7 @@
                                     </p>
                                 </div>
                                 
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="bg-[#daf0ff] p-6 rounded-lg shadow-sm">
                                     <h5 class="text-xl font-bold text-gray-800">
                                         Consulting Firms
                                     </h5>
@@ -67,7 +66,7 @@
                                     </p>
                                 </div>
                                 
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="bg-[#daf0ff] p-6 rounded-lg shadow-sm">
                                     <h5 class="text-xl font-bold text-gray-800">
                                         Creative Ad & Media Agencies
                                     </h5>
@@ -76,7 +75,7 @@
                                     </p>
                                 </div>
 
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="bg-[#daf0ff] p-6 rounded-lg shadow-sm">
                                     <h5 class="text-xl font-bold text-gray-800">
                                         Freelancers & Referral Partners
                                     </h5>
@@ -85,7 +84,7 @@
                                     </p>
                                 </div>
                                 
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="bg-[#daf0ff] p-6 rounded-lg shadow-sm">
                                     <h5 class="text-xl font-bold text-gray-800">
                                         Start-up Accelerators
                                     </h5>
@@ -94,7 +93,7 @@
                                     </p>
                                 </div>
                                 
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="bg-[#daf0ff] p-6 rounded-lg shadow-sm">
                                     <h5 class="text-xl font-bold text-gray-800">
                                         Regional Focus
                                     </h5>

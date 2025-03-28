@@ -144,7 +144,7 @@
               <img
                 src="../../@assets/images/spm.png"
                 alt="Media Card Carousel"
-                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                class="w-full h-auto mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>

@@ -15,45 +15,45 @@
                                 </p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">Effortless Campaign Creation </h4>
-                                            <p class="text-gray-600 text-sm">Launch personalized WhatsApp campaigns in just a few clicks using our intuitive platform.</p>
+                                            <p class="text-gray-600 text-md">Launch personalized WhatsApp campaigns in just a few clicks using our intuitive platform.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">Branded Templates with Custom Image Builder </h4>
-                                            <p class="text-gray-600 text-sm">Design professional campaigns featuring your logo and tailored messaging for maximum brand impact.</p>
+                                            <p class="text-gray-600 text-md">Design professional campaigns featuring your logo and tailored messaging for maximum brand impact.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">Advanced Targeting & Segmentation </h4>
-                                            <p class="text-gray-600 text-sm">Use filters and audience segmentation to precisely target customer groups for higher engagement.</p>
+                                            <p class="text-gray-600 text-md">Use filters and audience segmentation to precisely target customer groups for higher engagement.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">Smart Scheduling for Maximum Reach </h4>
-                                            <p class="text-gray-600 text-sm">Schedule campaigns at peak times, ensuring visibility even outside office hours.</p>
+                                            <p class="text-gray-600 text-md">Schedule campaigns at peak times, ensuring visibility even outside office hours.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">Real-Time Analytics & CTA Tracking </h4>
-                                            <p class="text-gray-600 text-sm">Monitor campaign performance with detailed reports and track customer interest effectively.</p>
+                                            <p class="text-gray-600 text-md">Monitor campaign performance with detailed reports and track customer interest effectively.</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">High-Throughput Messaging & Seamless Integrations </h4>
-                                            <p class="text-gray-600 text-sm">Overcome WhatsApp’s template limitations with our scalable system and integrate with Moengage, Navitair, and more for streamlined outbound messaging.</p>
+                                            <p class="text-gray-600 text-md">Overcome WhatsApp’s template limitations with our scalable system and integrate with Moengage, Navitair, and more for streamlined outbound messaging.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -62,11 +62,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="relative pl-36">
+                        <div class="relative pl-30">
                             <img
                                 src="../../@assets/images/camp1.png"
                                 alt="Campaign Management Illustration"
-                                class="w-full h-auto max-w-2xl mx-auto transform  transition-transform duration-300"
+                                class="max-w-xl  mx-auto duration-300"
                             />
                         </div>
                     </div>
