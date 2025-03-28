@@ -21,15 +21,15 @@
           @click.stop>
           <!-- Social Media Icons -->
           <div class="flex gap-4 py-3 justify-center">
-            <a href="https://www.instagram.com/meherysoccom/"
+            <a href="https://www.instagram.com/meherysoccom/" target="_blank" rel="noopener noreferrer"
               class="text-gray-400 hover:text-indigo-600 transform hover:scale-110 transition-all duration-300">
               <BIconInstagram class="w-6 h-6" />
             </a>
-            <a href="https://www.facebook.com/MeherY.SocCom/"
+            <a href="https://www.facebook.com/MeherY.SocCom/" target="_blank" rel="noopener noreferrer"
               class="text-gray-400 hover:text-indigo-600 transform hover:scale-110 transition-all duration-300">
               <BIconFacebook class="w-6 h-6" />
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=919372280725"
+            <a href="https://api.whatsapp.com/send/?phone=919372280725" target="_blank" rel="noopener noreferrer"
               class="text-gray-400 hover:text-indigo-600 transform hover:scale-110 transition-all duration-300">
               <BIconWhatsapp class="w-6 h-6" />
             </a>

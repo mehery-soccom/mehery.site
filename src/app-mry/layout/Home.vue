@@ -10,12 +10,12 @@
           Engage Customers Seamlessly with Unified Messaging
         </h1>
         <p class="text-gray-600 text-lg font-bold mb-6">
-          WhatsApp, Email, SMS, Facebook Messenger, Instagram, Webchat, and More
+          WhatsApp, Email, Telegram, Facebook Messenger, Instagram, Webchat, and AppChat
         </p>
         <p class="text-gray-600 text-md mb-3">
           Our platform offers a seamless, omnichannel experience that unifies all customer interactions across
           multiple messaging platforms. With native connections to WhatsApp Business API, Facebook Messenger,
-          Instagram DM, WebChat, AppChat, Email, and SMS, we enable businesses to manage inbound and outbound
+          Instagram DM, WebChat, AppChat, Email, and Telegram, we enable businesses to manage inbound and outbound
           communications in one place.
         </p>
         <p class="text-gray-600 text-md mb-4">

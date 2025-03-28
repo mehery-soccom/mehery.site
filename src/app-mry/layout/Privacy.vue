@@ -5,9 +5,9 @@
             <section id="privacy" class="max-w-7xl mx-auto">
                 <div class="container mx-auto">
                     <!-- Privacy Policy Header -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h3
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Privacy Policy
                         </h3>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -26,9 +26,9 @@
                     </div>
 
                     <!-- Information Collection and Use -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Information Collection and Use
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -56,9 +56,9 @@
                     </div>
 
                     <!-- Types of Data Collected -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Types of Data Collected
                         </h4>
                         <h5 class="text-left text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
@@ -73,16 +73,16 @@
                             <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start space-x-3">
                                 <span class="text-xl text-blue-600"></span>
                                 <div>
-                                    <p class="text-gray-600 text-sm">{{ point }}</p>
+                                    <p class="text-gray-600 text-lg">{{ point }}</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Usage Data -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Usage Data
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -100,9 +100,9 @@
                     </div>
 
                     <!-- Tracking & Cookies Data -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Tracking & Cookies Data
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -119,35 +119,36 @@
                             <li v-for="(point, index) in somethingPoints" :key="index" class="flex items-start space-x-3">
                                 <span class="text-xl text-blue-600"></span>
                                 <div>
-                                    <p class="text-gray-600 text-sm">{{ point }}</p>
+                                    <p class="text-gray-600 text-lg">{{ point }}</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Use of Data -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Use of Data
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
                             We use the collected data for various purposes:
                         </p>
                         <ul class="space-y-4">
-                            <li v-for="(point, index) in usagePoints" :key="index" class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600"></span>
-                                <div>
-                                    <p class="text-gray-600 text-sm">{{ point }}</p>
+                            
+                            <li v-for="(point, index) in usagePoints" :key="index" class="flex items-start  space-x-3">
+                                <span class="text-xl text-blue-600">-</span>
+                                <div class="">
+                                    <p class="text-gray-600 text-lg">{{ point }}</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Third-Party Services -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Firebase
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -171,9 +172,9 @@
                         </p>
                     </div>
 
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Flurry Analytics
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -194,9 +195,9 @@
                     </div>
 
                     <!-- Children's Privacy -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Children's Privacy
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -210,9 +211,9 @@
                     </div>
 
                     <!-- Changes to Privacy Policy -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Changes To This Privacy Policy
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">
@@ -226,9 +227,9 @@
                     </div>
 
                     <!-- Contact Us -->
-                    <div class="space-y-6 mb-16">
+                    <div class="space-y-6 mb-8">
                         <h4
-                            class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Contact Us
                         </h4>
                         <p class="text-gray-600 text-base sm:text-lg">

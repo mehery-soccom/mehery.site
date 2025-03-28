@@ -6,7 +6,7 @@
         </p>
 
         <!-- Services Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
             <ArticleList :contentType="'services'" v-slot="{ loading, results }">
                 <div v-if="loading" class="col-span-1 sm:col-span-2 flex justify-center py-8">
                     <div class="text-center">
@@ -54,8 +54,8 @@
         >
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
                 <div class="flex-1 max-w-full sm:max-w-md">
-                    <h2 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-center sm:text-left">BOTs & BOT Services</h2>
-                    <p class="mb-4 text-xs sm:text-sm text-center sm:text-left">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3  sm:text-left">BOTs & BOT Services</h2>
+                    <p class="mb-4 text-xs sm:text-sm  sm:text-left">
                         Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus
                         on high-value, personalized interactions that drive deeper customer relationships.
                     </p>
