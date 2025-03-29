@@ -7,40 +7,59 @@
                     <!-- Left: Text, Right: Image -->
                     <div class="grid lg:grid-cols-2 gap-10 items-center mb-3">
                         <div class="space-y-6 max-w-2xl">
-                            <h3 class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                Comprehensive Analytics for Smarter Decisions 
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                Comprehensive Analytics for Smarter Decisions
                             </h3>
                             <div class="space-y-4">
-                                <p class="text-gray-600 text-base sm:text-lg">
-                                    Gain deep insights into your customer engagement system with powerful, real-time analytics designed for better performance tracking and optimization.
+                                <p class="text-gray-600 text-base sm:text-md">
+                                    Gain deep insights into your customer engagement system with powerful, real-time
+                                    analytics designed for better performance tracking and optimization.
                                 </p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Conversational Analytics </h4>
-                                            <p class="text-gray-600 text-sm">Get a bird’s-eye view of inbound & outbound communication, agent performance, channel efficiency, and response analytics.</p>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Conversational Analytics
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Get a bird’s-eye view of inbound & outbound communication, agent
+                                                performance, channel efficiency, and response analytics.
+                                            </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Segmented Channel-Specific Daily Analytics </h4>
-                                            <p class="text-gray-600 text-sm">Analyze message flow per channel with hourly and daily breakdowns of inbound & outbound conversations.</p>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Segmented Channel-Specific Daily Analytics
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Analyze message flow per channel with hourly and daily breakdowns of
+                                                inbound & outbound conversations.
+                                            </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Campaign Analytics </h4>
-                                            <p class="text-gray-600 text-sm">Track campaign performance, including delivery rates, read rates, and response metrics—view data online or download for deeper analysis.</p>
+                                            <h4 class="text-base font-semibold text-gray-800">Campaign Analytics</h4>
+                                            <p class="text-gray-600 text-md">
+                                                Track campaign performance, including delivery rates, read rates, and
+                                                response metrics—view data online or download for deeper analysis.
+                                            </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">BOT Analytics </h4>
-                                            <p class="text-gray-600 text-sm">Monitor BOT flow execution, ensuring success criteria are met while improving BOT efficiency & customer interactions.</p>
+                                            <h4 class="text-base font-semibold text-gray-800">BOT Analytics</h4>
+                                            <p class="text-gray-600 text-md">
+                                                Monitor BOT flow execution, ensuring success criteria are met while
+                                                improving BOT efficiency & customer interactions.
+                                            </p>
                                         </div>
                                     </li>
                                 </ul>
@@ -70,13 +89,18 @@
                                     <li class="flex items-start space-x-3">
                                         <span class="text-xl text-blue-600"></span>
                                         <div>
-                                            <h4 class="text-base font-semibold text-gray-800">Turn Data into Actionable Insights </h4>
-                                            <p class="text-gray-600 text-sm">Optimize customer engagement with data-driven decisions and real-time performance tracking.</p>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Turn Data into Actionable Insights
+                                            </h4>
+                                            <p class="text-gray-600 text-sm">
+                                                Optimize customer engagement with data-driven decisions and real-time
+                                                performance tracking.
+                                            </p>
                                         </div>
                                     </li>
                                 </ul>
                                 <p class="text-gray-600 text-base sm:text-lg font-semibold">
-                                    Transform your customer engagement with smart, scalable, and easy-to-use analytics! 
+                                    Transform your customer engagement with smart, scalable, and easy-to-use analytics!
                                 </p>
                             </div>
                         </div>
