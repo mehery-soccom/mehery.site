@@ -91,46 +91,47 @@
                             <div class="space-y-4">
                                 <ul class="space-y-4">
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">
                                                 Session Tags & Categorization
                                             </h4>
-                                            <p class="text-gray-600 text-sm">
+                                            <p class="text-gray-600 text-md">
                                                 Create custom tags to categorize conversations, helping admins and users
                                                 track interactions and analyze customer trends.
                                             </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">Follow-Up Reminders</h4>
-                                            <p class="text-gray-600 text-sm">
+                                            <p class="text-gray-600 text-md">
                                                 Set reminders with contextual notes to ensure timely and proactive
                                                 customer follow-ups.
                                             </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-blue-600"></span>
+                                        <span class="">○</span>
+
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">
                                                 Complete Conversation History
                                             </h4>
-                                            <p class="text-gray-600 text-sm">
+                                            <p class="text-gray-600 text-md">
                                                 Access a detailed audit trail of past interactions for a 360° customer
                                                 view.
                                             </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <span class="text-xl text-purple-600"></span>
+                                        <span class="">○</span>
                                         <div>
                                             <h4 class="text-base font-semibold text-gray-800">
                                                 Integrated Customer Profiling
                                             </h4>
-                                            <p class="text-gray-600 text-sm">
+                                            <p class="text-gray-600 text-md">
                                                 Sync with the Customer Management module to view key customer data for
                                                 personalized engagement.
                                             </p>
