@@ -85,9 +85,8 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
-
+import Navbar from "../components/common/Navbar.vue";
+import Footer from "../components/common/Footer.vue";
 onMounted(() => {
     window.scrollTo({
         top: 0,

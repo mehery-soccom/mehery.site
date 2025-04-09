@@ -124,8 +124,8 @@ import Features from "./Features.vue";
 import WhatsApp from "./Whatsapp.vue";
 import Pricing from "./Pricing.vue";
 import FAQ from "./FAQ.vue";
-import Footer from "./Footer.vue";
-import Navbar from "./Navbar.vue"
+import Footer from "../components/common/Footer.vue";
+import Navbar from "../components/common/Navbar.vue"
 import Customer from "./Customer.vue";
 import About from "./About.vue"
 import Partner from "./Partner.vue";

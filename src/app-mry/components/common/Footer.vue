@@ -6,7 +6,7 @@
             <div class="space-y-6">
                 <!-- Logo -->
                 <div class="flex items-center transform hover:scale-105 transition-transform duration-300">
-                    <img src="../../@assets/images/logo.png" alt="Header Image" class="w-40 sm:w-64 h-auto" />
+                    <img src="../../../@assets/images/logo.png" alt="Header Image" class="w-40 sm:w-64 h-auto" />
                 </div>
 
                 <!-- Contact Info -->
@@ -34,7 +34,7 @@
 
             <!-- Meta Partner Section -->
             <div class="flex flex-col justify-center items-center">
-                <img src="../../@assets/images/meta.png" alt="Meta Partner Logo" class="w-32 sm:w-60" />
+                <img src="../../../@assets/images/meta.png" alt="Meta Partner Logo" class="w-32 sm:w-60" />
                 <p class="text-white-30 text-sm italic font-bold mt-3 text-center max-w-md">
                     "As a proud Meta Technology Partner, we ensure top-tier integration and reliability across
                     channels."
