@@ -263,16 +263,43 @@ import axios from "axios";
 import { ref, computed, onMounted } from "vue";
 import { CheckIcon, XIcon } from "vue-feather-icons";
 import resource from "@components/Resource"
+import pricingData from '../../../resources/app-mry/content/pricing/_free.json';
 
 const showUSD = ref(false);
 const showFeatures = ref(false);
 const billingCycle = ref("Monthly");
 
-const json = await resource.read({ contentType: "pricing", src: "pricing_list.xlsx", query: {} });
+
+const plans = ref(pricingData.map(plan => ({
+    name: plan.NAME,
+    buttonText: plan.BUTTONTEXT,
+    buttonLink: plan.BUTTONLINK,
+    fixedFees: {
+        monthly: { usd: plan["FIXEDFEES.MONTHLY.USD"], inr: plan["FIXEDFEES.MONTHLY.INR"] },
+        quarterly: { usd: plan["FIXEDFEES.QUARTERLY.USD"], inr: plan["FIXEDFEES.QUARTERLY.INR"] },
+        annual: { usd: plan["FIXEDFEES.ANNUAL.USD"], inr: plan["FIXEDFEES.ANNUAL.INR"] }
+    },
+    "Mehery Fees – Per conversation Fees": {
+        DAU: { inr: plan["MEHERY FEES – PER CONVERSATION FEES.DAU.INR"], usd: plan["MEHERY FEES – PER CONVERSATION FEES.DAU.USD"] },
+        "Email ": { inr: plan["MEHERY FEES – PER CONVERSATION FEES.EMAIL.INR"], usd: plan["MEHERY FEES – PER CONVERSATION FEES.EMAIL.USD"] },
+        "Image Creation": { inr: plan["MEHERY FEES – PER CONVERSATION FEES.IMAGE CREATION.INR"], usd: plan["MEHERY FEES – PER CONVERSATION FEES.IMAGE CREATION.USD"] },
+        "Conversational Bot": { inr: plan["MEHERY FEES – PER CONVERSATION FEES.CONVERSATIONAL BOT.INR"], usd: plan["MEHERY FEES – PER CONVERSATION FEES.CONVERSATIONAL BOT.USD"] }
+    },
+    users: {
+        adminAgent: plan["USERS.ADMINAGENT"],
+        additionalUser: { inr: plan["USERS.ADDITIONALUSER.INR"], usd: plan["USERS.ADDITIONALUSER.USD"] }
+    },
+    depositFees: { minimumDeposit: plan["DEPOSITFEES.MINIMUMDEPOSIT"] },
+    setupFees: {
+        facebookBusinessSetup: plan["SETUPFEES.FACEBOOKBUSINESSSETUP"],
+        openAISetupTraining: plan["SETUPFEES.OPENAISETUPTRAINING"],
+        openAIBotDevelopment: plan["SETUPFEES.OPENAIBOTDEVELOPMENT"]
+    }
+})));
+
+const json = await resource.read({ contentType: "pricing", src: "free.xlsx", query: {} });
 
 console.log(json);
-
-
 
 
 // const toggleCurrency = () => {
@@ -315,126 +342,126 @@ onMounted(async () => {
     }
 });
 // Pricing Data
-const plans = ref([
-    {
-        name: "FREE FOREVER",
-        buttonText: "Get Started",
-        buttonLink: "https://app.mehery.com/partner/auth/register",
-        fixedFees: {
-            monthly: { usd: "Free", inr: "Free" },
-            quarterly: { usd: "Free", inr: "Free" },
-            annual: { usd: "Free", inr: "Free" }
-        },
-        "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "Up to 10", usd: "Up to 10" },
-            "Email ": { inr: "Up to 1000", usd: "Up to 1000" },
-            "Image Creation": { inr: "Up to 10", usd: "Up to 10" },
-            "Conversational Bot": { inr: "Up to 10", usd: "Up to 10" }
-        },
-        users: { adminAgent: "1", additionalUser: { inr: "X", usd: "X" } },
-        depositFees: { minimumDeposit: "N/A" },
-        setupFees: {
-            facebookBusinessSetup: "N/A",
-            openAISetupTraining: "N/A",
-            openAIBotDevelopment: "N/A"
-        }
-    },
-    {
-        name: "LITE",
-        buttonText: "Get Started",
-        buttonLink: "https://app.mehery.com/partner/auth/register",
-        fixedFees: {
-            monthly: { usd: "NA", inr: "NA" },
-            quarterly: { usd: "NA", inr: "NA" },
-            annual: { usd: "NA", inr: "NA" }
-        },
-        "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "₹1.25", usd: "$0.050" },
-            "Email (1000 Free)": { inr: "₹0.12", usd: "$0.0014" },
-            "Image Creation Fee": { inr: "₹0.25", usd: "$0.012" },
-            "Conversational Bot": { inr: "₹0.50", usd: "$0.012" }
-        },
-        users: {
-            adminAgent: "1",
-            additionalUser: { inr: "₹500", usd: "$9.9" }
-        },
-        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
-        setupFees: {
-            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
-            openAISetupTraining: { inr: "X", usd: "X" },
-            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
-        }
-    },
-    {
-        name: "ECO",
-        buttonText: "Get Started",
-        buttonLink: "https://app.mehery.com/partner/auth/register",
-        fixedFees: {
-            monthly: { usd: "$69", inr: "₹2,499" },
-            quarterly: { usd: "$189", inr: "₹6,750" },
-            annual: { usd: "$649", inr: "₹24,000" }
-        },
-        "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "₹0.04", usd: "$0.006" },
-            "Email (1000 Free)": { inr: "₹0.08", usd: "$0.0009" },
-            "Image Creation Fee": { inr: "₹0.12", usd: "$0.006" },
-            "Conversational Bot": "X"
-        },
-        users: { adminAgent: "5", additionalUser: { inr: "₹500", usd: "$9.9" } },
-        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
-        setupFees: {
-            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
-            openAISetupTraining: { inr: "X", usd: "X" },
-            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
-        }
-    },
-    {
-        name: "PRO",
-        buttonText: "Get Started",
-        buttonLink: "https://app.mehery.com/partner/auth/register",
-        fixedFees: {
-            monthly: { usd: "$149", inr: "₹3,999" },
-            quarterly: { usd: "$399", inr: "₹11,000" },
-            annual: { usd: "$1,399", inr: "₹39,000" }
-        },
-        "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "₹0.03", usd: "$0.006" },
-            "Email (1000 Free)": { inr: "₹0.07", usd: "$0.0008" },
-            "Image Creation Fee": { inr: "₹0.12", usd: "$0.006" },
-            "Conversational Bot": "X"
-        },
-        users: { adminAgent: "7", additionalUser: { inr: "₹600", usd: "$19.9" } },
-        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
-        setupFees: {
-            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
-            openAISetupTraining: { inr: "X", usd: "X" },
-            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
-        }
-    },
-    {
-        name: "ENTERPRISE",
-        buttonText: "Contact Sales",
-        buttonLink: "https://calendly.com/shekhars",
-        fixedFees: {
-            monthly: { usd: "On Req", inr: "On Req" },
-            quarterly: { usd: "On Req", inr: "On Req" },
-            annual: { usd: "On Req", inr: "On Req" }
-        },
-        "Mehery Fees – Per conversation Fees": {
-            DAU: { inr: "On Req", usd: "On Req" },
-            "Email (1000 Free)": { inr: "On Req", usd: "On Req" },
-            "Image Creation Fee": { inr: "On Req", usd: "On Req" },
-            "Conversational Bot": { inr: "On Req", usd: "On Req" }
-        },
-        users: { adminAgent: "On Req", additionalUser: { inr: "On Req", usd: "On Req" } },
-        depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
-        setupFees: {
-            facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
-            openAISetupTraining: { inr: "On Req", usd: "On Req" },
-            openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
-        }
-    }
-]);
+// const plans = ref([
+//     {
+//         name: "FREE FOREVER",
+//         buttonText: "Get Started",
+//         buttonLink: "https://app.mehery.com/partner/auth/register",
+//         fixedFees: {
+//             monthly: { usd: "Free", inr: "Free" },
+//             quarterly: { usd: "Free", inr: "Free" },
+//             annual: { usd: "Free", inr: "Free" }
+//         },
+//         "Mehery Fees – Per conversation Fees": {
+//             DAU: { inr: "Up to 10", usd: "Up to 10" },
+//             "Email ": { inr: "Up to 1000", usd: "Up to 1000" },
+//             "Image Creation": { inr: "Up to 10", usd: "Up to 10" },
+//             "Conversational Bot": { inr: "Up to 10", usd: "Up to 10" }
+//         },
+//         users: { adminAgent: "1", additionalUser: { inr: "X", usd: "X" } },
+//         depositFees: { minimumDeposit: "N/A" },
+//         setupFees: {
+//             facebookBusinessSetup: "N/A",
+//             openAISetupTraining: "N/A",
+//             openAIBotDevelopment: "N/A"
+//         }
+//     },
+//     {
+//         name: "LITE",
+//         buttonText: "Get Started",
+//         buttonLink: "https://app.mehery.com/partner/auth/register",
+//         fixedFees: {
+//             monthly: { usd: "NA", inr: "NA" },
+//             quarterly: { usd: "NA", inr: "NA" },
+//             annual: { usd: "NA", inr: "NA" }
+//         },
+//         "Mehery Fees – Per conversation Fees": {
+//             DAU: { inr: "₹1.25", usd: "$0.050" },
+//             "Email (1000 Free)": { inr: "₹0.12", usd: "$0.0014" },
+//             "Image Creation Fee": { inr: "₹0.25", usd: "$0.012" },
+//             "Conversational Bot": { inr: "₹0.50", usd: "$0.012" }
+//         },
+//         users: {
+//             adminAgent: "1",
+//             additionalUser: { inr: "₹500", usd: "$9.9" }
+//         },
+//         depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
+//         setupFees: {
+//             facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
+//             openAISetupTraining: { inr: "X", usd: "X" },
+//             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
+//         }
+//     },
+//     {
+//         name: "ECO",
+//         buttonText: "Get Started",
+//         buttonLink: "https://app.mehery.com/partner/auth/register",
+//         fixedFees: {
+//             monthly: { usd: "$69", inr: "₹2,499" },
+//             quarterly: { usd: "$189", inr: "₹6,750" },
+//             annual: { usd: "$649", inr: "₹24,000" }
+//         },
+//         "Mehery Fees – Per conversation Fees": {
+//             DAU: { inr: "₹0.04", usd: "$0.006" },
+//             "Email (1000 Free)": { inr: "₹0.08", usd: "$0.0009" },
+//             "Image Creation Fee": { inr: "₹0.12", usd: "$0.006" },
+//             "Conversational Bot": "X"
+//         },
+//         users: { adminAgent: "5", additionalUser: { inr: "₹500", usd: "$9.9" } },
+//         depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
+//         setupFees: {
+//             facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
+//             openAISetupTraining: { inr: "X", usd: "X" },
+//             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
+//         }
+//     },
+//     {
+//         name: "PRO",
+//         buttonText: "Get Started",
+//         buttonLink: "https://app.mehery.com/partner/auth/register",
+//         fixedFees: {
+//             monthly: { usd: "$149", inr: "₹3,999" },
+//             quarterly: { usd: "$399", inr: "₹11,000" },
+//             annual: { usd: "$1,399", inr: "₹39,000" }
+//         },
+//         "Mehery Fees – Per conversation Fees": {
+//             DAU: { inr: "₹0.03", usd: "$0.006" },
+//             "Email (1000 Free)": { inr: "₹0.07", usd: "$0.0008" },
+//             "Image Creation Fee": { inr: "₹0.12", usd: "$0.006" },
+//             "Conversational Bot": "X"
+//         },
+//         users: { adminAgent: "7", additionalUser: { inr: "₹600", usd: "$19.9" } },
+//         depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
+//         setupFees: {
+//             facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
+//             openAISetupTraining: { inr: "X", usd: "X" },
+//             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
+//         }
+//     },
+//     {
+//         name: "ENTERPRISE",
+//         buttonText: "Contact Sales",
+//         buttonLink: "https://calendly.com/shekhars",
+//         fixedFees: {
+//             monthly: { usd: "On Req", inr: "On Req" },
+//             quarterly: { usd: "On Req", inr: "On Req" },
+//             annual: { usd: "On Req", inr: "On Req" }
+//         },
+//         "Mehery Fees – Per conversation Fees": {
+//             DAU: { inr: "On Req", usd: "On Req" },
+//             "Email (1000 Free)": { inr: "On Req", usd: "On Req" },
+//             "Image Creation Fee": { inr: "On Req", usd: "On Req" },
+//             "Conversational Bot": { inr: "On Req", usd: "On Req" }
+//         },
+//         users: { adminAgent: "On Req", additionalUser: { inr: "On Req", usd: "On Req" } },
+//         depositFees: { minimumDeposit: { inr: "₹1000", usd: "$25" } },
+//         setupFees: {
+//             facebookBusinessSetup: { inr: "₹5000", usd: "$50" },
+//             openAISetupTraining: { inr: "On Req", usd: "On Req" },
+//             openAIBotDevelopment: { inr: "Based on work scope", usd: "Based on work scope" }
+//         }
+//     }
+// ]);
 
 // Features Data
 const features = ref({
