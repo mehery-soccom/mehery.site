@@ -268,13 +268,9 @@ const showUSD = ref(false);
 const showFeatures = ref(false);
 const billingCycle = ref("Monthly");
 
-const json = await resource.read({ contentType: "pricing", src: "pricing_list.xlsx", query: {
-    sheet: "Pricing List",
-    header: 1,
-    range: "A1:Z1000",
-    valueRenderOption: "FORMULA",
-    dateTimeRenderOption: "FORMATTED_STRING"
-} });
+const json = await resource.read({ contentType: "pricing", src: "pricing_list.xlsx", query: {} });
+
+console.log(json);
 
 
 

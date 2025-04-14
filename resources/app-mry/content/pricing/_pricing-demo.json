@@ -1,0 +1,20 @@
+[
+    {
+        "name": "pro",
+        "buttontext": "get started",
+        "buttonlink": "1.1.1.1",
+        "fixedfees.monthly.usd": 666
+    },
+    {
+        "name": "lite",
+        "buttontext": "get started 1",
+        "buttonlink": 323232,
+        "fixedfees.monthly.usd": 9
+    },
+    {
+        "name": "enterprise",
+        "buttontext": "get started 2",
+        "buttonlink": 3232323,
+        "fixedfees.monthly.usd": 59
+    }
+]
