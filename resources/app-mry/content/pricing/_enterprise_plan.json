@@ -1,0 +1,32 @@
+[
+    {
+        "name": "ENTERPRISE",
+        "buttonText": "Contact Sales",
+        "buttonLink": "https://calendly.com/shekhars",
+        "fixedFees_monthly_usd": "On Req",
+        "fixedFees_monthly_inr": "On Req",
+        "fixedFees_quarterly_usd": "On Req",
+        "fixedFees_quarterly_inr": "On Req",
+        "fixedFees_annual_usd": "On Req",
+        "fixedFees_annual_inr": "On Req",
+        "MeheryFeesPerConversationFees_DAU_inr": "On Req",
+        "MeheryFeesPerConversationFees_DAU_usd": "On Req",
+        "MeheryFeesPerConversationFees_Email1000Free_inr": "On Req",
+        "MeheryFeesPerConversationFees_Email1000Free_usd": "On Req",
+        "MeheryFeesPerConversationFees_ImageCreationFee_inr": "On Req",
+        "MeheryFeesPerConversationFees_ImageCreationFee_usd": "On Req",
+        "MeheryFeesPerConversationFees_ConversationalBot_inr": "On Req",
+        "MeheryFeesPerConversationFees_ConversationalBot_usd": "On Req",
+        "users_adminAgent": "On Req",
+        "users_additionalUser_inr": "On Req",
+        "users_additionalUser_usd": "On Req",
+        "depositFees_minimumDeposit_inr": "₹1000",
+        "depositFees_minimumDeposit_usd": 25,
+        "setupFees_facebookBusinessSetup_inr": "₹5000",
+        "setupFees_facebookBusinessSetup_usd": 50,
+        "setupFees_openAISetupTraining_inr": "On Req",
+        "setupFees_openAISetupTraining_usd": "On Req",
+        "setupFees_openAIBotDevelopment_inr": "Based on work scope",
+        "setupFees_openAIBotDevelopment_usd": "Based on work scope"
+    }
+]

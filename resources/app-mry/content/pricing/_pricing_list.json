@@ -1,0 +1,322 @@
+[
+    {
+        "__EMPTY": "Smart Conversations",
+        "__EMPTY_1": "Lite",
+        "__EMPTY_2": "Eco",
+        "__EMPTY_3": "Pro",
+        "__EMPTY_4": "Enterprise",
+        "API's only": "Lite",
+        "__EMPTY_6": "Eco",
+        "__EMPTY_7": "Pro",
+        "__EMPTY_8": "Custom",
+        "__EMPTY_11": "Feature to control"
+    },
+    {
+        "__EMPTY": "Number of Users"
+    },
+    {
+        "__EMPTY": "Users – Admin / Agent",
+        "__EMPTY_1": 1,
+        "__EMPTY_2": 5,
+        "__EMPTY_3": 7,
+        "__EMPTY_4": 10,
+        "API's only": 1,
+        "__EMPTY_6": 2,
+        "__EMPTY_7": 2,
+        "__EMPTY_8": 2
+    },
+    {
+        "__EMPTY": "Communication Channels",
+        "__EMPTY_1": 1,
+        "__EMPTY_2": "Any 2",
+        "__EMPTY_3": "Any 3",
+        "__EMPTY_4": "All"
+    },
+    {
+        "__EMPTY": "Available Channels",
+        "__EMPTY_1": "WhatsApp",
+        "__EMPTY_2": "Lite + WebChat, Insta DM",
+        "__EMPTY_3": "Eco + Messenger, Telegram",
+        "__EMPTY_4": "Pro + Email + SMS",
+        "API's only": "WhatsApp",
+        "__EMPTY_6": "Lite + WebChat, Insta DM",
+        "__EMPTY_7": "Eco + Messenger, Telegram",
+        "__EMPTY_8": "Pro + Email"
+    },
+    {
+        "__EMPTY": "Conversations - Inbound"
+    },
+    {
+        "__EMPTY": "Team Inbox, Assignment, Grouping, Analytics",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "X"
+    },
+    {
+        "__EMPTY": "Chat GPT Paraphrase",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "X"
+    },
+    {
+        "__EMPTY": "Follow-up, Appointments, Table Bookings",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "X",
+        "__EMPTY_11": "Calendar Module"
+    },
+    {
+        "__EMPTY": "BOTS"
+    },
+    {
+        "__EMPTY": "Basic chatbots, Auto responders, OOO",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "Y",
+        "__EMPTY_6": "Y",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Advanced interconnected BOTs",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Outside Working Hours, Weekends and Holidays",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y",
+        "__EMPTY_11": "New Property to be created"
+    },
+    {
+        "__EMPTY": "Open AI - CHAT GPT"
+    },
+    {
+        "__EMPTY": "Instructor, Knowledgebase",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "X",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y",
+        "__EMPTY_11": "Open AI - New property to be created"
+    },
+    {
+        "__EMPTY": "Agent AI conversational BOT",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "X",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Custom BOT Scripting with OpenAI",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "X",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "Y",
+        "__EMPTY_11": "Scriptus, will automatically get blocked"
+    },
+    {
+        "__EMPTY": "WhatsApp"
+    },
+    {
+        "__EMPTY": "Text, image, video messaging",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Custom Image Templates",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Flows, Catalog, Carousel, Single Product message, Authentication",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Marketing / Lead Generation"
+    },
+    {
+        "__EMPTY": "Campaign Management, CTA tracking, Analytics",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "Y",
+        "__EMPTY_6": "Y",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Click to WhatsApp Ads Insights",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Campaign Scheduling - WA",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y",
+        "__EMPTY_11": "Campaign Scheduler"
+    },
+    {
+        "__EMPTY": "Customer Management"
+    },
+    {
+        "__EMPTY": "Customer Management",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "X",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "Y",
+        "__EMPTY_11": "Customer Profile"
+    },
+    {
+        "__EMPTY": "Agent Mobile App"
+    },
+    {
+        "__EMPTY": "IOS and Android",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "X"
+    },
+    {
+        "__EMPTY": "Onboarding & Support Plans"
+    },
+    {
+        "__EMPTY": "Assisted onboarding",
+        "__EMPTY_1": "Y",
+        "__EMPTY_2": "Y",
+        "__EMPTY_3": "Y",
+        "__EMPTY_4": "Y",
+        "API's only": "Y",
+        "__EMPTY_6": "Y",
+        "__EMPTY_7": "Y",
+        "__EMPTY_8": "Y"
+    },
+    {
+        "__EMPTY": "Email & WhatsApp support",
+        "__EMPTY_1": "10 hrs/day x 7 days/week",
+        "API's only": "10 hrs/day x 7 days/week"
+    },
+    {
+        "__EMPTY": "SLA - Response Times",
+        "__EMPTY_1": "12 hrs",
+        "__EMPTY_2": "6 hrs",
+        "__EMPTY_3": "6 hrs",
+        "__EMPTY_4": "4 hrs",
+        "API's only": "12 hrs",
+        "__EMPTY_6": "6 hrs",
+        "__EMPTY_7": "4 hrs",
+        "__EMPTY_8": "4 hrs"
+    },
+    {
+        "__EMPTY": "WhatsApp, Email and Call based support",
+        "__EMPTY_1": "X",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "included",
+        "__EMPTY_4": "included",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "included",
+        "__EMPTY_8": "included"
+    },
+    {
+        "__EMPTY": "WhatsApp, Email and Call based support 12 * 6",
+        "__EMPTY_1": "X",
+        "__EMPTY_2": "X",
+        "__EMPTY_3": "X",
+        "__EMPTY_4": "included",
+        "API's only": "X",
+        "__EMPTY_6": "X",
+        "__EMPTY_7": "X",
+        "__EMPTY_8": "included"
+    },
+    {
+        "__EMPTY": "Support Hours",
+        "__EMPTY_1": "9am - 7pm",
+        "API's only": "9am - 7pm"
+    },
+    {
+        "__EMPTY": "Support Days",
+        "__EMPTY_1": "Week Days, local Geo",
+        "API's only": "Week Days, local Geo"
+    }
+]

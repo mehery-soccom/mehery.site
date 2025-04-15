@@ -1,0 +1,31 @@
+[
+    {
+        "name": "PRO",
+        "buttonText": "Get Started",
+        "buttonLink": "https://app.mehery.com/partner/auth/register",
+        "fixedFees_monthly_usd": 149,
+        "fixedFees_monthly_inr": "₹3,999",
+        "fixedFees_quarterly_usd": 399,
+        "fixedFees_quarterly_inr": "₹11,000",
+        "fixedFees_annual_usd": 1399,
+        "fixedFees_annual_inr": "₹39,000",
+        "MeheryFeesPerConversationFees_DAU_inr": "₹0.03",
+        "MeheryFeesPerConversationFees_DAU_usd": 0.006,
+        "MeheryFeesPerConversationFees_Email1000Free_inr": "₹0.07",
+        "MeheryFeesPerConversationFees_Email1000Free_usd": 0.0008,
+        "MeheryFeesPerConversationFees_ImageCreationFee_inr": "₹0.12",
+        "MeheryFeesPerConversationFees_ImageCreationFee_usd": 0.006,
+        "MeheryFeesPerConversationFees_ConversationalBot": "X",
+        "users_adminAgent": 7,
+        "users_additionalUser_inr": "₹600",
+        "users_additionalUser_usd": 19.9,
+        "depositFees_minimumDeposit_inr": "₹1000",
+        "depositFees_minimumDeposit_usd": 25,
+        "setupFees_facebookBusinessSetup_inr": "₹5000",
+        "setupFees_facebookBusinessSetup_usd": 50,
+        "setupFees_openAISetupTraining_inr": "X",
+        "setupFees_openAISetupTraining_usd": "X",
+        "setupFees_openAIBotDevelopment_inr": "Based on work scope",
+        "setupFees_openAIBotDevelopment_usd": "Based on work scope"
+    }
+]

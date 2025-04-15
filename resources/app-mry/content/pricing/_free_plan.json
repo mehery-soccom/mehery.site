@@ -1,0 +1,28 @@
+[
+    {
+        "name": "FREE FOREVER",
+        "buttonText": "Get Started",
+        "buttonLink": "https://app.mehery.com/partner/auth/register",
+        "fixedFees_monthly_usd": "Free",
+        "fixedFees_monthly_inr": "Free",
+        "fixedFees_quarterly_usd": "Free",
+        "fixedFees_quarterly_inr": "Free",
+        "fixedFees_annual_usd": "Free",
+        "fixedFees_annual_inr": "Free",
+        "MeheryFeesPerConversationFees_DAU_inr": "Up to 10",
+        "MeheryFeesPerConversationFees_DAU_usd": "Up to 10",
+        "MeheryFeesPerConversationFees_Email_inr": "Up to 1000",
+        "MeheryFeesPerConversationFees_Email_usd": "Up to 1000",
+        "MeheryFeesPerConversationFees_ImageCreation_inr": "Up to 10",
+        "MeheryFeesPerConversationFees_ImageCreation_usd": "Up to 10",
+        "MeheryFeesPerConversationFees_ConversationalBot_inr": "Up to 10",
+        "MeheryFeesPerConversationFees_ConversationalBot_usd": "Up to 10",
+        "users_adminAgent": 1,
+        "users_additionalUser_inr": "X",
+        "users_additionalUser_usd": "X",
+        "depositFees_minimumDeposit": "N/A",
+        "setupFees_facebookBusinessSetup": "N/A",
+        "setupFees_openAISetupTraining": "N/A",
+        "setupFees_openAIBotDevelopment": "N/A"
+    }
+]

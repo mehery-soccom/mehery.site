@@ -1,5 +1,4 @@
 <template>
-
     <component :is="componentInstance" />
     <!-- <Navbar />
 
@@ -21,13 +20,11 @@
         </div>
     </div>
     <Footer /> -->
-
 </template>
 
 <script>
-import Navbar from '../app-mry/layout/Navbar.vue';
-import Footer from '../app-mry/layout/Footer.vue';
-
+import Navbar from "../app-mry/components/common/Navbar.vue";
+import Footer from "../app-mry/components/common/Footer.vue";
 
 export default {
     computed: {

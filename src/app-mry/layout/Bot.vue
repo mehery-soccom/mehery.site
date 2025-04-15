@@ -7,38 +7,56 @@
                     <!-- Left: Text, Right: Image -->
                     <div class="grid lg:grid-cols-2 gap-10 items-center mb-16">
                         <div class="space-y-6 max-w-2xl">
-    <h3 class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-        Transform Customer Interactions with AI-Powered Chatbots
-    </h3>
-    <div class="space-y-4">
-        <p class="text-gray-600 text-base sm:text-md">
-            Automate up to 80% of repetitive queries with intelligent chatbots, freeing your team to focus on high-value, personalized engagements.
-        </p>
-        <ul class="space-y-4">
-            <li class="flex items-start space-x-3">
-                <span class="">○</span>
-                <div>
-                    <h4 class="text-base font-semibold text-gray-800">No-Code BOT Builder & Seamless Integration</h4>
-                    <p class="text-gray-600 text-md">Easily design custom BOT workflows with our intuitive no-code scripting tools and ChatGPT integration for smarter automation.</p>
-                </div>
-            </li>
-            <li class="flex items-start space-x-3">
-                <span class="">○</span>
-                <div>
-                    <h4 class="text-base font-semibold text-gray-800">Personalized Conversational Journeys</h4>
-                    <p class="text-gray-600 text-md">Create custom BOT flows for different channels and user profiles, ensuring a tailored experience that enhances engagement.</p>
-                </div>
-            </li>
-            <li class="flex items-start space-x-3">
-                <span class="">○</span>
-                <div>
-                    <h4 class="text-base font-semibold text-gray-800">Native WhatsApp BOTs for Richer Interactions</h4>
-                    <p class="text-gray-600 text-md">Leverage WhatsApp’s native capabilities for collaborative, real-time engagements that improve response times and customer satisfaction.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                Transform Customer Interactions with AI-Powered Chatbots
+                            </h3>
+                            <div class="space-y-4">
+                                <p class="text-gray-600 text-base sm:text-md">
+                                    Automate up to 80% of repetitive queries with intelligent chatbots, freeing your
+                                    team to focus on high-value, personalized engagements.
+                                </p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                No-Code BOT Builder & Seamless Integration
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Easily design custom BOT workflows with our intuitive no-code scripting
+                                                tools and ChatGPT integration for smarter automation.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Personalized Conversational Journeys
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Create custom BOT flows for different channels and user profiles,
+                                                ensuring a tailored experience that enhances engagement.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Native WhatsApp BOTs for Richer Interactions
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Leverage WhatsApp’s native capabilities for collaborative, real-time
+                                                engagements that improve response times and customer satisfaction.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="relative lg:pl-8">
                             <img
                                 src="../../@assets/images/image12.png"
@@ -59,30 +77,45 @@
                         </div>
                         <div class="space-y-6 max-w-2xl lg:order-2">
                             <div class="space-y-4">
-    <ul class="space-y-4">
-        <li class="flex items-start space-x-3">
-            <span class="">○</span>
-            <div>
-                <h4 class="text-base font-semibold text-gray-800">Advanced Lead Management & Engagement</h4>
-                <p class="text-gray-600 text-md">Design customizable, segmented flows to nurture leads and drive meaningful customer interactions.</p>
-            </div>
-        </li>
-        <li class="flex items-start space-x-3">
-            <span class="">○</span>
-            <div>
-                <h4 class="text-base font-semibold text-gray-800">ChatGPT Paraphraser for On-Brand Communication</h4>
-                <p class="text-gray-600 text-md">Maintain consistent, engaging, and high-quality messaging with built-in AI-powered paraphrasing.</p>
-            </div>
-        </li>
-        <li class="flex items-start space-x-3">
-            <span class="">○</span>
-            <div>
-                <h4 class="text-base font-semibold text-gray-800">An AI Chatbot That’s Available Anytime, Anywhere</h4>
-                <p class="text-gray-600 text-md">Keep customers engaged across all platforms with Mehery’s omnichannel chatbot maker.</p>
-            </div>
-        </li>
-    </ul>
-</div>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Advanced Lead Management & Engagement
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Design customizable, segmented flows to nurture leads and drive
+                                                meaningful customer interactions.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                ChatGPT Paraphraser for On-Brand Communication
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Maintain consistent, engaging, and high-quality messaging with built-in
+                                                AI-powered paraphrasing.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                An AI Chatbot That’s Available Anytime, Anywhere
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Keep customers engaged across all platforms with Mehery’s omnichannel
+                                                chatbot maker.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -139,8 +172,8 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
+import Navbar from "../components/common/Navbar.vue";
+import Footer from "../components/common/Footer.vue";
 
 onMounted(() => {
     window.scrollTo({
