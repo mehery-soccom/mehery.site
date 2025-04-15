@@ -26,7 +26,9 @@ module.exports = {
             "@components": path.resolve(__base, "src/@components"),
             "@layout": path.resolve(__base, "src/@layout"),
             "@services": path.resolve(__base, "src/@services"),
-            "@utils": path.resolve(__base, "src/@utils")
+            "@utils": path.resolve(__base, "src/@utils"),
+
+            "@pushapp": path.resolve(__base, "src/app-pushapp")
         }
     },
 
@@ -50,8 +52,8 @@ module.exports = {
             ]
         }),
         new MiniCssExtractPlugin({
-            ignoreOrder: true, 
-        }),
+            ignoreOrder: true
+        })
     ],
 
     module: {
@@ -67,23 +69,22 @@ module.exports = {
                     }
                 }
             },
-            
-{
-  test: /\.vue$/,
-  resourceQuery: /type=style.*lang=scss/,
-  use: ["vue-style-loader", "css-loader", "sass-loader"]
-},
+
+            {
+                test: /\.vue$/,
+                resourceQuery: /type=style.*lang=scss/,
+                use: ["vue-style-loader", "css-loader", "sass-loader"]
+            },
             {
                 test: /\.js$/,
                 loader: "babel-loader"
             },
-            
+
             {
                 test: /\.vue\.(s[ac]ss)$/,
                 use: ["vue-style-loader", "css-loader", "sass-loader"]
             },
-            
-            
+
             {
                 test: /(?<!\.vue)\.(s[ac]ss)$/,
                 exclude: /node_modules/,

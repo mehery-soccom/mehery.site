@@ -14,14 +14,15 @@
 import { defineComponent } from "vue";
 import ConversationalBot from "./layout/Conversational.vue"; // Adjust the path as needed
 import SocialPopup from "./layout/SocialPopup.vue"; // Adjust the path as needed
-import "@assets/app/app.scss";
+import "@assets/app-mry/app.css";
+import "@assets/app-mry/app.scss";
 
 export default defineComponent({
     name: "App",
     components: {
         ConversationalBot,
-        SocialPopup,
-    },
+        SocialPopup
+    }
 });
 </script>
 
