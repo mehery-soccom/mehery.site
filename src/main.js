@@ -17,7 +17,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import WOW from "wowjs";
 import "animate.css";
 
-import "../src/@assets/base.css";
+import "@assets/base.css";
 import "@assets/base.scss";
 
 import { createHead } from "@vueuse/head";
@@ -66,8 +66,12 @@ import { createHead } from "@vueuse/head";
             router: () => import(/* webpackChunkName: "App_Router" */ "@src/app/router")
         },
         [Globals.MRY_APP_NAME]: {
-            app: () => import(/* webpackChunkName: "AppMry" */ "@src/app-mry/App.vue"),
-            router: () => import(/* webpackChunkName: "AppMry_Router" */ "@src/app-mry/router")
+            app: () => import(/* webpackChunkName: "App" */ "@src/app-mry/App.vue"),
+            router: () => import(/* webpackChunkName: "App_Router" */ "@src/app-mry/router")
+        },
+        [Globals.PUSH_APP_NAME]: {
+            app: () => import(/* webpackChunkName: "App" */ "@src/app-pushapp/App.vue"),
+            router: () => import(/* webpackChunkName: "App_Router" */ "@src/app-pushapp/router")
         }
     },
     window.CONST.APP
