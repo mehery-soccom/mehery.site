@@ -35,15 +35,15 @@
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Manage FAQs</h3>
             <div class="space-y-4">
                 <div
-                    v-for="(f, index) in faqs"
-                    :key="f.id"
+                    v-for="faq in faqs"
+                    :key="faq.id"
                     class="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
                 >
                     <div>
-                        <h4 class="text-lg font-medium text-gray-800">{{ f.title }}</h4>
+                        <h4 class="text-lg font-medium text-gray-800">{{ faq.title }}</h4>
                     </div>
                     <button
-                        @click="deleteFaq(index)"
+                        @click="deleteFaq(faq.id)"
                         class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition duration-300"
                     >
                         Delete
@@ -85,6 +85,8 @@ export default {
             }
         },
         async deleteFaq(id) {
+            if (!id) return;
+            
             try {
                 await faqService.deleteFaq(id);
                 await this.loadFaqs();
