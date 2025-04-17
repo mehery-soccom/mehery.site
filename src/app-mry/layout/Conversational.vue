@@ -106,10 +106,19 @@ export default {
                 email: "",
                 phone: ""
             },
-            currentStep: 0
+            currentStep: 0,
+            validationError: false
         };
     },
     methods: {
+        validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        },
+        validatePhone(phone) {
+            const phoneRegex = /^(\+?\d{1,3}[-.]?)?\d{3}[-.]?\d{3}[-.]?\d{4}$/;
+            return phoneRegex.test(phone.replace(/\s+/g, ''));
+        },
         toggleBot() {
             this.isOpen = !this.isOpen;
             if (!this.isOpen) {
@@ -119,24 +128,64 @@ export default {
         handleUserResponse() {
             const input = this.userInput.trim();
             if (input === "") return;
+
+            if (this.currentStep === 1 && !this.validateEmail(input)) {
+                this.conversation.push({ type: "user", text: input });
+                this.conversation.push({ 
+                    type: "bot", 
+                    text: "Please enter a valid email address (e.g., example@domain.com)" 
+                });
+                this.userInput = "";
+                return;
+            }
+
+            if (this.currentStep === 2 && !this.validatePhone(input)) {
+                this.conversation.push({ type: "user", text: input });
+                this.conversation.push({ 
+                    type: "bot", 
+                    text: "Please enter a valid phone number (e.g., +1234567890 or 123-456-7890)" 
+                });
+                this.userInput = "";
+                return;
+            }
+
             this.conversation.push({ type: "user", text: input });
             this.userInput = "";
             this.nextStep(input);
         },
         nextStep(input) {
-            this.currentStep++;
             switch (this.currentStep) {
-                case 1:
+                case 0:
+                    if (input.length < 2) {
+                        this.conversation.push({ 
+                            type: "bot", 
+                            text: "Please enter a valid name (at least 2 characters)" 
+                        });
+                        return;
+                    }
                     this.form.name = input;
-                    this.conversation.push({ type: "bot", text: "Great! What is your business email?" });
+                    this.conversation.push({ 
+                        type: "bot", 
+                        text: "Great! What is your business email?" 
+                    });
+                    this.currentStep++;
+                    break;
+                case 1:
+                    if (this.validateEmail(input)) {
+                        this.form.email = input;
+                        this.conversation.push({ 
+                            type: "bot", 
+                            text: "Lastly, your phone number, please." 
+                        });
+                        this.currentStep++;
+                    }
                     break;
                 case 2:
-                    this.form.email = input;
-                    this.conversation.push({ type: "bot", text: "Lastly, your phone number, please." });
-                    break;
-                case 3:
-                    this.form.phone = input;
-                    this.submitForm();
+                    if (this.validatePhone(input)) {
+                        this.form.phone = input;
+                        this.submitForm();
+                        this.currentStep++;
+                    }
                     break;
                 default:
                     break;
