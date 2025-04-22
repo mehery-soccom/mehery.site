@@ -528,12 +528,12 @@ onMounted(async () => {
                         usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "On Req" 
                     },
                     "Email (1000 Free)": { 
-                        inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "On Req" 
+                        inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_inr || "On Req", 
+                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_usd || "On Req" 
                     },
                     "Image Creation Fee": { 
-                        inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "On Req" 
+                        inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_inr || "On Req", 
+                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_usd || "On Req" 
                     },
                     "Conversational Bot": { 
                         inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "On Req", 
