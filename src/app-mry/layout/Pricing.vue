@@ -205,6 +205,7 @@ import { ref, computed, onMounted } from "vue";
 import { CheckIcon, XIcon } from "vue-feather-icons";
 import resource from "@components/Resource"
 
+
 const loading = ref(true);
 const showUSD = ref(false);
 const showFeatures = ref(false);
