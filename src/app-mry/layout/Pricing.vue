@@ -98,7 +98,7 @@
                                 v-if="plan.users.additionalUser.inr && plan.users.additionalUser.inr !== 'X'"
                                 class="flex justify-between"
                             >
-                                <span>Additional User</span>
+                                <span>Additional User(PM)</span>
                                 <span>
                                     {{ showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr }}</span
                                 >
