@@ -10,6 +10,16 @@ const routes = [
         component: () => import(/* webpackChunkName: "Home" */ "@src/app-pushapp/layout/Home.vue")
     },
     {
+        path: `/privacy-policy`,
+        name: "PrivacyPolicy",
+        component: () => import("@src/app-pushapp/layout/PrivacyPolicy.vue")
+    },
+    {
+        path: '/terms',
+        name: 'TermsOfUse',
+        component: () => import('@src/app-pushapp/layout/TermsOfUse.vue')
+    },
+    {
         path: `/:page/:contentName?`,
         name: "DynamicRouteComponent",
         component: () =>
@@ -19,16 +29,20 @@ const routes = [
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: () => import(/* webpackChunkName: "NotFound" */ "@src/@components/NotFound.vue")
-    }
+    },
+    
 ];
 
 const router = createRouter({
     history: createWebHistory(base),
     routes,
     scrollBehavior(to, from, savedPosition) {
-        console.log("scrollBehavior", { to, from, savedPosition });
-        return window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+        if (savedPosition) return savedPosition;
+        if (to.hash) {
+          return { el: to.hash, behavior: 'smooth' };
+        }
+        return { top: 0, behavior: 'smooth' };
+      }
 });
 
 export default router;
