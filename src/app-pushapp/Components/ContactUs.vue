@@ -9,7 +9,7 @@
           <span class="position-relative fw-extrabold z-1 large-title">
             Let's work
             <img
-              src="/usefull/bg-shape.png"
+              src="@assets/images/usefull/bg-shape.png"
               alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1 large-image"
             />
@@ -23,12 +23,12 @@
           <div class="col-lg-5">
             <div class="contact-img-box position-relative border p-2 h-100">
               <img
-                src="/contact/contact-border.png"
+                src="@assets/images/contact/contact-border.png"
                 alt="contact border"
                 class="contact-border-img position-absolute d-none d-lg-block scaleX-n1-rtl w-[180px]"
               />
               <img
-                src="/contact/customer-service.png"
+                src="@assets/images/contact/customer-service.png"
                 alt="contact customer service"
                 class="contact-img w-100 scaleX-n1-rtl"
               />

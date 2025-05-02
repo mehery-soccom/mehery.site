@@ -11,7 +11,7 @@
               <span class="position-relative fw-extrabold z-1">
                 What people say
                 <img
-                  src="/usefull/bg-shape.png"
+                  src="@assets/images/usefull/bg-shape.png"
                   alt="laptop charging"
                   class="section-title-img position-absolute object-fit-contain bottom-0 z-n1 large-image"
                 />
@@ -119,78 +119,75 @@
       return {
         reviews: [
           {
-            logo: '/realcostomers/aertrip_logo.png',
+            logo: require('@assets/images/realcostomers/aertrip_logo.png'),
+            avatar: require('@assets/images/realcostomers/founder-pinterest.png'),
             text:
               "“Vuexy is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project.”",
-            avatar: '/realcostomers/founder-pinterest.png',
             name: 'Cecilia Payne',
             role: 'CEO of Airbnb',
           },
           {
-            logo: '/realcostomers/Jazeera-Airways-Logo.png',
+            logo: require('@assets/images/realcostomers/Jazeera-Airways-Logo.png'),
+            avatar: require('@assets/images/realcostomers/founder-pinterest.png'),
             text:
               "“I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard sites on almost any project.”",
-            avatar: '/realcostomers/founder-pinterest.png',
             name: 'Eugenia Moore',
             role: 'Founder of Hubspot',
           },
           {
-            logo: '/realcostomers/bullforce_logo.png',
-            text:
-              "This template is really clean & well documented. The docs are really easy to understand and it's always easy to find a screenshot from their website.",
-            avatar: '/realcostomers/founder-pinterest.png',
+            logo: require('@assets/images/realcostomers/bullforce_logo.png'),
+            text: "This template is really clean & well documented. The docs are really easy to understand and it's always easy to find a screenshot from their website.",
+            avatar: require('@assets/images/realcostomers/founder-pinterest.png'),
             name: 'Curtis Fletcher',
             role: 'Design Lead at Dribbble',
           },
-          {
-            logo: '/realcostomers/Decredito_logo.png',
-            text:
-              "All the requirements for developers have been taken into consideration, so I’m able to build any interface I want.",
-            avatar: '/realcostomers/founder-pinterest.png',
+         {
+            logo: require('@assets/images/realcostomers/Decredito_logo.png'),
+            text: "All the requirements for developers have been taken into consideration, so I’m able to build any interface I want.",
+            avatar: require('@assets/images/realcostomers/founder-pinterest.png'),
             name: 'Sara Smith',
             role: 'Founder of Coinbase',
           },
           {
-            logo: '/realcostomers/Hassans_logo.png',
-            text:
-              "“I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard sites on almost any project.”",
-            avatar: '/realcostomers/founder-pinterest.png',
+            logo: require('@assets/images/realcostomers/Hassans_logo.png'),
+            text: "“I've never used a theme as versatile and flexible as Vuexy. It's my go-to for building dashboard sites on almost any project.”",
+            avatar: require('@assets/images/realcostomers/founder-pinterest.png'),
             name: 'Eugenia Moore',
             role: 'CTO of Pinterest',
-          },
+          }
         ],
         logos: [
           {
-            src: '/realcostomers/aertrip_logo-modified.png',
+            src: require('@assets/images/realcostomers/aertrip_logo-modified.png'),
             alt: 'Airbnb',
             light: 'front-pages/branding/logo_1-light.png',
             dark: 'front-pages/branding/logo_1-dark.png',
           },
           {
-            src: '/realcostomers/Jazeera-Airways-Logo-modified.png',
+            src: require('@assets/images/realcostomers/Jazeera-Airways-Logo-modified.png'),
             alt: 'Netflix',
             light: 'front-pages/branding/logo_2-light.png',
             dark: 'front-pages/branding/logo_2-dark.png',
           },
           {
-            src: '/realcostomers/bullforce_logo-modified.png',
+            src: require('@assets/images/realcostomers/bullforce_logo-modified.png'),
             alt: 'Coinbase',
             light: 'front-pages/branding/logo_3-light.png',
             dark: 'front-pages/branding/logo_3-dark.png',
           },
           {
-            src: '/realcostomers/Decredito_logo-modified.png',
+            src: require('@assets/images/realcostomers/Decredito_logo-modified.png'),
             alt: 'Dribbble',
             light: 'front-pages/branding/logo_4-light.png',
             dark: 'front-pages/branding/logo_4-dark.png',
           },
           {
-            src: '/realcostomers/Hassans_logo-modified.png',
+            src: require('@assets/images/realcostomers/Hassans_logo-modified.png'),
             alt: 'Pinterest',
             light: 'front-pages/branding/logo_5-light.png',
             dark: 'front-pages/branding/logo_5-dark.png',
-          },
-        ],
+          }
+        ]
       };
     },
     mounted() {

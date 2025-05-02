@@ -8,7 +8,7 @@
           <span class="position-relative fw-extrabold z-1">
             Supported
             <img
-              src="/usefull/bg-shape.png"
+              src="@assets/images/usefull/bg-shape.png"
               alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1"
             />
@@ -26,7 +26,7 @@
                 class="bg-label-primary border border-bottom-0 border-label-primary position-relative team-image-box"
               >
                 <img
-                  src="/greatteam/sophie.png"
+                  src="@assets/images/greatteam/sophie.png"
                   class="position-absolute card-img-position bottom-0 start-50"
                   alt="human image"
                 />
@@ -45,7 +45,7 @@
                 class="bg-label-info border border-bottom-0 border-label-info position-relative team-image-box"
               >
                 <img
-                  src="/greatteam/paul.png"
+                  src="@assets/images/greatteam/paul.png"
                   class="position-absolute card-img-position bottom-0 start-50"
                   alt="human image"
                 />
@@ -64,7 +64,7 @@
                 class="bg-label-danger border border-bottom-0 border-label-danger position-relative team-image-box"
               >
                 <img
-                  src="/greatteam/nannie.png"
+                  src="@assets/images/greatteam/nannie.png"
                   class="position-absolute card-img-position bottom-0 start-50"
                   alt="human image"
                 />
@@ -83,7 +83,7 @@
                 class="bg-label-success border border-bottom-0 border-label-success position-relative team-image-box"
               >
                 <img
-                  src="/greatteam/chris.png"
+                  src="@assets/images/greatteam/chris.png"
                   class="position-absolute card-img-position bottom-0 start-50"
                   alt="human image"
                 />

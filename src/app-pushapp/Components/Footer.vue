@@ -5,7 +5,7 @@
       <div class="flex flex-col sm:flex-row justify-between gap-8 mb-10">
         <!-- Logo + Contact -->
         <div class="w-full sm:w-1/3 space-y-6">
-          <img src="/footer/logo.png" alt="Mehery" class="w-40 h-auto mx-auto sm:mx-0" />
+          <img src="@assets/images/footer/logo.png" alt="Mehery" class="w-52 h-auto mx-auto sm:mx-0" />
           <div class="space-y-3 text-gray-300">
             <p class="flex items-center space-x-2 justify-center sm:justify-start">
               <MailIcon class="w-5 h-5" />
@@ -27,7 +27,7 @@
 
         <!-- Meta Partner -->
         <div class="w-full sm:w-1/3 flex flex-col items-center text-center">
-          <img src="/footer/meta.png" alt="Meta Partner" class="w-52 h-auto mb-4" />
+          <img src="@assets/images/footer/meta.png" alt="Meta Partner" class="w-52 h-auto mb-4" />
           <p class="italic text-gray-300 max-w-[300px] leading-relaxed">
             As a proud Meta Technology Partner,<br />
             we ensure top-tier integration and reliability across channels.

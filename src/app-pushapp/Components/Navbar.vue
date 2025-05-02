@@ -20,7 +20,7 @@
         @click="handleNavigation('landingHero')"
         class="flex items-center focus:outline-none mx-4 md:mx-0"
       >
-        <img src="/logo2.png" alt="Mehery Logo" class="h-12 w-auto" />
+        <img src="@assets/images/logo2.png" alt="Mehery Logo" class="h-12 w-auto" />
       </button>
 
       <!-- Desktop Links -->

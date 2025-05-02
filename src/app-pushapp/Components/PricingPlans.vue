@@ -9,7 +9,7 @@
         <span class="position-relative fw-extrabold z-1">
           Tailored pricing plans
           <img
-            src="/usefull/bg-shape.png"
+            src="@assets/images/usefull/bg-shape.png"
             alt="laptop charging"
             class="section-title-img position-absolute object-fit-contain bottom-0 z-n1 large-image"
           />
@@ -97,7 +97,7 @@ export default {
       plans: [
         {
           name: "Starter",
-          img: "/pricing/pricing-basic.png",
+          img: require('@assets/images/pricing/pricing-basic.png'),
           monthly: "US$ 750 pm",
           subtitle: "For businesses with small footprint of App Users",
           featuresHeading: "Includes",
@@ -113,7 +113,7 @@ export default {
         },
         {
           name: "Premium",
-          img: "/pricing/pricing-team.png",
+          img: require('@assets/images/pricing/pricing-team.png'),
           monthly: "US$ 2,000 pm",
           subtitle: "For strong consumer facing brands with advanced needs",
           featuresHeading: "Everything in Starter +",
@@ -129,7 +129,7 @@ export default {
         },
         {
           name: "Enterprise",
-          img: "/pricing/pricing-enterprise.png",
+          img: require('@assets/images/pricing/pricing-enterprise.png'),
           monthly: "Custom Pricing",
           subtitle: "Enterprises with massive consumer engagements and custom needs",
           featuresHeading: "Everything in Premium +",

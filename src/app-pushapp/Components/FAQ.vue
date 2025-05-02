@@ -9,7 +9,7 @@
           <span class="position-relative fw-extrabold z-1">
             questions
             <img
-              src="/usefull/bg-shape.png"
+              src="@assets/images/usefull/bg-shape.png"
               alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1 large-image"
             />
@@ -23,7 +23,7 @@
           <div class="col-lg-5">
             <div class="text-center">
               <img
-                src="/faq/boy-sitting-with-laptop.png"
+                src="@assets/images/faq/boy-sitting-with-laptop.png"
                 alt="faq boy with logos"
                 class="faq-image"
               />

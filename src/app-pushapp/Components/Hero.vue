@@ -2,7 +2,7 @@
   <section id="hero-animation">
     <div id="landingHero" class="section-py landing-hero position-relative">
       <img
-        src="/hero/hero-bg-light.png"
+        src="@assets/images/hero/hero-bg-light.png"
         alt="hero background"
         class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-[100vh] h-[100vh]"
         data-speed="1"
@@ -22,7 +22,7 @@
             <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium ml-9">
               Give It a Go
               <img
-                src="/hero/join-community-arrow.png"
+                src="@assets/images/hero/join-community-arrow.png"
                 alt="Give It a Go arrow"
                 class="scaleX-n1-rtl w-[60px]"
               />

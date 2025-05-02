@@ -1,7 +1,7 @@
 <template>
     <section id="landingCTA" class="position-relative section-py landing-cta p-lg-0 pb-0">
       <img
-        src="/CTA/get-started-bg-light.png"
+        src="@assets/images/CTA/get-started-bg-light.png"
         class="position-absolute bottom-0 end-0 h-100 w-100 z-n1"
         alt="cta image"
         data-app-light-img="front-pages/backgrounds/cta-bg-light.png"
@@ -16,7 +16,7 @@
           </div>
           <div class="col-lg-6 pt-lg-12 text-center text-lg-end">
             <img
-              src="/CTA/crm-dashboard.png"
+              src="@assets/images/CTA/crm-dashboard.png"
               alt="cta dashboard"
               class="img-fluid mt-lg-4"
             />

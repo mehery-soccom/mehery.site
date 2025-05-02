@@ -8,7 +8,7 @@
           <span class="position-relative fw-extrabold z-1">
             Everything you need 
             <img
-              src="/usefull/bg-shape.png"
+              src="@assets/images/usefull/bg-shape.png"
               alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1 large-image"
             />
