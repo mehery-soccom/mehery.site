@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmehery_site=self.webpackChunkmehery_site||[]).push([[7782],{7782:(e,n,o)=>{o.r(n),o.d(n,{default:()=>p});var r=o(9142);console.log("app loaded");const t=(0,r.defineComponent)({name:"App"}),p=(0,o(1535).A)(t,[["render",function(e,n,o,t,p,s){var a=(0,r.resolveComponent)("router-view");return(0,r.openBlock)(),(0,r.createBlock)(a)}]])}}]);

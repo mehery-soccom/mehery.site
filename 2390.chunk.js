@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmehery_site=self.webpackChunkmehery_site||[]).push([[2390],{2390:(e,n,r)=>{r.r(n),r.d(n,{default:()=>c});var t=r(9142);const o=(0,t.defineComponent)({name:"Hero"}),c=(0,r(1535).A)(o,[["render",function(e,n,r,o,c,l){return(0,t.openBlock)(),(0,t.createElementBlock)("div",null,"Hero")}]])}}]);

@@ -31,6 +31,91 @@
             "multiverse": {}
         },
         {
+            "contentType": "features",
+            "file": "analytics-feature.html",
+            "filePath": "resources/app-mry/content/features/analytics-feature.html",
+            "fileName": "analytics-feature",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Analytics",
+                "image": "/.features/../../resources/app-mry/content/features/_images/feature5.png",
+                "hyperlink": "/analytics",
+                "maindescription": "Analytics is a crucial component of any customer engagement system. Our analytics cover various segments of the platform based on utility and applicability.",
+                "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Conversational Analytics\",\n                \"description\": \"Get a bird’s-eye view of inbound and outbound communication, with insights on agent, channel, and team-specific performance, as well as response and closure analytics.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Segmented Channel-Specific Daily Analytics\",\n                \"description\": \"Drill down into the number of inbound and outbound messages and conversations handled by each channel, broken down by hour and day.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Campaign Analytics\",\n                \"description\": \"Monitor campaign delivery, read rates, and response rates, along with user-specific responses. View analytics online or download data for further analysis.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"BOT Analytics\",\n                \"description\": \"Track BOT flow execution to determine if success criteria are met, providing visibility into BOT performance and customer interactions.\"\n            }\n        ]\n    ",
+                "button": "Learn More"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "features",
+            "file": "bot-feature.html",
+            "filePath": "resources/app-mry/content/features/bot-feature.html",
+            "fileName": "bot-feature",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "BOT Builder",
+                "image": "/.features/../../resources/app-mry/content/features/_images/feature2.png",
+                "hyperlink": "/builder",
+                "maindescription": "Our BOT Builder empowers marketing teams to create and deploy bots independently, without needing a developer. It's a DIY toolkit designed to give you a competitive edge.\n    ",
+                "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Intuitive BOT Flow Builder\",\n                \"description\": \"Create bots using an extremely user-friendly, UI-based BOT flow builder.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Quick Deployment\",\n                \"description\": \"Build and deploy bots within minutes to drive seamless customer engagement.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Event-Driven and Timed Responses\",\n                \"description\": \"Set bots to respond to specific events and include time-delayed responses as needed.\"\n            }\n        ]\n    ",
+                "button": "Learn More"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "features",
+            "file": "cohort-feature.html",
+            "filePath": "resources/app-mry/content/features/cohort-feature.html",
+            "fileName": "cohort-feature",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Customer Cohorts",
+                "image": "/.features/../../resources/app-mry/content/features/_images/feature4.png",
+                "hyperlink": "/cohort",
+                "maindescription": "Build dynamic customer cohorts with our advanced filtering system, and leverage these cohorts for lead management and customer acquisition campaigns.",
+                "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Effortless Cohort Creation\",\n                \"description\": \"Easily create cohorts from the Customer Management module.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Reusable Cohorts\",\n                \"description\": \"Use cohorts on demand in outbound campaigns for lead management, customer engagement, or marketing.\"\n            }\n        ]\n    ",
+                "button": "Learn More"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "features",
+            "file": "marketing-feature.html",
+            "filePath": "resources/app-mry/content/features/marketing-feature.html",
+            "fileName": "marketing-feature",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Marketing Campaigns",
+                "image": "/.features/../../resources/app-mry/content/features/_images/feature3.png",
+                "hyperlink": "/marketing",
+                "maindescription": "Professional marketing campaigns are essential for lead generation, customer acquisition, and ongoing customer engagement. Our campaign management component is highly user-friendly and works seamlessly.\n    ",
+                "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Cohort Creation\",\n                \"description\": \"Build customer cohorts from your customer management module using dynamic filters, session tags from conversations, or external data sources.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Flexible Campaign Execution\",\n                \"description\": \"Run campaigns on demand or schedule them for optimal dates and times to suit your customers.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"A/B Testing\",\n                \"description\": \"Test campaign effectiveness by running A/B campaigns with a small test group before rolling out to a larger audience.\"\n            }\n        ]\n    ",
+                "button": "Learn More"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "features",
+            "file": "team-feature.html",
+            "filePath": "resources/app-mry/content/features/team-feature.html",
+            "fileName": "team-feature",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Team Inbox",
+                "image": "/.features/../../resources/app-mry/content/features/_images/feature1.png",
+                "hyperlink": "/inbox",
+                "maindescription": "Empower your team to engage with customers seamlessly through a centralized inbox that aggregates all conversations across multiple channels.\n    ",
+                "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Centralized Inbox for All Channels\",\n                \"description\": \"Communicate with customers on WhatsApp, Messenger, Instagram DM, Telegram\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Predefined Message Templates\",\n                \"description\": \"Start new conversations or continue existing ones using predefined messages\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Prioritization\",\n                \"description\": \"Enable team members to prioritize conversations based on time unattended or unanswered, minimizing customer wait times\"\n            }\n        ]\n    ",
+                "button": "Learn More"
+            },
+            "multiverse": {}
+        },
+        {
             "contentType": "news",
             "file": "news-name-or-id.html",
             "filePath": "resources/app-mry/content/news/news-name-or-id.html",
@@ -39,11 +124,389 @@
             "fileTags": {},
             "info": {},
             "multiverse": {}
+        },
+        {
+            "contentType": "pricing",
+            "file": "eco_plan.xlsx",
+            "filePath": "resources/app-mry/content/pricing/eco_plan.xlsx",
+            "fileName": "eco_plan",
+            "fileExtension": "xlsx",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {
+                "json": {
+                    "file": "_eco_plan.json",
+                    "filePath": "resources/app-mry/content/pricing/_eco_plan.json"
+                }
+            }
+        },
+        {
+            "contentType": "pricing",
+            "file": "enterprise_plan.xlsx",
+            "filePath": "resources/app-mry/content/pricing/enterprise_plan.xlsx",
+            "fileName": "enterprise_plan",
+            "fileExtension": "xlsx",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {
+                "json": {
+                    "file": "_enterprise_plan.json",
+                    "filePath": "resources/app-mry/content/pricing/_enterprise_plan.json"
+                }
+            }
+        },
+        {
+            "contentType": "pricing",
+            "file": "free_plan.xlsx",
+            "filePath": "resources/app-mry/content/pricing/free_plan.xlsx",
+            "fileName": "free_plan",
+            "fileExtension": "xlsx",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {
+                "json": {
+                    "file": "_free_plan.json",
+                    "filePath": "resources/app-mry/content/pricing/_free_plan.json"
+                }
+            }
+        },
+        {
+            "contentType": "pricing",
+            "file": "lite_plan.xlsx",
+            "filePath": "resources/app-mry/content/pricing/lite_plan.xlsx",
+            "fileName": "lite_plan",
+            "fileExtension": "xlsx",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {
+                "json": {
+                    "file": "_lite_plan.json",
+                    "filePath": "resources/app-mry/content/pricing/_lite_plan.json"
+                }
+            }
+        },
+        {
+            "contentType": "pricing",
+            "file": "pricing_list.xlsx",
+            "filePath": "resources/app-mry/content/pricing/pricing_list.xlsx",
+            "fileName": "pricing_list",
+            "fileExtension": "xlsx",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {
+                "json": {
+                    "file": "_pricing_list.json",
+                    "filePath": "resources/app-mry/content/pricing/_pricing_list.json"
+                }
+            }
+        },
+        {
+            "contentType": "pricing",
+            "file": "pro_plan.xlsx",
+            "filePath": "resources/app-mry/content/pricing/pro_plan.xlsx",
+            "fileName": "pro_plan",
+            "fileExtension": "xlsx",
+            "fileTags": {},
+            "info": {},
+            "multiverse": {
+                "json": {
+                    "file": "_pro_plan.json",
+                    "filePath": "resources/app-mry/content/pricing/_pro_plan.json"
+                }
+            }
+        },
+        {
+            "contentType": "services",
+            "file": "1customer-service.html",
+            "filePath": "resources/app-mry/content/services/1customer-service.html",
+            "fileName": "1customer-service",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Customer",
+                "subtitle": "Management",
+                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-many-browser-windows-with-different-information1.svg",
+                "hyperlink": "/customer",
+                "divcolor": "#ebf8ff",
+                "textcolor": "#1f2937",
+                "bordercolor": "#bfdbfe"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "services",
+            "file": "2campaign-servivce.html",
+            "filePath": "resources/app-mry/content/services/2campaign-servivce.html",
+            "fileName": "2campaign-servivce",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Campaign",
+                "subtitle": "Management",
+                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-volumetric-analytics-of-different-types-in-web-browsers2.svg",
+                "hyperlink": "/campaign",
+                "divcolor": "#fffbeb",
+                "textcolor": "#78350f",
+                "bordercolor": "#fde68a"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "services",
+            "file": "3conversation-service.html",
+            "filePath": "resources/app-mry/content/services/3conversation-service.html",
+            "fileName": "3conversation-service",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Conversation ",
+                "subtitle": "Management",
+                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-sending-messages-from-one-place-to-another1.svg",
+                "hyperlink": "/conversation",
+                "divcolor": "#eef2ff",
+                "textcolor": "#3730a3",
+                "bordercolor": "#c7d2fe"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "services",
+            "file": "4elation-service.html",
+            "filePath": "resources/app-mry/content/services/4elation-service.html",
+            "fileName": "4elation-service",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Relationship",
+                "subtitle": "Management",
+                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-browser-window-with-emoticon-likes-and-stars-around2.svg",
+                "hyperlink": "/relation",
+                "divcolor": "#e6fffa",
+                "textcolor": "#115e59",
+                "bordercolor": "#99f6e4"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "services",
+            "file": "5lead-service.html",
+            "filePath": "resources/app-mry/content/services/5lead-service.html",
+            "fileName": "5lead-service",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Lead",
+                "subtitle": "Management",
+                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-selecting-a-value-in-the-browser-window1.svg",
+                "hyperlink": "/lead",
+                "divcolor": "#f3e8ff",
+                "textcolor": "#4c1d95",
+                "bordercolor": "#d8b4fe"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "services",
+            "file": "6api-service.html",
+            "filePath": "resources/app-mry/content/services/6api-service.html",
+            "fileName": "6api-service",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "API Services",
+                "subtitle": "Services",
+                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-magnifier-web-search-with-elements2.svg",
+                "hyperlink": "/api",
+                "divcolor": "#fff1f2",
+                "textcolor": "#9f1239",
+                "bordercolor": "#fecdd3"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "testimonials",
+            "file": "test1.html",
+            "filePath": "resources/app-mry/content/testimonials/test1.html",
+            "fileName": "test1",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Jackson T",
+                "designation": "Tech Support Engineer",
+                "company": "Telecommunications",
+                "rating": "4",
+                "comment": "\n        Their agile approach and ability to adapt to changing requirements made our product launch a huge success. Great communication throughout the project.\n    ",
+                "avatar": "https://avatar.iran.liara.run/public/5"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "testimonials",
+            "file": "test2.html",
+            "filePath": "resources/app-mry/content/testimonials/test2.html",
+            "fileName": "test2",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Anurangi R",
+                "designation": "Co-Founder & CEO",
+                "company": "Educational managements",
+                "rating": "5",
+                "comment": "\n        The financial insights and strategic planning provided by this team have been instrumental in our company's growth. Highly recommended!\n    ",
+                "avatar": "https://avatar.iran.liara.run/public/4"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "testimonials",
+            "file": "test3.html",
+            "filePath": "resources/app-mry/content/testimonials/test3.html",
+            "fileName": "test3",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Manish B",
+                "designation": "HOD IT",
+                "company": "Financial Service",
+                "rating": "5",
+                "comment": "\n        The user-centric design approach and attention to accessibility have made our product stand out. It's been a game-changer for our user engagement.\n    ",
+                "avatar": "https://avatar.iran.liara.run/public/3"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "testimonials",
+            "file": "test4.html",
+            "filePath": "resources/app-mry/content/testimonials/test4.html",
+            "fileName": "test4",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Devang T",
+                "designation": "Software Developer",
+                "company": "Financial Services",
+                "rating": "4",
+                "comment": "\n        I'm impressed by the innovative approach and technical expertise. They delivered beyond our expectations and were always responsive to our needs.\n    ",
+                "avatar": "https://avatar.iran.liara.run/public/2"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "testimonials",
+            "file": "test5.html",
+            "filePath": "resources/app-mry/content/testimonials/test5.html",
+            "fileName": "test5",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Yuvraj Singh P",
+                "designation": "Sales Head",
+                "company": "Information Technology and services",
+                "rating": "5",
+                "comment": "\n        Working with this team has been an absolute pleasure. Their attention to detail and creative solutions have significantly improved our marketing efforts.\n    ",
+                "avatar": "https://avatar.iran.liara.run/public/1"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "whatsapp",
+            "file": "auth.html",
+            "filePath": "resources/app-mry/content/whatsapp/auth.html",
+            "fileName": "auth",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "WhatsApp - Authentication",
+                "hyperlink": "/Connect#authentication",
+                "maindescription": "\n        One-tap autofill authentication templates allow you to send a one-time password or code along with an one-tap autofill button to your users. When a WhatsApp user taps the autofill button, the WhatsApp client triggers an activity.\n    ",
+                "button": "Learn More",
+                "dotcolor": "bg-red-500",
+                "darkbutton": "true",
+                "hash": "#authentication",
+                "bgtint": "from-red-50 to-white"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "whatsapp",
+            "file": "click-to-connect.html",
+            "filePath": "resources/app-mry/content/whatsapp/click-to-connect.html",
+            "fileName": "click-to-connect",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Whatsapp - Click to Connect",
+                "hyperlink": "/Connect#click-to-connect",
+                "maindescription": "\n        Ads that click to WhatsApp can be placed across Facebook and Instagram (News Feed, Stories, and Marketplace) and help support business objectives across lead generation, sales, and marketing.\n    ",
+                "button": "Learn More",
+                "dotcolor": "bg-blue-500",
+                "darkbutton": "true",
+                "hash": "#click-to-connect",
+                "bgtint": "from-blue-50 to-white"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "whatsapp",
+            "file": "flows.html",
+            "filePath": "resources/app-mry/content/whatsapp/flows.html",
+            "fileName": "flows",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "WhatsApp - Flows",
+                "hyperlink": "/Connect#flows",
+                "maindescription": "\n        WhatsApp Flows is a way to build structured interactions for business messaging. With Flows, businesses can define, configure, and customize messages with rich interactions that give customers more structure in the way they communicate.\n    ",
+                "button": "Learn More",
+                "dotcolor": "bg-red-500",
+                "darkbutton": "true",
+                "hash": "#flows",
+                "bgtint": "from-red-50 to-white"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "whatsapp",
+            "file": "media-card.html",
+            "filePath": "resources/app-mry/content/whatsapp/media-card.html",
+            "fileName": "media-card",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "WhatsApp - Media Card Carousel",
+                "hyperlink": "/Connect#carousel",
+                "maindescription": "\n        Media card carousel templates allow you to send a single text message accompanied by a set of up to 10 media cards in a horizontally scrollable view.\n    ",
+                "button": "Learn More",
+                "dotcolor": "bg-orange-500",
+                "darkbutton": "true",
+                "hash": "#carousel",
+                "bgtint": "from-orange-50 to-white"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "whatsapp",
+            "file": "single-product.html",
+            "filePath": "resources/app-mry/content/whatsapp/single-product.html",
+            "fileName": "single-product",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Whatsapp - Single Product Message",
+                "hyperlink": "/Connect#single-product",
+                "maindescription": "\n        SPM templates are marketing templates that allow you to present a single product from your ecommerce catalog, accompanied by a product image.\n    ",
+                "button": "Learn More",
+                "dotcolor": "bg-blue-500",
+                "darkbutton": "true",
+                "hash": "#single-product",
+                "bgtint": "from-blue-50 to-white"
+            },
+            "multiverse": {}
         }
     ],
     "updateTime": {
-        "str": "2025-02-02T15:36:26.068Z",
+        "str": "2025-05-02T09:46:21.875Z",
         "offset": "00.0",
-        "stamp": 1738510586068
+        "stamp": 1746179181875
     }
 }
