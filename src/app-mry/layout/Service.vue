@@ -1,152 +1,87 @@
 <template>
-  <div class="mx-12 py-8">
-    <!-- Header Section -->
-    <h1 class="text-4xl mx-4 font-bold mb-3">Solutions</h1>
-    <p class="text-gray-600 mb-8 mx-4 max-w-2xl text-lg">
-      At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
-    </p>
-
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 mx-4 gap-4 mb-4">
-      <!-- Customer Management -->
-      <div 
-        @click="handleCustomer"
-        class="rounded-2xl bg-blue-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-blue-200 cursor-pointer"
-      >
-        <div class="h-40 relative">
-          <h2 class="text-2xl font-bold">Customer</h2>
-          <h2 class="text-2xl font-bold mb-2">Management</h2>
-          <img src="../../@assets/images/tokyo-many-browser-windows-with-different-information 1.svg" 
-               alt="" 
-               class="absolute right-0 top-0 w-32 h-32" />
-        </div>
-        <button class="inline-flex items-center text-blue-600 hover:text-blue-700 gap-1">
-          <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
-          <span class="text-lg">Learn more</span>
-        </button>
-      </div>
-
-      <!-- Lead Management -->
-      <div 
-        @click="handleLead"
-        class="rounded-2xl bg-purple-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-purple-200 cursor-pointer"
-      >
-        <div class="h-40 relative">
-          <h2 class="text-2xl font-bold">Lead</h2>
-          <h2 class="text-2xl font-bold">Management</h2>
-          <img src="../../@assets/images/tokyo-selecting-a-value-in-the-browser-window 1.svg" 
-               alt="" 
-               class="absolute right-0 top-0 w-32 h-32" />
-        </div>
-        <button class="inline-flex items-center text-purple-600 hover:text-purple-700 gap-1">
-          <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
-          <span class="text-lg">Learn more</span>
-        </button>
-      </div>
-
-      <!-- Relationship Management -->
-      <div 
-        @click="handleRelation"
-        class="rounded-2xl bg-teal-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-teal-200 cursor-pointer"
-      >
-        <div class="h-40 relative">
-          <h2 class="text-2xl font-bold">Relationship</h2>
-          <h2 class="text-2xl font-bold">Management</h2>
-          <img src="../../@assets/images/tokyo-browser-window-with-emoticon-likes-and-stars-around 2.svg" 
-               alt="" 
-               class="absolute right-0 top-0 w-32 h-32" />
-        </div>
-        <button class="inline-flex items-center text-teal-600 hover:text-teal-700 gap-1">
-          <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
-          <span class="text-lg">Learn more</span>
-        </button>
-      </div>
-
-      <!-- Conversation Management -->
-      <div 
-        @click="handleConvo"
-        class="rounded-2xl bg-indigo-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-indigo-200 cursor-pointer"
-      >
-        <div class="h-40 relative">
-          <h2 class="text-2xl font-bold">Conversation</h2>
-          <h2 class="text-2xl font-bold">Management</h2>
-          <img src="../../@assets/images/tokyo-sending-messages-from-one-place-to-another 1.svg" 
-               alt="" 
-               class="absolute right-0 top-0 w-32 h-32" />
-        </div>
-        <button class="inline-flex items-center text-indigo-600 hover:text-indigo-700 gap-1">
-          <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
-          <span class="text-lg">Learn more</span>
-        </button>
-      </div>
-
-      <!-- API Services -->
-      <div 
-        @click="handleApi"
-        class="rounded-2xl bg-rose-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-rose-200 cursor-pointer"
-      >
-        <div class="h-40 relative">
-          <h2 class="text-2xl font-bold">API</h2>
-          <h2 class="text-2xl font-bold">Services</h2>
-          <img src="../../@assets/images/tokyo-magnifier-web-search-with-elements 2.svg" 
-               alt="" 
-               class="absolute right-0 top-0 w-32 h-32" />
-        </div>
-        <button class="inline-flex items-center text-rose-600 hover:text-rose-700 gap-1">
-          <img src="../../@assets/images/Icon.svg" class="w-8 h-8" />
-          <span class="text-lg">Learn more</span>
-        </button>
-      </div>
-
-      <!-- Campaign Management -->
-      <div 
-        @click="handleCampaign"
-        class="rounded-2xl bg-amber-50 p-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-amber-200 cursor-pointer"
-      >
-        <div class="h-40 relative">
-          <h2 class="text-2xl font-bold">Campaign</h2>
-          <h2 class="text-2xl font-bold">Management</h2>
-          <img src="../../@assets/images/tokyo-volumetric-analytics-of-different-types-in-web-browsers 2.svg" 
-               alt="" 
-               class="absolute right-0 top-0 w-32 h-32" />
-        </div>
-        <button class="inline-flex items-center text-amber-600 hover:text-amber-700 gap-1">
-          <img src="../../@assets/images/Icon(1).svg" class="w-8 h-8" />
-          <span class="text-lg">Learn more</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- BOTs Section -->
-    <div 
-      @click="handleBot"
-      class="rounded-2xl bg-emerald-50 p-6 text-gray-800 mx-4 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer relative"
-    >
-      <div class="max-w-md">
-        <h2 class="text-2xl font-bold mb-3">BOTs & BOT Services</h2>
-        <p class="mb-4 text-sm">
-          Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus on high-value, personalized interactions that drive deeper customer relationships.
+    <div class="mx-4 sm:mx-6 md:mx-8 lg:mx-12 py-3 sm:py-5">
+        <!-- Header Section -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">Solutions</h1>
+        <p class="text-gray-600 mb-4 sm:mb-6 max-w-2xl text-sm sm:text-base">
         </p>
-      </div>
-      <img 
-        src="../../@assets/images/Illustration(1).svg" 
-        alt="" 
-        class="absolute right-6 bottom-6 w-48 h-48"
-      />
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
+            <ArticleList :contentType="'services'" v-slot="{ loading, results }">
+                <div v-if="loading" class="col-span-1 sm:col-span-2 flex justify-center py-8">
+                    <div class="text-center">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-gray-900"></div>
+                        <p class="mt-2 text-gray-600">Loading solutions...</p>
+                    </div>
+                </div>
+                <template v-else>
+                    <div
+                        v-for="(item, index) in results"
+                        :key="index"
+                        @click="handleNavigation(item.info.hyperlink)"
+                        class="rounded-2xl w-full p-4 sm:p-6 transition-all hover:scale-[1.02] hover:shadow-lg cursor-pointer min-h-[180px] sm:min-h-[200px] flex flex-col"
+                        :style="{
+                            backgroundColor: item.info.divcolor,
+                            borderBottom: `4px solid ${item.info.bordercolor}`
+                        }"
+                    >
+                        <div class="flex-1 flex flex-col sm:flex-row items-start sm:items-center">
+                            <div class="w-full sm:w-2/3 mb-3 sm:mb-0">
+                                <h2 class="text-xl sm:text-2xl font-bold">{{ item.info.title }}</h2>
+                                <h2 class="text-xl sm:text-2xl font-bold">{{ item.info.subtitle }}</h2>
+                            </div>
+                            <div class="w-full sm:w-1/3 flex justify-start sm:justify-center items-center">
+                                <img
+                                    :src="item.info.image"
+                                    alt="Service Image"
+                                    class="w-16 h-16 sm:w-24 sm:h-20 object-contain"
+                                />
+                            </div>
+                        </div>
+                        <button class="inline-flex items-center gap-1 mt-4 sm:mt-auto" :style="{ color: item.info.textcolor }">
+                            <img src="../../@assets/images/Icon.svg" class="w-5 h-5 sm:w-6 sm:h-6" />
+                            <span class="text-sm sm:text-base md:text-lg">Learn more</span>
+                        </button>
+                    </div>
+                </template>
+            </ArticleList>
+        </div>
+        
+        <!-- BOTs Section -->
+        <div
+            @click="handleBot"
+            class="rounded-2xl bg-emerald-50 px-4 sm:px-6 py-4 sm:py-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer"
+        >
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+                <div class="flex-1 max-w-full sm:max-w-md">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3  sm:text-left">BOTs & BOT Services</h2>
+                    <p class="mb-4 text-xs sm:text-sm  sm:text-left">
+                        Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus
+                        on high-value, personalized interactions that drive deeper customer relationships.
+                    </p>
+                </div>
+                <img 
+                    src="../../@assets/images/botService.png" 
+                    alt="BOT Services" 
+                    class="w-28 h-20 sm:w-32 sm:h-24 md:w-44 md:h-32 object-contain"
+                />
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
+import ArticleList from "@components/ArticleList.vue";
+
 const router = useRouter();
 
 // Router functions
-const handleCustomer = () => router.push('/customer');
-const handleLead = () => router.push('/lead');
-const handleRelation = () => router.push('/relation');
-const handleConvo = () => router.push('/conversation');
-const handleApi = () => router.push('/api');
-const handleCampaign = () => router.push('/campaign');
-const handleBot = () => router.push('/bot');
+const handleNavigation = path => {
+    if (path) router.push(path);
+};
+
+const handleBot = () => {
+    router.push("/bot");
+};
 </script>

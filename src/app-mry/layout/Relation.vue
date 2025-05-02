@@ -1,42 +1,93 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-gray-50">
+    <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
         <Navbar />
-        <main class="mt-12">
-            <section id="relation" class="lg:-mt-2">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div class="space-y-6">
-                            <h3 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight lg:-mt-10">
-                                Relationship Management
+        <main class="py-6 px-4 sm:px-6 lg:px-8">
+            <section id="relation" class="max-w-7xl mx-auto">
+                <div class="container mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-6 max-w-2xl">
+                            <h3
+                                class="text-left text-2xl sm:text-4xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                Stronger Relationships, Greater Loyalty
                             </h3>
-                            <p class="text-gray-600 text-lg sm:text-xl">
-                                Building strong, lasting relationships is essential for successful B2C engagement, and
-                                our Relationship Management module helps you achieve just that. By assigning dedicated
-                                Relationship Managers or Sales Agents to high-value customers, you add a personal touch
-                                that can significantly boost customer loyalty and unlock new revenue opportunities.
-                            </p>
-                            <p class="text-gray-600 text-lg">
-                                Our Relationship Management module integrates seamlessly with Customer and Lead
-                                Management, providing your team with a complete view of each customer’s journey
-                            </p>
-                            <p class="text-gray-600 text-lg">
-                                Relationship Managers can access relevant customer data and communication history across
-                                channels, allowing them to deliver personalized, impactful interactions at every
-                                touchpoint. This consolidated approach not only improves the quality of customer
-                                engagement but also enables your team to address individual needs and preferences,
-                                making customers feel valued and understood. In addition, all interactions are captured
-                                centrally, ensuring better monitoring, compliance, and team coordination. This
-                                flexibility empowers you to maintain organized, structured outreach while ensuring every
-                                customer receives tailored support. With our Relationship Management module, you’ll
-                                maximize your revenue potential by fostering deep connections that drive long-term
-                                loyalty and business growth.
-                            </p>
+                            <div class="space-y-4">
+                                <p class="text-gray-600 text-base sm:text-md">
+                                    Building lasting relationships is key to successful B2C engagement. Our Relationship
+                                    Management module helps you strengthen customer bonds while unlocking new revenue
+                                    opportunities.
+                                </p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Dedicated Relationship Managers
+                                            </h4>
+                                            <p class="text-gray-600 text-sm">
+                                                Assign Relationship Managers or Sales Agents to high-value customers,
+                                                adding a personal touch that boosts loyalty and retention.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">Seamless Integration</h4>
+                                            <p class="text-gray-600 text-sm">
+                                                Sync effortlessly with Customer and Lead Management to gain a 360° view
+                                                of each customer's journey.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Data-Driven Personalization
+                                            </h4>
+                                            <p class="text-gray-600 text-sm">
+                                                Equip your team with customer insights and communication history across
+                                                multiple channels for impactful, personalized interactions.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Organized & Structured Outreach
+                                            </h4>
+                                            <p class="text-gray-600 text-sm">
+                                                All interactions are centrally recorded, ensuring better monitoring,
+                                                compliance, and seamless coordination across teams.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="">○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Maximize Revenue Potential
+                                            </h4>
+                                            <p class="text-gray-600 text-sm">
+                                                Deepen customer relationships, enhance engagement, and drive long-term
+                                                business growth through meaningful, tailored support.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="text-gray-600 text-base sm:text-lg font-semibold">
+                                    Turn customer connections into lasting partnerships with our Relationship Management
+                                    module!
+                                </p>
+                            </div>
                         </div>
                         <div class="relative">
                             <img
-                                src="../../@assets/images/image 6.svg"
-                                alt="Customer Management Illustration"
-                                class="w-full h-auto"
+                                src="../../@assets/images/image4.png"
+                                alt="Relationship Management Illustration"
+                                class="w-full h-auto max-w-2xl transform scale-105 transition-transform duration-300 ml-20"
                             />
                         </div>
                     </div>
@@ -49,9 +100,8 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
-
+import Navbar from "../components/common/Navbar.vue";
+import Footer from "../components/common/Footer.vue";
 onMounted(() => {
     window.scrollTo({
         top: 0,

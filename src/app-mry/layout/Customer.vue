@@ -1,39 +1,103 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-gray-50">
+    <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
         <Navbar />
-        <main class="">
-            <section id="customer" class="mt-12">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div class="space-y-6">
+        <main class="py-6 px-4 sm:px-6 lg:px-8">
+            <section id="customer" class="max-w-7xl mx-auto">
+                <div class="container mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-6 max-w-2xl">
                             <h3
-                                class="text-6xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:-mt-20"
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
                             >
-                                Customer Management
+                                Smart Customer Management
                             </h3>
-                            <p class="text-gray-600 text-lg sm:text-xl">
-                                Effortlessly manage customer relationships across social media email, and SMS— all in
-                                one place. Easily segment customers into dynamic groups based on custom criteria to
-                                enable highly personalized, targeted campaigns. Gain a comprehensive 360° view of each
-                                customer by integrating interactions across multiple channels.
-                            </p>
-                            <p class="text-gray-600 text-lg">
-                                Our Customer Management feature empowers you to merge communication with detailed
-                                customer data, helping you develop impactful, organization-wide engagement strategies.
-                                Seamlessly import customer data from your transactional or eCommerce systems, equipping
-                                your agents with essential information to boost productivity.
-                            </p>
-                            <p class="text-gray-600 text-lg">
-                                Assign Relationship Managers to ensure personalized interactions, all centrally captured
-                                for compliance and oversight. Build custom cohorts and schedule structured campaigns to
-                                maintain consistent, meaningful connections with your customers.
-                            </p>
+                            <div class="space-y-4">
+                                <p class="text-gray-600 text-base sm:text-lg">
+                                    Streamline and strengthen customer relationships across social media and email, all
+                                    from a single, unified platform.
+                                </p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600"> </span>
+                                        <span>○</span>
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">360° Customer View</h4>
+                                            <p class="text-gray-600 text-md">
+                                                Integrate interactions across multiple channels to get a complete
+                                                picture of each customer, ensuring personalized and effective
+                                                engagement.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-purple-600"></span>
+                                        <span>○</span>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Intelligent Segmentation
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Group customers dynamically based on custom criteria, enabling highly
+                                                targeted campaigns that resonate with their needs.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600"></span>
+                                        <span>○</span>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Seamless Data Integration
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Effortlessly import customer data from your eCommerce or transactional
+                                                systems, equipping your team with the insights they need to boost
+                                                productivity.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-purple-600"></span>
+                                        <span>○</span>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Dedicated Relationship Management
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Assign Relationship Managers to nurture personalized connections, with
+                                                every interaction centrally recorded for compliance and oversight.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="text-xl text-blue-600"></span>
+                                        <span>○</span>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold text-gray-800">
+                                                Automated Campaigns & Outreach
+                                            </h4>
+                                            <p class="text-gray-600 text-md">
+                                                Build custom cohorts and schedule structured campaigns to maintain
+                                                consistent, high-touch engagement with your customers.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="text-gray-600 text-base sm:text-lg font-semibold">
+                                    Deliver exceptional customer experiences with an intelligent, data-driven approach
+                                    to management and engagement.
+                                </p>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative lg:p-16">
                             <img
-                                src="../../@assets/images/image 2.svg"
+                                src="../../@assets/images/image3.png"
                                 alt="Customer Management Illustration"
-                                class="w-full h-auto"
+                                class="h-xl max-w-xl mx-auto duration-300"
                             />
                         </div>
                     </div>
@@ -46,6 +110,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
+import Navbar from "../components/common/Navbar.vue";
+import Footer from "../components/common/Footer.vue";
 </script>

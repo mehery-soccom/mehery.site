@@ -1,17 +1,31 @@
 <template>
-    <router-view />
+    <!-- Main App Container -->
+    <div>
+        <!-- Router View for Pages -->
+        <router-view />
+
+        <!-- Global Components -->
+        <ConversationalBot />
+        <SocialPopup />
+    </div>
 </template>
 
 <script>
-console.log("app loaded");
-
 import { defineComponent } from "vue";
-import "@assets/app/app.scss";
-
+import ConversationalBot from "./layout/Conversational.vue"; // Adjust the path as needed
+import SocialPopup from "./layout/SocialPopup.vue"; // Adjust the path as needed
+import "@assets/app-mry/app.css";
+import "@assets/app-mry/app.scss";
 
 export default defineComponent({
-    name: "App"
+    name: "App",
+    components: {
+        ConversationalBot,
+        SocialPopup
+    }
 });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+/* Global styles can go here */
+</style>

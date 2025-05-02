@@ -1,0 +1,21 @@
+{
+    "title": "PushApp",
+    "theme": "green",
+    "tags": {
+        "lang": {
+            "values": [
+                "en_US",
+                "ar_KWT"
+            ],
+            "default": "en_US"
+        },
+        "version": {
+            "values": [
+                "v1",
+                "v2"
+            ],
+            "default": "v1"
+        }
+    },
+    "seo": []
+}

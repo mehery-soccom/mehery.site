@@ -1,162 +1,340 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100">
-    <Navbar />
-    <main class="flex-grow py-12">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-12">
-        <section id="click-to-connect" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                Whatsapp - Click to Connect
-              </h2>
-              <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                Ads that click to WhatsApp can be placed across Facebook and Instagram (News Feed, Stories, and Marketplace) and help support business objectives across lead generation, sales and marketing i.e. if you want a customer to move from Facebook or Instagram to WhatsApp. You can add a Send message button to your Facebook or Instagram ads that will open a conversation thread in the WhatsApp Business App. This allows customers to connect with your business on WhatsApp after clicking the button on your ad. However, with Mehery's omnichannel platform, Advertisements on Facebook and Instagram, can communicate with you on FB messenger and Instagram DM, itself and can be self-serviced using BOT and a human sales force.
-              </p>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 13.svg" alt="Click to Connect" class="max-w-full h-auto rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
-            </div>
-          </div>
-        </section>
+    <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
+        <Navbar />
+        <main class="flex-grow py-6 px-12 sm:px-6 lg:px-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+                <!-- WhatsApp - Click to Connect -->
+                <section id="click-to-connect" class="mb-24">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-6 max-w-2xl">
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                WhatsApp - Click to Connect
+                            </h3>
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Seamlessly transition customers from Facebook & Instagram to WhatsApp for direct
+                                engagement, lead generation, and conversions.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">Click-to-WhatsApp Ads</h4>
+                                        <p class="text-gray-600 text-md">
+                                            Place ads across Facebook & Instagram (News Feed, Stories, Marketplace) with
+                                            a "Send Message" button, directing users to WhatsApp Business Chat
+                                            instantly.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Instant Customer Engagement
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Enable real-time conversations on WhatsApp, helping businesses drive sales,
+                                            support, and marketing through instant messaging.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Mehery’s Omnichannel Advantage
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Unlike traditional Click-to-WhatsApp ads, Mehery allows customers to engage
+                                            directly on Facebook Messenger & Instagram DM, using self-service BOTs and
+                                            live agents for a frictionless experience.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 text-lg font-semibold">
+                                Maximize Conversions with AI-Powered Engagement!
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <img
+                                src="../../@assets/images/greenthingy.png"
+                                alt="Click to Connect"
+                                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </section>
 
-        <section id="flows" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                WhatsApp Flows
-              </h2>
-              <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                WhatsApp Flows is a way to build structured interactions for business messaging. With Flows, businesses can define, configure, and customize messages with rich interactions that give customers more structure in the way they communicate. You can use Flows to generate leads, recommend products, get new sales leads, or anything else where structured communication is more natural or comfortable for your customers. Flows allow you a variety of data elements for capturing responses – email id, dates, numbers, text, radio buttons, check boxes, drop down and opt-in. You can also push out images as part of the flow sequencing for greater customer engagement.
-              </p>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 14.svg" alt="WhatsApp Flows" class="max-w-full h-auto rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
-            </div>
-          </div>
-        </section>
+                <!-- WhatsApp Flows -->
+                <section id="flows" class="mb-24">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="relative">
+                            <img
+                                src="../../@assets/images/flow.png"
+                                alt="WhatsApp Flows"
+                                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 scale-125 hover:scale-150"
+                            />
+                        </div>
+                        <div class="space-y-6 max-w-2xl">
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                WhatsApp Flows – Structured & Interactive Messaging
+                            </h3>
+                            <p class="text-gray-600 text-base sm:text-md">
+                                Enhance customer interactions with WhatsApp Flows, enabling structured, guided
+                                conversations for seamless business messaging.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Customizable Structured Interactions
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Define and configure rich, interactive messages for lead generation, product
+                                            recommendations, and sales inquiries.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Diverse Data Collection Elements
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Capture customer responses effortlessly using: <br />- Email ID <br />-
+                                            Dates & Numbers <br />- Text Inputs <br />- Radio Buttons & Checkboxes
+                                            <br />- Drop-Down Menus & Opt-In Options
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Enhanced Engagement with Images
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Push out visual content as part of the flow sequence to create a more
+                                            engaging customer journey.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="text-gray-600 text-base sm:text-lg font-semibold">
+                                Drive Conversions & Personalize Customer Interactions with WhatsApp Flows!
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="lead-generation" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                Drive lead generation for pre-approved loans
-              </h2>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 15.svg" alt="Lead Generation" class="max-w-full h-auto rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
-            </div>
-          </div>
-        </section>
+                <!-- WhatsApp – Media Card Carousel -->
+                <section id="carousel" class="mb-24">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-6 max-w-2xl">
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                WhatsApp – Media Card Carousel
+                            </h3>
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Enhance your marketing campaigns with visually rich, interactive media carousels for
+                                seamless customer engagement.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Engaging Multi-Product Display
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Showcase up to 10 media cards in a horizontally scrollable view, perfect for
+                                            promoting multiple products or services.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Ideal for Marketing Campaigns
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Use carousel templates to highlight product variations, special offers, or
+                                            brand storytelling in a single message.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">Rich Media Integration</h4>
+                                        <p class="text-gray-600 text-md">
+                                            Combine text, images, and call-to-action buttons for a dynamic, visually
+                                            appealing customer experience.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 text-lg font-semibold">
+                                Drive Higher Engagement & Conversions with WhatsApp Media Carousels!
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <img
+                                src="../../@assets/images/spm.png"
+                                alt="Media Card Carousel"
+                                class="w-full h-auto mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </section>
 
-        <section id="insurance-quote" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                Send out an insurance Quote:
-              </h2>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 16.svg" alt="Insurance Quote" class="max-w-full h-auto rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
-            </div>
-          </div>
-        </section>
+                <!-- WhatsApp – Single Product Message -->
+                <section id="single-product" class="mb-24">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="relative">
+                            <img
+                                src="../../@assets/images/spm01.png"
+                                alt="Single Product Message"
+                                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                            />
+                        </div>
+                        <div class="space-y-6 max-w-2xl">
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                WhatsApp – Single Product Message (SPM)
+                            </h3>
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Showcase individual products directly from your eCommerce catalog with engaging,
+                                interactive product messages.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Personalized Product Display
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Highlight a single product with its image, title, and price—automatically
+                                            pulled from your eCommerce catalog.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">Customizable Messaging</h4>
+                                        <p class="text-gray-600 text-md">
+                                            Enhance engagement with custom body text, an optional footer, and a
+                                            call-to-action (View) button for easy access.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Seamless Shopping Experience
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Drive instant purchases by allowing customers to explore products
+                                            effortlessly within WhatsApp.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 text-lg font-semibold">
+                                Boost Conversions with Targeted Product Promotions!
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="carousel" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                WhatsApp – Media Card Carousel
-              </h2>
-              <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                Media card carousel templates allow you to send a single text message accompanied by a set of up to 10 media cards in a horizontally scrollable view. These can be very effectively used when you want to run a marketing campaign for multiple products of a similar kind or otherwise.
-              </p>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 16(1).svg" alt="Media Card Carousel" class="max-w-full h-50 rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
+                <!-- WhatsApp – Secure Authentication -->
+                <section id="authentication" class="mb-24">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-6 max-w-2xl">
+                            <h3
+                                class="text-left text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                WhatsApp – Secure Authentication
+                            </h3>
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Enhance user verification with WhatsApp Authentication Templates, ensuring fast,
+                                seamless, and secure logins.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Preset Verification Message
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            Send users a one-time password (OTP) or verification code with: <br />-
+                                            Fixed preset text: {VERIFICATION_CODE} is your verification code. <br />-
+                                            Security disclaimer (optional): For your security, do not share this code.
+                                            <br />- Expiration warning (optional): This code expires in {NUM_MINUTES}
+                                            minutes.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="">○</span>
+                                    <div>
+                                        <h4 class="text-base font-semibold text-gray-800">
+                                            Multiple Authentication Methods
+                                        </h4>
+                                        <p class="text-gray-600 text-md">
+                                            - One-Tap Autofill <br />Users tap the autofill button, opening your app
+                                            with the code pre-filled automatically. <br />- Copy Code Authentication
+                                            <br />Users tap the copy code button, storing the code on the clipboard for
+                                            manual pasting. <br />- Zero-Tap Authentication <br />The WhatsApp client
+                                            broadcasts the code, and your app captures it instantly, eliminating manual
+                                            entry.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 text-lg font-semibold">
+                                Fast, Secure, & Frictionless User Authentication with WhatsApp
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <img
+                                src="../../@assets/images/auth2.png"
+                                alt="Secure Authentication"
+                                class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </section>
             </div>
-          </div>
-        </section>
-
-        <section id="single-product" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                WhatsApp – Single Product Message
-              </h2>
-              <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                SPM templates are marketing templates that allow you to present a single product from your ecommerce catalog, accompanied by a product image, product title, and product price (all pulled from your product within your catalog), along with customizable body text, optional footer text, and an interactive View button.
-              </p>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 17.svg" alt="Single Product Message" class="max-w-full h-auto rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="authentication" class="mb-24 transform hover:scale-102 transition-transform duration-300 ease-in-out">
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-indigo-200">
-            <div class="p-8 space-y-6">
-              <h2 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-6">
-                WhatsApp – Authentication
-              </h2>
-              <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                If your mobile app offers users the option to receive one-time passwords or verification codes via WhatsApp, you must use an authentication template.<br />
-                Authentication templates consist of:
-              </p>
-              <ul class="space-y-4 mb-6 text-gray-700">
-                <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start group">
-                  <span class="inline-block w-4 h-4 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:animate-pulse"></span>
-                  <span class="group-hover:text-indigo-600 transition-colors duration-300">{{ point }}</span>
-                </li>
-              </ul>
-              <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                One-tap autofill authentication templates allow you to send a one-time password or code along with an one-tap autofill button to your users. When a WhatsApp user taps the autofill button, the WhatsApp client triggers an activity which opens your app and delivers it the password or code. Copy code authentication templates allow you to send a one-time password or code along with a copy code button to your users. When a WhatsApp user taps the copy code button, the WhatsApp client copies the password or code to the device's clipboard. The user can then switch to your app and paste the password or code into your app.
-                <br /> 
-                Zero-tap authentication templates allow your users to receive one-time passwords or codes via WhatsApp without having to leave your app. When a user in your app requests a password or code and you deliver it using a zero-tap authentication template, the WhatsApp client simply broadcasts the included password or code and your app can capture it immediately with a broadcast receiver.
-              </p>
-              <div class="flex justify-center mt-8 perspective-1000">
-                <img src="../../@assets/images/image 18.svg" alt="Authentication" class="max-w-full h-auto rounded-lg shadow-md transform transition-transform duration-500 hover:rotate-y-6" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-    <div>
+        </main>
         <div>
-            <ConversationalBot />
+            <div>
+                <!-- <ConversationalBot /> -->
+                <!-- <SocialPopup /> -->
+            </div>
         </div>
+        <Footer />
     </div>
-    <Footer />
-  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
+import Navbar from "../components/common/Navbar.vue";
+import Footer from "../components/common/Footer.vue";
 import ConversationalBot from "./Conversational.vue";
-
-const bulletPoints = ref([
-  "Fixed preset text: <VERIFICATION_CODE> is your verification code.",
-  "An optional security disclaimer: For your security, do not share this code.",
-  "An optional expiration warning: This code expires in <NUM_MINUTES> minutes.",
-  "Either a one-tap autofill button, a copy code button, or no button at all if using zero tap."
-]);
+// import SocialPopup from "./SocialPopup.vue";
 </script>
-
-<style scoped>
-@keyframes rotate-y {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(6deg); }
-}
-
-.hover\:rotate-y-6:hover {
-  animation: rotate-y 0.5s ease-in-out;
-}
-
-.perspective-1000 {
-  perspective: 1000px;
-}
-</style>
-

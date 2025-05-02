@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    content: ["./src/**/*.{vue,js,ts,jsx,tsx}", "./resources/**/*.{html}"],
+    safelist: [
+        {
+            pattern: /^(from|to)-[\w-]+$/
+        },
+        "to-white"
+    ],
     theme: {
         extend: {}
     },
