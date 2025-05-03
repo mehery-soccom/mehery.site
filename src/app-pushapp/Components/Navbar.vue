@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-4 left-0 right-0 mx-auto max-w-6xl p-4 bg-white/60 backdrop-blur-lg rounded-lg shadow-lg z-50 transition-colors"
+      class="fixed top-4 inset-x-4 md:inset-x-0 mx-auto max-w-6xl p-4 bg-white/30 backdrop-blur-lg border border-white/20 rounded-lg shadow-lg z-50"
   >
     <div class="flex items-center justify-between">
       <!-- Mobile Hamburger (left) -->
@@ -29,7 +29,7 @@
           v-for="link in links"
           :key="link.id"
           @click="handleNavigation(link.id)"
-          class="text-gray-700 hover:text-purple-400 text-lg font-medium transition-colors"
+          class="nav-item  text-gray-700 hover:text-purple-400 text-lg font-medium transition-colors"
           :class="{ 'text-purple-400': activeSection === link.id }"
         >
           {{ link.label }}
@@ -71,7 +71,7 @@
         v-for="link in links"
         :key="link.id"
         @click="handleNavigation(link.id)"
-        class="block w-full text-left px-4 py-2 rounded transition-colors text-lg"
+        class="nav-item block w-full text-left px-4 py-2 rounded transition-colors text-lg"
         :class="{
           'bg-purple-50 text-purple-700': activeSection === link.id,
           'hover:bg-gray-100': activeSection !== link.id
@@ -142,5 +142,19 @@ export default {
 </script>
 
 <style scoped>
-/* All styling via Tailwind */
+.nav-item {
+  font-family:
+    'Public Sans',
+    sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
 </style>

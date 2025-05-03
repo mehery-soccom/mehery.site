@@ -38,12 +38,11 @@
           <a href="javascript:void(0);">
             <div id="heroAnimationImg" class="position-relative hero-dashboard-img">
               <!-- placeholder dashboard image -->
-              <img
+              <!-- <img
                 src="https://via.placeholder.com/600x400?text=Dashboard+Placeholder"
                 alt="Dashboard placeholder"
                 class="animation-img"
-              />
-              <!-- removed the hero-elements image entirely -->
+              /> -->
             </div>
           </a>
         </div>
