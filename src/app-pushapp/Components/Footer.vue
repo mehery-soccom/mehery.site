@@ -35,20 +35,20 @@
         </div>
 
         <!-- Quick Links & Company -->
-        <div class="w-full sm:w-1/3 flex flex-col sm:flex-row sm:justify-end gap-6">
+        <div class="w-full sm:w-1/3 flex flex-col items-center  md:flex-row md:justify-end md:items-start gap-6">
           <!-- Quick Links -->
-          <div class="text-center sm:text-left">
+          <div class="text-center ">
             <h3 class="text-[#FFA726] font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-gray-300">
+            <ul class="space-y-2 text-gray-300 text-center">
               <li><button @click="handleNavigation('landingFeatures')" class="hover:text-white">Features</button></li>
               <li><button @click="handleNavigation('landingPricing')" class="hover:text-white">Pricing</button></li>
               <!-- <li><button @click="handleNavigation('landingReviews')" class="hover:text-white">Customers</button></li> -->
             </ul>
           </div>
           <!-- Company -->
-          <div class="text-center sm:text-left">
+          <div class="text-center">
             <h3 class="text-[#FFA726] font-semibold mb-4">Company</h3>
-            <ul class="space-y-2 text-gray-300">
+            <ul class="space-y-2 text-gray-300 text-center">
               <li><router-link to="/terms" class="hover:text-white">Terms of Use</router-link></li>
               <li><router-link to="/privacy-policy" class="hover:text-white">Privacy Policy</router-link></li>
             </ul>
