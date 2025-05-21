@@ -1,0 +1,17 @@
+
+.accordion-body[data-v-1a2b2221] {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+.large-title[data-v-1a2b2221] {
+  font-size: 1.5rem;
+}
+.large-image[data-v-1a2b2221] {
+  width: 500px;  
+  height: 30px;
+}
+
+

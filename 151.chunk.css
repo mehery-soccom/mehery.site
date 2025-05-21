@@ -1,0 +1,65 @@
+
+  /* Base container styles with high z-index */
+.chatbot-element[data-v-3b3df717] {
+    bottom: 8rem !important;    /* was bottom-8 (2rem) */
+    right: 2rem !important;    /* matches your right-6 */
+}
+.chatbot-popup[data-v-3b3df717] {
+    bottom: 9rem !important;    /* was bottom-12 (3rem) */
+    right: 8rem !important;     /* matches your right-28 */
+}
+.chatbot-container[data-v-3b3df717] {
+    position: relative;
+    z-index: 99999 !important;
+}
+.chatbot-element[data-v-3b3df717] {
+    position: fixed;
+    z-index: 99999 !important;
+}
+.chatbot-popup[data-v-3b3df717] {
+    position: fixed;
+    z-index: 99999 !important;
+}
+.chatbot-tooltip[data-v-3b3df717] {
+    z-index: 100000 !important;
+}
+  
+  /* Transitions */
+.slide-fade-enter-active[data-v-3b3df717],
+  .slide-fade-leave-active[data-v-3b3df717] {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99999 !important;
+}
+.slide-fade-enter-from[data-v-3b3df717],
+  .slide-fade-leave-to[data-v-3b3df717] {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+}
+.fade-enter-active[data-v-3b3df717],
+  .fade-leave-active[data-v-3b3df717] {
+    transition: opacity 0.3s ease;
+}
+.fade-enter-from[data-v-3b3df717],
+  .fade-leave-to[data-v-3b3df717] {
+    opacity: 0;
+}
+  
+  /* Social Media Icons Container */
+.flex.gap-6[data-v-3b3df717] {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* Icon Hover Effects */
+.text-gray-400[data-v-3b3df717]:hover {
+    color: #4f46e5; /* Indigo-600 */
+}
+.transform.hover\:scale-110[data-v-3b3df717] {
+    transform: scale(1.1);
+}
+.transition-all.duration-300[data-v-3b3df717] {
+    transition: all 0.3s ease;
+}
+
