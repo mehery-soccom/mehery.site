@@ -75,8 +75,64 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mt-8 text-center">
+              <p class="text-2xl font-semibold text-center">
+                For more FAQ's Chat with us on any of these Channels :
+              </p>
+              <div class="flex justify-center gap-6 mt-4">
+                <!-- Facebook Messenger -->
+                <a
+                  href="https://m.me/MeherY.SocCom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Channel id: fb:101842438530284"
+                  class="transform hover:scale-110 transition-all duration-300"
+                  style="color: #1877F2;"
+                >
+                  <BIconFacebook class="w-8 h-8" />
+                </a>
+
+                <!-- Instagram DM -->
+                <a
+                  href="https://www.instagram.com/meherysoccom/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Channel id: ig:17841447833002213"
+                  class="transform hover:scale-110 transition-all duration-300"
+                  style="color: #E4405F;"
+                >
+                  <BIconInstagram class="w-8 h-8" />
+                </a>
+
+                <!-- Telegram -->
+                <a
+                  href="https://t.me/meherybot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Channel id: tg:meherybot"
+                  class="transform hover:scale-110 transition-all duration-300"
+                  style="color: #0088CC;"
+                >
+                  <BIconTelegram class="w-8 h-8" />
+                </a>
+
+                <!-- WhatsApp -->
+                <a
+                  href="https://api.whatsapp.com/send/?phone=919372280725"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Message us on WhatsApp"
+                  class="transform hover:scale-110 transition-all duration-300"
+                  style="color: #25D366;"
+                >
+                  <BIconWhatsapp class="w-8 h-8" />
+                </a>
+              </div>
+            </div>
         </div>
-    </div>
+    </div>     
+
     <Footer />
 </template>
 
@@ -85,6 +141,7 @@ import { ref, computed, onMounted } from "vue";
 import { faqService } from "../../firebase/index";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
+import { BIconFacebook, BIconInstagram, BIconTelegram,BIconWhatsapp } from 'bootstrap-vue'
 
 const predefinedFaqs = [
     {
@@ -158,321 +215,6 @@ const predefinedFaqs = [
     `,
         isOpen: false
     },
-    {
-        title: "Can I use multiple WhatsApp Business API numbers with Mehery?",
-        content: `
-      Yes! Mehery allows businesses to:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Manage multiple WhatsApp Business API (WABA) numbers under the same domain.</li>
-        <li>Add up to 10 WABA numbers depending on your requirements.</li>
-        <li>Ensure flexibility for different teams, regions, or business units.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "What are the key requirements for a business to be approved for WhatsApp Business API?",
-        content: `
-      To be approved, your business must comply with:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>WhatsApp Business Solution Policy</li>
-        <li>WhatsApp Business Solution Terms</li>
-        <li>WhatsApp Commerce Policy</li>
-      </ul>
-      You must work with a Business Solution Provider (BSP) like Mehery.
-    `,
-        isOpen: false
-    },
-    {
-        title: "Can I use my existing customer engagement channels alongside WhatsApp Business API?",
-        content: `
-      Yes! WhatsApp Business API can be seamlessly integrated with your existing customer engagement channels. Contact Mehery to explore how this can be set up for your business.
-    `,
-        isOpen: false
-    },
-    {
-        title: "Are opt-ins required for WhatsApp Business API?",
-        content: `
-      Yes. WhatsApp requires businesses to obtain customer opt-ins before initiating conversations using Message Templates to ensure a high-quality customer experience.
-      Opt-ins can be collected both on and off WhatsApp through various methods, including:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>WhatsApp Links</li>
-        <li>WhatsApp QR Codes</li>
-        <li>WhatsApp Ads</li>
-        <li>Website Contact Forms</li>
-        <li>Interactive Voice Response (IVR)</li>
-      </ul>
-      For example, you can ask customers to opt in when they subscribe to your newsletter or sign up through your website.
-    `,
-        isOpen: false
-    },
-    {
-        title: "What are the prerequisites for going live with WhatsApp API?",
-        content: `
-      To go live with the WhatsApp Business API, you need:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Facebook Business Manager Account access</li>
-        <li>Credit or Debit Card (for billing purposes)</li>
-        <li>A Phone number (not associated with a mobile WhatsApp) to set up the WhatsApp Business Account. This can be a landline, mobile, or virtual number.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "Why does Meta block a WhatsApp Business Account?",
-        content: `
-      Meta blocks WhatsApp Business Accounts for several reasons:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Customers report outbound messages (marketing or utility) as spam, leading to account blocks if the percentage of reports exceeds Meta’s internal threshold.</li>
-        <li>Payment method failures or declined payments can also result in account blocks for outbound communication.</li>
-      </ul>
-      Suggestions to avoid blocks:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Run campaigns only with customers initially to ensure high-quality engagement.</li>
-        <li>Include an “unsubscribe” or “stop” button in campaigns.</li>
-        <li>Monitor campaign impact and pause if template quality is affected.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "Can Mehery help with getting me live when I have a blocked WhatsApp Business Account?",
-        content: `
-      Mehery has helped several customers resolve blocked WABA situations. However, this is done on a best-effort basis.
-    `,
-        isOpen: false
-    },
-    {
-        title: "What will be the stumbling blocks to getting my WhatsApp Business Account operational?",
-        content: `
-      Common points of failure when setting up a WhatsApp Business Account include:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Your Facebook Business Account is blocked or blacklisted by Meta.</li>
-        <li>Your WABA ID is blocked or blacklisted.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "Why should I verify my FB Manager account (WhatsApp Business API)?",
-        content: `
-      A verified WhatsApp Business API account enhances credibility and builds customer trust. You can request verification on Facebook Business Manager. Mehery’s customer engagement team will help you with this process. To be eligible, your business must be notable and comply with WhatsApp’s Commerce and Business Policies.
-    `,
-        isOpen: false
-    },
-    {
-        title: "Does the WhatsApp Business API support multiple languages?",
-        content: `
-      Yes! WhatsApp Business API supports multiple languages, allowing businesses to engage with customers in their regional language. This multilingual support applies to both notifications and conversational flows, ensuring a personalized customer experience.
-    `,
-        isOpen: false
-    },
-    {
-        title: "What is a Daily Active User (DAU)?",
-        content: `
-      A Daily Active User (DAU) refers to:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>A unique user who interacts with your business on a given calendar day.</li>
-        <li>The DAU charge covers all messages exchanged with that user across all channels included in your package.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "How is DAU Charged?",
-        content: `
-      DAU billing works as follows:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Billing is per unique user, per day – irrespective of the number of messages exchanged within that day.</li>
-        <li>Conversations from different channels (WhatsApp, Facebook Messenger, Instagram DM, Webchat, etc.) are consolidated into a single DAU charge.</li>
-      </ul>
-      Example Calculation:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>For the Lite Package:
-          <ul class="list-disc pl-5 space-y-1 mt-2">
-            <li>Day 1: 20 DAUs → Cost = 20 × ₹1.25 = ₹25.00</li>
-            <li>Day 2: 10 DAUs → Cost = 10 × ₹1.25 = ₹12.50</li>
-            <li>Cumulative Cost (Day 1 + Day 2) = ₹37.50</li>
-          </ul>
-        </li>
-      </ul>
-      Payment & Continuity:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Mehery Conversation Charges (DAU-based billing) are prepaid.</li>
-        <li>Your license remains active until the deposit amount is exhausted.</li>
-        <li>To continue using the service, you must top up your deposit once the balance runs out.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "How does the Free Forever Plan Work?",
-        content: `
-      Mehery Free Forever Plan – Unlock Powerful Features at No Cost!
-      With our Free Forever Plan, you gain full access to Mehery’s entire suite of powerful features—absolutely FREE!
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Explore all top-notch features without any subscription fees.</li>
-        <li>Even if your Facebook Business Verification is pending, you can still access your inbox with limited messaging capabilities.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "What are the messaging restrictions in the free forever plan?",
-        content: `
-      With the Free Forever Plan, you get free access to all Mehery features. However, there are certain messaging restrictions if your Facebook Business Verification is pending:
-      Messaging Limits:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>  Unlimited inbound messages – You can receive unlimited messages from users.</li>
-        <li>🚫 Limited outbound chats – You can chat with only 10 unique users per day.</li>
-        <li>🚫 Limited notifications – You can send WhatsApp template notifications to only 10 unique users per day. (Templates must be pre-approved by Facebook.)</li>
-      </ul>
-      Important Note:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>To unlock full functionality, you must complete your Facebook Business Verification.</li>
-        <li>Until then, your messaging access remains restricted to a limited set of phone numbers.</li>
-        <li>Once verified, you will gain access to higher messaging limits and additional features on your account.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "How to Get the WhatsApp Business Verified Blue Tick?",
-        content: `
-      The Blue Tick (Official Business Account - OBA Status) on WhatsApp is granted to businesses that WhatsApp verifies as authentic and reputable. This verification ensures that your business name appears instead of your phone number, even if your number is not saved by users.
-      How Mehery Helps You Get Verified:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Mehery can apply for the Blue Tick on your behalf for free once you move to a paid subscription.</li>
-        <li>Approval is entirely at WhatsApp's discretion, and we cannot influence their decision.</li>
-      </ul>
-      Factors Affecting Approval:
-      WhatsApp considers multiple factors, including:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>  Brand credibility & recognition</li>
-        <li>  Social media following</li>
-        <li>  Mentions in external media</li>
-        <li>  Website domain ranking</li>
-      </ul>
-      If Your Application is Rejected:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>🚫 Rejection does not impact your ability to use Mehery or the WhatsApp Business API.</li>
-        <li>You can still continue using all WhatsApp features as usual.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "When can I start using Mehery?",
-        content: `
-      As an official WhatsApp Business service provider, Mehery helps you grow your online sales and transform customer experience at scale. If you’re looking to boost your revenue by leveraging WhatsApp as a sales channel, you can start using Mehery anytime.
-      We also offer a Free Forever Plan:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>You can start using Mehery within minutes of signing up with us.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "WhatsApp Messaging Restrictions Before Facebook Verification",
-        content: `
-      Before completing your Facebook Business Verification, WhatsApp allows you to send messages in a restricted manner:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>  Unlimited inbound messages – You can receive unlimited messages from users.</li>
-        <li>🚫 Limited outbound chats – You can chat with only 250 unique users per day.</li>
-      </ul>
-      Maximize Your Free Access:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Leverage Mehery's Free Forever Plan to test, explore, and optimize your communication strategies before scaling up.</li>
-        <li>Experience firsthand how WhatsApp Business APIs can power up your customer engagement.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "How does Mehery’s pricing and Billing work?",
-        content: `
-      The pricing of Mehery Smart Conversations is based on the plan you choose for your business. Below are the key components:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Subscription Charges: Recurring charge based on the selected plan (monthly or annual).</li>
-        <li>Pay-As-You-Go Model (Lite Plan): Requires a one-time deposit of $1000 towards Daily Active User (DAU) fees.</li>
-        <li>WhatsApp Conversation Charges: Billed directly by Meta for conversations initiated by your business or customers.</li>
-        <li>Non-WABA Channels (FB Messenger, Instagram DM, Webchat, etc.): Charges are based on session usage.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "What Media Formats are supported by WhatsApp Business API?",
-        content: `
-      Accepted File Types & Size Limits for WhatsApp Business API:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Images: JPEG, PNG (max size: 16 MB)</li>
-        <li>Audio: AMR, MP3, Opus (max size: 16 MB)</li>
-        <li>Video: MP4, 3GP (max size: 16 MB)</li>
-        <li>Documents: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, TXT (max size: 100 MB)</li>
-        <li>Stickers: WebP (recommended size: ~100 KB)</li>
-      </ul>
-      Additional Considerations:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Compress or optimize files near or exceeding size limits for faster delivery.</li>
-        <li>Specify correct MIME types when uploading files.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "Does Mehery Allow me to integrate my Instagram and Facebook Messengers Accounts and converse with my customers?",
-        content: `
-      Yes, you can add Instagram DM and Messenger as channels in Mehery and seamlessly communicate with your customers for all inbound messages. You can use the CHAT GPT conversational BOT, menu-driven BOTs, or human agents to engage your customers and prospects alike.
-    `,
-        isOpen: false
-    },
-    {
-        title: "Can I initiate messages to customers using Instagram DM & FB Messenger?",
-        content: `
-      Meta allows you to send outbound messages to customers within a 24-hour window of their first message to your business. We can guide you on how to extend this window to 7 days.
-    `,
-        isOpen: false
-    },
-    {
-        title: "What are the requirements to use the FB Messenger API?",
-        content: `
-      To use the API, you need to meet the following requirements:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Facebook Business Account: Your account must be a Business (Professional) account.</li>
-        <li>Facebook Page Linkage: Your Instagram Business account must be linked to a Facebook Page.</li>
-        <li>API Integration: Integrate your chatbot with your Instagram Business or Facebook Business account on a supported platform such as Mehery.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "What are the requirements to use the Instagram DM API?",
-        content: `
-      To use the API, you need to meet the following requirements:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>Instagram Business Account: Your account must be a Business (Professional) account.</li>
-        <li>Facebook Page Linkage: Your Instagram Business account must be linked to a Facebook Page.</li>
-        <li>API Integration: Integrate your chatbot with your Instagram Business or Facebook Business account on a supported platform such as Mehery.</li>
-      </ul>
-    `,
-        isOpen: false
-    },
-    {
-        title: "What media formats are supported by the Instagram DM & FB Messenger API?",
-        content: `
-      The Instagram Messenger API supports the following media formats:
-      <ul class="list-disc pl-5 space-y-1 mt-2">
-        <li>  Text Messages</li>
-        <li>  Stickers</li>
-        <li>  Images – JPG, PNG, ICO, BMP (max size: 8MB)</li>
-        <li>  Videos</li>
-        <li>  Buttons</li>
-        <li>🚫 Unsupported Media – Attachments of any kind are not supported.</li>
-      </ul>
-    `,
-        isOpen: false
-    }
 ];
 // Reactive state
 const faqs = ref([]);

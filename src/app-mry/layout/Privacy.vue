@@ -1,313 +1,318 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
-        <Navbar />
-        <main class="py-6 px-4 sm:px-6 lg:px-8">
-            <section id="privacy" class="max-w-7xl mx-auto">
-                <div class="container mx-auto">
-                    <!-- Privacy Policy Header -->
-                    <div class="space-y-6 mb-8">
-                        <h3
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Privacy Policy
-                        </h3>
-                        <p class="text-gray-600 text-base sm:text-lg">Effective date: Sept 1, 2021</p>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            Mehery SocCom Pvt Ltd ("us", "we", or "our") operates the website and the Mehery
-                            application, which is a message aggregation and distribution service (the "Service"). This
-                            page informs you of our policies regarding the collection, use, and disclosure of personal
-                            data when you use our Service and the choices you have associated with that data. We use
-                            your data to provide and improve the Service. By using the Service, you agree to the
-                            collection and use of information in accordance with this policy. Unless otherwise defined
-                            in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our
-                            Terms and Conditions.
-                        </p>
-                    </div>
+  <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
+    <Navbar />
+    <main class="py-6 px-4 sm:px-6 lg:px-8">
+      <section id="privacy-policy" class="max-w-7xl mx-auto">
+        <div class="container mx-auto space-y-8">
+          <!-- Header -->
+          <div class="space-y-4 mb-8">
+            <h3 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              Privacy Policy
+            </h3>
+            <p class="text-gray-600 text-base sm:text-lg"><span class="font-bold">Effective date: Sept 1, 2021</span></p>
+            <p class="text-gray-600 text-base sm:text-lg"><span class="font-bold">Last Updated: May 17, 2025</span></p>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Mehery SocCom Pvt Ltd ("us", "we", or "our") operates the website and the Mehery application,
+              which is a message aggregation and distribution service (the "Service"). This Privacy Policy explains
+              how we collect, use, disclose, and safeguard your information when you use our Service. It also
+              outlines your choices regarding that data.
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg">
+              By using the Service, you agree to the collection and use of information in accordance with this policy.
+              Unless otherwise defined, terms in this Privacy Policy have the same meanings as in our Terms and Conditions.
+            </p>
+          </div>
 
-                    <!-- Information Collection and Use -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Information Collection and Use
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            We collect personal information about you from a variety of sources and you agree to the
-                            processing of this information for the purposes and ways utilized to improve the Services
-                            including the transfer of your personal information outside of your country to other
-                            countries. We collect personal information when you (a) submit personal information to us
-                            directly, (b) when it is made available to us through the Social Media Messengers that you
-                            use, or (c) when it is made available to us by our enterprise customers utilizing their own
-                            resources and integrations. We collect personal information about the domain and host from
-                            which you access the Internet, your device IP address, browser and operating system
-                            software, the date and time you access our website and the address of the site from which
-                            you linked to our website when you visit us; We may collect and retain your bank, payment
-                            card and other payment details when you use our services and for use in future transactions
-                            and services; and We collect personal information on your online activity as described in
-                            the paragraph below titled "TRACKING and COOKIES DATA ." The personal information we collect
-                            includes, but is not limited to, name, address, and telephone number, information about the
-                            form of identification used to send or receive messages, the products and services you have
-                            with us and your use of them, and your device's IP address and other online activity
-                            details, the type of mobile device you use, your mobile device unique ID, the IP address of
-                            your mobile device, your mobile operating system, the type of mobile Internet browser you
-                            use, unique device identifiers and other diagnostic data.
-                        </p>
-                    </div>
+          <!-- 1. Information Collection and Use -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              1. Information Collection and Use
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              We collect personal data from you through various sources. You agree to this data being processed for purposes such as service improvement, customer support, analytics, and, where applicable, marketing and legal compliance. This includes the transfer of your data outside your country to jurisdictions with different data protection laws.
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg">We collect information when:</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in infoPoints" :key="i">{{ item }}</li>
+            </ul>
+          </div>
 
-                    <!-- Types of Data Collected -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Types of Data Collected
-                        </h4>
-                        <h5 class="text-left text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
-                            Personal Data
-                        </h5>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            While using our Service, we may ask you to provide us with certain personally identifiable
-                            information that can be used to contact or identify you ("Personal Data"). Personally
-                            identifiable information may include, but is not limited to:
-                        </p>
-                        <ul class="space-y-4">
-                            <li v-for="(point, index) in bulletPoints" :key="index" class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">-</span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">{{ point }}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+          <!-- 2. Types of Data Collected -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              2. Types of Data Collected
+            </h4>
 
-                    <!-- Usage Data -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Usage Data
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            We may also collect information that your browser sends whenever you visit our Service or
-                            when you access the Service by or through a computing device ("Usage Data"). This Usage Data
-                            may include information such as your computer's Internet Protocol address (e.g. IP address),
-                            browser type, browser version, the pages of our Service that you visit, the time and date of
-                            your visit, the time spent on those pages, unique device identifiers and other diagnostic
-                            data. When you access the Service by or through a mobile device, this Usage Data may include
-                            information such as the type of mobile device you use, your mobile device unique ID, the IP
-                            address of your mobile device, your mobile operating system, the type of mobile Internet
-                            browser you use, unique device identifiers and other diagnostic data.
-                        </p>
-                    </div>
+            <h5 class="text-left text-xl font-semibold text-gray-900">Personal Data</h5>
+            <p class="text-gray-600 text-base sm:text-lg">
+              We may collect personally identifiable information including, but not limited to:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in personalDataPoints" :key="i">{{ item }}</li>
+            </ul>
 
-                    <!-- Tracking & Cookies Data -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Tracking & Cookies Data
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            We use cookies and similar tracking technologies to track the activity on our Service and
-                            hold certain information. Cookies are files with small amount of data which may include an
-                            anonymous unique identifier. Cookies are sent to your browser from a website and stored on
-                            your device. Tracking technologies also used are beacons, tags, and scripts to collect and
-                            track information and to improve and analyze our Service. You can instruct your browser to
-                            refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept
-                            cookies, you may not be able to use some portions of our Service. Examples of Cookies we
-                            use:
-                        </p>
-                        <ul class="space-y-4">
-                            <li
-                                v-for="(point, index) in somethingPoints"
-                                :key="index"
-                                class="flex items-start space-x-3"
-                            >
-                                <span class="text-xl text-blue-600">-</span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">{{ point }}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+            <h5 class="text-left text-xl font-semibold text-gray-900 mt-4">Usage Data</h5>
+            <p class="text-gray-600 text-base sm:text-lg">When accessing the Service, we may automatically collect:</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in usageDataPoints" :key="i">{{ item }}</li>
+            </ul>
+          </div>
 
-                    <!-- Use of Data -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Use of Data
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            We use the collected data for various purposes:
-                        </p>
-                        <ul class="space-y-4">
-                            <li v-for="(point, index) in usagePoints" :key="index" class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">-</span>
-                                <div class="">
-                                    <p class="text-gray-600 text-lg">{{ point }}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+          <!-- 3. Tracking & Cookies Data -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              3. Tracking & Cookies Data
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              We use cookies and similar tracking technologies (e.g., beacons, tags, scripts) to enhance user experience and analyze usage.
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg"><span class="font-bold">Types of Cookies:</span></p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(cookie, i) in cookieTypes" :key="i">
+                <span class="font-bold">{{ cookie.title }}:</span> {{ cookie.description }}
+              </li>
+            </ul>
+            <p class="text-gray-600 text-base sm:text-lg">
+              You can control cookie preferences through your browser. Disabling cookies may limit functionality.
+            </p>
+          </div>
 
-                    <!-- Third-Party Services -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Firebase
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            Firebase is analytics service provided by Google Inc. You may opt-out of certain Firebase
-                            features through your mobile device settings, such as your device advertising settings or by
-                            following the instructions provided by Google in their Privacy Policy:
-                            <a
-                                href="https://policies.google.com/privacy?hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-blue-600 hover:text-blue-800 break-all whitespace-normal"
-                            >
-                                https://policies.google.com/privacy?hl=en
-                            </a>
-                            We also encourage you to review the Google's policy for safeguarding your data:
-                            <a
-                                href="https://support.google.com/analytics/answer/6004245"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-blue-600 hover:text-blue-800 break-all whitespace-normal"
-                            >
-                                https://support.google.com/analytics/answer/6004245 </a
-                            >. For more information on what type of information Firebase collects, please visit
-                            <a
-                                href="https://policies.google.com/privacy?hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-blue-600 hover:text-blue-800 break-all whitespace-normal"
-                            >
-                                https://policies.google.com/privacy?hl=en
-                            </a>
-                        </p>
-                    </div>
+          <!-- 4. Use of Data -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              4. Use of Data
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">We use your data to:</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in useDataPoints" :key="i">{{ item }}</li>
+            </ul>
+          </div>
 
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Flurry Analytics
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            Flurry Analytics service is provided by Yahoo! Inc. You can opt-out from Flurry Analytics
-                            service to prevent Flurry Analytics from using and sharing your information by visiting the
-                            Flurry's Opt-out page:
-                            <a
-                                href="https://dev.flurry.com/secure/optOut.do"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-blue-600 hover:text-blue-800 break-all whitespace-normal"
-                            >
-                                https://dev.flurry.com/secure/optOut.do
-                            </a>
-                            For more information on the privacy practices and policies of Yahoo!, please visit their
-                            Privacy Policy page:
-                            <a
-                                href="https://policies.yahoo.com/us/en/yahoo/privacy/policy/index.htm"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-blue-600 hover:text-blue-800 break-all whitespace-normal"
-                            >
-                                https://policies.yahoo.com/us/en/yahoo/privacy/policy/index.htm
-                            </a>
-                        </p>
-                    </div>
+          <!-- 5. Transfer of Data -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              5. Transfer of Data
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Your personal data may be transferred and maintained on servers located outside your country. We take reasonable steps to ensure that your data is treated securely and in accordance with this Privacy Policy.
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Your submission of data represents your consent to this transfer.
+            </p>
+          </div>
 
-                    <!-- Children's Privacy -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Children's Privacy
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            Our Service does not address anyone under the age of 18 ("Children"). We do not knowingly
-                            collect personally identifiable information from anyone under the age of 18. If you are a
-                            parent or guardian and you are aware that your Children has provided us with Personal Data,
-                            please contact us. If we become aware that we have collected Personal Data from children
-                            without verification of parental consent, we take steps to remove that information from our
-                            servers.
-                        </p>
-                    </div>
+          <!-- 6. Disclosure of Data -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              6. Disclosure of Data
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">We may disclose your personal data:</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in disclosurePoints" :key="i">{{ item }}</li>
+            </ul>
+          </div>
 
-                    <!-- Changes to Privacy Policy -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Changes To This Privacy Policy
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            We may update our Privacy Policy from time to time. We will notify you of any changes by
-                            posting the new Privacy Policy on this page. We will let you know via email and/or a
-                            prominent notice on our Service, prior to the change becoming effective and update the
-                            "effective date" at the top of this Privacy Policy. You are advised to review this Privacy
-                            Policy periodically for any changes. Changes to this Privacy Policy are effective when they
-                            are posted on this page.
-                        </p>
-                    </div>
+          <!-- 7. Security of Data -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              7. Security of Data
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              We use commercially acceptable means to protect your data but cannot guarantee absolute security. You are responsible for protecting access credentials to the Service.
+            </p>
+          </div>
 
-                    <!-- Contact Us -->
-                    <div class="space-y-6 mb-8">
-                        <h4
-                            class="text-left text-2xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                        >
-                            Contact Us
-                        </h4>
-                        <p class="text-gray-600 text-base sm:text-lg">
-                            If you have any questions about this Privacy Policy, please contact us at
-                            <a href="mailto:legal@mehery.com" class="text-blue-600 hover:text-blue-800"
-                                >legal@mehery.com</a
-                            >
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <Footer />
-    </div>
+          <!-- 8. Service Providers -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              8. Service Providers
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">We may employ third parties to:</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in serviceProvidersPoints" :key="i">{{ item }}</li>
+            </ul>
+            <p class="text-gray-600 text-base sm:text-lg">
+              These third parties have access to your personal data only to perform their roles and are bound by confidentiality.
+            </p>
+          </div>
+
+          <!-- 9. Analytics -->
+        <div class="space-y-4 mb-8">
+            <h4
+                class="text-left text-2xl font-bold text-gray-900 leading-tight
+                    bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+            >
+                9. Analytics
+            </h4>
+
+            <p class="text-gray-600 text-base sm:text-lg">
+                We use third-party services including:            
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg">
+                <strong>Firebase (Google Inc.)</strong><br>
+                More: <a
+                href="https://policies.google.com/privacy?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:text-blue-800"
+                >Google Privacy</a><br>
+                Opt-out: Via your mobile device settings
+            </p>
+
+            <p class="text-gray-600 text-base sm:text-lg">
+                <strong>Flurry Analytics (Yahoo! Inc.)</strong><br>
+                More: <a
+                href="https://policies.yahoo.com/us/en/yahoo/privacy/policy/index.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:text-blue-800"
+                >Yahoo Privacy</a><br>
+                Opt-out: <a
+                href="https://dev.flurry.com/secure/optOut.do"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:text-blue-800"
+                >Flurry Opt-out</a>
+            </p>
+        </div>
+
+
+          <!-- 10. Conversational AI and ChatGPT Integration -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              10. Conversational AI and ChatGPT Integration
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              We use conversational AI powered by OpenAI’s ChatGPT API to respond to queries submitted via our webchat, embedded demos, or support interfaces.
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg"><strong>What We Collect:</strong></p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in aiCollectPoints" :key="i">{{ item }}</li>
+            </ul>
+            <p class="text-gray-600 text-base sm:text-lg"><strong>Purpose:</strong></p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+              <li v-for="(item, i) in aiPurposePoints" :key="i">{{ item }}</li>
+            </ul>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Your inputs are not used to train OpenAI’s models and are processed in accordance with OpenAI’s API terms, which ensure strict data security and privacy.<br><br> If you do not want your data used in this manner, please avoid using the demo or chat features.
+            </p>
+        </div>
+
+          <!-- 11. Links to Other Sites -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              11. Links to Other Sites
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Our Service may link to third-party websites not operated by us. We recommend reviewing their privacy policies, as we have no control over their content or practices.
+            </p>
+          </div>
+
+          <!-- 12. Children’s Privacy -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              12. Children’s Privacy
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Our Service is not intended for users under the age of 18. We do not knowingly collect data from children. If you believe a child has provided personal data, please contact us, and we will remove it promptly.
+            </p>
+          </div>
+
+          <!-- 13. Changes to This Privacy Policy -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              13. Changes to This Privacy Policy
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              We may update this Privacy Policy periodically. Changes will be posted on this page and, when appropriate, notified via email or a prominent notice on our Service.<br><br> Please review this page periodically for updates.
+            </p>
+          </div>
+
+          <!-- 14. Contact Us -->
+          <div class="space-y-4 mb-8">
+            <h4 class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              14. Contact Us
+            </h4>
+            <p class="text-gray-600 text-base sm:text-lg">
+              If you have questions about this Privacy Policy, please contact us at: <a href="mailto:legal@mehery.com" class="text-blue-600 hover:text-blue-800">legal@mehery.com</a>
+            </p>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import Navbar from "../components/common/Navbar.vue";
-import Footer from "../components/common/Footer.vue";
+import { ref, onMounted } from 'vue';
+import Navbar from '../components/common/Navbar.vue';
+import Footer from '../components/common/Footer.vue';
 
 onMounted(() => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-const bulletPoints = ref([
-    "Email address",
-    "Phone Number",
-    "First name and last name",
-    "Company name",
-    "Name of Regulator for Companies",
-    "Address, State, Province, ZIP/Postal code, City",
-    "Cookies and Usage Data"
+const infoPoints = ref([
+  'You provide it directly',
+  'It is made available via Social Media Messengers you use',
+  'Our enterprise customers provide it through their integrations with us'
 ]);
-const somethingPoints = ref([
-    "Session Cookies. We use Session Cookies to operate our Service.",
-    "Preference Cookies. We use Preference Cookies to remember your preferences and various settings",
-    "Security Cookies. We use Security Cookies for security purposes"
+
+const personalDataPoints = ref([
+  'Email address',
+  'Phone number',
+  'First and last name',
+  'Company name',
+  'Name of regulator (for businesses)',
+  'Address, State, Province, ZIP/Postal code, City',
+  'Cookies and usage data'
 ]);
-const usagePoints = ref([
-    "To provide and maintain the Service",
-    "To notify you about changes to our Service",
-    "To allow you to participate in interactive features of our Service when you choose to do so",
-    "To provide customer care and support",
-    "To provide analysis or valuable information so that we can improve the Service",
-    "To monitor the usage of the Service",
-    "To detect, prevent and address technical issues"
+
+const usageDataPoints = ref([
+  'IP address, browser type/version, device type',
+  'Date/time of access, referring URL',
+  'Mobile device identifiers, operating system, Internet browser',
+  'Pages visited, time spent on each page, clickstream data'
+]);
+
+const cookieTypes = ref([
+  { title: 'Session Cookies', description: 'For basic operation' },
+  { title: 'Preference Cookies', description: 'For remember settings' },
+  { title: 'Security Cookies', description: 'For security purposes' }
+]);
+
+const useDataPoints = ref([
+  'Provide and maintain the Service',
+  'Notify you about changes to our Service',
+  'Allow participation in interactive features',
+  'Provide customer support',
+  'Analyze usage and improve services',
+  'Monitor for security, technical, or fraud-related issues'
+]);
+
+const disclosurePoints = ref([
+  'To comply with legal obligations',
+  'To protect rights, property, or safety of Mehery or its users',
+  'To investigate fraud or misconduct',
+  'As required by law enforcement or regulators, both domestic and foreign'
+]);
+
+const serviceProvidersPoints = ref([
+  'Facilitate and operate the Service',
+  'Perform Service-related services',
+  'Analyze Service usage'
+]);
+
+const aiCollectPoints = ref([
+  'Your typed messages/questions',
+  'Metadata such as interaction timestamps, session IDs, and browser/device data'
+]);
+
+const aiPurposePoints = ref([
+  'Responding with AI-generated assistance',
+  'Improving and training our library for effectiveness and chat quality',
+  'Understanding product interest and intent'
 ]);
 </script>

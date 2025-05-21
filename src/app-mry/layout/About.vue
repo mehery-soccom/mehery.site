@@ -27,6 +27,7 @@
                             <img
                                 src="../../@assets/images/5495.jpg"
                                 alt="About Us Illustration"
+                                loading="lazy"
                                 class="w-full h-auto max-w-2xl mx-auto rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
                             />
                         </div>
@@ -40,6 +41,7 @@
                             <img
                                 src="../../@assets/images/core.png"
                                 alt="Core Values Illustration"
+                                loading="lazy"
                                 class="max-w-2xl rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
                             />
                         </div>
@@ -77,7 +79,8 @@
                             <img
                                 src="../../@assets/images/journey.jpg"
                                 alt="Our Journey Illustration"
-                                class="max-w-xs"
+                                loading="lazy"
+                                class="max-w-xs rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
                             />
                         </div>
                     </div>

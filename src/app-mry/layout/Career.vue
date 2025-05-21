@@ -25,62 +25,36 @@
                         >
                             Why Join Us?
                         </h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600"> </span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">Remote & Hybrid Work Culture:</span> We understand
-                                        the importance of flexibility in today’s world. Our team works remotely, with
-                                        the option of a hybrid setup when needed. But distance doesn’t mean
-                                        disconnect—we frequently come together for dinners, team outings, and even
-                                        two-day trips that strengthen our bond beyond work.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600"> </span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">Competitive Compensation:</span> We value talent and
-                                        hard work, offering salaries at par with industry standards. Your contributions
-                                        are recognized and rewarded.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600"> </span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">A Culture of Learning & Growth:</span> We are always
-                                        curious, eager to raise our standards, and committed to bettering ourselves. If
-                                        you love solving challenges, working with cutting-edge digital solutions, and
-                                        being part of a team that fosters innovation, Mehery is the place for you.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600"> </span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">Diverse & Inclusive Team:</span> We embrace
-                                        different perspectives and believe that diversity fuels creativity. At Mehery,
-                                        respect and collaboration define our work environment.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600"> </span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">Impact-Driven Work:</span> We are on a mission to
-                                        democratize customer engagement for businesses of all sizes. Every role at
-                                        Mehery contributes to building smarter, simpler, and more effective digital
-                                        solutions.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="space-y-4">
+                            <p class="text-gray-600 text-lg">
+                                <span class="font-semibold">Remote & Hybrid Work Culture:</span> We understand the
+                                importance of flexibility in today’s world. Our team works remotely, with the option of
+                                a hybrid setup when needed. But distance doesn’t mean disconnect—we frequently come
+                                together for dinners, team outings, and even two-day trips that strengthen our bond
+                                beyond work.
+                            </p>
+                            <p class="text-gray-600 text-lg">
+                                <span class="font-semibold">Competitive Compensation:</span> We value talent and hard
+                                work, offering salaries at par with industry standards. Your contributions are
+                                recognized and rewarded. recognized and rewarded.
+                            </p>
+                            <p class="text-gray-600 text-lg">
+                                <span class="font-semibold">A Culture of Learning & Growth:</span> We are always
+                                curious, eager to raise our standards, and committed to bettering ourselves. If you love
+                                solving challenges, working with cutting-edge digital solutions, and being part of a
+                                team that fosters innovation, Mehery is the place for you.
+                            </p>
+                            <p class="text-gray-600 text-lg">
+                                <span class="font-semibold">Diverse & Inclusive Team:</span> We embrace different
+                                perspectives and believe that diversity fuels creativity. At Mehery, respect and
+                                collaboration define our work environment.
+                            </p>
+                            <p class="text-gray-600 text-lg">
+                                <span class="font-semibold">Impact-Driven Work:</span> We are on a mission to
+                                democratize customer engagement for businesses of all sizes. Every role at Mehery
+                                contributes to building smarter, simpler, and more effective digital solutions.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Call to Action -->
@@ -113,28 +87,47 @@
                                 <span class="text-xl text-blue-600">-</span>
                                 <div>
                                     <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">Lead Generation Specialist</span> (Remote, 1-3 years
-                                        experience)
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">-</span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold">Customer Support Executive</span> (Remote/Hybrid,
-                                        1-3 years experience)
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="text-xl text-blue-600">-</span>
-                                <div>
-                                    <p class="text-gray-600 text-lg">
-                                        <span class="font-semibold"
-                                            >Software Developer (Full Stack – JavaScript & Node.js)</span
+                                        <a
+                                            href="/pdfs/JD - Sales - Marketing Automation website.pdf"
+                                            target="_blank"
+                                            download
+                                            class="font-semibold text-blue-600 hover:underline"
                                         >
-                                        (Remote, 2-5 years experience)
+                                            Sales - Marketing Automation
+                                        </a>
+                                        <span class="text-gray-600"> (3 year experience)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-xl text-blue-600">-</span>
+                                <div>
+                                    <p class="text-gray-600 text-lg">
+                                        <a
+                                            href="/pdfs/JD - Lead Generation Website.pdf"
+                                            target="_blank"
+                                            download
+                                            class="font-semibold text-blue-600 hover:underline"
+                                        >
+                                            Lead Generation professionals
+                                        </a>
+                                        <span class="text-gray-600"> (1 year experience)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-xl text-blue-600">-</span>
+                                <div>
+                                    <p class="text-gray-600 text-lg">
+                                        <a
+                                            href="/pdfs/JD - Sales Website.pdf"
+                                            target="_blank"
+                                            download
+                                            class="font-semibold text-blue-600 hover:underline"
+                                        >
+                                            Sales Executives
+                                        </a>
+                                        <span class="text-gray-600"> (2-3 years experience)</span>
                                     </p>
                                 </div>
                             </li>

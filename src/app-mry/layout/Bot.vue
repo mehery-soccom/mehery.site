@@ -159,7 +159,7 @@
                             <img
                                 src="../../@assets/images/bot.svg"
                                 alt="AI Chatbot Illustration"
-                                class="w-100 h-80 ml-16 pb-10"
+                                class="w-100 h-80 ml-16 pb-10 transform hover:scale-105 transition-transform duration-300"
                             />
                         </div>
                     </div>

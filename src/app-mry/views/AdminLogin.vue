@@ -26,12 +26,9 @@
         <div v-if="error" class="mb-4 text-red-500 text-sm">
           {{ error }}
         </div>
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition">
+        <button type="submit" class="text-center w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition">
           Login
         </button>
-        <p class="mt-4 text-gray-600 text-sm">
-          Hint: username: <strong>admin</strong>, password: <strong>blog123</strong>
-        </p>
       </form>
     </div>
   </div>

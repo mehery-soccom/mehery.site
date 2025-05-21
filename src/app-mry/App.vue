@@ -5,23 +5,29 @@
         <router-view />
 
         <!-- Global Components -->
-        <ConversationalBot />
+         <!-- <SocialWhatsapp/> -->
+        <WebChat/>
+        <!-- <ConversationalBot /> -->
         <SocialPopup />
     </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import ConversationalBot from "./layout/Conversational.vue"; // Adjust the path as needed
+// import ConversationalBot from "./layout/Conversational.vue"; // Adjust the path as needed
 import SocialPopup from "./layout/SocialPopup.vue"; // Adjust the path as needed
+import WebChat from "./layout/WebChat.vue"; // Adjust the path as needed
+// import SocialWhatsapp from "./layout/SocialWhatsapp.vue";
 import "@assets/app-mry/app.css";
 import "@assets/app-mry/app.scss";
 
 export default defineComponent({
     name: "App",
     components: {
-        ConversationalBot,
-        SocialPopup
+        // ConversationalBot,
+        SocialPopup,
+        WebChat,
+        // SocialWhatsapp
     }
 });
 </script>

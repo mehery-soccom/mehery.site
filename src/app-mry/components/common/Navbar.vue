@@ -11,7 +11,7 @@
             <div class="flex items-center relative">
                 <router-link :to="{ name: 'Home' }">
                     <img
-                        class="w-32 sm:w-40 md:w-44 hover:opacity-90 transition-opacity"
+                        class="w-24 sm:w-32 md:w-36 hover:opacity-90 transition-opacity"
                         src="../../../@assets/images/logo2.png"
                         alt="Logo"
                     />

@@ -1,0 +1,1269 @@
+<template>
+    <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50">
+        <Navbar />
+        <main class="py-6 px-4 sm:px-6 lg:px-8">
+            <section id="terms-of-service" class="max-w-7xl mx-auto">
+                <div class="container mx-auto space-y-8">
+                    <!-- Header -->
+                    <div class="space-y-4 mb-8">
+                        <h3
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            Terms of Service
+                        </h3>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            <span class="font-bold">Effective date: Sept 1, 2021</span>
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            <span class="font-bold">Last Updated: May 17, 2025</span>
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            THESE <span class="font-bold">TERMS OF SERVICE</span> (the “TOS”) governs how you
+                            (“Customer”) may use the Software-as-a-service products and other services provided by
+                            Mehery SocCom Pvt Ltd, (“Company”) and its affiliates. Customer and Company are each a
+                            “Party” and collectively the “Parties”.
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            By registering or using our Services you agree to be bound by the TOS. If you are using the
+                            Services or the Websites on behalf of an organization, you are agreeing to these TOS for
+                            that organization (in which event, “you”, “your” or “Customer” will refer to that
+                            organization) and representing to the Company that you have the authority to bind that
+                            organization to the TOS unless that organization has a separate written contract in effect
+                            with us (an “Agreement”), in which event the terms of the Agreement will govern your use of
+                            the Services; provided that if there is any conflict between the TOS and an Agreement, the
+                            provisions of the Agreement shall prevail.
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            <span class="font-bold"
+                                >IF YOU DO NOT AGREE TO BE BOUND BY THESE TERMS, YOU MUST NOT USE THE SERVICES.</span
+                            >
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            We may, in our sole discretion, modify the Terms of Service via email or by posting notice
+                            on any part of the Services or the on Website. The “Last Updated” date at the top the TOS
+                            indicates when the latest modifications were made to the TOS. By continuing to access and
+                            use the Service, you agree to any such modifications. In addition, when using particular
+                            services or features, you may be subject to any posted guidelines or policies applicable to
+                            such services or features that may be posted from time to time, including but not limited to
+                            the Privacy Policy.
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            If you have any comments or questions regarding the TOS, or wish to report any violation of
+                            the TOS, you may contact us at
+                            <a href="mailto:legal@mehery.com" class="text-blue-600 hover:text-blue-800"
+                                >legal@mehery.com</a
+                            >
+                        </p>
+                    </div>
+
+                    <!-- 1. DEFINITIONS AND INTERPRETATION -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            1. DEFINITIONS AND INTERPRETATION
+                        </h4>
+
+                        <h5 class="text-left text-xl font-semibold text-gray-900">1.1 Definitions</h5>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            In these Terms and Conditions, the following expressions shall, unless where the context
+                            otherwise requires, have meaning hereby respectively assigned to them:
+                        </p>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                1.1 “Bankruptcy Event” means any of the following events with respect to a Party: a
+                                Party is to be dissolved or liquidated, makes an assignment for the benefit of creditor,
+                                files a petition relating to bankruptcy, insolvency, reorganization, winding up or
+                                composition or adjustment of debts (or consents to or fails to contest in a timely
+                                manner any such petition filed against it), is adjudicated insolvent or bankrupt,
+                                petitions or applies to any tribunal for any receiver or trustee, commences any
+                                proceeding relating to itself under any bankruptcy or similar law of any jurisdiction,
+                                has commenced against it any such proceeding which remains un-dismissed for a period of
+                                forty-five (45) days, consents to, approves of, or acquiesces in any such proceeding, or
+                                any receiver of or trustee for such Party or any substantial part of the property of
+                                such Party is appointed, or takes any corporate action for the purposes of effecting any
+                                of the foregoing;
+                            </p>
+                            <p>
+                                1.2 “Business Day” shall mean any day other than a Saturday, Sunday and a Gazette
+                                holiday declared by the Central Government of India;
+                            </p>
+                            <p>1.3 “Channels” means the communication channels subscribed to by the Customer;</p>
+                            <p>
+                                1.4 “Confidential Information” means any information pursuant to these TOS or the data
+                                pertaining to the business of either Party, which is communicated to the other Party,
+                                orally or in writing or by electronic mail or in any other tangible or machine-readable
+                                form, directly or indirectly, by one Party. For the purpose of these TOS, the term
+                                Confidential Information shall include any and all information, ideas, plans, content,
+                                knowledge, know how, concepts, market survey, budgets, cost sheets, estimates,
+                                techniques, including without limitation to matter, materials, things, performance,
+                                literary content, audio, visual, audio-visual, pictures, drawings, photographs, any
+                                medium of communication, creatives, designs, computer programs, algorithms,
+                                advertisements, floppies, transparencies, presentations, and all other information and
+                                data pertaining to the Services to be rendered by the Service Provider;
+                            </p>
+                            <p>
+                                1.5 “Conversation” is defined as the sum total of all engagements by the user on a
+                                channel during a calendar day and will be used for computing the conversation fees on an
+                                ongoing basis;
+                            </p>
+                            <p>
+                                1.6 “Effective Date” is the date on which you sign up for the Services online, or as per
+                                the date mentioned in the Agreement, if there is a separate Agreement between yourselves
+                                and the Company;
+                            </p>
+                            <p>
+                                1.7 “Intellectual Property Rights” or “IP” means the rights in patents, patent
+                                applications, and patent disclosures, together with all re-issuances, continuations,
+                                continuations-in-part, revisions, extensions and re-examinations thereof; designs,
+                                present and future copyrights, all copyrightable works, all copyrights and all
+                                applications, know-how, proprietary processes, inventions, formulae, algorithms, models
+                                and methodologies, rights of privacy, know-how and trade marks (whether registered or
+                                not) all license agreements relating to any of the foregoing, and general intangibles of
+                                like nature, together with all goodwill related to the foregoing including application
+                                to register any of the aforementioned rights registrations and renewals in connection
+                                therewith moral rights, trademarks, service marks, logos, trade names and corporate
+                                names, together with all adaptations, deprivations and combinations thereof, including
+                                all goodwill associated therewith and all applications, registrations and renewals in
+                                connection therewith: database rights (including rights to extract information from
+                                databases) all other proprietary rights of whatsoever description whether or not
+                                protected and whether or not capable of protection, and semi-conductor topography rights
+                                in each case whether registered or not (including applications for registration),
+                                confidential, technical or commercial information, know-how, trade secrets, inventions
+                                or any similar rights or forms of protection, all copies and tangible embodiments
+                                thereof regardless of form and medium existing anywhere in the world;
+                            </p>
+                            <p>
+                                1.8 “Law” or “Laws” means in relation to the obligations of the Parties under these TOS,
+                                any statute, laws, regulation, ordinance, rule, judgment, order, decree, clearance,
+                                approval, directive, guideline, code, standard, manual, policy, requirement, or other
+                                government restriction or any similar form of decision, or determination by any
+                                government authority, whether in effect as of the Effective Date or thereafter, and in
+                                case as amended from time to time;
+                            </p>
+                            <p>
+                                1.9 “Mehery Software Application” shall mean the software licensed for use to the
+                                Customer under the services subscribed to by the Customer. This shall include the API
+                                connectors to various channels or third-party software, but exclude the channels
+                                themselves and the third-party software;
+                            </p>
+                            <p>
+                                1.10 “Messages” means communication on any of the channels subscribed by the Customer;
+                            </p>
+                            <p>1.11 “Modules” means functionality subscribed to by the Customer;</p>
+                            <p>
+                                1.12 “Person” means any legal and/or natural and/or juristic person including an
+                                individual, company, association, corporation, sole proprietorship, partnership, trust,
+                                unincorporated entity or other entity/organization, including a government or political
+                                sub-division, or agency or instrumentality thereof;
+                            </p>
+                            <p>
+                                1.13 “Session Messages” are a combination of inbound and outbound messages that comprise
+                                Customer initiated communication, BOT responses, Agent responses; and Customer initiated
+                                communication;
+                            </p>
+                            <p>1.14 “Services” means the services subscribed by the Customer;</p>
+                            <p>
+                                1.15 “Third-party” means and includes integrations with WhatsApp, Facebook, Instagram,
+                                Telegram, Gmail, Outlook, and OpenAI; and hosting service provider "AWS";
+                            </p>
+                            <p>1.16 “Term” means the term as provided in Clause 3;</p>
+                            <p>
+                                1.17 “Usage Fees” means any variable fees applicable to the Customer based upon the
+                                services subscribed to by the Customer;
+                            </p>
+                        </div>
+
+                        <h5 class="text-left text-xl font-semibold text-gray-900 mt-4">1.2 Interpretation</h5>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            In these TOS, unless the context otherwise requires,
+                        </p>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>1.2.1 any reference to the singular shall include the plural and vice-versa;</p>
+                            <p>1.2.2 the Recitals and Schedules shall form part of these TOS;</p>
+                            <p>
+                                1.2.3 headings to Clauses and Schedules are for convenience only and do not affect the
+                                interpretation of these TOS;
+                            </p>
+                            <p>
+                                1.2.4 the words “include” and “including” shall be construed as being by way of
+                                illustration or emphasis only, and shall not be construed as, nor shall they take effect
+                                as, limiting the generality of any preceding words;
+                            </p>
+                            <p>
+                                1.2.5 Unless the context otherwise requires, words importing the singular include the
+                                plural and vice versa, and pronouns importing a gender include each of the masculine,
+                                feminine and neuter genders;
+                            </p>
+                            <p>
+                                1.2.6 The terms “hereof”, “herein”, “hereby”, “hereto” and derivative or similar words
+                                refer to this entire TOS or specified Clauses of these TOS, as the case may be;
+                            </p>
+                            <p>
+                                1.2.7 Reference to statutory provisions shall be construed as meaning and including
+                                references also to any amendment or re-enactment (whether before or after the date of
+                                these TOS) for the time being in force and to all statutory instruments or orders made
+                                pursuant to such statutory provisions;
+                            </p>
+                            <p>
+                                1.2.8 The words “directly or indirectly” mean directly or indirectly through one or more
+                                intermediary Persons or through contractual or other legal arrangements, and “direct or
+                                indirect” shall have the correlative meanings;
+                            </p>
+                            <p>
+                                1.2.9 References to the knowledge, information, belief or awareness of any Person shall
+                                be deemed to include the knowledge, information, belief or awareness of such Person
+                                after examining all information and making all due diligence inquiries and
+                                investigations which would be expected or required from a person of ordinary prudence;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Services -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            2. SERVICES
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            During the Term of these TOS and any extension to the same, MeherY shall provide the
+                            following services to Customer more particularly set out in Schedule - I
+                        </p>
+                    </div>
+
+                    <!-- 3. Term -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            3. TERM
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            These TOS shall be valid for a period as defined by the License procured by the Customer
+                            from the “Effective Date” as mentioned hereinabove. It shall be continuously and
+                            automatically renewed for further periods of the same Term or a different Term (only if
+                            modified by the Customer), unless terminated by either party under clause 9 of the TOS.
+                        </p>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            Either Party has the right to terminate the TOS at the end of each Term, by giving a notice
+                            of 30 days before the date of expiry of the then current Term of the TOS.
+                        </p>
+                    </div>
+
+                    <!-- 4. FEES AND PAYMENT TERMS -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            4. FEES AND PAYMENT TERMS
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                4.1 Customer shall pay to MeherY the contracted fees (the “Fees”) as per the
+                                subscription signed-up for. The Fees shall be exclusive of tax, and the tax applied,
+                                shall be as per the applicable tax laws, at the time of raising the Invoice.
+                            </p>
+                            <p>
+                                4.2 Usage Fees shall be pre-paid by the Customer. User will be required to keep the
+                                account topped up, to ensure continuity of services. Upon expiry of the credits, the
+                                services shall stop until the credit is re-instated by the Customer.
+                            </p>
+                            <p>
+                                4.3 User will be prompted by email when the Usage Fees have crossed 75% of the pre-paid
+                                amount balance.
+                            </p>
+                            <p>
+                                4.4 Mehery reserves the right to adjust the Fees, not more than once per year. Such
+                                increases will be announced with at least four-weeks’ notice in writing or text form. If
+                                Customer does not agree with a Fee adjustment, Customer may terminate the TOS to the day
+                                of the increased prices becoming effective.
+                            </p>
+                            <p>
+                                4.5 Mehery will send subscription invoices to the Customer for the Fees when they become
+                                due.
+                            </p>
+                            <p>4.6 Mehery will send monthly Usage Fee invoices to Customers.</p>
+                            <p>
+                                4.7 If Customer has not renewed subscription before the end of the current subscription
+                                period, Customer's subscription will be terminated and customer will not be able to use
+                                the platform, unless the subscription renewal fees are paid.
+                            </p>
+                            <p>
+                                4.8 Notwithstanding anything contained herein, Mehery shall be free to suspend,
+                                disconnect the Services without any liability, whatsoever, to the Customer, in the event
+                                of any default by the Customer in one or more of such payments without prejudice to its
+                                rights under the Applicable Laws.
+                            </p>
+                            <p>
+                                4.9 MeherY confirms that it is a tax resident of India, and its Permanent Account Number
+                                is AALCM2125L.
+                            </p>
+                            <p>
+                                4.10 Mehery acknowledges and agrees that the Fees constitute the total consideration for
+                                MeherY’s performance and its obligations under these TOS.
+                            </p>
+                            <p>
+                                4.11 For Channels subscribed to by the Customer, it is the Customer's obligation to make
+                                the payments to the Channel service provider, as per their commercial terms. Mehery is
+                                not responsible for any channel service suspension, for non-payment of dues owed to the
+                                channel service provider.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 5. MEHERY’S OBLIGATIONS -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            5. MEHERY’S OBLIGATIONS
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">During the Term, MeherY shall:</p>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>5.1 Provide Services in an efficient and timely manner;</p>
+                            <p>
+                                5.2 Fully adhere at all times to all notifications, guidelines and regulations as issued
+                                by applicable regulatory authority.
+                            </p>
+                            <p>5.3 Ensure readiness and uptime of the Platform; and</p>
+                            <p>
+                                5.4 Ensure that response times of the applications are within the expected levels to
+                                enable the synchronous response mechanism.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 6. CUSTOMER’S OBLIGATIONS -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            6. CUSTOMER’S OBLIGATIONS
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            During the Term, Customer hereby undertakes that:
+                        </p>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                6.1 the content / information in the Message/ conversation messages, as the case may be
+                                delivered by MeherY will not infringe the copyright or other rights including right to
+                                privacy / publicity or be defamatory or libelous of any third party;
+                            </p>
+                            <p>
+                                6.2 they shall comply with the Channel Service provider guidelines at all points of
+                                time, when communicating on the Channel. Mehery is not responsible for any channel
+                                service suspension, for any violations committed by Customer.
+                            </p>
+                            <p>
+                                6.3 the content / information will not contain any material which is obscene, offensive
+                                or enrages the public sentiment, or constitutes an unfair trade practice or violates any
+                                other legislation or policy for the time being in force, or is made to give negative
+                                publicity;
+                            </p>
+                            <p>
+                                6.4 the content / information will comply with all applicable laws and other applicable
+                                ordinances, rules, regulations and guidelines;
+                            </p>
+                            <p>
+                                6.5 it has taken or will take all necessary steps to ensure that nothing is or will be
+                                contained in the Content/Information which might make its transmission illegal or
+                                actionable for any reason as per any applicable laws.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 7. WARRANTIES, REPRESENTATIONS AND COVENANTS -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            7. WARRANTIES, REPRESENTATIONS AND COVENANTS
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>7.1 MeherY and Customer warrant, represent and covenant to each other that:</p>
+                            <p>
+                                7.2 It has the full right, capacity and authority to execute, deliver and perform these
+                                TOS;
+                            </p>
+                            <p>
+                                7.3 Nothing in these TOS or otherwise shall entitle either Party to make any
+                                representations or warranties on behalf of the other Party or enter into contracts or
+                                arrangements on behalf of the other Party, and Parties assumes no liability and
+                                responsibility for any representation made by each other to any third party, except as
+                                otherwise specifically agreed by Parties under these TOS;
+                            </p>
+                            <p>
+                                7.4 Customer confirms that there are no legal, quasi-legal, administrative, arbitration,
+                                mediation, conciliation or other proceedings, claims, actions, governmental
+                                investigations, orders, judgments or decrees of any nature made, existing, or pending
+                                or, to the best knowledge of the Customer, against it which may prejudicially affect the
+                                payment obligation, of or enforceability, of these TOS or any obligation, act, omission
+                                or transactions contemplated hereunder;
+                            </p>
+                            <p>
+                                7.5 Each Party represents, warrants and undertakes throughout the Term that it will
+                                comply with, and shall continue to comply with, all Applicable Laws and regulations as
+                                may be applicable to its obligations hereunder;
+                            </p>
+                            <p>
+                                7.6 Financial Capacity: The Parties have sufficient financial resources for fulfilling
+                                all its monetary obligations under these TOS;
+                            </p>
+                            <p>
+                                7.7 No Conflicts: The execution, delivery and performance by each Party of these TOS and
+                                the consummation by each Party of the transaction contemplated hereby will not violate,
+                                conflict with or result in breach by either Party of (i) any provisions of such Party’s
+                                documents of incorporation; (ii) any provision of any TOS to which such Party is a party
+                                or any other legal obligation by which such Party is bound; (iii) any law or order of
+                                any governmental authority applicable to such Party; or (iv) requirement of any material
+                                order, consent, clearance, approval or authorization of or filing with any governmental
+                                authority;
+                            </p>
+                            <p>
+                                7.8 Valid and Binding Obligations: These TOS constitutes its valid and binding
+                                obligations, enforceable against the Parties in accordance with their terms, except to
+                                the extent that enforcement may be limited by applicable bankruptcy, insolvency or other
+                                laws of general application affecting creditors’ rights or the application of equitable
+                                principles;
+                            </p>
+                            <p>
+                                7.9 Each of the representations and warranties shall be construed as a separate
+                                representation. Warranty, covenant or undertaking, as the case may be, and shall not be
+                                limited by the terms of any other representation or warranty or by any other term of
+                                these TOS. Each of the representations and warranties shall be valid for the entire
+                                term;
+                            </p>
+                            <p>
+                                7.10 In connection with these TOS as well as all transactions contemplated by these TOS,
+                                the Customer agrees to execute and deliver such additional documents and to perform such
+                                additional actions as may be necessary and appropriate or requested by the MeherY;
+                            </p>
+                            <p>
+                                7.11 Except for the foregoing, the Parties make no express or implied warranty or
+                                condition under these TOS;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 8. CONFIDENTIAL INFORMATION -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            8. CONFIDENTIAL INFORMATION
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            During the tenure of these TOS the Parties shall share information that is indicated as
+                            Confidential Information to each other. The Parties shall protect Confidential Information
+                            of the other party and shall not use such Confidential Information for use other than as
+                            required under these TOS. The Confidential Information shall exclude: all information that
+                        </p>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>(a) is available in public domain through no act or omission of the recipient;</p>
+                            <p>
+                                (b) is disclosed to a third party by the disclosing party without restrictions on
+                                disclosure or use;
+                            </p>
+                            <p>
+                                (c) is rightfully acquired by the recipient from a third party without breach of any
+                                legal or contractual obligation;
+                            </p>
+                            <p>
+                                (d) is developed without breach of a duty of confidentiality independently of and
+                                without access to any Confidential Information of the disclosing party;
+                            </p>
+                            <p>
+                                (e) was lawfully in the recipient’s possession before receipt from the disclosing party
+                                as evidenced in writing; or
+                            </p>
+                            <p>
+                                (f) Notwithstanding anything in the foregoing to the contrary, the Receiving Party may
+                                disclose Confidential Information pursuant to any governmental, judicial, or
+                                administrative order, subpoena, discovery request, regulatory request or similar method,
+                                provided that the Receiving Party promptly notifies, to the extent practicable, the
+                                Disclosing Party in writing of such demand for disclosure so that the Disclosing Party,
+                                at its sole expense, may seek to make such disclosure subject to a protective order or
+                                other appropriate remedy to preserve the confidentiality of the Confidential
+                                Information; provided that the Receiving Party will disclose only that portion of the
+                                requested Confidential Information that, in the written opinion of its legal counsel, it
+                                is required to disclose.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 9. TERMINATION -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            9. TERMINATION
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>9.1 Customer may terminate these TOS by not renewing their subscription;</p>
+                            <p>
+                                9.2 Mehery may terminate these TOS based upon specific events covered in this TOS; or by
+                                giving Customer a 30-day notice for termination before the expiry of its subscription;
+                            </p>
+                            <p>
+                                9.3 Forthwith upon the occurrence of a liquidation, bankruptcy, appointment of
+                                liquidator, passing of resolution for dissolution with respect to the other Party and
+                                shall terminate the TOS with immediate effect;
+                            </p>
+                            <p>
+                                9.4 If the other Party commits a material or persistent breach of these TOS which it
+                                cannot remedy or which it fails to remedy within thirty (30) Business Days of receiving
+                                a prior written notice requiring it to do so;
+                            </p>
+                            <p>
+                                9.5 If any representations or warranties provided by either party are found to be false
+                                or incorrect;
+                            </p>
+                            <p>
+                                9.6 If either, advertently or inadvertently, disregards or violates any applicable laws
+                                or conditions of any applicable license;
+                            </p>
+                            <p>
+                                9.7 If either party suffers any material adverse changes or adverse effect which is
+                                likely to hinder performance of either party’s obligations under these TOS;
+                            </p>
+                            <p>
+                                9.8 Without prejudice to other rights available to MeherY under these TOS, Mehery
+                                reserves the right to terminate the TOS with immediate effect in the following events:
+                            </p>
+                            <div class="ml-6 space-y-2">
+                                <p>9.8.1 any misuse of services provided by Mehery</p>
+                                <p>9.8.2 any illegal and unlawful content is sent by customer using the platform.</p>
+                            </div>
+                        </div>
+
+                        <h5 class="text-left text-xl font-semibold text-gray-900 mt-4">9.9 Refunds</h5>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg ml-6">
+                            <p>9.9.1 There will be no refunds due to Customer for Mehery Subscription</p>
+                            <p>
+                                9.9.2 Any unutilized funds paid towards Usage Fees shall be refunded to the customer
+                                within 90 days of the termination of the subscription.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 10. CONSEQUENCE OF TERMINATION -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            10. CONSEQUENCE OF TERMINATION
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>10.1 If these TOS is terminated pursuant to Clause 9 above:</p>
+                            <div class="ml-6 space-y-2">
+                                <p>10.1.1 MeherY shall immediately suspend rendering the Services to the Customer.</p>
+                                <p>
+                                    10.1.2 Each Party shall return to the other within seven (7) Business Days after
+                                    termination of these TOS or destroy (at that Party’s request) all confidential or
+                                    proprietary information supplied pursuant to these TOS and will certify, if
+                                    required, the destruction of the confidential proprietary information, including the
+                                    Software copies, if any, thereof;
+                                </p>
+                                <p>10.1.3 Customer data will be retained for a period of three years;</p>
+                                <p>
+                                    10.1.4 If Customer requires, Mehery will provide the Customer with Customer
+                                    Conversation data within 30 days of the Customer making a demand of this by sending
+                                    an email to support@mehery.com. This email should come from one of the Admins of the
+                                    Customer account.
+                                </p>
+                            </div>
+                            <p>10.2 Customer shall settle all the valid invoices pending bills immediately.</p>
+                            <p>
+                                10.3 Termination or expiry of these TOS does not affect the rights, liabilities or
+                                obligations of any Party which have arisen on or before termination or which are
+                                expressly or impliedly to survive termination or expiry or the right to claim damages
+                                for breach of these TOS.
+                            </p>
+                            <p>
+                                10.4 Notwithstanding anything contained herein, clause 10.2 and 10.3 shall survive the
+                                termination of these TOS.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 11. INDEMNITY AND LIMITATION OF LIABILITY -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            11. INDEMNITY AND LIMITATION OF LIABILITY
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                11.1 Under no circumstances shall either Party be liable for special, indirect,
+                                exemplary, incidental and/or consequential damages, including but not limited to loss of
+                                business profits, business interruption, loss of business information or other pecuniary
+                                loss, even if the Party has been advised of the possibility of such damages.
+                            </p>
+                            <p>
+                                11.2 Mehery is not liable for any breaches caused by Channels, Third-party platforms,
+                                User actions, or force-majeure events related to data security.
+                            </p>
+                            <p>
+                                11.3 Either Party shall indemnify, defend and hold the other party and their respective
+                                officers, directors, and employees harmless from and against all claims, damages,
+                                liabilities, costs, losses and expenses, including reasonable attorneys’ fees and
+                                expenses incurred directly due to:
+                            </p>
+                            <div class="ml-6 space-y-2">
+                                <p>(i) Breach of any of the terms/obligations of these TOS by the other party.</p>
+                                <p>
+                                    (ii) Any of the representations and warranties being declared false by any court of
+                                    competent jurisdiction;
+                                </p>
+                                <p>
+                                    (iii) Any claim or action initiated by any third party relating to actual or alleged
+                                    breach/default/violation or omission by either party of compliance with any laws,
+                                    rules, regulations, notifications, terms, or policies applicable for the promotion
+                                    of any of its products or sending SMS through a digital channel;
+                                </p>
+                                <p>
+                                    (iv) Infringement by either party of any intellectual property or proprietary rights
+                                    of any third party, or any data provided by the customer that infringes or causes
+                                    infringement of copyright, trademark, patent or any other similar intellectual
+                                    property rights of a third party, except to the extent of infringement.
+                                </p>
+                            </div>
+                            <p>
+                                11.4 The aggregate liability of either Party to the other Party, if any, for any losses
+                                or damages arising out of or in connection with these TOS, whether the claim is in
+                                contract, tort or otherwise, shall be limited to the actual amount incurred, subject to
+                                a maximum equal to the last actual monthly billing by MeherY to Customer under these TOS
+                                for such Service, except in case of breach of applicable laws or confidentiality
+                                obligations.
+                            </p>
+                            <p>
+                                11.5 Notwithstanding anything mentioned in this contract, Customer shall be solely and
+                                exclusively responsible for the content of all messages and data transmitted via the
+                                Mehery Service and will fully adhere to all notifications, guidelines and regulations
+                                issued by any channel service provider or regulator. Customer shall indemnify and hold
+                                harmless Mehery and its officers, directors, and employees from all claims, damages,
+                                liabilities, costs, losses, penalties and expenses, including reasonable attorneys’
+                                fees.
+                            </p>
+                            <p>
+                                11.6 In the event of loss, hack, misuse, destruction or theft of data, whether
+                                confidential or not, notwithstanding reasonable care and technical measures by Mehery,
+                                Mehery shall not be liable for any damages as a consequence, and such an event shall not
+                                constitute a breach of contractual obligation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 12. DATA PROTECTION -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            12. DATA PROTECTION
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                12.1 In the course of implementing these TOS, MeherY may obtain access to Personal Data
+                                of the Customer’s customers. Such data will be considered Confidential Information of
+                                Customer at all times. Mehery shall protect the same in accordance with the
+                                confidentiality provisions.
+                            </p>
+                            <p>
+                                12.2 Data received from the Customer shall be considered confidential at all times and
+                                Mehery and its representatives shall protect it accordingly.
+                            </p>
+                            <p>
+                                12.3 In relation to the foregoing, when the Customer provides Personal and/or
+                                Transactional Data of their customers, Mehery shall ensure that:
+                            </p>
+                            <div class="ml-6 space-y-2">
+                                <p>
+                                    12.3(i) Mehery shall secure such Data by implementing all reasonable technical and
+                                    organizational measures in accordance with industry best practices to prevent
+                                    unauthorized or unlawful access, accidental loss, damage or destruction. MeherY will
+                                    promptly notify the Customer in writing upon becoming aware of any breach.
+                                </p>
+                                <p>
+                                    12.3(ii) MeherY shall solely fulfil the purpose specified under these TOS. Its
+                                    representatives will have read-and-process only access and will not print or
+                                    download any Personal or Transactional Data.
+                                </p>
+                            </div>
+                            <p>
+                                12.4 MeherY shall comply with Applicable Laws as a processor of Personal Data received
+                                from the Customer and adhere to requirements under the Information Technology
+                                (Reasonable Security Practices and Procedures and Sensitive Personal Data or
+                                Information) Rules, 2011, the Information Technology Act, 2000 (India), and any rules
+                                thereunder.
+                            </p>
+                            <p>
+                                12.5 Mehery shall store Customer data shared during the TOS term and for three years
+                                thereafter, after which Customer data will be deleted.
+                            </p>
+                            <p>
+                                12.6 Mehery shall take appropriate measures against unauthorized access, loss,
+                                destruction, or misuse of data and shall immediately notify the Customer upon becoming
+                                aware of any breach.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 13. FORCE MAJEURE -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            13. FORCE MAJEURE
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                13.1 Any delay or failure by a Party to perform an obligation under these TOS shall not
+                                constitute a breach of these TOS to the extent that it is caused by a Force Majeure
+                                Event.
+                            </p>
+                            <p>
+                                13.2 For the purposes of these TOS, a “Force Majeure Event” means any event including
+                                Acts of God or such other events beyond the reasonable control of the affected Party
+                                including government action, orders, terrorist activities, war, lightning, earthquake,
+                                tempest, cyclone, flood, volcanic eruption or fire or other casualty or accident or
+                                landslide, war or other violence or limitation/ suspension/ termination by WhatsApp of
+                                WhatsApp business solution or by operator or any cyber-attack or technological
+                                disruptions or any change in government policies directly or indirectly interrupting the
+                                performance of the affected Party in terms of these TOS and which event prevents the
+                                affected Party from performing its obligations under these TOS and which act or event is
+                                beyond the reasonable control and not arising out of the fault of the affected Party and
+                                the affected Party has been unable to overcome such act or event by the exercise of due
+                                diligence and reasonable efforts, skill and care, including through expenditure of
+                                reasonable sums of money. Upon cessation of such condition, the affected Party shall
+                                promptly resume performance hereunder. Each Party agrees to give the other Party prompt
+                                written notice of the occurrence of any such condition, the nature thereof, and the
+                                extent to which the affected Party will be unable to perform its obligations hereunder.
+                            </p>
+                            <p>
+                                13.3 In case a Force Majeure Event continues for more than thirty (30) calendar days, a
+                                Party may terminate the TOS with notice to the other Party.
+                            </p>
+                            <p>
+                                13.4 No amounts shall be paid by Customer to Mehery for the period of a Force Majeure
+                                Event.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 14. Principal to Principal Arrangement -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            14. PRINCIPAL TO PRINCIPAL ARRANGEMENT
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            The parties have agreed to these TOS on Principal to Principal basis and there is no
+                            partnership, agency relationship, and a party cannot bind or make contracts on behalf of
+                            other party.
+                        </p>
+                    </div>
+
+                    <!-- 15. Severability -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            15. SEVERABILITY
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            The Parties agree that the covenants, obligations and restrictions in these TOS are
+                            reasonable in all circumstances. If any provision of these TOS is held to be illegal,
+                            invalid, or unenforceable under any present or future law, (i) such provision shall be fully
+                            severable; (ii) these TOS shall be construed and enforced as if such illegal, invalid, or
+                            unenforceable provision had never comprised a part hereof; (iii) the remaining provisions of
+                            these TOS shall remain in full force and effect and shall not be affected by the illegal,
+                            invalid, or unenforceable provision or by its severance here from; and (iv) in lieu of such
+                            illegal, invalid, or unenforceable provision, there shall be added a legal valid and
+                            enforceable provision as similar in terms and effect to such illegal, invalid or
+                            unenforceable provision as may be possible.
+                        </p>
+                    </div>
+
+                    <!-- 16. ARBITRATION AND GOVERNING LAW -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            16. ARBITRATION AND GOVERNING LAW
+                        </h4>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                16.1 If any disputes, differences or questions, which may arise at any time between
+                                Customer and Mehery in connection with the validity, interpretation, construction,
+                                implementation or alleged material breach of any provision of these TOS, or performance
+                                of any obligations or enforcing any rights and/or liabilities of the Parties to these
+                                TOS, the Parties hereto shall endeavor to settle such dispute amicably.
+                            </p>
+                            <p>
+                                16.2 In the case of failure to resolve the dispute within 30 days, the same shall be
+                                referred to a panel of 3 arbitrators, one to be appointed by each Party, and the third
+                                to be appointed by the two selected arbitrators. The arbitration shall be conducted in
+                                accordance with and subject to the provisions of the Arbitration and Conciliation Act,
+                                1996 or any statutory modifications or re-enactment thereof for the time being in force.
+                                The language of the arbitration shall be English. The venue of such arbitration shall be
+                                at Mumbai and the Courts at Mumbai alone shall have the jurisdiction to deal with the
+                                legal proceedings and the awards in accordance with law.
+                            </p>
+                            <p>16.3 Provided that:</p>
+                            <div class="ml-6 space-y-2">
+                                <p>
+                                    16.3.1 The parties are at their discretion to invoke the above said arbitration
+                                    clause for resolution of disputes; the party opting for arbitration (the “Initiating
+                                    Party”) shall notify its intention to the other party in writing via letter or
+                                    email, stating the details of the dispute, the prayers, and the name of the
+                                    Arbitrator they wish to appoint.
+                                </p>
+                                <p>
+                                    16.3.2 The date of receipt of an “Arbitration Notice” by the receiving party (the
+                                    “Defending Party”) shall be recorded as the commencement date of the Arbitration
+                                    Proceeding.
+                                </p>
+                                <p>
+                                    16.3.3 The Defending Party must, within 15 days of receiving the Arbitration Notice,
+                                    submit in writing the details of the Arbitrator to be appointed on their behalf.
+                                </p>
+                                <p>
+                                    16.3.4 If no Arbitrator is nominated by the Defending Party within the prescribed
+                                    time, the Court shall appoint one on application by either party.
+                                </p>
+                                <p>
+                                    16.3.5 Both parties agree to appoint arbitrators who are Indian residents, above the
+                                    age of 30 and Advocates by profession, and not directly or indirectly related to the
+                                    parties or the subject matter in dispute.
+                                </p>
+                                <p>
+                                    16.3.6 The two appointed arbitrators shall, within 15 days of the second
+                                    arbitrator’s appointment, jointly decide on the third, presiding arbitrator.
+                                </p>
+                                <p>
+                                    16.3.7 If the two arbitrators cannot agree on the third arbitrator, the High Court
+                                    of Mumbai, or a committee designated by it, shall appoint the third arbitrator on
+                                    application by either party.
+                                </p>
+                                <p>
+                                    16.3.8 If an Arbitrator’s mandate is terminated due to withdrawal, death, or health
+                                    reasons, the proceedings shall continue with the new Arbitrator as if no change
+                                    occurred. Hearings and procedures will resume from where they were left off, unless
+                                    both parties agree to repeat certain or all proceedings.
+                                </p>
+                                <p>
+                                    16.3.9 All awards passed by the prior arbitrator(s) shall remain binding and shall
+                                    not be revoked solely due to a change in Arbitrator.
+                                </p>
+                                <p>
+                                    16.3.10 If an Arbitrator’s mandate is terminated by mutual agreement or challenge,
+                                    the proceedings shall be repeated before the new tribunal unless both parties agree
+                                    otherwise.
+                                </p>
+                                <p>
+                                    16.3.11 All awards passed by the prior arbitrator(s) shall be invalid and not
+                                    binding if the proceedings are repeated under clause 16.3.10.
+                                </p>
+                                <p>
+                                    16.3.12 The rules and procedure of the technology and software industry shall govern
+                                    the arbitration hearing. The Indian Evidence Act shall govern evidence, and the
+                                    Arbitration and Conciliation Act, 1996 shall apply.
+                                </p>
+                                <p>
+                                    16.3.13 The language of arbitration shall be exclusively English. Parties or
+                                    witnesses not comfortable in English may use a translator.
+                                </p>
+                                <p>
+                                    16.3.14 The venue of all arbitration proceedings shall be decided by the
+                                    arbitrators, but in South Mumbai.
+                                </p>
+                                <p>
+                                    16.3.15 The presiding arbitrator shall decide questions of procedure in accordance
+                                    with these TOS.
+                                </p>
+                                <p>
+                                    16.3.16 Nothing in these TOS shall permit any individual, institution, or arbitrator
+                                    to amend the arbitration agreement or the TOS.
+                                </p>
+                                <p>
+                                    16.3.17 The arbitration agreement shall bar any suit, judicial proceeding, or remedy
+                                    with respect to disputes under the TOS and act as a complete defense.
+                                </p>
+                                <p>
+                                    16.3.18 The arbitration agreement shall remain valid even if the TOS is deemed null
+                                    and void ab initio.
+                                </p>
+                                <p>
+                                    16.3.19 Parties shall not initiate judicial proceedings for disputes under the TOS.
+                                    If such proceedings are initiated, the other party may apply to court to refer to
+                                    arbitration and recover costs plus an additional 30% for time and effort lost.
+                                </p>
+                            </div>
+                            <p>16.4 The provisions of this clause shall survive termination of the TOS.</p>
+                            <p>
+                                16.5 These TOS and all matters relating to them shall be construed and governed by the
+                                laws of India. Subject to mutual agreement, MeherY shall continue work during
+                                arbitration unless Customer orders suspension in writing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 17. Notices -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            17. NOTICES
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            All notices and communications relating to these TOS shall be given at the following
+                            addresses:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+                            <li><strong>Mehery email</strong> legal@mehery.com</li>
+                            <li>
+                                <strong>Customer email</strong> An email id, validated during the registration process
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 18. Assignment -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            18. ASSIGNMENT
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            Either Party shall not assign these TOS in whole or in part or any benefit of any legal or
+                            equitable interest herein without the prior written consent of the other Party (such consent
+                            shall not be unreasonably withheld or delayed).
+                        </p>
+                    </div>
+
+                    <!-- 19. Legal Capacity of Representatives -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            19. LEGAL CAPACITY OF REPRESENTATIVES
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            Each party represents and warrants to the other party that its representative executing
+                            these TOS on its behalf is its duly appointed and acting representative and has the legal
+                            capacity required under applicable law to enter into these TOS and bind it.
+                        </p>
+                    </div>
+
+                    <!-- 20. Waiver -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            20. WAIVER
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            Neither the failure nor any delay on the part of a party to exercise any right, remedy,
+                            power or privilege under these TOS shall operate as a waiver thereof, nor shall any single
+                            or partial exercise of any right, remedy, power or privilege preclude any other or further
+                            exercise of the same or of any right, remedy, power or privilege, nor shall any waiver of
+                            any right, remedy, power or privilege with respect to any occurrence be construed as a
+                            waiver of such right, remedy, power or privilege with respect to any other occurrence. No
+                            waiver shall be effective unless it is in writing and is signed by the party asserted to
+                            have granted such waiver. No forbearance, indulgence, relaxation or inaction by any Party at
+                            any time to require performance of any of the provisions of these TOS shall in any way
+                            affect, diminish or prejudice the right of that Party to require performance of that
+                            provision. Any waiver or acquiescence by any Party of any breach of any of the provisions of
+                            these TOS shall not be construed as a waiver or acquiescence of any right under or arising
+                            out of these TOS or of the subsequent breach, or acquiescence to or recognition of rights
+                            other than as expressly stipulated in these TOS.
+                        </p>
+                    </div>
+
+                    <!-- 21. Entire TOS -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            21. ENTIRE TOS
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            These TOS constitutes the complete TOS between the Parties and supersedes all prior
+                            discussions, representations, proposals, agreements or understandings, written or oral, with
+                            respect to the subject matter of these TOS.
+                        </p>
+                    </div>
+
+                    <!-- Schedule - I -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            Schedule - I
+                        </h4>
+                        <h5 class="text-left text-xl font-semibold text-gray-900">Channels:</h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+                            <li>Web Chat</li>
+                            <li>App Chat</li>
+                            <li>WhatsApp Business Account</li>
+                            <li>Facebook Messenger</li>
+                            <li>Instagram DM</li>
+                            <li>Telegram</li>
+                            <li>Email</li>
+                            <li>SMS</li>
+                        </ul>
+                        <h5 class="text-left text-xl font-semibold text-gray-900 mt-4">Modules:</h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+                            <li>Conversation Management</li>
+                            <li>BOTs</li>
+                            <li>Open AI API / Chat GPT integration</li>
+                            <li>Campaign Management</li>
+                            <li>Marketing and Lead Management</li>
+                            <li>Customer Management</li>
+                            <li>Mobile App</li>
+                        </ul>
+                        <h5 class="text-left text-xl font-semibold text-gray-900 mt-4">Third Party integrations:</h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+                            <li>Open AI / CHAT GPT API</li>
+                            <li>WhatsApp Business Account API</li>
+                            <li>Facebook Messenger API</li>
+                            <li>Instagram DM API</li>
+                            <li>Telegram API</li>
+                            <li>Outlook</li>
+                            <li>IMAP</li>
+                            <li>Gmail</li>
+                            <li>SMS service providers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Schedule – II -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            Schedule – II
+                        </h4>
+                        <h5 class="text-left text-xl font-semibold text-gray-900">Service Level Agreement</h5>
+                        <h5 class="text-left text-xl font-semibold text-gray-900">Service Level Obligations</h5>
+                        <div class="space-y-2 text-gray-600 text-base sm:text-lg">
+                            <p>
+                                i) The target availability objective for Mehery services provided by MeherY to Customer
+                                is ninety-eight per cent (98%) per year (excluding unavailability due to scheduled
+                                maintenance). Service outage shall mean an incident when MeherY Services are unavailable
+                                for Customer Service for at least sixty continuous (60) minutes in duration.
+                            </p>
+                            <p>
+                                ii) Availability of Mehery services shall mean only the Mehery Software Application and
+                                will exclude all external vendors mentioned as Channels or third-party integrations.
+                            </p>
+                            <p>
+                                iii) If the Customer wants a targeted 99.5% availability, the incremental cost is US$
+                                100 per month.
+                            </p>
+                            <p>
+                                iv) Mehery Service outage shall not include any outage or interruption resulting from
+                                maintenance action requested by or attributed to Customer, nor from scheduled or routine
+                                maintenance operations. Mehery will notify Customer in writing one (1) week in advance
+                                of a scheduled maintenance. A single maintenance period will not exceed three (3) hours.
+                            </p>
+                            <p>
+                                v) Mehery Service outage shall also not include any outage or interruption resulting
+                                from emergency or general maintenance that lasts for sixty (60) minutes or less—e.g.,
+                                any unforeseen problem on Channels or with third-party providers. Mehery will use its
+                                best efforts to limit such occurrences and schedule these short-duration maintenance
+                                windows during planned maintenance.
+                            </p>
+                            <p>
+                                vi) Service unavailability arising from delays in fault resolution due to delayed
+                                responses from Customer will not count toward service availability calculations.
+                            </p>
+                            <p>vii) Mehery will guarantee a network availability time of up to 98%.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service Performance Criteria -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            SERVICE PERFORMANCE CRITERIA
+                        </h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+                            <li>Maximum Throughput Messages: 20 messages per second</li>
+                            <li>
+                                Average time to submit message to any Channel, from Mehery servers = 1 minute or less
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Availability -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            SUPPORT AVAILABILITY
+                        </h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base sm:text-lg pl-6">
+                            <li>
+                                Email and WhatsApp access to technical support, as per the subscription plan of the
+                                Customer.
+                            </li>
+                            <li>
+                                Average time to submit message to any Channel, from Mehery servers = 1 minute or
+                                lessCustomer will have a support team at their end to assist in diagnosing and fixing
+                                the problem.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Priority Levels -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            PRIORITY LEVELS
+                        </h4>
+                        <p class="text-gray-600 text-base sm:text-lg">
+                            Problems reported by Customer will be allocated a priority level in accordance with the
+                            severity of the problem. The priority levels are defined for all service levels as follows:
+                        </p>
+                        <!-- Priority Levels -->
+                        <!-- Priority Levels -->
+                        <div class="space-y-4 mb-8">
+                            <h4
+                                class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                            >
+                                PRIORITY LEVELS
+                            </h4>
+                            <table class="min-w-full divide-y divide-gray-200 text-left text-gray-600">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-xs font-medium uppercase">PRIORITY</th>
+                                        <th class="px-6 py-3 text-xs font-medium uppercase">DEFINITION</th>
+                                        <th class="px-6 py-3 text-xs font-medium uppercase">EXAMPLES</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <!-- Priority 1 -->
+                                    <tr>
+                                        <td class="px-6 py-4">1</td>
+                                        <td class="px-6 py-4">
+                                            <p>
+                                                A whole or a critical part of the system(s) is malfunctioning causing
+                                                immediate and significant business impact.
+                                            </p>
+                                            <p>
+                                                A large number of users are unable to access the systems. The attention
+                                                required is deemed urgent and demands immediate attention.
+                                            </p>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                                <li>Total outage of a system</li>
+                                                <li>
+                                                    Partial outage of a system causing considerable service restrictions
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <!-- Priority 2 -->
+                                    <tr>
+                                        <td class="px-6 py-4">2</td>
+                                        <td class="px-6 py-4">
+                                            A significant, but not immediately critical part of the system(s) is
+                                            malfunctioning, causing some business impact.
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                                <li>Problems threatens to escalate to an emergency</li>
+                                                <li>Some service restrictions</li>
+                                                <li>
+                                                    Failure of a crucial feature e.g. delivery report malfunctioning
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <!-- Priority 3 -->
+                                    <tr>
+                                        <td class="px-6 py-4">3</td>
+                                        <td class="px-6 py-4">
+                                            Queries which are related to non-acute operational problems or are important
+                                            technical inquiries
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                                <li>End users are complaining about anomalies</li>
+                                                <li>Minor service restrictions</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <!-- Priority 4 -->
+                                    <tr>
+                                        <td class="px-6 py-4">4</td>
+                                        <td class="px-6 py-4">General queries</td>
+                                        <td class="px-6 py-4">
+                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                                <li>Information requests</li>
+                                                <li>Questions on processes and procedures</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Response and Restoration Target Time -->
+                    <div class="space-y-4 mb-8">
+                        <h4
+                            class="text-left text-2xl font-bold text-gray-900 leading-tight bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                        >
+                            RESPONSE AND RESTORATION TARGET TIME
+                        </h4>
+                        <table class="min-w-full divide-y divide-gray-200 text-left text-gray-600">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-xs font-medium uppercase">SERVICE LEVEL</th>
+                                    <th class="px-6 py-3 text-xs font-medium uppercase">PRIORITY 1</th>
+                                    <th class="px-6 py-3 text-xs font-medium uppercase">PRIORITY 2</th>
+                                    <th class="px-6 py-3 text-xs font-medium uppercase">PRIORITY 3</th>
+                                    <th class="px-6 py-3 text-xs font-medium uppercase">PRIORITY 4</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4">Initial Investigation</td>
+                                    <td class="px-6 py-4">60 minutes</td>
+                                    <td class="px-6 py-4">4 hours</td>
+                                    <td class="px-6 py-4">8 hours</td>
+                                    <td class="px-6 py-4">4 hours</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">Service restoration</td>
+                                    <td class="px-6 py-4">8 hours</td>
+                                    <td class="px-6 py-4">2 days</td>
+                                    <td class="px-6 py-4">2 weeks</td>
+                                    <td class="px-6 py-4">Not applicable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <Footer />
+    </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from "vue";
+import Navbar from "../components/common/Navbar.vue";
+import Footer from "../components/common/Footer.vue";
+
+onMounted(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>

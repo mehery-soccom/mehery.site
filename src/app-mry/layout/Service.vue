@@ -5,6 +5,28 @@
         <p class="text-gray-600 mb-4 sm:mb-6 max-w-2xl text-sm sm:text-base">
         </p>
 
+        <!-- BOTs Section -->
+        <div
+            @click="handleBot"
+            class="rounded-2xl bg-emerald-50 px-4 sm:px-6 py-4 sm:py-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer"
+        >
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 pl-6">
+                <div class="flex-1 max-w-full sm:max-w-md">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3  sm:text-left">BOTs & BOT Services</h2>
+                    <p class="mb-4 text-xs sm:text-sm  sm:text-left">
+                        Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus
+                        on high-value, personalized interactions that drive deeper customer relationships.
+                    </p>
+                </div>
+                <img 
+                    src="../../@assets/images/ChatGPT-Logo.png" 
+                    alt="BOT Services" 
+                    class="w-28 h-20 sm:w-32 sm:h-24 md:w-44 md:h-32 object-contain"
+                />
+            </div>
+        </div>
+        <br>
+
         <!-- Services Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
             <ArticleList :contentType="'services'" v-slot="{ loading, results }">
@@ -47,26 +69,7 @@
             </ArticleList>
         </div>
         
-        <!-- BOTs Section -->
-        <div
-            @click="handleBot"
-            class="rounded-2xl bg-emerald-50 px-4 sm:px-6 py-4 sm:py-6 text-gray-800 transition-all hover:scale-[1.02] hover:shadow-lg border-b-4 border-emerald-200 cursor-pointer"
-        >
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
-                <div class="flex-1 max-w-full sm:max-w-md">
-                    <h2 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3  sm:text-left">BOTs & BOT Services</h2>
-                    <p class="mb-4 text-xs sm:text-sm  sm:text-left">
-                        Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus
-                        on high-value, personalized interactions that drive deeper customer relationships.
-                    </p>
-                </div>
-                <img 
-                    src="../../@assets/images/botService.png" 
-                    alt="BOT Services" 
-                    class="w-28 h-20 sm:w-32 sm:h-24 md:w-44 md:h-32 object-contain"
-                />
-            </div>
-        </div>
+        
     </div>
 </template>
 

@@ -73,33 +73,16 @@
         </div>
 
         <!-- Bottom Section -->
-        <div class="flex flex-col md:flex-row  gap-6 pt-6 border-t border-gray-700">
-            <!-- Copyright and Privacy Policy -->
-
-            <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
-                <p class="text-gray-400">© 2024 Mehery. All Rights Reserved.</p>
-                <router-link :to="{ name: 'Privacy' }" class="text-gray-400 hover:text-white transition-colors">
-                    Privacy Policy
-                </router-link>
-            </div>
-
-            <!-- Subscribe to Blogs Input and Button -->
-            <div class="flex flex-col sm:flex-row items-center gap-3 md:w-auto">
-                <input
-                    v-model="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    class="w-full pl-3 py-2 bg-[#2C2C35] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-[#FFA726] focus:ring-1 focus:ring-[#FFA726] transition-all"
-                    required
-                />
-                <button
-                    @click="handleSubscribe"
-                    class="w-full sm:w-auto px-4 py-2 bg-[#FFA726] text-black font-semibold rounded-lg hover:bg-[#FF9800] transition-all duration-300"
-                >
-                    Subscribe
-                </button>
-            </div>
+        <div class="flex flex-row items-center gap-4 pt-6 border-t border-gray-700">
+            <p class="text-gray-400">© 2024 Mehery. All Rights Reserved.</p>
+            <router-link
+                :to="{ name: 'Privacy' }"
+                class="text-gray-400 hover:text-white transition-colors"
+            >
+                Privacy Policy
+            </router-link>  
         </div>
+
     </footer>
 </template>
 
@@ -118,6 +101,7 @@ const navLinks = [
     { type: "route", path: "about", label: "About Us" },
     { type: "route", path: "/career", label: "Career" },
     { type: "route", path: "/privacy", label: "Privacy Policy" },
+    { type: "route", path: "/terms",  label: "Terms of Service" },
     { type: "route", path: "/partner", label: "Partner" },
     { type: "route", path: "/faq", label: "FAQs" }
 ];
@@ -146,10 +130,10 @@ const handleScroll = id => {
     }
 };
 
-const handleSubscribe = () => {
-    if (email.value) {
-        console.log("Subscribed:", email.value);
-        email.value = "";
-    }
-};
+// const handleSubscribe = () => {
+//     if (email.value) {
+//         console.log("Subscribed:", email.value);
+//         email.value = "";
+//     }
+// };
 </script>

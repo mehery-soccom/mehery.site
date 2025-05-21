@@ -29,9 +29,13 @@
               class="text-gray-400 hover:text-indigo-600 transform hover:scale-110 transition-all duration-300">
               <BIconFacebook class="w-6 h-6" />
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=919372280725" target="_blank" rel="noopener noreferrer"
+            <!-- <a href="https://api.whatsapp.com/send/?phone=919372280725" target="_blank" rel="noopener noreferrer"
               class="text-gray-400 hover:text-indigo-600 transform hover:scale-110 transition-all duration-300">
               <BIconWhatsapp class="w-6 h-6" />
+            </a> -->
+            <a href="https://www.linkedin.com/company/mehery/posts/?feedView=all" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-indigo-600 transform hover:scale-110 transition-all duration-300">
+              <BIconLinkedin class="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -40,7 +44,7 @@
   </template>
   
   <script>
-  import { BIconFacebook, BIconInstagram, BIconWhatsapp } from 'bootstrap-vue';
+  import { BIconLinkedin  } from 'bootstrap-vue';
   import { Share2Icon, InstagramIcon, FacebookIcon, TwitterIcon, XIcon  } from 'vue-feather-icons'
   
   export default {
@@ -50,6 +54,7 @@
       FacebookIcon,
       TwitterIcon,
       XIcon,
+      BIconLinkedin 
     },
     data() {
       return {
@@ -75,8 +80,18 @@
   };
   </script>
   
-  <style scoped>
+<style scoped>
   /* Base container styles with high z-index */
+  .chatbot-element {
+    bottom: 8rem !important;    /* was bottom-8 (2rem) */
+    right: 2rem !important;    /* matches your right-6 */
+  }
+
+  .chatbot-popup {
+    bottom: 9rem !important;    /* was bottom-12 (3rem) */
+    right: 8rem !important;     /* matches your right-28 */
+  }
+  
   .chatbot-container {
     position: relative;
     z-index: 99999 !important;
@@ -139,4 +154,4 @@
   .transition-all.duration-300 {
     transition: all 0.3s ease;
   }
-  </style>
+</style>

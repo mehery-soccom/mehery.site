@@ -3,19 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBQZl0W_338XMQnxQYSqCs_e5taNQRd_Zo",
-
-    authDomain: "mehery-6c223.firebaseapp.com",
-
-    projectId: "mehery-6c223",
-
-    storageBucket: "mehery-6c223.firebasestorage.app",
-
-    messagingSenderId: "585106041639",
-
-    appId: "1:585106041639:web:714f6a900aad03d952d702",
-
-    measurementId: "G-VCVRH2HN1L"
+  apiKey:            process.env.FIREBASE_API_KEY,
+  authDomain:        process.env.FIREBASE_AUTH_DOMAIN,
+  projectId:         process.env.FIREBASE_PROJECT_ID,
+  storageBucket:     process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId:             process.env.FIREBASE_APP_ID,
+  measurementId:     process.env.FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

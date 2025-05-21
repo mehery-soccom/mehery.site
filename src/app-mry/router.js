@@ -63,6 +63,11 @@ const routes = [
         component: () => import("@src/app-mry/layout/Privacy.vue")
     },
     {
+        path: `/terms`,
+        name: "TermsOfService",
+        component: () => import("@src/app-mry/layout/TermsOfService.vue")
+    },
+    {
         path: `/career`,
         name: "Career",
         component: () => import("@src/app-mry/layout/Career.vue")

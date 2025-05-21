@@ -74,11 +74,11 @@
                     </div>
 
                     <!-- Deposits -->
-                    <div v-if="plan.depositFees.minimumDeposit !== 'N/A'">
-                        <h4 class="font-semibold mb-2 border-b pb-1">Deposit Fees</h4>
+                    <div >
+                        <h4 class="font-semibold mb-2 border-b pb-1">Deposit</h4>
                         <ul>
                             <li class="flex justify-between">
-                                <span>Minimum Deposit</span>
+                                <span>Minimum</span>
                                 <span>{{
                                     showUSD ? plan.depositFees.minimumDeposit.usd : plan.depositFees.minimumDeposit.inr
                                 }}</span>
@@ -94,14 +94,21 @@
                                 <span>Admin/Agent</span><span>{{ plan.users.adminAgent }}</span>
                             </li>
 
-                            <li
-                                v-if="plan.users.additionalUser.inr && plan.users.additionalUser.inr !== 'X'"
-                                class="flex justify-between"
-                            >
-                                <span>Additional User(PM)</span>
-                                <span>
-                                    {{ showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr }}</span
+                            <li class="flex justify-between">
+                                <span>Additional User (PM)</span>
+                                <span
+                                    :class="{ 'text-red-700': (showUSD ? plan.users.additionalUser.usd : plan.users.additionalUser.inr) === 'X' }"
                                 >
+                                    {{
+                                    (showUSD
+                                        ? plan.users.additionalUser.usd
+                                        : plan.users.additionalUser.inr) === 'X'
+                                        ? '✗'
+                                        : (showUSD
+                                            ? plan.users.additionalUser.usd
+                                            : plan.users.additionalUser.inr)
+                                    }}
+                                </span> 
                             </li>
                         </ul>
                     </div>
@@ -181,7 +188,7 @@
         </div>
         <div class="flex align-center justify-center mt-4 text-xl gap-4">
             <div>
-                <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" class="text-blue-500"
+                <a href="https://developers.facebook.com/docs/whatsapp/pricing/updates-to-pricing" target="_blank" class="text-blue-500"
                     >Whatsapp Conversation Fees</a
                 >
             </div>
@@ -189,7 +196,7 @@
                 <p class="text-blue-500">•</p>
             </div>
             <div>
-                <a href="https://openai.com/api/pricing/" target="_blank" class="text-blue-500">Chat GPT Charges</a
+                <a href="https://platform.openai.com/docs/pricing" target="_blank" class="text-blue-500">Chat GPT Charges</a
                 ><span>, GPT 4o Mini is required for Mehery Services.</span>
             </div>
         </div>
@@ -272,13 +279,17 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    DAU: { 
+                    "Per Conversation": { 
                         inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "Up to 10", 
                         usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "Up to 10" 
                     },
+                    // "Email": { 
+                    //     inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "Up to 100", 
+                    //     usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "Up to 100" 
+                    // },
                     "Email": { 
-                        inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "Up to 1000", 
-                        usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "Up to 1000" 
+                        inr: "Up to 100", 
+                        usd: "Up to 100" 
                     },
                     "Image Creation": { 
                         inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "Up to 10", 
@@ -296,8 +307,14 @@ onMounted(async () => {
                         usd: freePlanRes.results[0]?.users_additionalUser_usd || "X" 
                     } 
                 },
+                // depositFees: { 
+                //     minimumDeposit: freePlanRes.results[0]?.depositFees_minimumDeposit || "Nil" 
+                // },
                 depositFees: { 
-                    minimumDeposit: freePlanRes.results[0]?.depositFees_minimumDeposit || "N/A" 
+                    minimumDeposit: { 
+                        inr: "Nil", 
+                        usd: "Nil" 
+                    } 
                 },
                 setupFees: {
                     facebookBusinessSetup: freePlanRes.results[0]?.setupFees_facebookBusinessSetup || "N/A",
@@ -331,11 +348,11 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    DAU: { 
+                    "Per Conversation": { 
                         inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹1.25", 
                         usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.050" 
                     },
-                    "Email (1000 Free)": { 
+                    "Email (100 Free)": { 
                         inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.12", 
                         usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0014" 
                     },
@@ -397,11 +414,11 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    DAU: { 
+                    "Per Conversation": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.04", 
                         usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
                     },
-                    "Email (1000 Free)": { 
+                    "Email (100 Free)": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.08", 
                         usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0009" 
                     },
@@ -460,11 +477,11 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    DAU: { 
+                    "Per Conversation": { 
                         inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.03", 
                         usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
                     },
-                    "Email (1000 Free)": { 
+                    "Email (100 Free)": { 
                         inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
                         usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
                     },
@@ -523,11 +540,11 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    DAU: { 
+                    "Per Conversation": { 
                         inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "On Req", 
                         usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "On Req" 
                     },
-                    "Email (1000 Free)": { 
+                    "Email (100 Free)": { 
                         inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_inr || "On Req", 
                         usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_usd || "On Req" 
                     },
