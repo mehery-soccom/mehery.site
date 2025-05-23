@@ -8,7 +8,7 @@ import * as Utils from "@utils";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import { register } from 'swiper/element/bundle';
+import { register } from "swiper/element/bundle";
 
 register();
 
@@ -24,12 +24,12 @@ import "animate.css";
 import "@assets/base.css";
 import "@assets/base.scss";
 
-import Swiper from 'swiper';        
-import 'swiper/css';                
-import 'swiper/css/navigation';     
-import 'swiper/css/autoplay';
+import Swiper from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
-window.Swiper = Swiper;            
+window.Swiper = Swiper;
 
 import { createHead } from "@vueuse/head";
 
@@ -66,6 +66,17 @@ import { createHead } from "@vueuse/head";
         try {
             await app.config.globalProperties.$dataService.init();
             app.mount("#app");
+
+            try {
+                console.log(`
+    ################################# CDN DETAILS #################################
+    VERSION :: ${process.env?.VUE_APP_VERSION || "-"}
+    BUILD TIME :: ${process.env?.VUE_APP_TIMESTAMP ? new Date(Number(process.env.VUE_APP_TIMESTAMP)) : "-"}
+    ###############################################################################
+  `);
+            } catch (error) {
+                console.error(error);
+            }
         } catch (error) {
             console.error("Failed to mount app");
         } finally {
