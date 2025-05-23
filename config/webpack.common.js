@@ -1,12 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require("dotenv-webpack"); 
+const Dotenv = require("dotenv-webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
 const __base = path.resolve(__dirname, "..");
 const __src = path.resolve(__base, "src");
+
+console.log("process.env", process.env);
 
 module.exports = {
     entry: path.resolve(__src, "main.js"),
@@ -56,9 +58,12 @@ module.exports = {
             ignoreOrder: true
         }),
         new Dotenv({
-          path: path.resolve(__dirname, "../.env"),
-          safe: false,       
+            path: path.resolve(__dirname, "../.env"),
+            safe: false
         }),
+        new webpack.DefinePlugin({
+            "process.env": JSON.stringify(process.env)
+        })
     ],
 
     module: {
