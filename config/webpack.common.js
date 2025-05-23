@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require("dotenv-webpack");
+// const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -58,10 +58,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             ignoreOrder: true
         }),
-        new Dotenv({
-            path: path.resolve(__dirname, "../.env"),
-            safe: false
-        }),
+        // new Dotenv({
+        //     path: path.resolve(__dirname, "../.env"),
+        //     safe: false
+        // }),
         new webpack.DefinePlugin({
             "process.env": {
                 VUE_APP_VERSION: require("../package.json").version,
