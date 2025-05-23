@@ -63,11 +63,10 @@ module.exports = {
             safe: false
         }),
         new webpack.DefinePlugin({
-            "process.env": JSON.stringify({
-                ...process.env,
+            "process.env": {
                 VUE_APP_VERSION: require("../package.json").version,
                 VUE_APP_TIMESTAMP: Date.now()
-            })
+            }
         })
     ],
 
