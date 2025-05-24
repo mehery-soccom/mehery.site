@@ -138,19 +138,15 @@
                 <table class="w-full border border-gray-300">
                     <thead class="bg-gray-200">
                         <tr class="border-b border-gray-300">
-                            <th class="text-left py-2 px-2 w-1/3 border-r border-gray-300">Feature</th>
-                            <th v-for="plan in plans" :key="plan.name" class="py-2 px-2 border-r border-gray-300">
-                                <div class="text-center !important text-md font-bold whitespace-nowrap">{{ plan.name }}</div>
-                                <div class="text-center text-xs text-gray-500">
-                                    {{
-                                        showUSD
-                                            ? plan.fixedFees[billingCycle.toLowerCase()].usd
-                                            : plan.fixedFees[billingCycle.toLowerCase()].inr
-                                    }}
-                                </div>
-                            </th>
+                            <th class="text-left py-2 px-2 w-1/3 border-r border-gray-300">Packages</th>
+                            <th class="py-2 px-2 border-r border-gray-300 text-center font-bold">Freemium</th>
+                            <th class="py-2 px-2 border-r border-gray-300 text-center font-bold">Lite</th>
+                            <th class="py-2 px-2 border-r border-gray-300 text-center font-bold">Eco</th>
+                            <th class="py-2 px-2 border-r border-gray-300 text-center font-bold">Pro</th>
+                            <th class="py-2 px-2 border-r border-gray-300 text-center font-bold">Enterprise</th>
                         </tr>
                     </thead>
+
                     <tbody class="divide-y divide-gray-300">
                         <template v-for="(section, sectionKey) in features" :key="sectionKey">
                             <!-- Section Header -->
@@ -611,13 +607,14 @@ onMounted(async () => {
 
         // Set features data
         features.value = {
-            Channels: [
+            "Channels (#), Any of the below": [
+                { name: "", availability: ["-", "1", "2", "3", "all"] },
                 { name: "WhatsApp", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Webchat", availability: ["Y", "Y", "Y", "Y", "Y"] },
-                { name: "Facebook Messenger", availability: ["X", "X", "X", "Y", "Y"] },
-                { name: "Instagram DM", availability: ["X", "X", "Y", "Y", "Y"] },
-                { name: "Telegram", availability: ["X", "X", "X", "Y", "Y"] },
-                { name: "App Chat", availability: ["X", "X", "X", "Y", "Y"] },
+                { name: "Facebook Messenger", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "Instagram DM", availability: ["Y", "Y", "Y", "Y", "Y"] },
+                { name: "Telegram", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "App Chat", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "Email", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "SMS", availability: ["Y", "Y", "X", "Y", "Y"] }
             ],
