@@ -8,7 +8,6 @@ const { VueLoaderPlugin } = require("vue-loader");
 const __base = path.resolve(__dirname, "..");
 const __src = path.resolve(__base, "src");
 
-console.log("process.env", process.env);
 
 module.exports = {
     entry: path.resolve(__src, "main.js"),
@@ -61,9 +60,6 @@ module.exports = {
             path: path.resolve(__dirname, "../.env"),
             safe: false
         }),
-        new webpack.DefinePlugin({
-            "process.env": JSON.stringify(process.env)
-        })
     ],
 
     module: {

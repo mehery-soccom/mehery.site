@@ -5,30 +5,13 @@
             <!-- Title and Search Bar -->
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
                 <h2 class="text-3xl font-bold">FAQs</h2>
-                <div class="relative w-full sm:w-64">
-                    <input
-                        v-model="searchQuery"
-                        type="text"
-                        placeholder="Search FAQs..."
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                            />
-                        </svg>
-                    </span>
-                </div>
+
             </div>
 
             <!-- FAQs List -->
             <div class="space-y-4">
                 <div
-                    v-for="(faq, index) in filteredFaqs"
+                    v-for="(faq, index) in predefinedFaqs"
                     :key="index"
                     class="border-2 rounded-3xl p-2 cursor-pointer transition-all duration-300"
                     :class="[faq.isOpen ? 'shadow-lg' : 'hover:shadow-md', 'hover:border-gray-400']"
@@ -137,13 +120,12 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import { faqService } from "../../firebase/index";
+import { ref } from "vue";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
 import { BIconFacebook, BIconInstagram, BIconTelegram,BIconWhatsapp } from 'bootstrap-vue'
 
-const predefinedFaqs = [
+const predefinedFaqs = ref([
     {
         title: "Can I use my existing WhatsApp number with Mehery?",
         content: `
@@ -215,49 +197,11 @@ const predefinedFaqs = [
     `,
         isOpen: false
     },
-];
-// Reactive state
-const faqs = ref([]);
-const searchQuery = ref("");
+]);
 
-const filteredFaqs = computed(() => {
-    if (!searchQuery.value) return faqs.value;
-    const query = searchQuery.value.toLowerCase();
-    return faqs.value.filter(
-        faq => faq.title.toLowerCase().includes(query) || faq.content.toLowerCase().includes(query)
-    );
-});
 
-const loadFaqs = async () => {
-    // Get stored FAQs from Firebase
-    const storedFaqs = await faqService.getFaqs();
+const toggleFaq = (index) => {
+  predefinedFaqs.value[index].isOpen = !predefinedFaqs.value[index].isOpen
+}
 
-    // Merge with predefined FAQs
-    const mergedFaqs = [
-        ...predefinedFaqs,
-        ...storedFaqs.filter(
-            storedFaq => !predefinedFaqs.some(predefinedFaq => predefinedFaq.title === storedFaq.title)
-        )
-    ];
-
-    // Add isOpen property if not exists
-    mergedFaqs.forEach(faq => {
-        if (!faq.hasOwnProperty("isOpen")) {
-            faq.isOpen = false;
-        }
-    });
-
-    faqs.value = mergedFaqs;
-};
-
-const toggleFaq = index => {
-    const originalIndex = faqs.value.findIndex(faq => faq.title === filteredFaqs.value[index].title);
-    if (originalIndex !== -1) {
-        faqs.value[originalIndex].isOpen = !faqs.value[originalIndex].isOpen;
-    }
-};
-
-onMounted(() => {
-    loadFaqs();
-});
 </script>

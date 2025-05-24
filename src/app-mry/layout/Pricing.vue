@@ -136,11 +136,11 @@
         <div v-else class="bg-white rounded-lg shadow-lg p-4">
             <div class="overflow-x-auto">
                 <table class="w-full border border-gray-300">
-                    <thead class="bg-gray-100">
+                    <thead class="bg-gray-200">
                         <tr class="border-b border-gray-300">
                             <th class="text-left py-2 px-2 w-1/3 border-r border-gray-300">Feature</th>
                             <th v-for="plan in plans" :key="plan.name" class="py-2 px-2 border-r border-gray-300">
-                                <div class="text-center !important text-md font-bold">{{ plan.name }}</div>
+                                <div class="text-center !important text-md font-bold whitespace-nowrap">{{ plan.name }}</div>
                                 <div class="text-center text-xs text-gray-500">
                                     {{
                                         showUSD
@@ -154,7 +154,7 @@
                     <tbody class="divide-y divide-gray-300">
                         <template v-for="(section, sectionKey) in features" :key="sectionKey">
                             <!-- Section Header -->
-                            <tr class="bg-gray-50 border-b border-gray-300">
+                            <tr class="bg-gray-100 border-b border-gray-300">
                                 <td colspan="6" class="py-2 px-2 font-semibold text-md border-gray-300">
                                     {{ formatSectionTitle(sectionKey) }}
                                 </td>
@@ -244,7 +244,7 @@ const currencySymbol = computed(() => {
 });
 
 const formatSectionTitle = key => {
-    return key.split(/(?=[A-Z])/).join(" ");
+    return key.replace(/([A-Z])(?=[A-Z])/g, '$1').replace(/\s{2,}/g, ' ');
 };
 
 onMounted(async () => {
@@ -350,7 +350,8 @@ onMounted(async () => {
                 "Mehery Fees – Per conversation Fees": {
                     "Per Conversation": { 
                         inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹1.25", 
-                        usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.050" 
+                        // usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.050" 
+                        usd: "$0.05"
                     },
                     "Email (100 Free)": { 
                         inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.12", 
@@ -369,13 +370,15 @@ onMounted(async () => {
                     adminAgent: litePlanRes.results[0]?.users_adminAgent || "1", 
                     additionalUser: { 
                         inr: litePlanRes.results[0]?.users_additionalUser_inr || "₹500", 
-                        usd: litePlanRes.results[0]?.users_additionalUser_usd || "$9.9" 
+                        // usd: litePlanRes.results[0]?.users_additionalUser_usd || "$9.9" 
+                        usd: "$9.9"
                     } 
                 },
                 depositFees: { 
                     minimumDeposit: { 
                         inr: litePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
-                        usd: litePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        // usd: litePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        usd: "$25"
                     } 
                 },
                 setupFees: {
@@ -401,22 +404,26 @@ onMounted(async () => {
                 buttonLink: ecoPlanRes.results[0]?.buttonLink || "https://app.mehery.com/partner/auth/register",
                 fixedFees: {
                     monthly: { 
-                        usd: ecoPlanRes.results[0]?.fixedFees_monthly_usd || "$69", 
+                        // usd: ecoPlanRes.results[0]?.fixedFees_monthly_usd || "$69", 
+                        usd: "$69",                        
                         inr: ecoPlanRes.results[0]?.fixedFees_monthly_inr || "₹2,499" 
                     },
                     quarterly: { 
-                        usd: ecoPlanRes.results[0]?.fixedFees_quarterly_usd || "$189", 
+                        // usd: ecoPlanRes.results[0]?.fixedFees_quarterly_usd || "$189",
+                        usd: "$189" ,
                         inr: ecoPlanRes.results[0]?.fixedFees_quarterly_inr || "₹6,750" 
                     },
                     annual: { 
-                        usd: ecoPlanRes.results[0]?.fixedFees_annual_usd || "$649", 
+                        // usd: ecoPlanRes.results[0]?.fixedFees_annual_usd || "$649", 
+                        usd: "$649",
                         inr: ecoPlanRes.results[0]?.fixedFees_annual_inr || "₹24,000" 
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
                     "Per Conversation": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.04", 
-                        usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
+                        // usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
+                        usd: "$0.006"
                     },
                     "Email (100 Free)": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.08", 
@@ -424,7 +431,8 @@ onMounted(async () => {
                     },
                     "Image Creation Fee": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "₹0.12", 
-                        usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "$0.006" 
+                        // usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "$0.006" 
+                        usd: "$0.006"
                     },
                     "Conversational Bot": ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot || "X"
                 },
@@ -432,13 +440,15 @@ onMounted(async () => {
                     adminAgent: ecoPlanRes.results[0]?.users_adminAgent || "5", 
                     additionalUser: { 
                         inr: ecoPlanRes.results[0]?.users_additionalUser_inr || "₹500", 
-                        usd: ecoPlanRes.results[0]?.users_additionalUser_usd || "$9.9" 
+                        // usd: ecoPlanRes.results[0]?.users_additionalUser_usd || "$9.9" 
+                        usd: "$9.9"
                     } 
                 },
                 depositFees: { 
                     minimumDeposit: { 
                         inr: ecoPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
-                        usd: ecoPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        // usd: ecoPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        usd: "$25"
                     } 
                 },
                 setupFees: {
@@ -464,22 +474,26 @@ onMounted(async () => {
                 buttonLink: proPlanRes.results[0]?.buttonLink || "https://app.mehery.com/partner/auth/register",
                 fixedFees: {
                     monthly: { 
-                        usd: proPlanRes.results[0]?.fixedFees_monthly_usd || "$149", 
+                        // usd: proPlanRes.results[0]?.fixedFees_monthly_usd || "$149", 
+                        usd: "$149",
                         inr: proPlanRes.results[0]?.fixedFees_monthly_inr || "₹3,999" 
                     },
                     quarterly: { 
-                        usd: proPlanRes.results[0]?.fixedFees_quarterly_usd || "$399", 
+                        // usd: proPlanRes.results[0]?.fixedFees_quarterly_usd || "$399", 
+                        usd: "$399",
                         inr: proPlanRes.results[0]?.fixedFees_quarterly_inr || "₹11,000" 
                     },
                     annual: { 
-                        usd: proPlanRes.results[0]?.fixedFees_annual_usd || "$1,399", 
+                        // usd: proPlanRes.results[0]?.fixedFees_annual_usd || "$1,399", 
+                        usd: "$1,399",
                         inr: proPlanRes.results[0]?.fixedFees_annual_inr || "₹39,000" 
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
                     "Per Conversation": { 
                         inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.03", 
-                        usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
+                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
+                        usd: "$0.006"
                     },
                     "Email (100 Free)": { 
                         inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
@@ -495,13 +509,15 @@ onMounted(async () => {
                     adminAgent: proPlanRes.results[0]?.users_adminAgent || "7", 
                     additionalUser: { 
                         inr: proPlanRes.results[0]?.users_additionalUser_inr || "₹600", 
-                        usd: proPlanRes.results[0]?.users_additionalUser_usd || "$19.9" 
+                        // usd: proPlanRes.results[0]?.users_additionalUser_usd || "$19.9" 
+                        usd: "$19.9"
                     } 
                 },
                 depositFees: { 
                     minimumDeposit: { 
                         inr: proPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
-                        usd: proPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        // usd: proPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        usd: "$25"                        
                     } 
                 },
                 setupFees: {
@@ -542,19 +558,24 @@ onMounted(async () => {
                 "Mehery Fees – Per conversation Fees": {
                     "Per Conversation": { 
                         inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "On Req" 
+                        usd: "$0.006"                        
+                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "On Req" 
                     },
                     "Email (100 Free)": { 
-                        inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_usd || "On Req" 
+                        inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_inr || "On Req",
+                        usd: "$0.0007"                        
+                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_usd || "On Req" 
+                        
                     },
                     "Image Creation Fee": { 
                         inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_usd || "On Req" 
+                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_usd || "On Req" 
+                        usd: "$0.006"                        
                     },
                     "Conversational Bot": { 
                         inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_usd || "On Req" 
+                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_usd || "On Req" 
+                        usd: "$0.009"                        
                     }
                 },
                 users: { 
@@ -567,7 +588,8 @@ onMounted(async () => {
                 depositFees: { 
                     minimumDeposit: { 
                         inr: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
-                        usd: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        // usd: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        usd: "$25"
                     } 
                 },
                 setupFees: {
@@ -591,23 +613,30 @@ onMounted(async () => {
         features.value = {
             Channels: [
                 { name: "WhatsApp", availability: ["Y", "Y", "Y", "Y", "Y"] },
-                { name: "Webchat", availability: ["X", "X", "Y", "Y", "Y"] },
+                { name: "Webchat", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Facebook Messenger", availability: ["X", "X", "X", "Y", "Y"] },
                 { name: "Instagram DM", availability: ["X", "X", "Y", "Y", "Y"] },
                 { name: "Telegram", availability: ["X", "X", "X", "Y", "Y"] },
-                { name: "App Chat", availability: ["X", "X", "X", "X", "Y"] },
-                { name: "Email", availability: ["Y", "Y", "Y", "Y", "Y"] }
+                { name: "App Chat", availability: ["X", "X", "X", "Y", "Y"] },
+                { name: "Email", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "SMS", availability: ["Y", "Y", "X", "Y", "Y"] }
             ],
-            SmartConversations: [
+            "SmartConversations : Conversations-Inbound": [
                 { name: "Team Inbox", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Chat Assignment / Auto routing", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Session Tags", availability: ["Y", "Y", "Y", "Y", "Y"] },
+                { name: "Follow-up", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "Appointment / Table Booking", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "Number Masking", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "User roles/skills", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Conversation Analytics", availability: ["Y", "Y", "Y", "Y", "Y"] },
-                { name: "Chat GPT Paraphrase", availability: ["Y", "Y", "X", "Y", "Y"] },
-                { name: "Follow-up", availability: ["Y", "Y", "X", "Y", "Y"] },
-                { name: "Appointment / Table Booking", availability: ["Y", "Y", "X", "Y", "Y"] }
+                
+            ],
+            "Conversations - AI enabled with CHAT GPT": [
+                { name: "Smart Session Tags", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "Paraphrase", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "Language Translation", availability: ["Y", "Y", "X", "Y", "Y"] },
+                { name: "Summary of Conversation", availability: ["Y", "Y", "X", "Y", "Y"] }
             ],
             Bots: [
                 { name: "Basic chatbots", availability: ["Y", "Y", "Y", "Y", "Y"] },
@@ -615,46 +644,46 @@ onMounted(async () => {
                 { name: "Auto-reply BOTs", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Outside Working Hours, Weekends and Holidays", availability: ["Y", "Y", "X", "Y", "Y"] }
             ],
-            OpenAIChatGPT: [
-                { name: "Instructor, Knowledgebase", availability: ["Y", "Y", "X", "X", "Y"] },
+            "Conversational BOTs - CHAT GPT": [
+                { name: "Instructor, Knowledgebase - RAG Approach", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Agent AI conversational BOT", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Custom BOT Scripting with OpenAI", availability: ["Y", "Y", "X", "X", "Y"] }
             ],
-            WhatsAppBusinessAPI: [
+            "WhatsApp - Business API": [
                 { name: "Text, image, video messaging", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Custom Image Templates", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "WhatsApp Flows", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "WhatsApp Carousels", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Authentication", availability: ["Y", "Y", "Y", "Y", "Y"] }
             ],
-            MarketingLeadGeneration: [
+            "Marketing / Lead Generation": [
                 { name: "Campaign Management", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Campaign Scheduling", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "Campaign Analytics, CTA Tracker", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Custom Image (and HTML source) Templates", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "Click to WhatsApp Ads Insights", availability: ["Y", "Y", "Y", "Y", "Y"] }
             ],
-            APIs: [{ name: "APIs for Outbound communication", availability: ["X", "X", "Y", "Y", "Y"] }],
-            CustomerManagement: [
+            APIs: [{ name: "APIs for Outbound communication", availability: ["Y", "X", "Y", "Y", "Y"] }],
+            "Customer Management": [
                 { name: "Customer master", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Custom fields", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Custom Filters for grouping", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Customer Grouping for Campaigns", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Relationship Management", availability: ["Y", "Y", "X", "X", "Y"] }
             ],
-            AgentMobileApp: [{ name: "IOS and Android", availability: ["X", "X", "Y", "Y", "Y"] }],
-            WebhookConnections: [{ name: "Number of Webhook Connections", availability: ["X", "X", "1", "2", "Custom"] }],
-            SupportPlans: [
+            "Agent Mobile App": [{ name: "IOS and Android", availability: ["Y", "X", "Y", "Y", "Y"] }],
+            "Webhook Connections": [{ name: "Number of Webhook Connections", availability: ["X", "X", "1", "2", "Custom"] }],
+            "Support Plans": [
                 { name: "Assisted onboarding", availability: ["Y", "Y", "Y", "Y", "Y"] },
-                { name: "SLA - Response Times", availability: ["12 hrs", "12 hrs", " 6hrs", "4 hrs", "4 hrs"] },
+                { name: "SLA - Response Times", availability: ["2  days", "12 hrs", " 8hrs", "4 hrs", "4 hrs"] },
                 {
                     name: "WhatsApp and Email support",
                     availability: [
-                        "10 hrs/day x 7 days/week",
-                        "10 hrs/day x 7 days/week",
-                        "10 hrs/day x 7 days/week",
-                        "10 hrs/day x 7 days/week",
-                        "10 hrs/day x 7 days/week"
+                        "9 hrs/day x 7 days/week",
+                        "9 hrs/day x 7 days/week",
+                        "9 hrs/day x 7 days/week",
+                        "9 hrs/day x 7 days/week",
+                        "9 hrs/day x 7 days/week"
                     ]
                 },
                 {
@@ -662,12 +691,8 @@ onMounted(async () => {
                     availability: ["X", "X", "X", "included", "included"]
                 },
                 {
-                    name: "WhatsApp, Email and Call based support 9h * 6d",
-                    availability: ["X", "X", "X", "X", "included"]
-                },
-                {
                     name: "Support Hours",
-                    availability: ["9 am - 7 pm", "9 am - 7 pm", "9 am - 7 pm", "9 am - 7 pm", "9 am - 7 pm"]
+                    availability: ["9 am - 6 pm", "9 am - 6 pm", "9 am - 6 pm", "9 am - 6 pm", "9 am - 6 pm"]
                 },
                 {
                     name: "Support Days",
@@ -687,6 +712,7 @@ onMounted(async () => {
             const response = await axios.get("https://ipinfo.io/json?token=1bfc162a759fb1");
             if (response.data.country === "IN") {
                 showUSD.value = false;
+                // showUSD.value = true;
             } else {
                 showUSD.value = true;
             }
@@ -702,3 +728,9 @@ onMounted(async () => {
     }
 });
 </script>
+
+<style scoped>
+th > div {
+    letter-spacing: normal !important;
+}
+</style>
