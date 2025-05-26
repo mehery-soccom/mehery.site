@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
+const webpack = require("webpack");
 
 const __base = path.resolve(__dirname, "..");
 const __src = path.resolve(__base, "src");
@@ -53,6 +54,11 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             ignoreOrder: true
+        }),
+        new webpack.DefinePlugin({
+            "process.env": {
+                VUE_APP_TIMESTAMP: Date.now()
+            }
         })
     ],
 
