@@ -1,5 +1,4 @@
 <template>
-    <Navbar />
     <div class="min-h-screen bg-white py-6 px-4 sm:px-6 lg:px-8 pb-16">
         <div class="max-w-5xl mx-auto">
             <!-- Title and Search Bar -->
@@ -115,14 +114,10 @@
             </div>
         </div>
     </div>     
-
-    <Footer />
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Navbar from "../components/common/Navbar.vue";
-import Footer from "../components/common/Footer.vue";
 import { BIconFacebook, BIconInstagram, BIconTelegram,BIconWhatsapp } from 'bootstrap-vue'
 
 const predefinedFaqs = ref([

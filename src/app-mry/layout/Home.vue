@@ -88,6 +88,11 @@
         <Pricing />
       </div>
     </div>
+    <div class="scroll-mt-[60px]" id="pricing">
+      <div class="container mx-auto px-6">
+        <FAQ />
+      </div>
+    </div>    
     <div class="scroll-mt-[60px]" id="testimonial">
       <div class="container mx-auto px-6">
         <Testimonial />
