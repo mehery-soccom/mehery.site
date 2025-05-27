@@ -226,7 +226,7 @@
                 "title": "Customer",
                 "subtitle": "Management",
                 "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-many-browser-windows-with-different-information1.svg",
-                "hyperlink": "/customer",
+                "hyperlink": "/solutions/1customer-service",
                 "divcolor": "#ebf8ff",
                 "textcolor": "#1f2937",
                 "bordercolor": "#bfdbfe"
@@ -235,16 +235,16 @@
         },
         {
             "contentType": "services",
-            "file": "2campaign-servivce.html",
-            "filePath": "resources/app-mry/content/services/2campaign-servivce.html",
-            "fileName": "2campaign-servivce",
+            "file": "2campaign-service.html",
+            "filePath": "resources/app-mry/content/services/2campaign-service.html",
+            "fileName": "2campaign-service",
             "fileExtension": "html",
             "fileTags": {},
             "info": {
                 "title": "Campaign",
                 "subtitle": "Management",
                 "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-volumetric-analytics-of-different-types-in-web-browsers2.svg",
-                "hyperlink": "/campaign",
+                "hyperlink": "/solutions/2campaign-service",
                 "divcolor": "#fffbeb",
                 "textcolor": "#78350f",
                 "bordercolor": "#fde68a"
@@ -262,7 +262,7 @@
                 "title": "Conversation ",
                 "subtitle": "Management",
                 "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-sending-messages-from-one-place-to-another1.svg",
-                "hyperlink": "/conversation",
+                "hyperlink": "/solutions/3conversation-service",
                 "divcolor": "#eef2ff",
                 "textcolor": "#3730a3",
                 "bordercolor": "#c7d2fe"
@@ -271,16 +271,16 @@
         },
         {
             "contentType": "services",
-            "file": "4elation-service.html",
-            "filePath": "resources/app-mry/content/services/4elation-service.html",
-            "fileName": "4elation-service",
+            "file": "4relation-service.html",
+            "filePath": "resources/app-mry/content/services/4relation-service.html",
+            "fileName": "4relation-service",
             "fileExtension": "html",
             "fileTags": {},
             "info": {
                 "title": "Relationship",
                 "subtitle": "Management",
                 "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-browser-window-with-emoticon-likes-and-stars-around2.svg",
-                "hyperlink": "/relation",
+                "hyperlink": "/solutions/4relation-service",
                 "divcolor": "#e6fffa",
                 "textcolor": "#115e59",
                 "bordercolor": "#99f6e4"
@@ -298,7 +298,7 @@
                 "title": "Lead",
                 "subtitle": "Management",
                 "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-selecting-a-value-in-the-browser-window1.svg",
-                "hyperlink": "/lead",
+                "hyperlink": "/solutions/5lead-service",
                 "divcolor": "#f3e8ff",
                 "textcolor": "#4c1d95",
                 "bordercolor": "#d8b4fe"
@@ -316,10 +316,28 @@
                 "title": "API Services",
                 "subtitle": "Services",
                 "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-magnifier-web-search-with-elements2.svg",
-                "hyperlink": "/api",
+                "hyperlink": "/solutions/6api-service",
                 "divcolor": "#fff1f2",
                 "textcolor": "#9f1239",
                 "bordercolor": "#fecdd3"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "servicesBot",
+            "file": "bot-service.html",
+            "filePath": "resources/app-mry/content/servicesBot/bot-service.html",
+            "fileName": "bot-service",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "BOTs & BOT Services",
+                "subtitle": "Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus\n                        on high-value, personalized interactions that drive deeper customer relationships.",
+                "image": "/.servicesBot/../../resources/app-mry/content/servicesBot/_images/ChatGPT-Logo.png",
+                "hyperlink": "/solutionbot/bot-service",
+                "divcolor": "#ECFDF5",
+                "textcolor": "#064E3B",
+                "bordercolor": "#A7F3D0"
             },
             "multiverse": {}
         },
@@ -505,8 +523,8 @@
         }
     ],
     "updateTime": {
-        "str": "2025-05-26T06:37:51.021Z",
+        "str": "2025-05-27T12:30:33.541Z",
         "offset": "00.0",
-        "stamp": 1748241471021
+        "stamp": 1748349033541
     }
 }
