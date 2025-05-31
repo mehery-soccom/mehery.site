@@ -17,11 +17,11 @@
                                     Join forces with Mehery to unlock revenue opportunities while delivering innovative
                                     customer engagement solutions to your clients.
                                 </p>
-                                <button
+                                <!-- <button
                                     class="bg-[#F4B860] hover:bg-[#f3a840] text-black px-8 py-4 rounded-lg font-bold mt-20 text-lg transition-colors duration-300"
                                 >
                                     BECOME A PARTNER
-                                </button>
+                                </button> -->
                             </div>
                             <div
                                 class="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-100 max-h-[300px]"

@@ -1161,7 +1161,7 @@
                                             </p>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                            <ul class="list-disc  space-y-1 pl-6">
                                                 <li>Total outage of a system</li>
                                                 <li>
                                                     Partial outage of a system causing considerable service restrictions
@@ -1177,7 +1177,7 @@
                                             malfunctioning, causing some business impact.
                                         </td>
                                         <td class="px-6 py-4">
-                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                            <ul class="list-disc  space-y-1 pl-6">
                                                 <li>Problems threatens to escalate to an emergency</li>
                                                 <li>Some service restrictions</li>
                                                 <li>
@@ -1194,7 +1194,7 @@
                                             technical inquiries
                                         </td>
                                         <td class="px-6 py-4">
-                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                            <ul class="list-disc space-y-1 pl-6">
                                                 <li>End users are complaining about anomalies</li>
                                                 <li>Minor service restrictions</li>
                                             </ul>
@@ -1205,7 +1205,7 @@
                                         <td class="px-6 py-4">4</td>
                                         <td class="px-6 py-4">General queries</td>
                                         <td class="px-6 py-4">
-                                            <ul class="list-disc list-inside space-y-1 pl-6">
+                                            <ul class="list-disc  space-y-1 pl-6">
                                                 <li>Information requests</li>
                                                 <li>Questions on processes and procedures</li>
                                             </ul>

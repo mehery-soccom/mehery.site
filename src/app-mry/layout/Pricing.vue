@@ -477,7 +477,8 @@ onMounted(async () => {
                         usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "$0.012" 
                     },
                     "Conversational Bot": { 
-                        inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "₹2.25", 
+                        // inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "₹2.25", 
+                        inr: "₹2.25",
                         usd: "$0.100" 
                     }
                 },
@@ -892,7 +893,7 @@ onMounted(async () => {
             "Webhook Connections": [{ name: "Number of Webhook Connections", availability: ["X", "X", "1", "2", "Custom"] }],
             "Support Plans": [
                 { name: "Assisted onboarding", availability: ["Y", "Y", "Y", "Y", "Y"] },
-                { name: "SLA - Response Times", availability: ["2  days", "12 hrs", " 8hrs", "4 hrs", "4 hrs"] },
+                { name: "SLA - Response Times", availability: ["2 days", "12 hrs", " 8 hrs", "6 hrs", "4 hrs"] },
                 {
                     name: "WhatsApp and Email support",
                     availability: [

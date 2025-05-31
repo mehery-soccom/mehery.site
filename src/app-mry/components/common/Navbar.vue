@@ -4,7 +4,7 @@
             'shadow-sm py-2': isScrolled,
             'py-4': !isScrolled
         }"
-        class="w-full transition-all duration-300 sticky top-0 z-50 bg-white"
+        class="w-full transition-all duration-300 sticky top-0 z-50 bg-white text-gray-700"
     >
         <div class="flex items-center px-4">
             <!-- Logo -->
@@ -110,12 +110,12 @@
                             Partner
                         </router-link>
 
-                        <router-link
-                            :to="{ name: 'Faq' }"
+                        <a
+                            @click="scrollToSection('faq')"
                             class="block px-6 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-md font-bold cursor-pointer transition-colors"
                         >
                             FAQ
-                        </router-link>
+                        </a>
 
                         <!-- Testimonials Link -->
                         <a
@@ -280,13 +280,13 @@
                         </router-link>
 
                         <!-- FAQ Link (Mobile) -->
-                        <router-link
-                            :to="{ name: 'Faq' }"
+                        <a
+                            @click="handleMobileLinkClick('faq')"
                             class="block py-1.5 text-gray-700 hover:text-gray-900 text-sm cursor-pointer transition-colors duration-300"
-                            @click="toggleMobileMenu"
+                            
                         >
                             FAQ
-                        </router-link>
+                        </a>
 
                         <!-- Testimonials Link (Mobile) -->
                         <a

@@ -15,6 +15,7 @@ onMounted(() => {
     channelId: 'web:meherysitepagesdev',
     channelKey: '1joi34fachojo9OAG550I72',
     config: {
+      "launcher.animation.effect": "bounce",
       'header.bg.color': '#78bffd',
       'header.text.color': '#000000',
       'header.icon.url': 'https://cdn.jsdelivr.net/gh/mehery-soccom/mehery-web-dist@834bfa2c3b8060cac2ebcd7778758d6021be2dca/dist/logo/logo-tiny-o.png',

@@ -103,7 +103,7 @@ const navLinks = [
     { type: "route", path: "/privacy", label: "Privacy Policy" },
     { type: "route", path: "/terms",  label: "Terms of Service" },
     { type: "route", path: "/partner", label: "Partner" },
-    { type: "route", path: "/faq", label: "FAQs" }
+    { type: "scroll", path: "faq", label: "FAQs" }
 ];
 
 const handleScroll = id => {

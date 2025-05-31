@@ -42,7 +42,7 @@
                                 src="../../@assets/images/core.png"
                                 alt="Core Values Illustration"
                                 loading="lazy"
-                                class="max-w-2xl rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
+                                class="max-w-3xl w-full rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
                             />
                         </div>
                         <div class="space-y-6 max-w-2xl">
