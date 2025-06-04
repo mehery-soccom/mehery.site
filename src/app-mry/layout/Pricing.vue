@@ -356,11 +356,15 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per Conversation": { 
+                    "Per WABA Conv": { 
                         // inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "Max 10/day", 
                         // usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "Max 10/day" 
                         inr:"Max 10/day",
                         usd:"Max 10/day"
+                    },
+                    "Per Social Conv": { 
+                        inr: "Max 10/day", 
+                        usd: "Max 10/day" 
                     },
                     // "Email": { 
                     //     inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "Up to 100", 
@@ -432,7 +436,7 @@ onMounted(async () => {
                 },
                 setupFees: {
                     "FB Biz Act":           { inr: "X", usd: "X" },
-                    "OPEN AI Training":   { inr: "X", usd: "X" },
+                    "Open AI Training":   { inr: "X", usd: "X" },
                     "BOT development":      { inr: "X",  usd: "X" }
                 }
             },
@@ -457,10 +461,14 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per Conversation": { 
+                    "Per WABA Conv": { 
                         inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹1.25", 
                         // usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.050" 
                         usd: "$0.05"
+                    },
+                    "Per Social Conv": { 
+                        inr:"₹1.25",
+                        usd:"$0.05"
                     },
                     "Per Email": { 
                         inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.12", 
@@ -497,7 +505,8 @@ onMounted(async () => {
                 },
                 depositFees: { 
                     minimumDeposit: { 
-                        inr: litePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
+                        // inr: litePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
+                        inr:"₹1,000",
                         // usd: litePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
                         usd: "$25"
                     } 
@@ -554,10 +563,14 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per Conversation": { 
+                    "Per WABA Conv": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.04", 
                         // usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
                         usd: "$0.006"
+                    },
+                    "Per Social Conv": { 
+                        inr:"₹0.12",
+                        usd:"$0.006"
                     },
                     "Per Email": { 
                         inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.08", 
@@ -591,8 +604,9 @@ onMounted(async () => {
                 },
                 depositFees: { 
                     minimumDeposit: { 
-                        inr: ecoPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
+                        // inr: ecoPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
                         // usd: ecoPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        inr:"₹1,000",
                         usd: "$25"
                     } 
                 },
@@ -648,10 +662,14 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per Conversation": { 
+                    "Per WABA Conv": { 
                         inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.03", 
                         // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
                         usd: "$0.006"
+                    },
+                    "Per Social Conv": { 
+                        inr:"₹0.12",
+                        usd:"$0.006"
                     },
                     "Per Email": { 
                         inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
@@ -684,8 +702,9 @@ onMounted(async () => {
                 },
                 depositFees: { 
                     minimumDeposit: { 
-                        inr: proPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
+                        // inr: proPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
                         // usd: proPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        inr:"₹1,000",
                         usd: "$25"                        
                     } 
                 },
@@ -744,11 +763,15 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per Conversation": { 
+                    "Per WABA Conv": { 
                         // inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "On Req", 
                         usd: "$0.006",   
                         inr:"₹0.03"                     
                         // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "On Req" 
+                    },
+                    "Per Social Conv": { 
+                        inr:"₹0.12",
+                        usd:"$0.006"
                     },
                     "Per Email": { 
                         // inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_inr || "On Req",
@@ -791,8 +814,9 @@ onMounted(async () => {
                 },
                 depositFees: { 
                     minimumDeposit: { 
-                        inr: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1000", 
+                        // inr: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
                         // usd: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
+                        inr:"₹1,000",
                         usd: "$25"
                     } 
                 },
@@ -845,9 +869,9 @@ onMounted(async () => {
                 { name: "Session Tags", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Follow-up", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "Appointment / Table Booking", availability: ["Y", "Y", "X", "Y", "Y"] },
-                { name: "Number Masking", availability: ["Y", "Y", "Y", "Y", "Y"] },
+                { name: "Number Masking", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "User roles/skills", availability: ["Y", "Y", "Y", "Y", "Y"] },
-                { name: "Conversation Analytics", availability: ["Y", "Y", "Y", "Y", "Y"] },
+                { name: "Conversation Analytics", availability: ["Y", "Y", "X", "X", "Y"] },
                 
             ],
             "Conversations - AI enabled with CHAT GPT": [
@@ -877,7 +901,8 @@ onMounted(async () => {
             "Marketing / Lead Generation": [
                 { name: "Campaign Management", availability: ["Y", "Y", "Y", "Y", "Y"] },
                 { name: "Campaign Scheduling", availability: ["Y", "Y", "X", "Y", "Y"] },
-                { name: "Campaign Analytics, CTA Tracker", availability: ["Y", "Y", "Y", "Y", "Y"] },
+                { name: "Campaign Analytics, CTA Tracker", availability: ["Y", "Y", "X", "X", "Y"] },
+                { name: "Template Analytics, CTA Tracker", availability: ["Y", "Y", "X", "X", "Y"] },
                 { name: "Custom Image (and HTML source) Templates", availability: ["Y", "Y", "X", "Y", "Y"] },
                 { name: "Click to WhatsApp Ads Insights", availability: ["Y", "Y", "Y", "Y", "Y"] }
             ],
