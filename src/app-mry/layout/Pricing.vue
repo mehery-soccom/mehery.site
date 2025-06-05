@@ -66,9 +66,7 @@
                                 class="flex justify-between"
                             >
                                 <span>{{ key }}</span>
-                                <span :class="{ 'text-red-700': value === 'X'}" >{{
-                                    value === "X" ? "✗" : showUSD ? value.usd : value.inr
-                                }}</span>
+                                <span :class="{ 'text-red-700': displayValue(value) === '✗' }">{{ displayValue(value) }}</span>
                             </li>
                         </ul>
                     </div>
@@ -283,9 +281,9 @@ const billingCycle = ref("Monthly");
 const plans = ref([]);
 const features = ref({});
 
-const toggleCurrency = () => {
-     showUSD.value = !showUSD.value;
- };
+// const toggleCurrency = () => {
+//      showUSD.value = !showUSD.value;
+//  };
 
 const toggleView = () => {
     showFeatures.value = !showFeatures.value;
@@ -301,13 +299,37 @@ const toggleBillingCycle = () => {
     }
 };
 
-const currencySymbol = computed(() => {
-    return showUSD.value ? "$" : "₹";
-});
+// const currencySymbol = computed(() => {
+//     return showUSD.value ? "$" : "₹";
+// });
+
+const displayValue = (value) => {
+    if (typeof value === 'object' && value !== null) {
+        const val = showUSD.value ? value.usd : value.inr;
+        return val === 'X' ? '✗' : val;
+    }
+    return value;
+};
 
 const formatSectionTitle = key => {
     return key.replace(/([A-Z])(?=[A-Z])/g, '$1').replace(/\s{2,}/g, ' ');
 };
+
+function unflattenObject(obj) {
+  const result = {};
+  for (const key in obj) {
+    const keys = key.split(".");
+    keys.reduce((acc, part, i) => {
+      if (i === keys.length - 1) {
+        acc[part] = obj[key];
+      } else {
+        acc[part] = acc[part] || {};
+      }
+      return acc[part];
+    }, result);
+  }
+  return result;
+}
 
 onMounted(async () => {
 
@@ -315,8 +337,8 @@ onMounted(async () => {
     try {
             const response = await axios.get("https://ipinfo.io/json?token=1bfc162a759fb1");
             if (response.data.country === "IN") {
-                showUSD.value = false;
-                // showUSD.value = true;
+                // showUSD.value = false;
+                showUSD.value = true;
             } else {
                 showUSD.value = true;
             }
@@ -326,529 +348,136 @@ onMounted(async () => {
     }
 
     try {
-        // Fetch all plans in parallel
-        const [freePlanRes, enterprisePlanRes, ecoPlanRes, litePlanRes, proPlanRes] = await Promise.all([
-            resource.read({ contentType: "pricing", src: "free_plan.xlsx", query: {} }),
-            resource.read({ contentType: "pricing", src: "enterprise_plan.xlsx", query: {} }),
-            resource.read({ contentType: "pricing", src: "eco_plan.xlsx", query: {} }),
-            resource.read({ contentType: "pricing", src: "lite_plan.xlsx", query: {} }),
-            resource.read({ contentType: "pricing", src: "pro_plan.xlsx", query: {} })
+        const [pricingUSD, pricingINR] = await Promise.all([
+            resource.read({ contentType: "pricing", src: "pricing_usd.xlsx", query: {} }),
+            resource.read({ contentType: "pricing", src: "pricing_inr.xlsx", query: {} })
         ]);
 
-        plans.value = [
-            // FREE FOREVER
-            {
-                name: freePlanRes.results[0]?.name || "FREE FOREVER",
-                buttonText: freePlanRes.results[0]?.buttonText || "Get Started",
-                buttonLink: freePlanRes.results[0]?.buttonLink || "https://app.mehery.com/partner/auth/register",
+        // Unflatten the flat JSON results
+        const unflattenedUSD = pricingUSD.results.map(unflattenObject);
+        const unflattenedINR = pricingINR.results.map(unflattenObject);
+
+        // Create maps of plans by name for easy lookup
+        const plansUSD = unflattenedUSD.reduce((acc, plan) => {
+            acc[plan.name] = plan;
+            return acc;
+        }, {});
+
+        const plansINR = unflattenedINR.reduce((acc, plan) => {
+            acc[plan.name] = plan;
+            return acc;
+        }, {});
+
+        // Get all plan names (assuming USD and INR have the same plans)
+        const planNames = Object.keys(plansUSD);
+
+        // Construct the plans array by combining USD and INR data
+        plans.value = planNames.map(name => {
+            const usdPlan = plansUSD[name];
+            const inrPlan = plansINR[name];
+
+            return {
+                name: name,
+                buttonText: usdPlan.button?.text || "Get Started",
+                buttonLink: usdPlan.button?.link || "https://app.mehery.com/partner/auth/register",
                 fixedFees: {
-                    monthly: { 
-                        usd: freePlanRes.results[0]?.fixedFees_monthly_usd || "Free", 
-                        inr: freePlanRes.results[0]?.fixedFees_monthly_inr || "Free" 
+                    monthly: {
+                        usd: usdPlan.fees?.monthly || "X",
+                        inr: inrPlan.fees?.monthly || "X"
                     },
-                    quarterly: { 
-                        usd: freePlanRes.results[0]?.fixedFees_quarterly_usd || "Free", 
-                        inr: freePlanRes.results[0]?.fixedFees_quarterly_inr || "Free" 
+                    quarterly: {
+                        usd: usdPlan.fees?.quaterly || "X",
+                        inr: inrPlan.fees?.quaterly || "X"
                     },
-                    annual: { 
-                        usd: freePlanRes.results[0]?.fixedFees_annual_usd || "Free", 
-                        inr: freePlanRes.results[0]?.fixedFees_annual_inr || "Free" 
+                    annual: {
+                        usd: usdPlan.fees?.annualy || "X",
+                        inr: inrPlan.fees?.annualy || "X"
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per WABA Conv": { 
-                        // inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "Max 10/day", 
-                        // usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "Max 10/day" 
-                        inr:"Max 10/day",
-                        usd:"Max 10/day"
+                    "Per WABA Conv": {
+                        usd: usdPlan.mfees?.waba || "X",
+                        inr: inrPlan.mfees?.waba || "X"
                     },
-                    "Per Social Conv": { 
-                        inr: "Max 10/day", 
-                        usd: "Max 10/day" 
+                    "Per Social Conv": {
+                        usd: usdPlan.mfees?.social || "X",
+                        inr: inrPlan.mfees?.social || "X"
                     },
-                    // "Email": { 
-                    //     inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "Up to 100", 
-                    //     usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "Up to 100" 
-                    // },
-                    
-                    "Per Email": { 
-                        inr: "Max 10/day", 
-                        usd: "Max 10/day" 
+                    "Per Email": {
+                        usd: usdPlan.mfees?.email || "X",
+                        inr: inrPlan.mfees?.email || "X"
                     },
-                    "Per SMS": { 
-                        // inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
-                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
-                        inr:"Max 10/day",
-                        usd:"Max 10/day"
+                    "Per SMS": {
+                        usd: usdPlan.mfees?.sms || "X",
+                        inr: inrPlan.mfees?.sms || "X"
                     },
-                    "Per Image Creation": { 
-                        // inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "Max 10/day", 
-                        // usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "Max 10/day" 
-                        inr:"Max 10/day",
-                        usd:"Max 10/day"
+                    "Per Image Creation": {
+                        usd: usdPlan.mfees?.image || "X",
+                        inr: inrPlan.mfees?.image || "X"
                     },
-                    "Conversational Bot": { 
-                        // inr: freePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "Max 10/day", 
-                        // usd: freePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_usd || "Max 10/day" 
-                        inr:"Max 10/day",
-                        usd:"Max 10/day"
+                    "Conversational Bot": {
+                        usd: usdPlan.mfees?.gpt || "X",
+                        inr: inrPlan.mfees?.gpt || "X"
                     }
                 },
-                users: { 
-                    adminAgent: freePlanRes.results[0]?.users_adminAgent || "1", 
-                    // additionalUser: { 
-                    //     inr: freePlanRes.results[0]?.users_additionalUser_inr || "X", 
-                    //     usd: freePlanRes.results[0]?.users_additionalUser_usd || "X" 
-                    // } 
+                users: {
+                    adminAgent: usdPlan.user?.num || "1",
                     additionalUser: {
-                        monthly:   { usd: "X",    inr: "X"  },
-                        quarterly: { usd: "X",   inr: "X"},
-                        annual:    { usd: "X",   inr: "X"}
+                        monthly: {
+                            usd: usdPlan.user?.month || "X",
+                            inr: inrPlan.user?.month || "X"
+                        },
+                        quarterly: {
+                            usd: usdPlan.user?.quater || "X",
+                            inr: inrPlan.user?.quater || "X"
+                        },
+                        annual: {
+                            usd: usdPlan.user?.year || "X",
+                            inr: inrPlan.user?.year || "X"
+                        }
                     }
                 },
-                // depositFees: { 
-                //     minimumDeposit: freePlanRes.results[0]?.depositFees_minimumDeposit || "Nil" 
-                // },
-                depositFees: { 
-                    minimumDeposit: { 
-                        inr: "Nil", 
-                        usd: "Nil" 
-                    } 
+                depositFees: {
+                    minimumDeposit: {
+                        usd: usdPlan.minDeposit || "X",
+                        inr: inrPlan.minDeposit || "X"
+                    }
                 },
                 setupFees: {
-                    facebookBusinessSetup: freePlanRes.results[0]?.setupFees_facebookBusinessSetup || "N/A",
-                    openAISetupTraining: freePlanRes.results[0]?.setupFees_openAISetupTraining || "N/A",
-                    openAIBotDevelopment: freePlanRes.results[0]?.setupFees_openAIBotDevelopment || "Based on work scope"
-                },
-                freeUtilities: {
-                    monthlyDAU: freePlanRes.results[0]?.freeUtilities_monthlyDAU || "10",
-                    freeImages: freePlanRes.results[0]?.freeUtilities_freeImages || "10",
-                    freeBotConversations: freePlanRes.results[0]?.freeUtilities_freeBotConversations || "10"
+                    "FB Biz Act": {
+                        usd: usdPlan.setup?.fb || "X",
+                        inr: inrPlan.setup?.fb || "X"
+                    },
+                    "Open AI Training": {
+                        usd: usdPlan.setup?.openAi || "X",
+                        inr: inrPlan.setup?.openAi || "X"
+                    },
+                    "BOT Development": {
+                        usd: usdPlan.setup?.bot || "X",
+                        inr: inrPlan.setup?.bot || "X"
+                    }
                 },
                 channels: {
-                    // permissionedNumber: planData.channels_permissionedNumber || "All",
-                    permissionedNumber: "All",
+                    permissionedNumber: usdPlan.channel?.num || "All",
                     additionalChannels: {
-                    monthly:   { usd: "X",     inr: "X" },
-                    quarterly: { usd: "X",     inr: "X" },
-                    annual:    { usd: "X",     inr: "X"}
+                        monthly: {
+                            usd: usdPlan.channel?.month || "X",
+                            inr: inrPlan.channel?.month || "X"
+                        },
+                        quarterly: {
+                            usd: usdPlan.channel?.quater || "X",
+                            inr: inrPlan.channel?.quater || "X"
+                        },
+                        annual: {
+                            usd: usdPlan.channel?.year || "X",
+                            inr: inrPlan.channel?.year || "X"
+                        }
                     }
-                },
-                setupFees: {
-                    "FB Biz Act":           { inr: "X", usd: "X" },
-                    "Open AI Training":   { inr: "X", usd: "X" },
-                    "BOT development":      { inr: "X",  usd: "X" }
                 }
-            },
+            };
+        });
 
-            // LITE
-            {
-                name: litePlanRes.results[0]?.name || "LITE",
-                buttonText: litePlanRes.results[0]?.buttonText || "Get Started",
-                buttonLink: litePlanRes.results[0]?.buttonLink || "https://app.mehery.com/partner/auth/register",
-                fixedFees: {
-                    monthly: { 
-                        usd: litePlanRes.results[0]?.fixedFees_monthly_usd || "NA", 
-                        inr: litePlanRes.results[0]?.fixedFees_monthly_inr || "NA" 
-                    },
-                    quarterly: { 
-                        usd: litePlanRes.results[0]?.fixedFees_quarterly_usd || "NA", 
-                        inr: litePlanRes.results[0]?.fixedFees_quarterly_inr || "NA" 
-                    },
-                    annual: { 
-                        usd: litePlanRes.results[0]?.fixedFees_annual_usd || "NA", 
-                        inr: litePlanRes.results[0]?.fixedFees_annual_inr || "NA" 
-                    }
-                },
-                "Mehery Fees – Per conversation Fees": {
-                    "Per WABA Conv": { 
-                        inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹1.25", 
-                        // usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.050" 
-                        usd: "$0.05"
-                    },
-                    "Per Social Conv": { 
-                        inr:"₹1.25",
-                        usd:"$0.05"
-                    },
-                    "Per Email": { 
-                        inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.12", 
-                        usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0015" 
-                    },
-                    "Per SMS": { 
-                        // inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
-                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
-                        inr:"₹0.05",
-                        usd:"$0.005"
-                    },
-                    "Per Image Creation": { 
-                        inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "₹0.25", 
-                        usd: litePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "$0.012" 
-                    },
-                    "Conversational Bot": { 
-                        // inr: litePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "₹2.25", 
-                        inr: "₹2.25",
-                        usd: "$0.100" 
-                    }
-                },
-                users: { 
-                    adminAgent: litePlanRes.results[0]?.users_adminAgent || "1", 
-                    // additionalUser: { 
-                    //     inr: litePlanRes.results[0]?.users_additionalUser_inr || "₹500", 
-                    //     // usd: litePlanRes.results[0]?.users_additionalUser_usd || "$9.9" 
-                    //     usd: "$9.9"
-                    // } 
-                    additionalUser: {
-                        monthly:   { usd: "$10",    inr: "₹800"  },
-                        quarterly: { usd: "$27",   inr: "₹2,160"},
-                        annual:    { usd: "$96",   inr: "₹7,680"}
-                    }
-                },
-                depositFees: { 
-                    minimumDeposit: { 
-                        // inr: litePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
-                        inr:"₹1,000",
-                        // usd: litePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
-                        usd: "$25"
-                    } 
-                },
-                setupFees: {
-                    facebookBusinessSetup: { 
-                        inr: litePlanRes.results[0]?.setupFees_facebookBusinessSetup_inr || "₹5000", 
-                        usd: litePlanRes.results[0]?.setupFees_facebookBusinessSetup_usd || "$50" 
-                    },
-                    openAISetupTraining: { 
-                        inr: litePlanRes.results[0]?.setupFees_openAISetupTraining_inr || "X", 
-                        usd: litePlanRes.results[0]?.setupFees_openAISetupTraining_usd || "X" 
-                    },
-                    openAIBotDevelopment: { 
-                        inr: litePlanRes.results[0]?.setupFees_openAIBotDevelopment_inr || "Based on work scope", 
-                        usd: litePlanRes.results[0]?.setupFees_openAIBotDevelopment_usd || "Based on work scope" 
-                    }
-                },
-                channels: {
-                    permissionedNumber: "1",
-                    additionalChannels: {
-                    monthly:   { usd: "$50",     inr: "₹1,250" },
-                    quarterly: { usd: "$135",     inr: "₹3,375" },
-                    annual:    { usd: "$480",     inr: "₹12,000"}
-                    }
-                },
-                setupFees: {
-                    "FB Biz Act":           { inr: "₹5,000", usd: "$50" },
-                    "Open AI Training":   { inr: "On Req", usd: "On Req" },
-                    "BOT development":      { inr: "On Req",  usd: "On Req" }
-                },
-            },
-
-            // ECO
-            {
-                name: ecoPlanRes.results[0]?.name || "ECO",
-                buttonText: ecoPlanRes.results[0]?.buttonText || "Get Started",
-                buttonLink: ecoPlanRes.results[0]?.buttonLink || "https://app.mehery.com/partner/auth/register",
-                fixedFees: {
-                    monthly: { 
-                        // usd: ecoPlanRes.results[0]?.fixedFees_monthly_usd || "$69", 
-                        usd: "$69",                        
-                        inr: ecoPlanRes.results[0]?.fixedFees_monthly_inr || "₹2,499" 
-                    },
-                    quarterly: { 
-                        // usd: ecoPlanRes.results[0]?.fixedFees_quarterly_usd || "$189",
-                        usd: "$185" ,
-                        inr: ecoPlanRes.results[0]?.fixedFees_quarterly_inr || "₹6,750" 
-                    },
-                    annual: { 
-                        // usd: ecoPlanRes.results[0]?.fixedFees_annual_usd || "$649", 
-                        usd: "$660",
-                        inr: ecoPlanRes.results[0]?.fixedFees_annual_inr || "₹24,000" 
-                    }
-                },
-                "Mehery Fees – Per conversation Fees": {
-                    "Per WABA Conv": { 
-                        inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.04", 
-                        // usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
-                        usd: "$0.006"
-                    },
-                    "Per Social Conv": { 
-                        inr:"₹0.12",
-                        usd:"$0.006"
-                    },
-                    "Per Email": { 
-                        inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.08", 
-                        usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0009" 
-                    },
-                    "Per SMS": { 
-                        // inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
-                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
-                        inr:"₹0.03",
-                        usd:"$0.002"
-                    },
-                    "Per Image Creation": { 
-                        inr: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "₹0.12", 
-                        // usd: ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "$0.006" 
-                        usd: "$0.006"
-                    },
-                    "Conversational Bot": ecoPlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot || "X"
-                },
-                users: { 
-                    adminAgent: ecoPlanRes.results[0]?.users_adminAgent || "5", 
-                    // additionalUser: { 
-                    //     inr: ecoPlanRes.results[0]?.users_additionalUser_inr || "₹500", 
-                    //     // usd: ecoPlanRes.results[0]?.users_additionalUser_usd || "$9.9" 
-                    //     usd: "$9.9"
-                    // } 
-                    additionalUser: {
-                        monthly:   { usd: "$9",    inr: "₹400"  },
-                        quarterly: { usd: "$24",   inr: "₹1,080"},
-                        annual:    { usd: "$86",   inr: "₹3,840"}
-                    }
-                },
-                depositFees: { 
-                    minimumDeposit: { 
-                        // inr: ecoPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
-                        // usd: ecoPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
-                        inr:"₹1,000",
-                        usd: "$25"
-                    } 
-                },
-                setupFees: {
-                    facebookBusinessSetup: { 
-                        inr: ecoPlanRes.results[0]?.setupFees_facebookBusinessSetup_inr || "₹5000", 
-                        usd: ecoPlanRes.results[0]?.setupFees_facebookBusinessSetup_usd || "$50" 
-                    },
-                    openAISetupTraining: { 
-                        inr: ecoPlanRes.results[0]?.setupFees_openAISetupTraining_inr || "X", 
-                        usd: ecoPlanRes.results[0]?.setupFees_openAISetupTraining_usd || "X" 
-                    },
-                    openAIBotDevelopment: { 
-                        inr: ecoPlanRes.results[0]?.setupFees_openAIBotDevelopment_inr || "Based on work scope", 
-                        usd: ecoPlanRes.results[0]?.setupFees_openAIBotDevelopment_usd || "Based on work scope" 
-                    }
-                },
-                channels: {
-                    permissionedNumber: "2",
-                    additionalChannels: {
-                    monthly:   { usd: "$40",     inr: "₹1,000" },
-                    quarterly: { usd: "$108",     inr: "₹2,700" },
-                    annual:    { usd: "$384",     inr: "₹9,600"}
-                    }
-                },
-                setupFees: {
-                    "FB Biz Act":           { inr: "₹5,000", usd: "$50" },
-                    "Open AI Training":   { inr: "X", usd: "X" },
-                    "BOT Development":      { inr: "X",  usd: "X" }
-                },
-            },
-
-            // PRO
-            {
-                name: proPlanRes.results[0]?.name || "PRO",
-                buttonText: proPlanRes.results[0]?.buttonText || "Get Started",
-                buttonLink: proPlanRes.results[0]?.buttonLink || "https://app.mehery.com/partner/auth/register",
-                fixedFees: {
-                    monthly: { 
-                        // usd: proPlanRes.results[0]?.fixedFees_monthly_usd || "$149", 
-                        usd: "$149",
-                        inr: proPlanRes.results[0]?.fixedFees_monthly_inr || "₹3,999" 
-                    },
-                    quarterly: { 
-                        // usd: proPlanRes.results[0]?.fixedFees_quarterly_usd || "$399", 
-                        usd: "$400",
-                        inr: proPlanRes.results[0]?.fixedFees_quarterly_inr || "₹11,000" 
-                    },
-                    annual: { 
-                        // usd: proPlanRes.results[0]?.fixedFees_annual_usd || "$1,399", 
-                        usd: "$1,430",
-                        inr: proPlanRes.results[0]?.fixedFees_annual_inr || "₹39,000" 
-                    }
-                },
-                "Mehery Fees – Per conversation Fees": {
-                    "Per WABA Conv": { 
-                        inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "₹0.03", 
-                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "$0.006" 
-                        usd: "$0.006"
-                    },
-                    "Per Social Conv": { 
-                        inr:"₹0.12",
-                        usd:"$0.006"
-                    },
-                    "Per Email": { 
-                        inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
-                        usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
-                    },
-                    "Per SMS": { 
-                        // inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
-                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
-                        inr:"₹0.02",
-                        usd:"$0.0020"
-                    },
-                    "Per Image Creation": { 
-                        inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_inr || "₹0.12", 
-                        usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreation_usd || "$0.006" 
-                    },
-                    "Conversational Bot": proPlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot || "X"
-                },
-                users: { 
-                    adminAgent: proPlanRes.results[0]?.users_adminAgent || "7", 
-                    // additionalUser: { 
-                    //     inr: proPlanRes.results[0]?.users_additionalUser_inr || "₹600", 
-                    //     // usd: proPlanRes.results[0]?.users_additionalUser_usd || "$19.9" 
-                    //     usd: "$19.9"
-                    // } 
-                    additionalUser: {
-                        monthly:   { usd: "$15",    inr: "₹500"  },
-                        quarterly: { usd: "$41",   inr: "₹1,350"},
-                        annual:    { usd: "$144",   inr: "₹4,800"}
-                    }
-                },
-                depositFees: { 
-                    minimumDeposit: { 
-                        // inr: proPlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
-                        // usd: proPlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
-                        inr:"₹1,000",
-                        usd: "$25"                        
-                    } 
-                },
-                setupFees: {
-                    facebookBusinessSetup: { 
-                        inr: proPlanRes.results[0]?.setupFees_facebookBusinessSetup_inr || "₹5000", 
-                        usd: proPlanRes.results[0]?.setupFees_facebookBusinessSetup_usd || "$50" 
-                    },
-                    openAISetupTraining: { 
-                        inr: proPlanRes.results[0]?.setupFees_openAISetupTraining_inr || "X", 
-                        usd: proPlanRes.results[0]?.setupFees_openAISetupTraining_usd || "X" 
-                    },
-                    openAIBotDevelopment: { 
-                        inr: proPlanRes.results[0]?.setupFees_openAIBotDevelopment_inr || "Based on work scope", 
-                        usd: proPlanRes.results[0]?.setupFees_openAIBotDevelopment_usd || "Based on work scope" 
-                    }
-                },
-                channels: {
-                    permissionedNumber: "3",
-                    additionalChannels: {
-                    monthly:   { usd: "$40",     inr: "₹1,000" },
-                    quarterly: { usd: "$108",     inr: "₹2,700" },
-                    annual:    { usd: "$384",     inr: "₹9,600"}
-                    }
-                },
-                setupFees: {
-                    "FB Biz Act":           { inr: "₹5,000", usd: "$50" },
-                    "Open AI Training":   { inr: "X", usd: "X" },
-                    "BOT Development":      { inr: "X",  usd: "X" }
-                },
-            },
-
-            // ENTERPRISE
-            {
-                name: enterprisePlanRes.results[0]?.name || "ENTERPRISE",
-                buttonText: enterprisePlanRes.results[0]?.buttonText || "Contact Sales",
-                buttonLink: enterprisePlanRes.results[0]?.buttonLink || "https://calendly.com/shekhars",
-                fixedFees: {
-                    monthly: { 
-                        // usd: enterprisePlanRes.results[0]?.fixedFees_monthly_usd || "On Req", 
-                        // inr: enterprisePlanRes.results[0]?.fixedFees_monthly_inr || "On Req" 
-                        usd: "$399",
-                        inr: "₹9,999",
-                    },
-                    quarterly: { 
-                        // usd: enterprisePlanRes.results[0]?.fixedFees_quarterly_usd || "On Req", 
-                        // inr: enterprisePlanRes.results[0]?.fixedFees_quarterly_inr || "On Req" 
-                        usd: "$1,075",
-                        inr: "₹27,000",
-                    },
-                    annual: { 
-                        // usd: enterprisePlanRes.results[0]?.fixedFees_annual_usd || "On Req", 
-                        // inr: enterprisePlanRes.results[0]?.fixedFees_annual_inr || "On Req" 
-                        usd: "$3,830",
-                        inr: "₹96,000",
-                    }
-                },
-                "Mehery Fees – Per conversation Fees": {
-                    "Per WABA Conv": { 
-                        // inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_inr || "On Req", 
-                        usd: "$0.006",   
-                        inr:"₹0.03"                     
-                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_DAU_usd || "On Req" 
-                    },
-                    "Per Social Conv": { 
-                        inr:"₹0.12",
-                        usd:"$0.006"
-                    },
-                    "Per Email": { 
-                        // inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_inr || "On Req",
-                        usd: "$0.0008",
-                        inr:"₹0.06"                        
-                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_Email1000Free_usd || "On Req" 
-                        
-                    },
-                    "Per SMS": { 
-                        // inr: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_inr || "₹0.07", 
-                        // usd: proPlanRes.results[0]?.MeheryFeesPerConversationFees_Email_usd || "$0.0008" 
-                        inr:"₹0.01",
-                        usd:"$0.001"
-                    },
-                    "Per Image Creation": { 
-                        // inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_inr || "On Req", 
-                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ImageCreationFee_usd || "On Req" 
-                        inr:"₹0.12",
-                        usd: "$0.006"                        
-                    },
-                    "Conversational Bot": { 
-                        // inr: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_inr || "On Req", 
-                        // usd: enterprisePlanRes.results[0]?.MeheryFeesPerConversationFees_ConversationalBot_usd || "On Req" 
-                        inr:"₹0.75",
-                        usd: "$0.020"                        
-                    }
-                },
-                users: { 
-                    // adminAgent: enterprisePlanRes.results[0]?.users_adminAgent || "On Req", 
-                    adminAgent: "10",
-                    // additionalUser: { 
-                    //     inr: enterprisePlanRes.results[0]?.users_additionalUser_inr || "On Req", 
-                    //     usd: enterprisePlanRes.results[0]?.users_additionalUser_usd || "On Req" 
-                    // } 
-                    additionalUser: {
-                        monthly:   { usd: "$30",    inr: "₹800"  },
-                        quarterly: { usd: "$81",   inr: "₹2,160"},
-                        annual:    { usd: "$288",   inr: "₹7,680"}
-                    }
-                },
-                depositFees: { 
-                    minimumDeposit: { 
-                        // inr: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_inr || "₹1,000", 
-                        // usd: enterprisePlanRes.results[0]?.depositFees_minimumDeposit_usd || "$25" 
-                        inr:"₹1,000",
-                        usd: "$25"
-                    } 
-                },
-                setupFees: {
-                    facebookBusinessSetup: { 
-                        inr: enterprisePlanRes.results[0]?.setupFees_facebookBusinessSetup_inr || "₹5000", 
-                        usd: enterprisePlanRes.results[0]?.setupFees_facebookBusinessSetup_usd || "$50" 
-                    },
-                    openAISetupTraining: { 
-                        inr: enterprisePlanRes.results[0]?.setupFees_openAISetupTraining_inr || "On Req", 
-                        usd: enterprisePlanRes.results[0]?.setupFees_openAISetupTraining_usd || "On Req" 
-                    },
-                    openAIBotDevelopment: { 
-                        inr: enterprisePlanRes.results[0]?.setupFees_openAIBotDevelopment_inr || "Based on work scope", 
-                        usd: enterprisePlanRes.results[0]?.setupFees_openAIBotDevelopment_usd || "Based on work scope" 
-                    }
-                },
-                channels: {
-                    permissionedNumber: "8",
-                    additionalChannels: {
-                    monthly:   { usd: "-",     inr: "-" },
-                    quarterly: { usd: "-",     inr: "-" },
-                    annual:    { usd: "-",     inr: "-"}
-                    }
-                },
-                setupFees: {
-                    "FB Biz Act":           { inr: "₹5,000", usd: "$50" },
-                    "Open AI Training":   { inr: "On Req", usd: "On Req" },
-                    "BOT Development":      { inr: "On Req",  usd: "On Req" }
-                },
-            }
-        ];
+        console.log("plan-value", plans);
 
         // Set features data
         features.value = {
@@ -949,12 +578,11 @@ onMounted(async () => {
                 }
             ]
         };
-
-        loading.value = false;
     } catch (error) {
-        console.error("Error loading pricing data:", error);
-        loading.value = false;
-    }
+        console.error("Error fetching pricing data:", error);
+    }finally {
+        loading.value = false; 
+    }  
 });
 </script>
 
