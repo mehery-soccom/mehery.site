@@ -58,7 +58,7 @@
                 <div class="space-y-4 flex-1">
                     <!-- Mehery Fees - Per Conversation Fees -->
                     <div>
-                        <h4 class="font-semibold mb-2 border-b pb-1">Mehery Fees</h4>
+                        <h4 class="font-semibold mb-2 border-b pb-1">Limits</h4>
                         <ul>
                             <li
                                 v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']"
@@ -337,8 +337,8 @@ onMounted(async () => {
     try {
             const response = await axios.get("https://ipinfo.io/json?token=1bfc162a759fb1");
             if (response.data.country === "IN") {
-                // showUSD.value = false;
-                showUSD.value = true;
+                showUSD.value = false;
+                // showUSD.value = true;
             } else {
                 showUSD.value = true;
             }
@@ -395,23 +395,23 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "Per WABA Conv": {
+                    "WABA Conv": {
                         usd: usdPlan.mfees?.waba || "X",
                         inr: inrPlan.mfees?.waba || "X"
                     },
-                    "Per Social Conv": {
+                    "Social Conv": {
                         usd: usdPlan.mfees?.social || "X",
                         inr: inrPlan.mfees?.social || "X"
                     },
-                    "Per Email": {
+                    "Email": {
                         usd: usdPlan.mfees?.email || "X",
                         inr: inrPlan.mfees?.email || "X"
                     },
-                    "Per SMS": {
+                    "SMS": {
                         usd: usdPlan.mfees?.sms || "X",
                         inr: inrPlan.mfees?.sms || "X"
                     },
-                    "Per Image Creation": {
+                    "Image Creation": {
                         usd: usdPlan.mfees?.image || "X",
                         inr: inrPlan.mfees?.image || "X"
                     },
