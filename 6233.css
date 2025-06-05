@@ -1,4 +1,9 @@
 
+th > div[data-v-e69d5282] {
+    letter-spacing: normal !important;
+}
+
+
 /* Base container styles with high z-index */
 .chatbot-container[data-v-0b8f8531] {
     position: relative;

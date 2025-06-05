@@ -1,6 +1,48 @@
 {
     "resources": [
         {
+            "contentType": "about",
+            "file": "1AboutUs.html",
+            "filePath": "resources/app-mry/content/about/1AboutUs.html",
+            "fileName": "1AboutUs",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "About Us",
+                "image": "/.about/../../resources/app-mry/content/about/_images/5495.jpg",
+                "maindescription": "\n    \n      At Mehery, we believe in the power of conversations. Conversations are the cornerstone\n      of building strong customer relationships and play a pivotal role in converting\n      prospects into loyal customers. While large enterprises have the resources to create\n      bespoke tools for customer interactions, small and medium-sized businesses often lack\n      the expertise and infrastructure to do so. That's where Mehery comes in. We make it easy\n      for businesses of all sizes to automate customer interactions, transforming\n      conversations into transactions with ease.\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "about",
+            "file": "2core-values.html",
+            "filePath": "resources/app-mry/content/about/2core-values.html",
+            "fileName": "2core-values",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Our Core Values",
+                "image": "/.about/../../resources/app-mry/content/about/_images/core.png",
+                "maindescription": "\n    \n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li><strong>Putting Customers First:</strong> Our purpose is rooted in helping our customers succeed. When they grow, we grow.</li>\n        <li><strong>Striving for Excellence:</strong> We challenge ourselves to raise the bar every day, staying curious, innovative, and relentless in improving what we do.</li>\n        <li><strong>Simplicity is Our Superpower:</strong> We take pride in creating solutions that are intuitive, elegant, and easy to use—because simplicity drives impact.</li>\n        <li><strong>Fostering Collaboration:</strong> We believe in the power of diversity—of people, ideas, and perspectives. Together, we achieve more.</li>\n        <li><strong>Acting with Agility:</strong> Speed and precision define our approach. We move swiftly, deliver with quality, and stay laser-focused until the goal is achieved.</li>\n        <li><strong>Leading with Integrity:</strong> We stand by our commitments, take ownership of our actions, and make decisions that reflect our values.</li>\n      </ul>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "about",
+            "file": "3journey.html",
+            "filePath": "resources/app-mry/content/about/3journey.html",
+            "fileName": "3journey",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Our Journey",
+                "image": "/.about/../../resources/app-mry/content/about/_images/journey.jpg",
+                "maindescription": "\n    \n      Our story is one of innovation, collaboration, and a relentless pursuit of excellence. \n      Though young, our journey has only just begun, and we invite you to join us as we shape \n      the future of customer engagement—one meaningful conversation at a time.\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
             "contentType": "blog",
             "file": "blog-name-or-id.html",
             "filePath": "resources/app-mry/content/blog/blog-name-or-id.html",
@@ -21,6 +63,81 @@
             "multiverse": {}
         },
         {
+            "contentType": "connect",
+            "file": "auth.html",
+            "filePath": "resources/app-mry/content/connect/auth.html",
+            "fileName": "auth",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "hash": "#authentication",
+                "title": "WhatsApp – Secure Authentication",
+                "image": "/.connect/../../resources/app-mry/content/connect/_images/auth2.png",
+                "maindescription": "\n    \n      Enhance user verification with WhatsApp Authentication Templates, ensuring fast,\n      seamless, and secure logins.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Preset Verification Message</h4>\n            <p class=\"text-gray-600 text-md\">\n              Send users a one-time password (OTP) or verification code with: <br />- Fixed\n              preset text: {VERIFICATION_CODE} is your verification code. <br />- Security disclaimer\n              (optional): For your security, do not share this code. <br />- Expiration warning\n              (optional): This code expires in {NUM_MINUTES} minutes.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Multiple Authentication Methods</h4>\n            <p class=\"text-gray-600 text-md\">\n              - One-Tap Autofill <br />Users tap the autofill button, opening your app\n              with the code pre-filled automatically. <br />- Copy Code Authentication <br />Users\n              tap the copy code button, storing the code on the clipboard for manual pasting. <br />- Zero-Tap Authentication\n              <br />The WhatsApp client broadcasts the code, and your app captures it instantly, eliminating manual entry.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Fast, Secure, & Frictionless User Authentication with WhatsApp\n      </p>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "connect",
+            "file": "click-to-connect.html",
+            "filePath": "resources/app-mry/content/connect/click-to-connect.html",
+            "fileName": "click-to-connect",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "hash": "#click-to-connect",
+                "title": "WhatsApp – Click to Connect",
+                "image": "/.connect/../../resources/app-mry/content/connect/_images/greenthingy.png",
+                "maindescription": "\n    \n      Seamlessly transition customers from Facebook & Instagram to WhatsApp for direct\n      engagement, lead generation, and conversions.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Click-to-WhatsApp Ads</h4>\n            <p class=\"text-gray-600 text-md\">\n              Place ads across Facebook & Instagram (News Feed, Stories, Marketplace) with\n              a “Send Message” button, directing users to WhatsApp Business Chat\n              instantly.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Instant Customer Engagement</h4>\n            <p class=\"text-gray-600 text-md\">\n              Enable real-time conversations on WhatsApp, helping businesses drive sales,\n              support, and marketing through instant messaging.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Mehery’s Omnichannel Advantage</h4>\n            <p class=\"text-gray-600 text-md\">\n              Unlike traditional Click-to-WhatsApp ads, Mehery allows customers to engage\n              directly on Facebook Messenger & Instagram DM, using self-service BOTs and\n              live agents for a frictionless experience.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Maximize Conversions with AI-Powered Engagement!\n      </p>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "connect",
+            "file": "flows.html",
+            "filePath": "resources/app-mry/content/connect/flows.html",
+            "fileName": "flows",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "hash": "#flows",
+                "title": "WhatsApp Flows – Structured & Interactive Messaging",
+                "image": "/.connect/../../resources/app-mry/content/connect/_images/flow.png",
+                "maindescription": "\n    \n      Enhance customer interactions with WhatsApp Flows, enabling structured, guided\n      conversations for seamless business messaging.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Customizable Structured Interactions</h4>\n            <p class=\"text-gray-600 text-md\">\n              Define and configure rich, interactive messages for lead generation, product\n              recommendations, and sales inquiries.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Diverse Data Collection Elements</h4>\n            <p class=\"text-gray-600 text-md\">\n              Capture customer responses effortlessly using: <br />- Email ID <br />- Dates & Numbers <br />- Text Inputs <br />- Radio Buttons & Checkboxes <br />- Drop-Down Menus & Opt-In Options\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Enhanced Engagement with Images</h4>\n            <p class=\"text-gray-600 text-md\">\n              Push out visual content as part of the flow sequence to create a more\n              engaging customer journey.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-600 text-base sm:text-lg font-semibold mt-4\">\n        Drive Conversions & Personalize Customer Interactions with WhatsApp Flows!\n      </p>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "connect",
+            "file": "media-card.html",
+            "filePath": "resources/app-mry/content/connect/media-card.html",
+            "fileName": "media-card",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "hash": "#carousel",
+                "title": "WhatsApp – Media Card Carousel",
+                "image": "/.connect/../../resources/app-mry/content/connect/_images/spm.png",
+                "maindescription": "\n    \n      Enhance your marketing campaigns with visually rich, interactive media carousels for\n      seamless customer engagement.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Engaging Multi-Product Display</h4>\n            <p class=\"text-gray-600 text-md\">\n              Showcase up to 10 media cards in a horizontally scrollable view, perfect for\n              promoting multiple products or services.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Ideal for Marketing Campaigns</h4>\n            <p class=\"text-gray-600 text-md\">\n              Use carousel templates to highlight product variations, special offers, or\n              brand storytelling in a single message.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Rich Media Integration</h4>\n            <p class=\"text-gray-600 text-md\">\n              Combine text, images, and call-to-action buttons for a dynamic, visually\n              appealing customer experience.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Drive Higher Engagement & Conversions with WhatsApp Media Carousels!\n      </p>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "connect",
+            "file": "single-product.html",
+            "filePath": "resources/app-mry/content/connect/single-product.html",
+            "fileName": "single-product",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "hash": "#single-product",
+                "title": "WhatsApp – Single Product Message (SPM)",
+                "image": "/.connect/../../resources/app-mry/content/connect/_images/spm01.png",
+                "maindescription": "\n    \n      Showcase individual products directly from your eCommerce catalog with engaging,\n      interactive product messages.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Personalized Product Display</h4>\n            <p class=\"text-gray-600 text-md\">\n              Highlight a single product with its image, title, and price—automatically\n              pulled from your eCommerce catalog.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Customizable Messaging</h4>\n            <p class=\"text-gray-600 text-md\">\n              Enhance engagement with custom body text, an optional footer, and a\n              call-to-action (View) button for easy access.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Seamless Shopping Experience</h4>\n            <p class=\"text-gray-600 text-md\">\n              Drive instant purchases by allowing customers to explore products\n              effortlessly within WhatsApp.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Boost Conversions with Targeted Product Promotions!\n      </p>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
             "contentType": "content",
             "file": "content-name-or-id.html",
             "filePath": "resources/app-mry/content/content-name-or-id.html",
@@ -28,6 +145,71 @@
             "fileExtension": "html",
             "fileTags": {},
             "info": {},
+            "multiverse": {}
+        },
+        {
+            "contentType": "faqs",
+            "file": "1faq.html",
+            "filePath": "resources/app-mry/content/faqs/1faq.html",
+            "fileName": "1faq",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Can I use my existing WhatsApp number with Mehery?",
+                "content": "\n    \n      Yes, you can use your existing WhatsApp number with Mehery. However, before onboarding:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>You must delete the WhatsApp account linked to that number.</li>\n        <li>If your number is used with another WhatsApp Business API provider (BSP), you can migrate it to Mehery after disabling the Two-Factor Authentication (2FA) PIN from your existing BSP.</li>\n        <li>Alternatively, you can provide a new phone number (virtual or regular SIM) to receive an OTP.</li>\n      </ul>\n      Once migrated:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Your number will be accessible only on the Mehery platform.</li>\n        <li>Virtual numbers support regular voice calls but not WhatsApp voice and video calls via the WhatsApp Business API.</li>\n      </ul>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "faqs",
+            "file": "2faq.html",
+            "filePath": "resources/app-mry/content/faqs/2faq.html",
+            "fileName": "2faq",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "What is conversation-based pricing on WhatsApp?",
+                "content": "\n    \n      WhatsApp introduced a conversation-based pricing model in February 2022. Key points:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Businesses are charged per 24-hour messaging session with a customer.</li>\n        <li>Multiple messages within a 24-hour period incur a single charge for that session.</li>\n        <li>For more details, refer to \n          <span class=\"text-blue-500\">\n            <a href=\"https://developers.facebook.com/docs/whatsapp/pricing/\">WhatsApp’s official pricing documentation</a>.\n          </span>\n        </li>\n      </ul>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "faqs",
+            "file": "3faq.html",
+            "filePath": "resources/app-mry/content/faqs/3faq.html",
+            "fileName": "3faq",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "If WhatsApp is free, why does conversation-based pricing apply?",
+                "content": "\n    \n      While WhatsApp is free for personal use, businesses using the WhatsApp Business API are charged:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Based on conversation pricing.</li>\n        <li>Costs vary depending on the customer's country code and the type of message templates used.</li>\n        <li>For pricing details, visit \n          <span class=\"text-blue-500\">\n            <a href=\"https://developers.facebook.com/docs/whatsapp/pricing/\">WhatsApp’s official pricing documentation</a>.\n          </span>\n        </li>\n      </ul>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "faqs",
+            "file": "4faq.html",
+            "filePath": "resources/app-mry/content/faqs/4faq.html",
+            "fileName": "4faq",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "How many social media messenger channels can I add on Mehery?",
+                "content": "\n    \n      The number of channels depends on your license type:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>You can have one, two, three, or more channels on the same platform.</li>\n        <li>Channels can be of the same type (e.g., multiple WhatsApp accounts) or a combination of different platforms.</li>\n      </ul>\n    \n  "
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "faqs",
+            "file": "5faq.html",
+            "filePath": "resources/app-mry/content/faqs/5faq.html",
+            "fileName": "5faq",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "How easy is it to add a new channel on Mehery?",
+                "content": "\n    \n      Mehery offers an auto-configure capability:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Allows you to seamlessly add a new channel whenever needed.</li>\n      </ul>\n    \n  "
+            },
             "multiverse": {}
         },
         {
@@ -127,91 +309,31 @@
         },
         {
             "contentType": "pricing",
-            "file": "eco_plan.xlsx",
-            "filePath": "resources/app-mry/content/pricing/eco_plan.xlsx",
-            "fileName": "eco_plan",
+            "file": "pricing_inr.xlsx",
+            "filePath": "resources/app-mry/content/pricing/pricing_inr.xlsx",
+            "fileName": "pricing_inr",
             "fileExtension": "xlsx",
             "fileTags": {},
             "info": {},
             "multiverse": {
                 "json": {
-                    "file": "_eco_plan.json",
-                    "filePath": "resources/app-mry/content/pricing/_eco_plan.json"
+                    "file": "_pricing_inr.json",
+                    "filePath": "resources/app-mry/content/pricing/_pricing_inr.json"
                 }
             }
         },
         {
             "contentType": "pricing",
-            "file": "enterprise_plan.xlsx",
-            "filePath": "resources/app-mry/content/pricing/enterprise_plan.xlsx",
-            "fileName": "enterprise_plan",
+            "file": "pricing_usd.xlsx",
+            "filePath": "resources/app-mry/content/pricing/pricing_usd.xlsx",
+            "fileName": "pricing_usd",
             "fileExtension": "xlsx",
             "fileTags": {},
             "info": {},
             "multiverse": {
                 "json": {
-                    "file": "_enterprise_plan.json",
-                    "filePath": "resources/app-mry/content/pricing/_enterprise_plan.json"
-                }
-            }
-        },
-        {
-            "contentType": "pricing",
-            "file": "free_plan.xlsx",
-            "filePath": "resources/app-mry/content/pricing/free_plan.xlsx",
-            "fileName": "free_plan",
-            "fileExtension": "xlsx",
-            "fileTags": {},
-            "info": {},
-            "multiverse": {
-                "json": {
-                    "file": "_free_plan.json",
-                    "filePath": "resources/app-mry/content/pricing/_free_plan.json"
-                }
-            }
-        },
-        {
-            "contentType": "pricing",
-            "file": "lite_plan.xlsx",
-            "filePath": "resources/app-mry/content/pricing/lite_plan.xlsx",
-            "fileName": "lite_plan",
-            "fileExtension": "xlsx",
-            "fileTags": {},
-            "info": {},
-            "multiverse": {
-                "json": {
-                    "file": "_lite_plan.json",
-                    "filePath": "resources/app-mry/content/pricing/_lite_plan.json"
-                }
-            }
-        },
-        {
-            "contentType": "pricing",
-            "file": "pricing_list.xlsx",
-            "filePath": "resources/app-mry/content/pricing/pricing_list.xlsx",
-            "fileName": "pricing_list",
-            "fileExtension": "xlsx",
-            "fileTags": {},
-            "info": {},
-            "multiverse": {
-                "json": {
-                    "file": "_pricing_list.json",
-                    "filePath": "resources/app-mry/content/pricing/_pricing_list.json"
-                }
-            }
-        },
-        {
-            "contentType": "pricing",
-            "file": "pro_plan.xlsx",
-            "filePath": "resources/app-mry/content/pricing/pro_plan.xlsx",
-            "fileName": "pro_plan",
-            "fileExtension": "xlsx",
-            "fileTags": {},
-            "info": {},
-            "multiverse": {
-                "json": {
-                    "file": "_pro_plan.json",
-                    "filePath": "resources/app-mry/content/pricing/_pro_plan.json"
+                    "file": "_pricing_usd.json",
+                    "filePath": "resources/app-mry/content/pricing/_pricing_usd.json"
                 }
             }
         },
@@ -523,8 +645,8 @@
         }
     ],
     "updateTime": {
-        "str": "2025-06-04T10:04:07.578Z",
+        "str": "2025-06-05T11:00:34.194Z",
         "offset": "00.0",
-        "stamp": 1749031447578
+        "stamp": 1749121234194
     }
 }
