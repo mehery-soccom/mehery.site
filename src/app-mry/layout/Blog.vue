@@ -14,37 +14,42 @@
                     </p>
                 </div>
 
-                <div class="posts-container">
-                    <div v-if="posts.length" class="posts-grid">
-                        <div v-for="post in posts" :key="post.id" class="post-card" @click="openPost(post)">
-                            <div v-if="post.image" class="post-image">
-                                <img :src="post.image" alt="Post Image" />
-                            </div>
-                            <div class="post-content">
-                                <h3 class="post-title">{{ post.title }}</h3>
-                                <p class="post-meta">By {{ post.author }} on {{ post.date }}</p>
-                                <p class="post-text">{{ truncated(post.content) }}</p>
-                            </div>
+                <ArticleList :contentType="'blog'" v-slot="{ loading, results }">
+                    <div v-if="loading" class="text-center py-8">
+                        <p>Loading blogs...</p>
+                    </div>
+
+                    <div v-else-if="results.length" class="posts-grid">
+                        <div v-for="(item, index) in results" :key="index" class="post-card" @click="openPost(item.info)">
+                        <div v-if="item.info.image" class="post-image">
+                            <img :src="item.info.image" alt="Post Image" />
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">{{ item.info.title }}</h3>
+                            <p class="post-meta">By {{ item.info.author }} on {{ item.info.date }}</p>
+                            <p class="post-text" v-html="truncated(item.info.content)"></p>
+                        </div>
                         </div>
                     </div>
+
                     <div v-else class="no-posts">
                         <p>No posts available yet. Please check back later!</p>
                     </div>
-                </div>
+                </ArticleList>
             </section>
         </div>
 
         <!-- Modal Popup for Full Blog Details -->
         <div v-if="selectedPost" class="modal-overlay" @click.self="closeModal">
             <div class="modal-box">
-                <button class="modal-close" @click="closeModal">×</button>
+                <button class="modal-close" @click="closeModal">X</button>
                 <div class="modal-content-wrapper">
                     <div v-if="selectedPost.image" class="modal-image">
                         <img :src="selectedPost.image" alt="Post Image" />
                     </div>
                     <h2 class="modal-title">{{ selectedPost.title }}</h2>
                     <p class="modal-meta">By {{ selectedPost.author }} on {{ selectedPost.date }}</p>
-                    <p class="modal-content">{{ selectedPost.content }}</p>
+                    <div class="modal-content" v-html="selectedPost.content"></div>
                 </div>
             </div>
         </div>
@@ -59,6 +64,7 @@ import { ref, onMounted } from "vue";
 // import { blogService } from "../../firebase/index";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
+import ArticleList from "@components/ArticleList.vue";
 
 const posts = ref([]);
 const selectedPost = ref(null);
