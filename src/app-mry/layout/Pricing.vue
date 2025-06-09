@@ -58,7 +58,9 @@
                 <div class="space-y-4 flex-1">
                     <!-- Mehery Fees - Per Conversation Fees -->
                     <div>
-                        <h4 class="font-semibold mb-2 border-b pb-1">Limits</h4>
+                        <h4 class="font-semibold mb-2 border-b pb-1">
+                            {{ plan.name === 'FREE FOREVER' ? 'Limits' : 'Cost per' }}
+                        </h4>
                         <ul>
                             <li
                                 v-for="(value, key) in plan['Mehery Fees – Per conversation Fees']"
