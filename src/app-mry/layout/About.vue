@@ -50,7 +50,7 @@
                 ]"
               >
                 <img
-                  :src="item.info.image"
+                  :src="resolveLink(item.info.image)"
                   alt="About Section Image"
                   loading="lazy"
                   class="w-full h-auto max-w-xl mx-auto rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
@@ -74,8 +74,8 @@ import { onMounted } from "vue";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
 import ArticleList from "@components/ArticleList.vue";
+import { resolveLink } from "../../@utils/linkResolver";
 
-/* Scroll to top on mount, same as before */
 onMounted(() => {
   window.scrollTo({
     top: 0,

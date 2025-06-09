@@ -110,7 +110,7 @@
 import { onMounted } from "vue";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
-import ConversationalBot from "./Conversational.vue";
+// import ConversationalBot from "./Conversational.vue";
 
 onMounted(() => {
     window.scrollTo({

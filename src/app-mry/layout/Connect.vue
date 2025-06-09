@@ -24,7 +24,7 @@
                   ]"
                 >
                   <img
-                    :src="item.info.image"
+                    :src="resolveLink(item.info.image)"
                     :alt="item.info.title"
                     loading="lazy"
                     class="w-full h-auto max-w-md mx-auto rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
@@ -61,6 +61,7 @@
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
 import ArticleList from "@components/ArticleList.vue";
+import { resolveLink } from "../../@utils/linkResolver";
 
 /* Scroll to top on mount */
 import { onMounted } from "vue";

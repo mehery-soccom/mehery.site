@@ -55,7 +55,7 @@
                         'rounded-lg overflow-hidden',
                         {'lg:order-2': index % 2 === 0, 'lg:order-1': index % 2 !== 0}
                     ]">
-                        <img :src="item.info.image" alt="Feature Image" class="w-full h-auto object-cover shadow-md" loading="lazy" />
+                        <img :src="resolveLink(item.info.image)" alt="Feature Image" class="w-full h-auto object-cover shadow-md" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -67,6 +67,7 @@
 import { CheckCircleIcon } from "vue-feather-icons";
 import { useRouter } from "vue-router";
 import ArticleList from "@components/ArticleList.vue";
+import { resolveLink } from "../../@utils/linkResolver";
 
 const router = useRouter();
 

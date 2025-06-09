@@ -22,7 +22,7 @@
                     <div v-else-if="results.length" class="posts-grid">
                         <div v-for="(item, index) in results" :key="index" class="post-card" @click="openPost(item.info)">
                         <div v-if="item.info.image" class="post-image">
-                            <img :src="item.info.image" alt="Post Image" />
+                            <img :src="resolveLink(item.info.image)" alt="Post Image" />
                         </div>
                         <div class="post-content">
                             <h3 class="post-title">{{ item.info.title }}</h3>
@@ -45,7 +45,7 @@
                 <button class="modal-close" @click="closeModal">X</button>
                 <div class="modal-content-wrapper">
                     <div v-if="selectedPost.image" class="modal-image">
-                        <img :src="selectedPost.image" alt="Post Image" />
+                        <img :src="resolveLink(selectedPost.image)" alt="Post Image" />
                     </div>
                     <h2 class="modal-title">{{ selectedPost.title }}</h2>
                     <p class="modal-meta">By {{ selectedPost.author }} on {{ selectedPost.date }}</p>
@@ -65,6 +65,7 @@ import { ref, onMounted } from "vue";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
 import ArticleList from "@components/ArticleList.vue";
+import { resolveLink } from "../../@utils/linkResolver";
 
 const posts = ref([]);
 const selectedPost = ref(null);

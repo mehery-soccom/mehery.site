@@ -31,7 +31,7 @@
                         <p class="mb-4 text-xs sm:text-sm  sm:text-left">{{ item.info.subtitle }}</p>
                     </div>
                         <img
-                            :src="item.info.image"
+                            :src="resolveLink(item.info.image)"
                             alt="Bot Image"
                             class="w-28 h-20 sm:w-32 sm:h-24 md:w-44 md:h-32 object-contain"
                         />
@@ -69,7 +69,7 @@
                             </div>
                             <div class="w-full sm:w-1/3 flex justify-start sm:justify-center items-center">
                                 <img
-                                    :src="item.info.image"
+                                    :src="resolveLink(item.info.image)"
                                     alt="Service Image"
                                     class="w-16 h-16 sm:w-24 sm:h-20 object-contain"
                                 />
@@ -91,6 +91,7 @@
 <script setup>
 import { useRouter } from "vue-router";
 import ArticleList from "@components/ArticleList.vue";
+import { resolveLink } from "../../@utils/linkResolver";
 
 const router = useRouter();
 
