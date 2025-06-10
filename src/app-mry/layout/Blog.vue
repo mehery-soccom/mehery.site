@@ -176,7 +176,7 @@ onMounted(async () => {
 }
 
 .post-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
