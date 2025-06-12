@@ -91,6 +91,11 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.post-title,
+.modal-title {
+    text-align: left;
+}
+
 .blog-container {
     max-width: 1200px;
     margin: 2rem auto;
