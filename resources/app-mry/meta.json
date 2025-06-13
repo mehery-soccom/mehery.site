@@ -9,7 +9,7 @@
             "fileTags": {},
             "info": {
                 "title": "About Us",
-                "image": "/.about/../../resources/app-mry/content/about/_images/5495.jpg",
+                "image": "/about/_images/5495.jpg",
                 "maindescription": "\n    \n      At Mehery, we believe in the power of conversations. Conversations are the cornerstone\n      of building strong customer relationships and play a pivotal role in converting\n      prospects into loyal customers. While large enterprises have the resources to create\n      bespoke tools for customer interactions, small and medium-sized businesses often lack\n      the expertise and infrastructure to do so. That's where Mehery comes in. We make it easy\n      for businesses of all sizes to automate customer interactions, transforming\n      conversations into transactions with ease.\n    \n  "
             },
             "multiverse": {}
@@ -23,7 +23,7 @@
             "fileTags": {},
             "info": {
                 "title": "Our Core Values",
-                "image": "/.about/../../resources/app-mry/content/about/_images/core.png",
+                "image": "/about/_images/core.png",
                 "maindescription": "\n    \n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li><strong>Putting Customers First:</strong> Our purpose is rooted in helping our customers succeed. When they grow, we grow.</li>\n        <li><strong>Striving for Excellence:</strong> We challenge ourselves to raise the bar every day, staying curious, innovative, and relentless in improving what we do.</li>\n        <li><strong>Simplicity is Our Superpower:</strong> We take pride in creating solutions that are intuitive, elegant, and easy to use—because simplicity drives impact.</li>\n        <li><strong>Fostering Collaboration:</strong> We believe in the power of diversity—of people, ideas, and perspectives. Together, we achieve more.</li>\n        <li><strong>Acting with Agility:</strong> Speed and precision define our approach. We move swiftly, deliver with quality, and stay laser-focused until the goal is achieved.</li>\n        <li><strong>Leading with Integrity:</strong> We stand by our commitments, take ownership of our actions, and make decisions that reflect our values.</li>\n      </ul>\n    \n  "
             },
             "multiverse": {}
@@ -37,7 +37,7 @@
             "fileTags": {},
             "info": {
                 "title": "Our Journey",
-                "image": "/.about/../../resources/app-mry/content/about/_images/journey.jpg",
+                "image": "/about/_images/journey.jpg",
                 "maindescription": "\n    \n      Our story is one of innovation, collaboration, and a relentless pursuit of excellence. \n      Though young, our journey has only just begun, and we invite you to join us as we shape \n      the future of customer engagement—one meaningful conversation at a time.\n    \n  "
             },
             "multiverse": {}
@@ -53,7 +53,7 @@
                 "title": "WhatsApp Business. Catalogs, Communication and Commerce",
                 "author": "Kershasp Carnac",
                 "date": "November 10, 2021",
-                "image": "/.blog/../../resources/app-mry/content/blog/_images/phone.png",
+                "image": "/blog/_images/phone.png",
                 "content": "\n    \n      WhatsApp introduced Catalogs in single device platforms in 2021 and has now planned to release the same over the WhatsApp Business API.<br><br>\n\n      Let’s explore how you as an enterprise can capitalize on this.<br><br>\n\n      <b>Building Catalogs</b><br>\n      Catalogs for WhatsApp Business API users can be built in multiple ways. We are listing them below, in an order of ease of execution.<br><br>\n\n        <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n          <li>If your business already has a Facebook catalog set up, we suggest that you leverage that catalog for WhatsApp commerce use cases, as it’s the quickest way to commence operations</li>\n          <li>If your business already has and manages its own Facebook catalog, you can give permission to your Vendor to connect your catalog. Once the permissions are granted, your vendor can link the WhatsApp Business Account to the Catalog via the WhatsApp Manager.</li>\n          <li>If your business is building this for the first time and want to explore all possibilities, your business can also create this in the Facebook Commerce Manager.</li>\n          <li>If your business has an elaborate eCommerce engine and you want all the flexibility of managing the items displayed from your eCommerce system, you need to get down to integrating your eCommerce platform with the WhatsApp Business API.</li>\n        </ul><br>\n\n      <b>Sharing Catalogs with WhatsApp Users</b><br>\n      I will skip the details on how to manage a single product catalog and focus on the multi-product catalog, as that’s how business will best leverage the platform. Catalogs can be categorized, and products can be placed in categories, to make the user search easier.<br><br>\n\n      The above is a quick short, proposed flow for a grocery store, which you can replicate for your business. The in-picture guidelines, detail the characteristics of how this can be executed.<br><br>\n\n      A caveat – in the current release, your catalog can only have 30 items and that limitation is driven by the current menu structure of the WhatsApp Business API, which has this limitation. That, however, does not mean you cannot show more products. Innovate, as you go. Or talk to us<br><br>\n\n      <b>Shopping Cart and Checkout</b><br>\n      A customer can simply add products to his shopping cart, decide quantity, sub-category (weight, size, color with impact on price) and then proceed to checkout. The checkout process will be fed to your eCommerce / ERP using our platform.<br><br>\n\n      A caveat – in the current release, the shopping cart is not fungible across multiple devices that your customer may be using. Not a very strong use case, but nevertheless, something for your call center agents, who get fervent calls saying that my shopping cart is missing.<br><br>\n\n      <b>Converse, Collect and Complete</b><br>\n      Continue the user engagement to collect further collect information on shipping address, shipping location map, confirm delivery date and time, collect money (in countries with WhatsApp pay, you can pay using the WhatsApp pay. However, nothing stops you from sending a payment link for the customer to pay), send notification of dispatch and successful delivery completion.<br><br>\n\n      All this comes together on the Mehery Smart messaging platform, which will give you the integration engagement with the people who understand how this will come together.<br><br> Contact us at sales@mehery.com to get us involved in your success.\n    \n  "
             },
             "multiverse": {}
@@ -69,7 +69,7 @@
                 "title": "WhatsApp Business API. Promotions permitted",
                 "author": "Kershasp Carnac",
                 "date": "November 18, 2021",
-                "image": "/.blog/../../resources/app-mry/content/blog/_images/wabaAPI.png",
+                "image": "/blog/_images/wabaAPI.png",
                 "content": "\n    \n      WhatsApp is rapidly scaling up to becoming a commercial behemoth, by capitalizing its significantly large user base. But more of that in another post.<br><br>\n\n      Meta has now allowed enterprises using the WhatsApp Business API, to send out promotional messages (aka templates, in WhatsApp parlance) and have started approving them.\n      You now have a free pass to reach out to your customers, outside the Session / Conversation timeframes, with promotional messages.<br><br>\n\n      There is no new category of template message introduced, to facilitate this, so you can use any of the existing categories, to start your customer conversations.\n      Meta is actively supporting and approving promotional messages, as they liberalize the WhatsApp Business API and timeframes have come down to minutes.<br><br>\n\n      However, this comes with a caveat – Meta, will be very closely monitoring the recipient responses to your templates.\n      Too many recipients responding with a Block or Report will immediately see a reaction from Meta, to either throttle the template broadcast in case you had initiated a bulk broadcast or even block the template itself.<br>\n      In extreme cases, Meta can block your Business Account itself which will then undergo scrutiny.<br><br>\n\n      Our reasoned proposition to all our platform users as well as anybody who is using the WhatsApp Business API and is planning to use it for promotions is –\n      when you are undertaking promotions, send out a broadcast to a small user base.\n      Evaluate their responses and then expand the recipient coverage in a stepped manner, to minimize any WhatsApp reaction risks.<br><br>\n\n      Mehery Smart messaging, allows you to segment your user base, allowing you to manage this structured promotional message broadcasts.<br><br>\n\n      Contact us at sales@mehery.com to get us involved in your success.<br>\n    \n  "
             },
             "multiverse": {}
@@ -85,7 +85,7 @@
                 "title": "Customer Acquisition. The new dawn",
                 "author": "Kershasp Carnac",
                 "date": "November 18, 2021",
-                "image": "/.blog/../../resources/app-mry/content/blog/_images/custAcq.jpg",
+                "image": "/blog/_images/custAcq.jpg",
                 "content": "\n    \n      Customer acquisition, digitally or otherwise, is an expensive operation. If you do not agree, stop right here, and don’t waste your time.<br><br>\n\n      Let’s talk of digital advertising, here.<br><br>\n\n      Organizations spend tons of time ideating the creatives, messaging, sub-text, target audience et al and then, at the point of time, when the prospect is ready to demonstrate interest, fall flat. Let me explain this.<br><br>\n\n      Digital advertisements, all focus on getting the prospect's attention and then getting him to click on the advert. What happens next is a disaster. They are taken to a form (unless you are on Facebook where they pre-fill the prospect’s details), which if, and when completed, falls into your void. Your agents will look at it when they are ready or when it comes up in their CRM queues. And guess what, the prospect has moved onto another task and your conversion rate has just dropped by another 50%.<br><br>\n\n      All is not lost. Technology is moving and moving rapidly, to help you to enhance your conversion rates.<br><br>\n\n      Social Media Messaging integrated with Digital Advertisements is the way forward.<br><br>\n\n      We would like to present the future normal. We see a future where when a prospect clicks on a digital advert, it walks him through a defined workflow journey, picking up the incremental information required and information that can be disseminated by BOTS and then handing over the prospect to an agent, to conclude the commercial arrangements.<br><br>\n\n      We at Mehery will be happy to work with you to create these customer acquisition journeys and helping you enhance your customer acquisition yields. View sample customer acquisition journeys on our website www.mehery.com in the Customer Acquisition section, by clicking on any of the images there.<br><br>\n\n      Contact us at sales@mehery.com to get us involved in your success.\n    \n  "
             },
             "multiverse": {}
@@ -110,8 +110,8 @@
             "info": {
                 "hash": "#authentication",
                 "title": "WhatsApp – Secure Authentication",
-                "image": "/.connect/../../resources/app-mry/content/connect/_images/auth2.png",
-                "maindescription": "\n    \n      Enhance user verification with WhatsApp Authentication Templates, ensuring fast,\n      seamless, and secure logins.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Preset Verification Message</h4>\n            <p class=\"text-gray-600 text-md\">\n              Send users a one-time password (OTP) or verification code with: <br />- Fixed\n              preset text: {VERIFICATION_CODE} is your verification code. <br />- Security disclaimer\n              (optional): For your security, do not share this code. <br />- Expiration warning\n              (optional): This code expires in {NUM_MINUTES} minutes.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Multiple Authentication Methods</h4>\n            <p class=\"text-gray-600 text-md\">\n              - One-Tap Autofill <br />Users tap the autofill button, opening your app\n              with the code pre-filled automatically. <br />- Copy Code Authentication <br />Users\n              tap the copy code button, storing the code on the clipboard for manual pasting. <br />- Zero-Tap Authentication\n              <br />The WhatsApp client broadcasts the code, and your app captures it instantly, eliminating manual entry.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Fast, Secure, & Frictionless User Authentication with WhatsApp\n      </p>\n    \n  "
+                "image": "/connect/_images/auth2.png",
+                "maindescription": "\n    \n      Enhance user verification with WhatsApp Authentication Templates, ensuring fast,\n      seamless, and secure logins.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start gap-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Preset Verification Message</h4>\n            <p class=\"text-gray-600 text-md\">\n              Send users a one-time password (OTP) or verification code with: <br />- Fixed\n              preset text: {VERIFICATION_CODE} is your verification code. <br />- Security disclaimer\n              (optional): For your security, do not share this code. <br />- Expiration warning\n              (optional): This code expires in {NUM_MINUTES} minutes.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Multiple Authentication Methods</h4>\n            <p class=\"text-gray-600 text-md\">\n              - One-Tap Autofill <br />Users tap the autofill button, opening your app\n              with the code pre-filled automatically. <br />- Copy Code Authentication <br />Users\n              tap the copy code button, storing the code on the clipboard for manual pasting. <br />- Zero-Tap Authentication\n              <br />The WhatsApp client broadcasts the code, and your app captures it instantly, eliminating manual entry.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Fast, Secure, & Frictionless User Authentication with WhatsApp\n      </p>\n    \n  "
             },
             "multiverse": {}
         },
@@ -125,7 +125,7 @@
             "info": {
                 "hash": "#click-to-connect",
                 "title": "WhatsApp – Click to Connect",
-                "image": "/.connect/../../resources/app-mry/content/connect/_images/greenthingy.png",
+                "image": "/connect/_images/greenthingy.png",
                 "maindescription": "\n    \n      Seamlessly transition customers from Facebook & Instagram to WhatsApp for direct\n      engagement, lead generation, and conversions.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Click-to-WhatsApp Ads</h4>\n            <p class=\"text-gray-600 text-md\">\n              Place ads across Facebook & Instagram (News Feed, Stories, Marketplace) with\n              a “Send Message” button, directing users to WhatsApp Business Chat\n              instantly.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Instant Customer Engagement</h4>\n            <p class=\"text-gray-600 text-md\">\n              Enable real-time conversations on WhatsApp, helping businesses drive sales,\n              support, and marketing through instant messaging.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Mehery’s Omnichannel Advantage</h4>\n            <p class=\"text-gray-600 text-md\">\n              Unlike traditional Click-to-WhatsApp ads, Mehery allows customers to engage\n              directly on Facebook Messenger & Instagram DM, using self-service BOTs and\n              live agents for a frictionless experience.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Maximize Conversions with AI-Powered Engagement!\n      </p>\n    \n  "
             },
             "multiverse": {}
@@ -140,7 +140,7 @@
             "info": {
                 "hash": "#flows",
                 "title": "WhatsApp Flows – Structured & Interactive Messaging",
-                "image": "/.connect/../../resources/app-mry/content/connect/_images/flow.png",
+                "image": "/connect/_images/flow.png",
                 "maindescription": "\n    \n      Enhance customer interactions with WhatsApp Flows, enabling structured, guided\n      conversations for seamless business messaging.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Customizable Structured Interactions</h4>\n            <p class=\"text-gray-600 text-md\">\n              Define and configure rich, interactive messages for lead generation, product\n              recommendations, and sales inquiries.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Diverse Data Collection Elements</h4>\n            <p class=\"text-gray-600 text-md\">\n              Capture customer responses effortlessly using: <br />- Email ID <br />- Dates & Numbers <br />- Text Inputs <br />- Radio Buttons & Checkboxes <br />- Drop-Down Menus & Opt-In Options\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Enhanced Engagement with Images</h4>\n            <p class=\"text-gray-600 text-md\">\n              Push out visual content as part of the flow sequence to create a more\n              engaging customer journey.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-600 text-base sm:text-lg font-semibold mt-4\">\n        Drive Conversions & Personalize Customer Interactions with WhatsApp Flows!\n      </p>\n    \n  "
             },
             "multiverse": {}
@@ -155,7 +155,7 @@
             "info": {
                 "hash": "#carousel",
                 "title": "WhatsApp – Media Card Carousel",
-                "image": "/.connect/../../resources/app-mry/content/connect/_images/spm.png",
+                "image": "/connect/_images/spm.png",
                 "maindescription": "\n    \n      Enhance your marketing campaigns with visually rich, interactive media carousels for\n      seamless customer engagement.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Engaging Multi-Product Display</h4>\n            <p class=\"text-gray-600 text-md\">\n              Showcase up to 10 media cards in a horizontally scrollable view, perfect for\n              promoting multiple products or services.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Ideal for Marketing Campaigns</h4>\n            <p class=\"text-gray-600 text-md\">\n              Use carousel templates to highlight product variations, special offers, or\n              brand storytelling in a single message.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Rich Media Integration</h4>\n            <p class=\"text-gray-600 text-md\">\n              Combine text, images, and call-to-action buttons for a dynamic, visually\n              appealing customer experience.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Drive Higher Engagement & Conversions with WhatsApp Media Carousels!\n      </p>\n    \n  "
             },
             "multiverse": {}
@@ -170,7 +170,7 @@
             "info": {
                 "hash": "#single-product",
                 "title": "WhatsApp – Single Product Message (SPM)",
-                "image": "/.connect/../../resources/app-mry/content/connect/_images/spm01.png",
+                "image": "/connect/_images/spm01.png",
                 "maindescription": "\n    \n      Showcase individual products directly from your eCommerce catalog with engaging,\n      interactive product messages.\n      <ul class=\"space-y-4 mt-4\">\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Personalized Product Display</h4>\n            <p class=\"text-gray-600 text-md\">\n              Highlight a single product with its image, title, and price—automatically\n              pulled from your eCommerce catalog.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Customizable Messaging</h4>\n            <p class=\"text-gray-600 text-md\">\n              Enhance engagement with custom body text, an optional footer, and a\n              call-to-action (View) button for easy access.\n            </p>\n          </div>\n        </li>\n        <li class=\"flex items-start space-x-3\">\n          <span class=\"\">○</span>\n          <div>\n            <h4 class=\"text-base font-semibold text-gray-800\">Seamless Shopping Experience</h4>\n            <p class=\"text-gray-600 text-md\">\n              Drive instant purchases by allowing customers to explore products\n              effortlessly within WhatsApp.\n            </p>\n          </div>\n        </li>\n      </ul>\n      <p class=\"text-gray-700 text-lg font-semibold mt-4\">\n        Boost Conversions with Targeted Product Promotions!\n      </p>\n    \n  "
             },
             "multiverse": {}
@@ -259,8 +259,8 @@
             "fileTags": {},
             "info": {
                 "title": "Analytics",
-                "image": "/.features/../../resources/app-mry/content/features/_images/feature5.png",
-                "hyperlink": "/analytics",
+                "image": "/features/_images/feature5.png",
+                "hyperlink": "/feature/analytics-feature",
                 "maindescription": "Analytics is a crucial component of any customer engagement system. Our analytics cover various segments of the platform based on utility and applicability.",
                 "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Conversational Analytics\",\n                \"description\": \"Get a bird’s-eye view of inbound and outbound communication, with insights on agent, channel, and team-specific performance, as well as response and closure analytics.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Segmented Channel-Specific Daily Analytics\",\n                \"description\": \"Drill down into the number of inbound and outbound messages and conversations handled by each channel, broken down by hour and day.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Campaign Analytics\",\n                \"description\": \"Monitor campaign delivery, read rates, and response rates, along with user-specific responses. View analytics online or download data for further analysis.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"BOT Analytics\",\n                \"description\": \"Track BOT flow execution to determine if success criteria are met, providing visibility into BOT performance and customer interactions.\"\n            }\n        ]\n    ",
                 "button": "Learn More"
@@ -276,8 +276,8 @@
             "fileTags": {},
             "info": {
                 "title": "BOT Builder",
-                "image": "/.features/../../resources/app-mry/content/features/_images/feature2.png",
-                "hyperlink": "/builder",
+                "image": "/features/_images/feature2.png",
+                "hyperlink": "/feature/bot-feature",
                 "maindescription": "Our BOT Builder empowers marketing teams to create and deploy bots independently, without needing a developer. It's a DIY toolkit designed to give you a competitive edge.\n    ",
                 "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Intuitive BOT Flow Builder\",\n                \"description\": \"Create bots using an extremely user-friendly, UI-based BOT flow builder.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Quick Deployment\",\n                \"description\": \"Build and deploy bots within minutes to drive seamless customer engagement.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Event-Driven and Timed Responses\",\n                \"description\": \"Set bots to respond to specific events and include time-delayed responses as needed.\"\n            }\n        ]\n    ",
                 "button": "Learn More"
@@ -293,8 +293,8 @@
             "fileTags": {},
             "info": {
                 "title": "Customer Cohorts",
-                "image": "/.features/../../resources/app-mry/content/features/_images/feature4.png",
-                "hyperlink": "/cohort",
+                "image": "/features/_images/feature4.png",
+                "hyperlink": "/feature/cohort-feature",
                 "maindescription": "Build dynamic customer cohorts with our advanced filtering system, and leverage these cohorts for lead management and customer acquisition campaigns.",
                 "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Effortless Cohort Creation\",\n                \"description\": \"Easily create cohorts from the Customer Management module.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Reusable Cohorts\",\n                \"description\": \"Use cohorts on demand in outbound campaigns for lead management, customer engagement, or marketing.\"\n            }\n        ]\n    ",
                 "button": "Learn More"
@@ -310,8 +310,8 @@
             "fileTags": {},
             "info": {
                 "title": "Marketing Campaigns",
-                "image": "/.features/../../resources/app-mry/content/features/_images/feature3.png",
-                "hyperlink": "/marketing",
+                "image": "/features/_images/feature3.png",
+                "hyperlink": "/feature/marketing-feature",
                 "maindescription": "Professional marketing campaigns are essential for lead generation, customer acquisition, and ongoing customer engagement. Our campaign management component is highly user-friendly and works seamlessly.\n    ",
                 "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Cohort Creation\",\n                \"description\": \"Build customer cohorts from your customer management module using dynamic filters, session tags from conversations, or external data sources.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Flexible Campaign Execution\",\n                \"description\": \"Run campaigns on demand or schedule them for optimal dates and times to suit your customers.\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"A/B Testing\",\n                \"description\": \"Test campaign effectiveness by running A/B campaigns with a small test group before rolling out to a larger audience.\"\n            }\n        ]\n    ",
                 "button": "Learn More"
@@ -327,8 +327,8 @@
             "fileTags": {},
             "info": {
                 "title": "Team Inbox",
-                "image": "/.features/../../resources/app-mry/content/features/_images/feature1.png",
-                "hyperlink": "/inbox",
+                "image": "/features/_images/feature1.png",
+                "hyperlink": "/feature/team-feature",
                 "maindescription": "Empower your team to engage with customers seamlessly through a centralized inbox that aggregates all conversations across multiple channels.\n    ",
                 "features": "\n        [\n            {\n                \"icon\": \"CheckCircleIcon\",  \n                \"subtext\": \"Centralized Inbox for All Channels\",\n                \"description\": \"Communicate with customers on WhatsApp, Messenger, Instagram DM, Telegram\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Predefined Message Templates\",\n                \"description\": \"Start new conversations or continue existing ones using predefined messages\"\n            },\n            {\n                \"icon\": \"CheckCircleIcon\",\n                \"subtext\": \"Prioritization\",\n                \"description\": \"Enable team members to prioritize conversations based on time unattended or unanswered, minimizing customer wait times\"\n            }\n        ]\n    ",
                 "button": "Learn More"
@@ -385,7 +385,7 @@
             "info": {
                 "title": "Customer",
                 "subtitle": "Management",
-                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-many-browser-windows-with-different-information1.svg",
+                "image": "/services/_images/tokyo-many-browser-windows-with-different-information1.svg",
                 "hyperlink": "/solutions/1customer-service",
                 "divcolor": "#ebf8ff",
                 "textcolor": "#1f2937",
@@ -403,7 +403,7 @@
             "info": {
                 "title": "Campaign",
                 "subtitle": "Management",
-                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-volumetric-analytics-of-different-types-in-web-browsers2.svg",
+                "image": "/services/_images/tokyo-volumetric-analytics-of-different-types-in-web-browsers2.svg",
                 "hyperlink": "/solutions/2campaign-service",
                 "divcolor": "#fffbeb",
                 "textcolor": "#78350f",
@@ -421,7 +421,7 @@
             "info": {
                 "title": "Conversation ",
                 "subtitle": "Management",
-                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-sending-messages-from-one-place-to-another1.svg",
+                "image": "/services/_images/tokyo-sending-messages-from-one-place-to-another1.svg",
                 "hyperlink": "/solutions/3conversation-service",
                 "divcolor": "#eef2ff",
                 "textcolor": "#3730a3",
@@ -439,7 +439,7 @@
             "info": {
                 "title": "Relationship",
                 "subtitle": "Management",
-                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-browser-window-with-emoticon-likes-and-stars-around2.svg",
+                "image": "/services/_images/tokyo-browser-window-with-emoticon-likes-and-stars-around2.svg",
                 "hyperlink": "/solutions/4relation-service",
                 "divcolor": "#e6fffa",
                 "textcolor": "#115e59",
@@ -457,7 +457,7 @@
             "info": {
                 "title": "Lead",
                 "subtitle": "Management",
-                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-selecting-a-value-in-the-browser-window1.svg",
+                "image": "/services/_images/tokyo-selecting-a-value-in-the-browser-window1.svg",
                 "hyperlink": "/solutions/5lead-service",
                 "divcolor": "#f3e8ff",
                 "textcolor": "#4c1d95",
@@ -475,7 +475,7 @@
             "info": {
                 "title": "API Services",
                 "subtitle": "Services",
-                "image": "/.services/../../resources/app-mry/content/services/_images/tokyo-magnifier-web-search-with-elements2.svg",
+                "image": "/services/_images/tokyo-magnifier-web-search-with-elements2.svg",
                 "hyperlink": "/solutions/6api-service",
                 "divcolor": "#fff1f2",
                 "textcolor": "#9f1239",
@@ -493,7 +493,7 @@
             "info": {
                 "title": "BOTs & BOT Services",
                 "subtitle": "Our advanced BOTs efficiently manage up to 80% of repetitive inquiries, allowing your team to focus\n                        on high-value, personalized interactions that drive deeper customer relationships.",
-                "image": "/.servicesBot/../../resources/app-mry/content/servicesBot/_images/ChatGPT-Logo.png",
+                "image": "/servicesBot/_images/ChatGPT-Logo.png",
                 "hyperlink": "/solutionbot/bot-service",
                 "divcolor": "#ECFDF5",
                 "textcolor": "#064E3B",
@@ -683,8 +683,8 @@
         }
     ],
     "updateTime": {
-        "str": "2025-06-10T05:24:55.204Z",
+        "str": "2025-06-13T05:14:28.073Z",
         "offset": "00.0",
-        "stamp": 1749533095204
+        "stamp": 1749791668073
     }
 }
