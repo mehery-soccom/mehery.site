@@ -7,19 +7,19 @@
       <!-- Left Side (Text Content) -->
       <div class="md:w-1/2 lg:pr-20">
         <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-8 text-left">
-          Engage Customers Seamlessly with Unified Messaging
+          From Lead to Loyalty — Mehery Powers Every Step
         </h1>
         <p class="text-gray-600 text-lg font-bold mb-6">
-          WhatsApp, Email, Telegram, Facebook Messenger, Instagram, Webchat, and AppChat
+          Mehery combines powerful Lead Management and Customer Engagement tools into one unified platform.
         </p>
         <p class="text-gray-600 text-md mb-3">
-          Our platform offers a seamless, omnichannel experience that unifies all customer interactions across
-          multiple messaging platforms. With native connections to WhatsApp Business API, Facebook Messenger,
-          Instagram DM, WebChat, AppChat, Email, and Telegram, we enable businesses to manage inbound and outbound
-          communications in one place.
+          Convert leads and engage customers across their journey with seamless, multi-channel communication.
+          Reach them via <strong>WhatsApp, Email, SMS, Messenger, Instagram DM, Web Chat, App Chat, Landing pages</strong>, and more.
+          Our open API's allow you to <strong>plug into your tech stack easily</strong> — CRM, ERP, eCommerce, or appointment tools. 
+          <strong>Fast setup. Scales with you.</strong> Focus on growth, not complexity.
         </p>
         <p class="text-gray-600 text-md mb-4">
-          Set up is fast and intuitive, with automatic configuration to get you up and running in minutes.
+          <strong>Go live on day 1 - or the first month's fee is on us.</strong>
         </p>
         <a href="https://app.mehery.com/partner/auth/register" target="_blank" rel="noopener noreferrer">
           <button
