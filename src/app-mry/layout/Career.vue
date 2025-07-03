@@ -36,7 +36,7 @@
                             <p class="text-gray-600 text-lg">
                                 <span class="font-semibold">Competitive Compensation:</span> We value talent and hard
                                 work, offering salaries at par with industry standards. Your contributions are
-                                recognized and rewarded. recognized and rewarded.
+                                recognized and rewarded.
                             </p>
                             <p class="text-gray-600 text-lg">
                                 <span class="font-semibold">A Culture of Learning & Growth:</span> We are always

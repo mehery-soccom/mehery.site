@@ -19,17 +19,17 @@
                 <div
                   v-for="(faq, index) in results"
                   :key="index"
-                  class="border-2 rounded-3xl p-2 cursor-pointer transition-all duration-300"
+                  class="border-2 rounded-3xl p-2 sm:p-4 cursor-pointer transition-all duration-300"
                   :class="[faq.isOpen ? 'shadow-lg' : 'hover:shadow-md', 'hover:border-gray-400']"
                   @click="faq.isOpen = !faq.isOpen"
                 >
-                  <div class="flex items-start justify-between sm:scale-90">
-                    <div class="flex sm:gap-2 items-start flex-1">
-                      <span class="text-xl sm:text-3xl font-medium text-gray-700 font-mono">
+                  <div class="flex items-start justify-between gap-2 sm:scale-90">
+                    <div class="flex gap-2 items-center w-full">
+                      <!-- <span class="text-base sm:text-2xl font-medium text-gray-700 font-mono pt-1">
                         {{ String(index + 1).padStart(2) }}.
-                      </span>
+                      </span> -->
                       <div class="flex-1 min-w-0">
-                        <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-4 pt-1 sm:pt-2">
+                        <h3 class="text-left text-lg sm:text-xl font-medium mb-1 sm:mb-2 pt-0 sm:pt-1 px-1 sm:px-0 mt-1">
                           {{ faq.info.title }}
                         </h3>
                         <Transition
@@ -42,14 +42,14 @@
                         >
                           <div
                             v-show="faq.isOpen"
-                            class="text-gray-600 text-base sm:text-lg leading-relaxed"
+                            class="text-left text-gray-600 text-base sm:text-lg leading-relaxed px-1 sm:px-0"
                             v-html="faq.info.content"
                           ></div>
                         </Transition>
                       </div>
                     </div>
                     <button
-                      class="rounded-full border-2 w-8 h-8 sm:w-10 sm:h-10 flex justify-center text-xl sm:text-2xl transition-all duration-300 flex-shrink-0 mt-1 sm:mt-2"
+                      class="rounded-full border-2 w-8 h-8 sm:w-10 sm:h-10 flex justify-center items-center text-xl sm:text-2xl transition-all duration-300 flex-shrink-0 mt-1"
                       :class="
                         faq.isOpen ? 'bg-black text-white border-black' : 'bg-white text-black hover:bg-gray-50'
                       "

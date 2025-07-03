@@ -5,20 +5,20 @@
     <!-- Existing Hero Section -->
     <div class="container mx-auto px-4 sm:px-6 py-16 pt-7 flex flex-col md:flex-row items-center">
       <!-- Left Side (Text Content) -->
-      <div class="md:w-1/2 lg:pr-20">
+      <div class="md:w-1/2 lg:pr-20 text-left">
         <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-8 text-left">
           From Lead to Loyalty — Mehery Powers Every Step
         </h1>
-        <p class="text-gray-600 text-lg font-bold mb-6">
+        <p class="text-gray-600 text-lg font-bold mb-6 text-left">
           Mehery combines powerful Lead Management and Customer Engagement tools into one unified platform.
         </p>
-        <p class="text-gray-600 text-md mb-3">
+        <p class="text-gray-600 text-md mb-3 text-left">
           Convert leads and engage customers across their journey with seamless, multi-channel communication.
           Reach them via <strong>WhatsApp, Email, SMS, Messenger, Instagram DM, Web Chat, App Chat, Landing pages</strong>, and more.
           Our open API's allow you to <strong>plug into your tech stack easily</strong> — CRM, ERP, eCommerce, or appointment tools. 
           <strong>Fast setup. Scales with you.</strong> Focus on growth, not complexity.
         </p>
-        <p class="text-gray-600 text-md mb-4">
+        <p class="text-gray-600 text-md mb-4 text-left">
           <strong>Go live on day 1 - or the first month's fee is on us.</strong>
         </p>
         <a href="https://app.mehery.com/partner/auth/register" target="_blank" rel="noopener noreferrer">
@@ -29,7 +29,7 @@
         </a>
 
 
-        <div class="mt-2 space-y-1 flex gap-3">
+        <div class="mt-2 space-y-1 flex flex-col sm:flex-row sm:gap-3 text-left">
           <div class="flex items-center text-gray-600 text-sm">
             <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
