@@ -194,7 +194,7 @@
             "fileTags": {},
             "info": {
                 "title": "Can I use my existing WhatsApp number with Mehery?",
-                "content": "\n    \n      Yes, you can use your existing WhatsApp number with Mehery. However, before onboarding:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>You must delete the WhatsApp account linked to that number.</li>\n        <li>If your number is used with another WhatsApp Business API provider (BSP), you can migrate it to Mehery after disabling the Two-Factor Authentication (2FA) PIN from your existing BSP.</li>\n        <li>Alternatively, you can provide a new phone number (virtual or regular SIM) to receive an OTP.</li>\n      </ul>\n      Once migrated:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Your number will be accessible only on the Mehery platform.</li>\n        <li>Virtual numbers support regular voice calls but not WhatsApp voice and video calls via the WhatsApp Business API.</li>\n      </ul>\n    \n  "
+                "content": "\n    \n      Yes, you can use your existing WhatsApp number with Mehery. However, before onboarding:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2 text-left\">\n        <li>You must delete the WhatsApp account linked to that number.</li>\n        <li>If your number is used with another WhatsApp Business API provider (BSP), you can migrate it to Mehery after disabling the Two-Factor Authentication (2FA) PIN from your existing BSP.</li>\n        <li>Alternatively, you can provide a new phone number (virtual or regular SIM) to receive an OTP.</li>\n      </ul>\n      Once migrated:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2 text-left\">\n        <li>Your number will be accessible only on the Mehery platform.</li>\n        <li>Virtual numbers support regular voice calls but not WhatsApp voice and video calls via the WhatsApp Business API.</li>\n      </ul>\n    \n  "
             },
             "multiverse": {}
         },
@@ -207,7 +207,7 @@
             "fileTags": {},
             "info": {
                 "title": "What is conversation-based pricing on WhatsApp?",
-                "content": "\n    \n      WhatsApp introduced a conversation-based pricing model in February 2022. Key points:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Businesses are charged per 24-hour messaging session with a customer.</li>\n        <li>Multiple messages within a 24-hour period incur a single charge for that session.</li>\n        <li>For more details, refer to \n          <span class=\"text-blue-500\">\n            <a href=\"https://developers.facebook.com/docs/whatsapp/pricing/\">WhatsApp’s official pricing documentation</a>.\n          </span>\n        </li>\n      </ul>\n    \n  "
+                "content": "\n    \n      WhatsApp introduced a conversation-based pricing model in February 2022. Key points:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2 text-left\">\n        <li>Businesses are charged per 24-hour messaging session with a customer.</li>\n        <li>Multiple messages within a 24-hour period incur a single charge for that session.</li>\n        <li>For more details, refer to \n          <span class=\"text-blue-500\">\n            <a href=\"https://developers.facebook.com/docs/whatsapp/pricing/\">WhatsApp’s official pricing documentation</a>.\n          </span>\n        </li>\n      </ul>\n    \n  "
             },
             "multiverse": {}
         },
@@ -220,7 +220,7 @@
             "fileTags": {},
             "info": {
                 "title": "If WhatsApp is free, why does conversation-based pricing apply?",
-                "content": "\n    \n      While WhatsApp is free for personal use, businesses using the WhatsApp Business API are charged:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Based on conversation pricing.</li>\n        <li>Costs vary depending on the customer's country code and the type of message templates used.</li>\n        <li>For pricing details, visit \n          <span class=\"text-blue-500\">\n            <a href=\"https://developers.facebook.com/docs/whatsapp/pricing/\">WhatsApp’s official pricing documentation</a>.\n          </span>\n        </li>\n      </ul>\n    \n  "
+                "content": "\n    \n      While WhatsApp is free for personal use, businesses using the WhatsApp Business API are charged:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2 text-left\">\n        <li>Based on conversation pricing.</li>\n        <li>Costs vary depending on the customer's country code and the type of message templates used.</li>\n        <li>For pricing details, visit \n          <span class=\"text-blue-500\">\n            <a href=\"https://developers.facebook.com/docs/whatsapp/pricing/\">WhatsApp’s official pricing documentation</a>.\n          </span>\n        </li>\n      </ul>\n    \n  "
             },
             "multiverse": {}
         },
@@ -233,7 +233,7 @@
             "fileTags": {},
             "info": {
                 "title": "How many social media messenger channels can I add on Mehery?",
-                "content": "\n    \n      The number of channels depends on your license type:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>You can have one, two, three, or more channels on the same platform.</li>\n        <li>Channels can be of the same type (e.g., multiple WhatsApp accounts) or a combination of different platforms.</li>\n      </ul>\n    \n  "
+                "content": "\n    \n      The number of channels depends on your license type:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2 text-left\">\n        <li>You can have one, two, three, or more channels on the same platform.</li>\n        <li>Channels can be of the same type (e.g., multiple WhatsApp accounts) or a combination of different platforms.</li>\n      </ul>\n    \n  "
             },
             "multiverse": {}
         },
@@ -246,7 +246,7 @@
             "fileTags": {},
             "info": {
                 "title": "How easy is it to add a new channel on Mehery?",
-                "content": "\n    \n      Mehery offers an auto-configure capability:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n        <li>Allows you to seamlessly add a new channel whenever needed.</li>\n      </ul>\n    \n  "
+                "content": "\n    \n      Mehery offers an auto-configure capability:\n      <ul class=\"list-disc pl-5 space-y-1 mt-2 text-left\">\n        <li>Allows you to seamlessly add a new channel whenever needed.</li>\n      </ul>\n    \n  "
             },
             "multiverse": {}
         },
@@ -683,8 +683,8 @@
         }
     ],
     "updateTime": {
-        "str": "2025-07-01T05:49:34.250Z",
+        "str": "2025-07-07T15:01:15.053Z",
         "offset": "00.0",
-        "stamp": 1751348974250
+        "stamp": 1751900475053
     }
 }
