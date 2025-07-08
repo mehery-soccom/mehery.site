@@ -397,9 +397,13 @@ onMounted(async () => {
                     }
                 },
                 "Mehery Fees – Per conversation Fees": {
-                    "WABA Conv": {
-                        usd: usdPlan.mfees?.waba || "X",
-                        inr: inrPlan.mfees?.waba || "X"
+                    "WABA - Marketing": {
+                        usd: usdPlan.mfees?.wabaMarketing || "X",
+                        inr: inrPlan.mfees?.wabaMarketing || "X"
+                    },
+                    "WABA - U, A, S": {
+                        usd: usdPlan.mfees?.wabaUtil || "X",
+                        inr: inrPlan.mfees?.wabaUtil || "X"
                     },
                     "Social Conv": {
                         usd: usdPlan.mfees?.social || "X",
