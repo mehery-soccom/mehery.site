@@ -1,6 +1,5 @@
 <template>
     <div id="page-top">
-        <!-- Header -->
         <Navbar />
 
         <div class="blog-container">
@@ -20,14 +19,14 @@
                     </div>
 
                     <div v-else-if="results.length" class="posts-grid">
-                        <div v-for="(item, index) in results" :key="index" class="post-card" @click="openPost(item.info)">
+                        <div v-for="(item, index) in results" :key="index" class="post-card" @click="navigateToPost(item.info.hyperlink)">
                         <div v-if="item.info.image" class="post-image">
                             <img :src="resolveLink(item.info.image)" alt="Post Image" />
                         </div>
                         <div class="post-content">
                             <h3 class="post-title">{{ item.info.title }}</h3>
                             <p class="post-meta">By {{ item.info.author }} on {{ item.info.date }}</p>
-                            <p class="post-text" v-html="truncated(item.info.content)"></p>
+                            <!-- <p class="post-text" v-html="truncated(item.info.content)"></p> -->
                         </div>
                         </div>
                     </div>
@@ -39,55 +38,24 @@
             </section>
         </div>
 
-        <!-- Modal Popup for Full Blog Details -->
-        <div v-if="selectedPost" class="modal-overlay" @click.self="closeModal">
-            <div class="modal-box">
-                <button class="modal-close" @click="closeModal">X</button>
-                <div class="modal-content-wrapper">
-                    <div v-if="selectedPost.image" class="modal-image">
-                        <img :src="resolveLink(selectedPost.image)" alt="Post Image" />
-                    </div>
-                    <h2 class="modal-title">{{ selectedPost.title }}</h2>
-                    <p class="modal-meta">By {{ selectedPost.author }} on {{ selectedPost.date }}</p>
-                    <div class="modal-content" v-html="selectedPost.content"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
         <Footer />
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-// import { blogService } from "../../firebase/index";
+import { useRouter } from "vue-router";
 import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
 import ArticleList from "@components/ArticleList.vue";
 import { resolveLink } from "../../@utils/linkResolver";
 
-const posts = ref([]);
-const selectedPost = ref(null);
+const router = useRouter();
 
-const openPost = post => {
-    selectedPost.value = post;
+const navigateToPost = (link) => {
+    router.push(link);
 };
 
-const closeModal = () => {
-    selectedPost.value = null;
-};
-
-const truncated = text => {
-    const maxLength = 100;
-    if (!text) return "";
-    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-};
-
-onMounted(async () => {
-    posts.value = await blogService.getPosts();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
 </script>
 
 <style scoped>
@@ -203,104 +171,5 @@ onMounted(async () => {
     text-align: center;
     font-size: 1.2rem;
     color: #666;
-}
-
-/* Modal Styles */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.modal-box {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 600px;
-    width: 90%;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.3s;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: #42b983;
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s;
-}
-
-.modal-close:hover {
-    background: #369870;
-}
-
-.modal-content-wrapper {
-    margin-top: 1.5rem;
-}
-
-.modal-image img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-.modal-title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.modal-meta {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 1rem;
-}
-
-.modal-content {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
 }
 </style>

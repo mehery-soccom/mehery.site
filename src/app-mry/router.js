@@ -10,6 +10,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "Home" */ "@src/app-mry/layout/Home.vue")
     },
     {
+        path: "/blogPost/:contentName",
+        name: "BlogPost",
+        component: () => import("@src/app-mry/layout/BlogPost.vue")
+    },
+    {
         path: `/:page/:contentName?`,
         name: "DynamicRouteComponent",
         component: () =>
