@@ -44,49 +44,97 @@
         },
         {
             "contentType": "blog",
-            "file": "4wabaCatalogs.html",
-            "filePath": "resources/app-mry/content/blog/4wabaCatalogs.html",
-            "fileName": "4wabaCatalogs",
+            "file": "4insights.html",
+            "filePath": "resources/app-mry/content/blog/4insights.html",
+            "fileName": "4insights",
             "fileExtension": "html",
             "fileTags": {},
             "info": {
-                "title": "WhatsApp Business. Catalogs, Communication and Commerce",
+                "title": "New Release: Introducing Insights360 for Smarter Communication Analytics",
                 "author": "Kershasp Carnac",
-                "date": "November 10, 2021",
-                "image": "/blog/_images/phone.png",
-                "content": "\n    \n      WhatsApp introduced Catalogs in single device platforms in 2021 and has now planned to release the same over the WhatsApp Business API.<br><br>\n\n      Let’s explore how you as an enterprise can capitalize on this.<br><br>\n\n      <b>Building Catalogs</b><br>\n      Catalogs for WhatsApp Business API users can be built in multiple ways. We are listing them below, in an order of ease of execution.<br><br>\n\n        <ul class=\"list-disc pl-5 space-y-1 mt-2\">\n          <li>If your business already has a Facebook catalog set up, we suggest that you leverage that catalog for WhatsApp commerce use cases, as it’s the quickest way to commence operations</li>\n          <li>If your business already has and manages its own Facebook catalog, you can give permission to your Vendor to connect your catalog. Once the permissions are granted, your vendor can link the WhatsApp Business Account to the Catalog via the WhatsApp Manager.</li>\n          <li>If your business is building this for the first time and want to explore all possibilities, your business can also create this in the Facebook Commerce Manager.</li>\n          <li>If your business has an elaborate eCommerce engine and you want all the flexibility of managing the items displayed from your eCommerce system, you need to get down to integrating your eCommerce platform with the WhatsApp Business API.</li>\n        </ul><br>\n\n      <b>Sharing Catalogs with WhatsApp Users</b><br>\n      I will skip the details on how to manage a single product catalog and focus on the multi-product catalog, as that’s how business will best leverage the platform. Catalogs can be categorized, and products can be placed in categories, to make the user search easier.<br><br>\n\n      The above is a quick short, proposed flow for a grocery store, which you can replicate for your business. The in-picture guidelines, detail the characteristics of how this can be executed.<br><br>\n\n      A caveat – in the current release, your catalog can only have 30 items and that limitation is driven by the current menu structure of the WhatsApp Business API, which has this limitation. That, however, does not mean you cannot show more products. Innovate, as you go. Or talk to us<br><br>\n\n      <b>Shopping Cart and Checkout</b><br>\n      A customer can simply add products to his shopping cart, decide quantity, sub-category (weight, size, color with impact on price) and then proceed to checkout. The checkout process will be fed to your eCommerce / ERP using our platform.<br><br>\n\n      A caveat – in the current release, the shopping cart is not fungible across multiple devices that your customer may be using. Not a very strong use case, but nevertheless, something for your call center agents, who get fervent calls saying that my shopping cart is missing.<br><br>\n\n      <b>Converse, Collect and Complete</b><br>\n      Continue the user engagement to collect further collect information on shipping address, shipping location map, confirm delivery date and time, collect money (in countries with WhatsApp pay, you can pay using the WhatsApp pay. However, nothing stops you from sending a payment link for the customer to pay), send notification of dispatch and successful delivery completion.<br><br>\n\n      All this comes together on the Mehery Smart messaging platform, which will give you the integration engagement with the people who understand how this will come together.<br><br> Contact us at sales@mehery.com to get us involved in your success.\n    \n  "
+                "date": "July 14, 2025",
+                "hyperlink": "/blogPost/4insights",
+                "image": "/blog/_images/insights.png"
             },
             "multiverse": {}
         },
         {
             "contentType": "blog",
-            "file": "5wabaAPI.html",
-            "filePath": "resources/app-mry/content/blog/5wabaAPI.html",
-            "fileName": "5wabaAPI",
+            "file": "5whatsapp-Calling.html",
+            "filePath": "resources/app-mry/content/blog/5whatsapp-Calling.html",
+            "fileName": "5whatsapp-Calling",
             "fileExtension": "html",
             "fileTags": {},
             "info": {
-                "title": "WhatsApp Business API. Promotions permitted",
+                "title": "WhatsApp Business Calling API: The Big Picture",
                 "author": "Kershasp Carnac",
-                "date": "November 18, 2021",
-                "image": "/blog/_images/wabaAPI.png",
-                "content": "\n    \n      WhatsApp is rapidly scaling up to becoming a commercial behemoth, by capitalizing its significantly large user base. But more of that in another post.<br><br>\n\n      Meta has now allowed enterprises using the WhatsApp Business API, to send out promotional messages (aka templates, in WhatsApp parlance) and have started approving them.\n      You now have a free pass to reach out to your customers, outside the Session / Conversation timeframes, with promotional messages.<br><br>\n\n      There is no new category of template message introduced, to facilitate this, so you can use any of the existing categories, to start your customer conversations.\n      Meta is actively supporting and approving promotional messages, as they liberalize the WhatsApp Business API and timeframes have come down to minutes.<br><br>\n\n      However, this comes with a caveat – Meta, will be very closely monitoring the recipient responses to your templates.\n      Too many recipients responding with a Block or Report will immediately see a reaction from Meta, to either throttle the template broadcast in case you had initiated a bulk broadcast or even block the template itself.<br>\n      In extreme cases, Meta can block your Business Account itself which will then undergo scrutiny.<br><br>\n\n      Our reasoned proposition to all our platform users as well as anybody who is using the WhatsApp Business API and is planning to use it for promotions is –\n      when you are undertaking promotions, send out a broadcast to a small user base.\n      Evaluate their responses and then expand the recipient coverage in a stepped manner, to minimize any WhatsApp reaction risks.<br><br>\n\n      Mehery Smart messaging, allows you to segment your user base, allowing you to manage this structured promotional message broadcasts.<br><br>\n\n      Contact us at sales@mehery.com to get us involved in your success.<br>\n    \n  "
+                "date": "June 12, 2025",
+                "hyperlink": "/blogPost/5whatsapp-Calling",
+                "image": "/blog/_images/waCall.png"
             },
             "multiverse": {}
         },
         {
             "contentType": "blog",
-            "file": "6custAcq.html",
-            "filePath": "resources/app-mry/content/blog/6custAcq.html",
-            "fileName": "6custAcq",
+            "file": "6nbfc.html",
+            "filePath": "resources/app-mry/content/blog/6nbfc.html",
+            "fileName": "6nbfc",
             "fileExtension": "html",
             "fileTags": {},
             "info": {
-                "title": "Customer Acquisition. The new dawn",
+                "title": "Why NBFCs Are Struggling with Customer Acquisition & Collections - And How to Fix It!",
                 "author": "Kershasp Carnac",
-                "date": "November 18, 2021",
-                "image": "/blog/_images/custAcq.jpg",
-                "content": "\n    \n      Customer acquisition, digitally or otherwise, is an expensive operation. If you do not agree, stop right here, and don’t waste your time.<br><br>\n\n      Let’s talk of digital advertising, here.<br><br>\n\n      Organizations spend tons of time ideating the creatives, messaging, sub-text, target audience et al and then, at the point of time, when the prospect is ready to demonstrate interest, fall flat. Let me explain this.<br><br>\n\n      Digital advertisements, all focus on getting the prospect's attention and then getting him to click on the advert. What happens next is a disaster. They are taken to a form (unless you are on Facebook where they pre-fill the prospect’s details), which if, and when completed, falls into your void. Your agents will look at it when they are ready or when it comes up in their CRM queues. And guess what, the prospect has moved onto another task and your conversion rate has just dropped by another 50%.<br><br>\n\n      All is not lost. Technology is moving and moving rapidly, to help you to enhance your conversion rates.<br><br>\n\n      Social Media Messaging integrated with Digital Advertisements is the way forward.<br><br>\n\n      We would like to present the future normal. We see a future where when a prospect clicks on a digital advert, it walks him through a defined workflow journey, picking up the incremental information required and information that can be disseminated by BOTS and then handing over the prospect to an agent, to conclude the commercial arrangements.<br><br>\n\n      We at Mehery will be happy to work with you to create these customer acquisition journeys and helping you enhance your customer acquisition yields. View sample customer acquisition journeys on our website www.mehery.com in the Customer Acquisition section, by clicking on any of the images there.<br><br>\n\n      Contact us at sales@mehery.com to get us involved in your success.\n    \n  "
+                "date": "May 10, 2025",
+                "hyperlink": "/blogPost/6nbfc",
+                "image": "/blog/_images/nbfc.jpg"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "blog",
+            "file": "7microsoft.html",
+            "filePath": "resources/app-mry/content/blog/7microsoft.html",
+            "fileName": "7microsoft",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Microsoft CEO Admits That AI Is Generating Basically No Value",
+                "author": "Kershasp Carnac",
+                "date": "February 22, 2025",
+                "hyperlink": "/blogPost/7microsoft",
+                "image": "/blog/_images/microsoft.png"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "blog",
+            "file": "8meta-partner.html",
+            "filePath": "resources/app-mry/content/blog/8meta-partner.html",
+            "fileName": "8meta-partner",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "From being an ISV to a Meta - Business Partner for WhatsApp Business Accounts. ",
+                "author": "Kershasp Carnac",
+                "date": "February 12, 2025",
+                "hyperlink": "/blogPost/8meta-partner",
+                "image": "/blog/_images/partner.jpeg"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "blog",
+            "file": "9equity-broking.html",
+            "filePath": "resources/app-mry/content/blog/9equity-broking.html",
+            "fileName": "9equity-broking",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Equity Broking in India is undergoing a profound digital transformation",
+                "author": "Kershasp Carnac",
+                "date": "January 4, 2025",
+                "hyperlink": "/blogPost/9equity-broking",
+                "image": "/blog/_images/broking.jpeg"
             },
             "multiverse": {}
         },
@@ -683,8 +731,8 @@
         }
     ],
     "updateTime": {
-        "str": "2025-07-11T17:36:46.598Z",
+        "str": "2025-07-23T14:10:44.923Z",
         "offset": "00.0",
-        "stamp": 1752255406598
+        "stamp": 1753279844923
     }
 }
