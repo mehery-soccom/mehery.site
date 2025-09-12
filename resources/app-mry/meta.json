@@ -44,6 +44,22 @@
         },
         {
             "contentType": "blog",
+            "file": "3transition.html",
+            "filePath": "resources/app-mry/content/blog/3transition.html",
+            "fileName": "3transition",
+            "fileExtension": "html",
+            "fileTags": {},
+            "info": {
+                "title": "Should You Transition to AI for Your Support Bot? A Strategic Guide",
+                "author": "Kershasp Carnac",
+                "date": "September 12 , 2025",
+                "hyperlink": "/blogPost/3transition",
+                "image": "/blog/_images/transition.jpeg"
+            },
+            "multiverse": {}
+        },
+        {
+            "contentType": "blog",
             "file": "4insights.html",
             "filePath": "resources/app-mry/content/blog/4insights.html",
             "fileName": "4insights",
@@ -731,8 +747,8 @@
         }
     ],
     "updateTime": {
-        "str": "2025-07-31T09:47:17.134Z",
+        "str": "2025-09-12T12:38:22.282Z",
         "offset": "00.0",
-        "stamp": 1753955237134
+        "stamp": 1757680702282
     }
 }

@@ -547,6 +547,9 @@ video {
 .collapse{
   visibility: collapse;
 }
+.static{
+  position: static;
+}
 .fixed{
   position: fixed;
 }
@@ -3652,6 +3655,9 @@ video {
 .font-medium{
   font-weight: 500;
 }
+.font-normal{
+  font-weight: 400;
+}
 .font-semibold{
   font-weight: 600;
 }
@@ -3821,13 +3827,10 @@ video {
 }
 .backdrop-blur-lg{
   --tw-backdrop-blur: blur(16px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -33885,6 +33888,9 @@ video {
 .collapse{
   visibility: collapse;
 }
+.static{
+  position: static;
+}
 .fixed{
   position: fixed;
 }
@@ -36990,6 +36996,9 @@ video {
 .font-medium{
   font-weight: 500;
 }
+.font-normal{
+  font-weight: 400;
+}
 .font-semibold{
   font-weight: 600;
 }
@@ -37159,13 +37168,10 @@ video {
 }
 .backdrop-blur-lg{
   --tw-backdrop-blur: blur(16px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -37261,8 +37267,7 @@ body {
 }
 
 nav.layout-navbar {
-  -webkit-backdrop-filter: unset;
-          backdrop-filter: unset;
+  backdrop-filter: unset;
   background-color: transparent;
   block-size: auto;
 
@@ -37382,8 +37387,7 @@ nav.layout-navbar .navbar.landing-navbar .navbar-nav .nav-link:hover {
   }
 }
 nav.layout-navbar.navbar-active::before {
-  -webkit-backdrop-filter: saturate(100%) blur(6px);
-          backdrop-filter: saturate(100%) blur(6px)
+  backdrop-filter: saturate(100%) blur(6px)
 }
 nav.layout-navbar.navbar-active .landing-navbar {
   background-color: var(--bs-paper-bg);
@@ -65442,8 +65446,7 @@ li:not(:first-child) .dropdown-item, .dropdown-menu .dropdown-item:not(:first-ch
   transform: translate3d(0, 0, 0);
 }
 .layout-menu.menu-vertical ~ .layout-page.window-scrolled .layout-navbar {
-  -webkit-backdrop-filter: saturate(200%) blur(6px);
-          backdrop-filter: saturate(200%) blur(6px);
+  backdrop-filter: saturate(200%) blur(6px);
   background-color: rgba(var(--bs-paper-bg-rgb), 0.88);
 }
 
@@ -65675,8 +65678,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 .layout-navbar-fixed .layout-wrapper:not(.layout-horizontal) .layout-page::before {
   position: fixed;
   z-index: 1001;
-  -webkit-backdrop-filter: saturate(200%) blur(10px);
-          backdrop-filter: saturate(200%) blur(10px);
+  backdrop-filter: saturate(200%) blur(10px);
   background: linear-gradient(180deg, rgba(var(--bs-body-bg-rgb), 70%) 44%, rgba(var(--bs-body-bg-rgb), 43%) 73%, rgba(var(--bs-body-bg-rgb), 0%));
   block-size: 4.75rem;
   content: "";
@@ -66109,8 +66111,7 @@ body:not(.modal-open) .layout-content-navbar .layout-navbar {
 .aa-DetachedOverlay {
   position: fixed;
   z-index: 999999;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   background: rgba(0, 0, 0, 0.35);
   block-size: 100vh;
   inset-block-start: 0;
