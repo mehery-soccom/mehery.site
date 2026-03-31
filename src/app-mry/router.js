@@ -81,4 +81,11 @@ const router = createRouter({
     }
 });
 
+// LeadBoxer SPA tracking
+router.afterEach((to, from) => {
+    if (window.lb) {
+        window.lb('pageview');
+    }
+});
+
 export default router;
