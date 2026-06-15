@@ -51,6 +51,11 @@ const routes = [
         component: () => import("@src/app-mry/layout/Privacy.vue")
     },
     {
+        path: `/deletion`,
+        name: "DataDeletionPolicy",
+        component: () => import("@src/app-mry/layout/DataDeletionPolicy.vue")
+    },
+    {
         path: `/terms`,
         name: "TermsOfService",
         component: () => import("@src/app-mry/layout/TermsOfService.vue")
