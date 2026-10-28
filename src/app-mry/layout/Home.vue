@@ -83,11 +83,11 @@
         <WhatsApp />
       </div>
     </div>
-    <div class="scroll-mt-[60px]" id="pricing">
+    <!-- <div class="scroll-mt-[60px]" id="pricing">
       <div class="container mx-auto px-6">
         <Pricing />
       </div>
-    </div>
+    </div> -->
     <div class="scroll-mt-[60px]" id="faq">
       <div class="container mx-auto px-6">
         <FAQ />
