@@ -128,13 +128,13 @@
                 </div>
 
                 <!-- Pricing Link -->
-                <a
+                <!-- <a
                     @click="scrollToSection('pricing')"
                     class="text-gray-700 hover:text-gray-900 cursor-pointer text-md font-bold transition-colors duration-300 relative group hover:no-underline"
                     @mouseenter="(productMenuOpen = false), (resourcesMenuOpen = false)"
                 >
                     Pricing
-                </a>
+                </a> -->
             </div>
 
             <!-- Free Trial Button -->
@@ -299,12 +299,12 @@
                 </div>
 
                 <!-- Pricing Link (Mobile) -->
-                <a
+                <!-- <a
                     @click="handleMobileLinkClick('pricing')"
                     class="block py-2 text-gray-700 hover:text-gray-900 text-sm font-medium cursor-pointer transition-colors duration-300"
                 >
                     Pricing
-                </a>
+                </a> -->
 
                 <!-- Action Buttons (Mobile) -->
                 <div class="flex flex-col space-y-2 pt-1">
