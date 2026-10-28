@@ -97,7 +97,7 @@ const router = useRouter();
 const navLinks = [
     { type: "scroll", path: "features", label: "Features" },
     { type: "scroll", path: "solutions", label: "Solutions" },
-    { type: "scroll", path: "pricing", label: "Pricing" },
+    // { type: "scroll", path: "pricing", label: "Pricing" },
     { type: "route", path: "about", label: "About Us" },
     { type: "route", path: "/career", label: "Career" },
     { type: "route", path: "/privacy", label: "Privacy Policy" },
